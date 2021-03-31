@@ -1,0 +1,2930 @@
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc566hHT.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m0plus
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 0
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"main_cm0p.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.main,"ax",%progbits
+  20              		.align	2
+  21              		.global	main
+  22              		.code	16
+  23              		.thumb_func
+  24              		.type	main, %function
+  25              	main:
+  26              	.LFB549:
+  27              		.file 1 "main_cm0p.c"
+   1:main_cm0p.c   **** /******************************************************************************
+   2:main_cm0p.c   **** * File Name: main_cm0p.c
+   3:main_cm0p.c   **** *
+   4:main_cm0p.c   **** * Version: 1.10
+   5:main_cm0p.c   **** *
+   6:main_cm0p.c   **** * Description: This file main application code for the CE223727 EmWin Graphics
+   7:main_cm0p.c   **** *				library EInk Display, for the CM0+ processor.  The only action
+   8:main_cm0p.c   **** *				this file performs is to start the CM4 processor.
+   9:main_cm0p.c   **** *
+  10:main_cm0p.c   **** * Hardware Dependency: CY8CKIT-028-EPD E-Ink Display Shield
+  11:main_cm0p.c   **** *					   CY8CKIT-062-BLE PSoC6 BLE Pioneer Kit
+  12:main_cm0p.c   **** *
+  13:main_cm0p.c   **** *******************************************************************************
+  14:main_cm0p.c   **** * Copyright (2018), Cypress Semiconductor Corporation. All rights reserved.
+  15:main_cm0p.c   **** *******************************************************************************
+  16:main_cm0p.c   **** * This software, including source code, documentation and related materials
+  17:main_cm0p.c   **** * (“Software”), is owned by Cypress Semiconductor Corporation or one of its
+  18:main_cm0p.c   **** * subsidiaries (“Cypress”) and is protected by and subject to worldwide patent
+  19:main_cm0p.c   **** * protection (United States and foreign), United States copyright laws and
+  20:main_cm0p.c   **** * international treaty provisions. Therefore, you may use this Software only
+  21:main_cm0p.c   **** * as provided in the license agreement accompanying the software package from
+  22:main_cm0p.c   **** * which you obtained this Software (“EULA”).
+  23:main_cm0p.c   **** *
+  24:main_cm0p.c   **** * If no EULA applies, Cypress hereby grants you a personal, nonexclusive,
+  25:main_cm0p.c   **** * non-transferable license to copy, modify, and compile the Software source
+  26:main_cm0p.c   **** * code solely for use in connection with Cypress’s integrated circuit products.
+  27:main_cm0p.c   **** * Any reproduction, modification, translation, compilation, or representation
+  28:main_cm0p.c   **** * of this Software except as specified above is prohibited without the express
+  29:main_cm0p.c   **** * written permission of Cypress.
+  30:main_cm0p.c   **** *
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc566hHT.s 			page 2
+
+
+  31:main_cm0p.c   **** * Disclaimer: THIS SOFTWARE IS PROVIDED AS-IS, WITH NO WARRANTY OF ANY KIND, 
+  32:main_cm0p.c   **** * EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, NONINFRINGEMENT, IMPLIED 
+  33:main_cm0p.c   **** * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. Cypress 
+  34:main_cm0p.c   **** * reserves the right to make changes to the Software without notice. Cypress 
+  35:main_cm0p.c   **** * does not assume any liability arising out of the application or use of the 
+  36:main_cm0p.c   **** * Software or any product or circuit described in the Software. Cypress does 
+  37:main_cm0p.c   **** * not authorize its products for use in any products where a malfunction or 
+  38:main_cm0p.c   **** * failure of the Cypress product may reasonably be expected to result in 
+  39:main_cm0p.c   **** * significant property damage, injury or death (“High Risk Product”). By 
+  40:main_cm0p.c   **** * including Cypress’s product in a High Risk Product, the manufacturer of such 
+  41:main_cm0p.c   **** * system or application assumes all risk of such use and in doing so agrees to 
+  42:main_cm0p.c   **** * indemnify Cypress against all liability.
+  43:main_cm0p.c   **** *******************************************************************************/
+  44:main_cm0p.c   **** #include "project.h"
+  45:main_cm0p.c   **** 
+  46:main_cm0p.c   **** int main(void)
+  47:main_cm0p.c   **** {
+  28              		.loc 1 47 0
+  29              		.cfi_startproc
+  30              		@ Volatile: function does not return.
+  31              		@ args = 0, pretend = 0, frame = 0
+  32              		@ frame_needed = 0, uses_anonymous_args = 0
+  33 0000 10B5     		push	{r4, lr}
+  34              		.cfi_def_cfa_offset 8
+  35              		.cfi_offset 4, -8
+  36              		.cfi_offset 14, -4
+  48:main_cm0p.c   ****     /*__enable_irq(); */ /* Enable global interrupts. */
+  49:main_cm0p.c   ****     
+  50:main_cm0p.c   **** 	/* Enable CM4.  CY_CORTEX_M4_APPL_ADDR must be updated if CM4 memory layout is changed. */
+  51:main_cm0p.c   ****     Cy_SysEnableCM4(CY_CORTEX_M4_APPL_ADDR); 
+  37              		.loc 1 51 0
+  38 0002 0348     		ldr	r0, .L3
+  39 0004 FFF7FEFF 		bl	Cy_SysEnableCM4
+  40              	.LVL0:
+  41              	.L2:
+  52:main_cm0p.c   **** 
+  53:main_cm0p.c   ****     /* Place your initialization/startup code here (e.g. MyInst_Start()) */
+  54:main_cm0p.c   **** 
+  55:main_cm0p.c   ****     for(;;)
+  56:main_cm0p.c   ****     {
+  57:main_cm0p.c   ****         /* Place your application code here. */
+  58:main_cm0p.c   **** 		Cy_SysPm_DeepSleep(CY_SYSPM_WAIT_FOR_INTERRUPT);
+  42              		.loc 1 58 0 discriminator 1
+  43 0008 0020     		movs	r0, #0
+  44 000a FFF7FEFF 		bl	Cy_SysPm_CpuEnterDeepSleep
+  45              	.LVL1:
+  46 000e FBE7     		b	.L2
+  47              	.L4:
+  48              		.align	2
+  49              	.L3:
+  50 0010 00000810 		.word	268959744
+  51              		.cfi_endproc
+  52              	.LFE549:
+  53              		.size	main, .-main
+  54              		.text
+  55              	.Letext0:
+  56              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc566hHT.s 			page 3
+
+
+  57              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+  58              		.file 4 "Generated_Source\\PSoC6\\pdl\\drivers/peripheral/device/cy_device.h"
+  59              		.file 5 "Generated_Source\\PSoC6\\pdl\\drivers/peripheral/syspm/cy_syspm.h"
+  60              		.file 6 "Generated_Source\\PSoC6\\pdl\\drivers/peripheral/sar/cy_sar.h"
+  61              		.file 7 "Generated_Source\\PSoC6\\pdl\\drivers/peripheral/scb/cy_scb_spi.h"
+  62              		.file 8 "Generated_Source\\PSoC6\\pdl\\drivers/peripheral/tcpwm/cy_tcpwm_counter.h"
+  63              		.file 9 "Generated_Source\\PSoC6\\pdl\\drivers/peripheral/tcpwm/cy_tcpwm_pwm.h"
+  64              		.file 10 "Generated_Source\\PSoC6/ADC_1.h"
+  65              		.file 11 "Generated_Source\\PSoC6/CY_EINK_SPIM.h"
+  66              		.file 12 "Generated_Source\\PSoC6/CY_EINK_Timer.h"
+  67              		.file 13 "Generated_Source\\PSoC6/PWM_1.h"
+  68              		.file 14 "./system_psoc6.h"
+  69              		.section	.debug_info,"",%progbits
+  70              	.Ldebug_info0:
+  71 0000 540A0000 		.4byte	0xa54
+  72 0004 0400     		.2byte	0x4
+  73 0006 00000000 		.4byte	.Ldebug_abbrev0
+  74 000a 04       		.byte	0x4
+  75 000b 01       		.uleb128 0x1
+  76 000c E2080000 		.4byte	.LASF195
+  77 0010 0C       		.byte	0xc
+  78 0011 8F000000 		.4byte	.LASF196
+  79 0015 68040000 		.4byte	.LASF197
+  80 0019 00000000 		.4byte	.Ldebug_ranges0+0
+  81 001d 00000000 		.4byte	0
+  82 0021 00000000 		.4byte	.Ldebug_line0
+  83 0025 02       		.uleb128 0x2
+  84 0026 02       		.byte	0x2
+  85 0027 05       		.byte	0x5
+  86 0028 2A080000 		.4byte	.LASF0
+  87 002c 02       		.uleb128 0x2
+  88 002d 01       		.byte	0x1
+  89 002e 08       		.byte	0x8
+  90 002f 08080000 		.4byte	.LASF1
+  91 0033 02       		.uleb128 0x2
+  92 0034 01       		.byte	0x1
+  93 0035 06       		.byte	0x6
+  94 0036 C80A0000 		.4byte	.LASF2
+  95 003a 03       		.uleb128 0x3
+  96 003b B6000000 		.4byte	.LASF3
+  97 003f 02       		.byte	0x2
+  98 0040 1D       		.byte	0x1d
+  99 0041 2C000000 		.4byte	0x2c
+ 100 0045 03       		.uleb128 0x3
+ 101 0046 00040000 		.4byte	.LASF4
+ 102 004a 02       		.byte	0x2
+ 103 004b 29       		.byte	0x29
+ 104 004c 25000000 		.4byte	0x25
+ 105 0050 03       		.uleb128 0x3
+ 106 0051 B0090000 		.4byte	.LASF5
+ 107 0055 02       		.byte	0x2
+ 108 0056 2B       		.byte	0x2b
+ 109 0057 5B000000 		.4byte	0x5b
+ 110 005b 02       		.uleb128 0x2
+ 111 005c 02       		.byte	0x2
+ 112 005d 07       		.byte	0x7
+ 113 005e 98030000 		.4byte	.LASF6
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc566hHT.s 			page 4
+
+
+ 114 0062 02       		.uleb128 0x2
+ 115 0063 04       		.byte	0x4
+ 116 0064 05       		.byte	0x5
+ 117 0065 ED020000 		.4byte	.LASF7
+ 118 0069 03       		.uleb128 0x3
+ 119 006a CA030000 		.4byte	.LASF8
+ 120 006e 02       		.byte	0x2
+ 121 006f 41       		.byte	0x41
+ 122 0070 74000000 		.4byte	0x74
+ 123 0074 02       		.uleb128 0x2
+ 124 0075 04       		.byte	0x4
+ 125 0076 07       		.byte	0x7
+ 126 0077 DB040000 		.4byte	.LASF9
+ 127 007b 02       		.uleb128 0x2
+ 128 007c 08       		.byte	0x8
+ 129 007d 05       		.byte	0x5
+ 130 007e D7010000 		.4byte	.LASF10
+ 131 0082 02       		.uleb128 0x2
+ 132 0083 08       		.byte	0x8
+ 133 0084 07       		.byte	0x7
+ 134 0085 3F010000 		.4byte	.LASF11
+ 135 0089 04       		.uleb128 0x4
+ 136 008a 04       		.byte	0x4
+ 137 008b 05       		.byte	0x5
+ 138 008c 696E7400 		.ascii	"int\000"
+ 139 0090 02       		.uleb128 0x2
+ 140 0091 04       		.byte	0x4
+ 141 0092 07       		.byte	0x7
+ 142 0093 52040000 		.4byte	.LASF12
+ 143 0097 03       		.uleb128 0x3
+ 144 0098 E6090000 		.4byte	.LASF13
+ 145 009c 03       		.byte	0x3
+ 146 009d 18       		.byte	0x18
+ 147 009e 3A000000 		.4byte	0x3a
+ 148 00a2 03       		.uleb128 0x3
+ 149 00a3 BB010000 		.4byte	.LASF14
+ 150 00a7 03       		.byte	0x3
+ 151 00a8 20       		.byte	0x20
+ 152 00a9 45000000 		.4byte	0x45
+ 153 00ad 03       		.uleb128 0x3
+ 154 00ae 5F040000 		.4byte	.LASF15
+ 155 00b2 03       		.byte	0x3
+ 156 00b3 24       		.byte	0x24
+ 157 00b4 50000000 		.4byte	0x50
+ 158 00b8 03       		.uleb128 0x3
+ 159 00b9 AD080000 		.4byte	.LASF16
+ 160 00bd 03       		.byte	0x3
+ 161 00be 30       		.byte	0x30
+ 162 00bf 69000000 		.4byte	0x69
+ 163 00c3 02       		.uleb128 0x2
+ 164 00c4 04       		.byte	0x4
+ 165 00c5 07       		.byte	0x7
+ 166 00c6 BA060000 		.4byte	.LASF17
+ 167 00ca 05       		.uleb128 0x5
+ 168 00cb B8000000 		.4byte	0xb8
+ 169 00cf 02       		.uleb128 0x2
+ 170 00d0 08       		.byte	0x8
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc566hHT.s 			page 5
+
+
+ 171 00d1 04       		.byte	0x4
+ 172 00d2 7A090000 		.4byte	.LASF18
+ 173 00d6 06       		.uleb128 0x6
+ 174 00d7 B8       		.byte	0xb8
+ 175 00d8 04       		.byte	0x4
+ 176 00d9 34       		.byte	0x34
+ 177 00da E7040000 		.4byte	0x4e7
+ 178 00de 07       		.uleb128 0x7
+ 179 00df 15010000 		.4byte	.LASF19
+ 180 00e3 04       		.byte	0x4
+ 181 00e4 37       		.byte	0x37
+ 182 00e5 B8000000 		.4byte	0xb8
+ 183 00e9 00       		.byte	0
+ 184 00ea 07       		.uleb128 0x7
+ 185 00eb BF030000 		.4byte	.LASF20
+ 186 00ef 04       		.byte	0x4
+ 187 00f0 38       		.byte	0x38
+ 188 00f1 B8000000 		.4byte	0xb8
+ 189 00f5 04       		.byte	0x4
+ 190 00f6 07       		.uleb128 0x7
+ 191 00f7 11030000 		.4byte	.LASF21
+ 192 00fb 04       		.byte	0x4
+ 193 00fc 39       		.byte	0x39
+ 194 00fd B8000000 		.4byte	0xb8
+ 195 0101 08       		.byte	0x8
+ 196 0102 07       		.uleb128 0x7
+ 197 0103 D8070000 		.4byte	.LASF22
+ 198 0107 04       		.byte	0x4
+ 199 0108 3A       		.byte	0x3a
+ 200 0109 B8000000 		.4byte	0xb8
+ 201 010d 0C       		.byte	0xc
+ 202 010e 07       		.uleb128 0x7
+ 203 010f 5D020000 		.4byte	.LASF23
+ 204 0113 04       		.byte	0x4
+ 205 0114 3B       		.byte	0x3b
+ 206 0115 B8000000 		.4byte	0xb8
+ 207 0119 10       		.byte	0x10
+ 208 011a 07       		.uleb128 0x7
+ 209 011b B3020000 		.4byte	.LASF24
+ 210 011f 04       		.byte	0x4
+ 211 0120 3C       		.byte	0x3c
+ 212 0121 B8000000 		.4byte	0xb8
+ 213 0125 14       		.byte	0x14
+ 214 0126 07       		.uleb128 0x7
+ 215 0127 0A050000 		.4byte	.LASF25
+ 216 012b 04       		.byte	0x4
+ 217 012c 3D       		.byte	0x3d
+ 218 012d B8000000 		.4byte	0xb8
+ 219 0131 18       		.byte	0x18
+ 220 0132 07       		.uleb128 0x7
+ 221 0133 86000000 		.4byte	.LASF26
+ 222 0137 04       		.byte	0x4
+ 223 0138 3E       		.byte	0x3e
+ 224 0139 B8000000 		.4byte	0xb8
+ 225 013d 1C       		.byte	0x1c
+ 226 013e 07       		.uleb128 0x7
+ 227 013f 020C0000 		.4byte	.LASF27
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc566hHT.s 			page 6
+
+
+ 228 0143 04       		.byte	0x4
+ 229 0144 3F       		.byte	0x3f
+ 230 0145 B8000000 		.4byte	0xb8
+ 231 0149 20       		.byte	0x20
+ 232 014a 07       		.uleb128 0x7
+ 233 014b 49070000 		.4byte	.LASF28
+ 234 014f 04       		.byte	0x4
+ 235 0150 40       		.byte	0x40
+ 236 0151 B8000000 		.4byte	0xb8
+ 237 0155 24       		.byte	0x24
+ 238 0156 07       		.uleb128 0x7
+ 239 0157 5E060000 		.4byte	.LASF29
+ 240 015b 04       		.byte	0x4
+ 241 015c 43       		.byte	0x43
+ 242 015d 97000000 		.4byte	0x97
+ 243 0161 28       		.byte	0x28
+ 244 0162 07       		.uleb128 0x7
+ 245 0163 69000000 		.4byte	.LASF30
+ 246 0167 04       		.byte	0x4
+ 247 0168 44       		.byte	0x44
+ 248 0169 97000000 		.4byte	0x97
+ 249 016d 29       		.byte	0x29
+ 250 016e 07       		.uleb128 0x7
+ 251 016f F80B0000 		.4byte	.LASF31
+ 252 0173 04       		.byte	0x4
+ 253 0174 45       		.byte	0x45
+ 254 0175 97000000 		.4byte	0x97
+ 255 0179 2A       		.byte	0x2a
+ 256 017a 07       		.uleb128 0x7
+ 257 017b 3B070000 		.4byte	.LASF32
+ 258 017f 04       		.byte	0x4
+ 259 0180 46       		.byte	0x46
+ 260 0181 97000000 		.4byte	0x97
+ 261 0185 2B       		.byte	0x2b
+ 262 0186 07       		.uleb128 0x7
+ 263 0187 AE050000 		.4byte	.LASF33
+ 264 018b 04       		.byte	0x4
+ 265 018c 47       		.byte	0x47
+ 266 018d 97000000 		.4byte	0x97
+ 267 0191 2C       		.byte	0x2c
+ 268 0192 07       		.uleb128 0x7
+ 269 0193 EE090000 		.4byte	.LASF34
+ 270 0197 04       		.byte	0x4
+ 271 0198 48       		.byte	0x48
+ 272 0199 97000000 		.4byte	0x97
+ 273 019d 2D       		.byte	0x2d
+ 274 019e 07       		.uleb128 0x7
+ 275 019f 66020000 		.4byte	.LASF35
+ 276 01a3 04       		.byte	0x4
+ 277 01a4 49       		.byte	0x49
+ 278 01a5 97000000 		.4byte	0x97
+ 279 01a9 2E       		.byte	0x2e
+ 280 01aa 07       		.uleb128 0x7
+ 281 01ab 6B060000 		.4byte	.LASF36
+ 282 01af 04       		.byte	0x4
+ 283 01b0 4A       		.byte	0x4a
+ 284 01b1 97000000 		.4byte	0x97
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc566hHT.s 			page 7
+
+
+ 285 01b5 2F       		.byte	0x2f
+ 286 01b6 07       		.uleb128 0x7
+ 287 01b7 96090000 		.4byte	.LASF37
+ 288 01bb 04       		.byte	0x4
+ 289 01bc 4B       		.byte	0x4b
+ 290 01bd 97000000 		.4byte	0x97
+ 291 01c1 30       		.byte	0x30
+ 292 01c2 07       		.uleb128 0x7
+ 293 01c3 FF040000 		.4byte	.LASF38
+ 294 01c7 04       		.byte	0x4
+ 295 01c8 4E       		.byte	0x4e
+ 296 01c9 97000000 		.4byte	0x97
+ 297 01cd 31       		.byte	0x31
+ 298 01ce 07       		.uleb128 0x7
+ 299 01cf A8000000 		.4byte	.LASF39
+ 300 01d3 04       		.byte	0x4
+ 301 01d4 4F       		.byte	0x4f
+ 302 01d5 97000000 		.4byte	0x97
+ 303 01d9 32       		.byte	0x32
+ 304 01da 07       		.uleb128 0x7
+ 305 01db 46040000 		.4byte	.LASF40
+ 306 01df 04       		.byte	0x4
+ 307 01e0 50       		.byte	0x50
+ 308 01e1 97000000 		.4byte	0x97
+ 309 01e5 33       		.byte	0x33
+ 310 01e6 07       		.uleb128 0x7
+ 311 01e7 CE060000 		.4byte	.LASF41
+ 312 01eb 04       		.byte	0x4
+ 313 01ec 51       		.byte	0x51
+ 314 01ed 97000000 		.4byte	0x97
+ 315 01f1 34       		.byte	0x34
+ 316 01f2 07       		.uleb128 0x7
+ 317 01f3 6C0A0000 		.4byte	.LASF42
+ 318 01f7 04       		.byte	0x4
+ 319 01f8 52       		.byte	0x52
+ 320 01f9 A2000000 		.4byte	0xa2
+ 321 01fd 36       		.byte	0x36
+ 322 01fe 07       		.uleb128 0x7
+ 323 01ff 43030000 		.4byte	.LASF43
+ 324 0203 04       		.byte	0x4
+ 325 0204 53       		.byte	0x53
+ 326 0205 A2000000 		.4byte	0xa2
+ 327 0209 38       		.byte	0x38
+ 328 020a 07       		.uleb128 0x7
+ 329 020b E50A0000 		.4byte	.LASF44
+ 330 020f 04       		.byte	0x4
+ 331 0210 54       		.byte	0x54
+ 332 0211 A2000000 		.4byte	0xa2
+ 333 0215 3A       		.byte	0x3a
+ 334 0216 07       		.uleb128 0x7
+ 335 0217 A4020000 		.4byte	.LASF45
+ 336 021b 04       		.byte	0x4
+ 337 021c 55       		.byte	0x55
+ 338 021d 97000000 		.4byte	0x97
+ 339 0221 3C       		.byte	0x3c
+ 340 0222 07       		.uleb128 0x7
+ 341 0223 6A030000 		.4byte	.LASF46
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc566hHT.s 			page 8
+
+
+ 342 0227 04       		.byte	0x4
+ 343 0228 56       		.byte	0x56
+ 344 0229 97000000 		.4byte	0x97
+ 345 022d 3D       		.byte	0x3d
+ 346 022e 07       		.uleb128 0x7
+ 347 022f 7D080000 		.4byte	.LASF47
+ 348 0233 04       		.byte	0x4
+ 349 0234 57       		.byte	0x57
+ 350 0235 97000000 		.4byte	0x97
+ 351 0239 3E       		.byte	0x3e
+ 352 023a 07       		.uleb128 0x7
+ 353 023b 26010000 		.4byte	.LASF48
+ 354 023f 04       		.byte	0x4
+ 355 0240 58       		.byte	0x58
+ 356 0241 97000000 		.4byte	0x97
+ 357 0245 3F       		.byte	0x3f
+ 358 0246 07       		.uleb128 0x7
+ 359 0247 54070000 		.4byte	.LASF49
+ 360 024b 04       		.byte	0x4
+ 361 024c 59       		.byte	0x59
+ 362 024d 97000000 		.4byte	0x97
+ 363 0251 40       		.byte	0x40
+ 364 0252 07       		.uleb128 0x7
+ 365 0253 D5030000 		.4byte	.LASF50
+ 366 0257 04       		.byte	0x4
+ 367 0258 5A       		.byte	0x5a
+ 368 0259 97000000 		.4byte	0x97
+ 369 025d 41       		.byte	0x41
+ 370 025e 07       		.uleb128 0x7
+ 371 025f 13050000 		.4byte	.LASF51
+ 372 0263 04       		.byte	0x4
+ 373 0264 5B       		.byte	0x5b
+ 374 0265 97000000 		.4byte	0x97
+ 375 0269 42       		.byte	0x42
+ 376 026a 07       		.uleb128 0x7
+ 377 026b 30070000 		.4byte	.LASF52
+ 378 026f 04       		.byte	0x4
+ 379 0270 5C       		.byte	0x5c
+ 380 0271 97000000 		.4byte	0x97
+ 381 0275 43       		.byte	0x43
+ 382 0276 07       		.uleb128 0x7
+ 383 0277 1A030000 		.4byte	.LASF53
+ 384 027b 04       		.byte	0x4
+ 385 027c 5D       		.byte	0x5d
+ 386 027d 97000000 		.4byte	0x97
+ 387 0281 44       		.byte	0x44
+ 388 0282 07       		.uleb128 0x7
+ 389 0283 00000000 		.4byte	.LASF54
+ 390 0287 04       		.byte	0x4
+ 391 0288 5E       		.byte	0x5e
+ 392 0289 B8000000 		.4byte	0xb8
+ 393 028d 48       		.byte	0x48
+ 394 028e 07       		.uleb128 0x7
+ 395 028f F6020000 		.4byte	.LASF55
+ 396 0293 04       		.byte	0x4
+ 397 0294 5F       		.byte	0x5f
+ 398 0295 B8000000 		.4byte	0xb8
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc566hHT.s 			page 9
+
+
+ 399 0299 4C       		.byte	0x4c
+ 400 029a 07       		.uleb128 0x7
+ 401 029b 320C0000 		.4byte	.LASF56
+ 402 029f 04       		.byte	0x4
+ 403 02a0 60       		.byte	0x60
+ 404 02a1 97000000 		.4byte	0x97
+ 405 02a5 50       		.byte	0x50
+ 406 02a6 07       		.uleb128 0x7
+ 407 02a7 95010000 		.4byte	.LASF57
+ 408 02ab 04       		.byte	0x4
+ 409 02ac 61       		.byte	0x61
+ 410 02ad 97000000 		.4byte	0x97
+ 411 02b1 51       		.byte	0x51
+ 412 02b2 07       		.uleb128 0x7
+ 413 02b3 080B0000 		.4byte	.LASF58
+ 414 02b7 04       		.byte	0x4
+ 415 02b8 62       		.byte	0x62
+ 416 02b9 97000000 		.4byte	0x97
+ 417 02bd 52       		.byte	0x52
+ 418 02be 07       		.uleb128 0x7
+ 419 02bf 200C0000 		.4byte	.LASF59
+ 420 02c3 04       		.byte	0x4
+ 421 02c4 63       		.byte	0x63
+ 422 02c5 97000000 		.4byte	0x97
+ 423 02c9 53       		.byte	0x53
+ 424 02ca 07       		.uleb128 0x7
+ 425 02cb 8B080000 		.4byte	.LASF60
+ 426 02cf 04       		.byte	0x4
+ 427 02d0 64       		.byte	0x64
+ 428 02d1 97000000 		.4byte	0x97
+ 429 02d5 54       		.byte	0x54
+ 430 02d6 07       		.uleb128 0x7
+ 431 02d7 A7010000 		.4byte	.LASF61
+ 432 02db 04       		.byte	0x4
+ 433 02dc 65       		.byte	0x65
+ 434 02dd 97000000 		.4byte	0x97
+ 435 02e1 55       		.byte	0x55
+ 436 02e2 07       		.uleb128 0x7
+ 437 02e3 C7040000 		.4byte	.LASF62
+ 438 02e7 04       		.byte	0x4
+ 439 02e8 66       		.byte	0x66
+ 440 02e9 97000000 		.4byte	0x97
+ 441 02ed 56       		.byte	0x56
+ 442 02ee 07       		.uleb128 0x7
+ 443 02ef 1F050000 		.4byte	.LASF63
+ 444 02f3 04       		.byte	0x4
+ 445 02f4 67       		.byte	0x67
+ 446 02f5 97000000 		.4byte	0x97
+ 447 02f9 57       		.byte	0x57
+ 448 02fa 07       		.uleb128 0x7
+ 449 02fb 24000000 		.4byte	.LASF64
+ 450 02ff 04       		.byte	0x4
+ 451 0300 68       		.byte	0x68
+ 452 0301 97000000 		.4byte	0x97
+ 453 0305 58       		.byte	0x58
+ 454 0306 07       		.uleb128 0x7
+ 455 0307 16080000 		.4byte	.LASF65
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc566hHT.s 			page 10
+
+
+ 456 030b 04       		.byte	0x4
+ 457 030c 69       		.byte	0x69
+ 458 030d 97000000 		.4byte	0x97
+ 459 0311 59       		.byte	0x59
+ 460 0312 07       		.uleb128 0x7
+ 461 0313 C3060000 		.4byte	.LASF66
+ 462 0317 04       		.byte	0x4
+ 463 0318 6E       		.byte	0x6e
+ 464 0319 AD000000 		.4byte	0xad
+ 465 031d 5A       		.byte	0x5a
+ 466 031e 07       		.uleb128 0x7
+ 467 031f 280A0000 		.4byte	.LASF67
+ 468 0323 04       		.byte	0x4
+ 469 0324 6F       		.byte	0x6f
+ 470 0325 AD000000 		.4byte	0xad
+ 471 0329 5C       		.byte	0x5c
+ 472 032a 07       		.uleb128 0x7
+ 473 032b 77000000 		.4byte	.LASF68
+ 474 032f 04       		.byte	0x4
+ 475 0330 70       		.byte	0x70
+ 476 0331 97000000 		.4byte	0x97
+ 477 0335 5E       		.byte	0x5e
+ 478 0336 07       		.uleb128 0x7
+ 479 0337 B2070000 		.4byte	.LASF69
+ 480 033b 04       		.byte	0x4
+ 481 033c 71       		.byte	0x71
+ 482 033d 97000000 		.4byte	0x97
+ 483 0341 5F       		.byte	0x5f
+ 484 0342 07       		.uleb128 0x7
+ 485 0343 1F070000 		.4byte	.LASF70
+ 486 0347 04       		.byte	0x4
+ 487 0348 72       		.byte	0x72
+ 488 0349 97000000 		.4byte	0x97
+ 489 034d 60       		.byte	0x60
+ 490 034e 07       		.uleb128 0x7
+ 491 034f 8B070000 		.4byte	.LASF71
+ 492 0353 04       		.byte	0x4
+ 493 0354 73       		.byte	0x73
+ 494 0355 B8000000 		.4byte	0xb8
+ 495 0359 64       		.byte	0x64
+ 496 035a 07       		.uleb128 0x7
+ 497 035b 65010000 		.4byte	.LASF72
+ 498 035f 04       		.byte	0x4
+ 499 0360 76       		.byte	0x76
+ 500 0361 AD000000 		.4byte	0xad
+ 501 0365 68       		.byte	0x68
+ 502 0366 07       		.uleb128 0x7
+ 503 0367 A8060000 		.4byte	.LASF73
+ 504 036b 04       		.byte	0x4
+ 505 036c 77       		.byte	0x77
+ 506 036d AD000000 		.4byte	0xad
+ 507 0371 6A       		.byte	0x6a
+ 508 0372 07       		.uleb128 0x7
+ 509 0373 41050000 		.4byte	.LASF74
+ 510 0377 04       		.byte	0x4
+ 511 0378 78       		.byte	0x78
+ 512 0379 AD000000 		.4byte	0xad
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc566hHT.s 			page 11
+
+
+ 513 037d 6C       		.byte	0x6c
+ 514 037e 07       		.uleb128 0x7
+ 515 037f 91050000 		.4byte	.LASF75
+ 516 0383 04       		.byte	0x4
+ 517 0384 79       		.byte	0x79
+ 518 0385 AD000000 		.4byte	0xad
+ 519 0389 6E       		.byte	0x6e
+ 520 038a 07       		.uleb128 0x7
+ 521 038b 47080000 		.4byte	.LASF76
+ 522 038f 04       		.byte	0x4
+ 523 0390 7B       		.byte	0x7b
+ 524 0391 97000000 		.4byte	0x97
+ 525 0395 70       		.byte	0x70
+ 526 0396 07       		.uleb128 0x7
+ 527 0397 1A020000 		.4byte	.LASF77
+ 528 039b 04       		.byte	0x4
+ 529 039c 7C       		.byte	0x7c
+ 530 039d 97000000 		.4byte	0x97
+ 531 03a1 71       		.byte	0x71
+ 532 03a2 07       		.uleb128 0x7
+ 533 03a3 0A0C0000 		.4byte	.LASF78
+ 534 03a7 04       		.byte	0x4
+ 535 03a8 7D       		.byte	0x7d
+ 536 03a9 97000000 		.4byte	0x97
+ 537 03ad 72       		.byte	0x72
+ 538 03ae 07       		.uleb128 0x7
+ 539 03af EC060000 		.4byte	.LASF79
+ 540 03b3 04       		.byte	0x4
+ 541 03b4 7E       		.byte	0x7e
+ 542 03b5 97000000 		.4byte	0x97
+ 543 03b9 73       		.byte	0x73
+ 544 03ba 07       		.uleb128 0x7
+ 545 03bb 9B080000 		.4byte	.LASF80
+ 546 03bf 04       		.byte	0x4
+ 547 03c0 80       		.byte	0x80
+ 548 03c1 AD000000 		.4byte	0xad
+ 549 03c5 74       		.byte	0x74
+ 550 03c6 07       		.uleb128 0x7
+ 551 03c7 BB090000 		.4byte	.LASF81
+ 552 03cb 04       		.byte	0x4
+ 553 03cc 81       		.byte	0x81
+ 554 03cd AD000000 		.4byte	0xad
+ 555 03d1 76       		.byte	0x76
+ 556 03d2 07       		.uleb128 0x7
+ 557 03d3 55030000 		.4byte	.LASF82
+ 558 03d7 04       		.byte	0x4
+ 559 03d8 82       		.byte	0x82
+ 560 03d9 AD000000 		.4byte	0xad
+ 561 03dd 78       		.byte	0x78
+ 562 03de 07       		.uleb128 0x7
+ 563 03df CC000000 		.4byte	.LASF83
+ 564 03e3 04       		.byte	0x4
+ 565 03e4 83       		.byte	0x83
+ 566 03e5 AD000000 		.4byte	0xad
+ 567 03e9 7A       		.byte	0x7a
+ 568 03ea 07       		.uleb128 0x7
+ 569 03eb 610B0000 		.4byte	.LASF84
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc566hHT.s 			page 12
+
+
+ 570 03ef 04       		.byte	0x4
+ 571 03f0 86       		.byte	0x86
+ 572 03f1 97000000 		.4byte	0x97
+ 573 03f5 7C       		.byte	0x7c
+ 574 03f6 07       		.uleb128 0x7
+ 575 03f7 A90A0000 		.4byte	.LASF85
+ 576 03fb 04       		.byte	0x4
+ 577 03fc 87       		.byte	0x87
+ 578 03fd 97000000 		.4byte	0x97
+ 579 0401 7D       		.byte	0x7d
+ 580 0402 07       		.uleb128 0x7
+ 581 0403 38000000 		.4byte	.LASF86
+ 582 0407 04       		.byte	0x4
+ 583 0408 88       		.byte	0x88
+ 584 0409 97000000 		.4byte	0x97
+ 585 040d 7E       		.byte	0x7e
+ 586 040e 07       		.uleb128 0x7
+ 587 040f AB030000 		.4byte	.LASF87
+ 588 0413 04       		.byte	0x4
+ 589 0414 89       		.byte	0x89
+ 590 0415 97000000 		.4byte	0x97
+ 591 0419 7F       		.byte	0x7f
+ 592 041a 07       		.uleb128 0x7
+ 593 041b 32040000 		.4byte	.LASF88
+ 594 041f 04       		.byte	0x4
+ 595 0420 8A       		.byte	0x8a
+ 596 0421 97000000 		.4byte	0x97
+ 597 0425 80       		.byte	0x80
+ 598 0426 07       		.uleb128 0x7
+ 599 0427 920A0000 		.4byte	.LASF89
+ 600 042b 04       		.byte	0x4
+ 601 042c 8D       		.byte	0x8d
+ 602 042d B8000000 		.4byte	0xb8
+ 603 0431 84       		.byte	0x84
+ 604 0432 07       		.uleb128 0x7
+ 605 0433 E1000000 		.4byte	.LASF90
+ 606 0437 04       		.byte	0x4
+ 607 0438 8E       		.byte	0x8e
+ 608 0439 B8000000 		.4byte	0xb8
+ 609 043d 88       		.byte	0x88
+ 610 043e 07       		.uleb128 0x7
+ 611 043f 4C0B0000 		.4byte	.LASF91
+ 612 0443 04       		.byte	0x4
+ 613 0444 8F       		.byte	0x8f
+ 614 0445 B8000000 		.4byte	0xb8
+ 615 0449 8C       		.byte	0x8c
+ 616 044a 07       		.uleb128 0x7
+ 617 044b 77060000 		.4byte	.LASF92
+ 618 044f 04       		.byte	0x4
+ 619 0450 90       		.byte	0x90
+ 620 0451 B8000000 		.4byte	0xb8
+ 621 0455 90       		.byte	0x90
+ 622 0456 07       		.uleb128 0x7
+ 623 0457 13040000 		.4byte	.LASF93
+ 624 045b 04       		.byte	0x4
+ 625 045c 91       		.byte	0x91
+ 626 045d B8000000 		.4byte	0xb8
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc566hHT.s 			page 13
+
+
+ 627 0461 94       		.byte	0x94
+ 628 0462 07       		.uleb128 0x7
+ 629 0463 3D060000 		.4byte	.LASF94
+ 630 0467 04       		.byte	0x4
+ 631 0468 92       		.byte	0x92
+ 632 0469 B8000000 		.4byte	0xb8
+ 633 046d 98       		.byte	0x98
+ 634 046e 07       		.uleb128 0x7
+ 635 046f C30B0000 		.4byte	.LASF95
+ 636 0473 04       		.byte	0x4
+ 637 0474 93       		.byte	0x93
+ 638 0475 B8000000 		.4byte	0xb8
+ 639 0479 9C       		.byte	0x9c
+ 640 047a 07       		.uleb128 0x7
+ 641 047b 75010000 		.4byte	.LASF96
+ 642 047f 04       		.byte	0x4
+ 643 0480 94       		.byte	0x94
+ 644 0481 B8000000 		.4byte	0xb8
+ 645 0485 A0       		.byte	0xa0
+ 646 0486 07       		.uleb128 0x7
+ 647 0487 71020000 		.4byte	.LASF97
+ 648 048b 04       		.byte	0x4
+ 649 048c 95       		.byte	0x95
+ 650 048d AD000000 		.4byte	0xad
+ 651 0491 A4       		.byte	0xa4
+ 652 0492 07       		.uleb128 0x7
+ 653 0493 28060000 		.4byte	.LASF98
+ 654 0497 04       		.byte	0x4
+ 655 0498 96       		.byte	0x96
+ 656 0499 AD000000 		.4byte	0xad
+ 657 049d A6       		.byte	0xa6
+ 658 049e 07       		.uleb128 0x7
+ 659 049f A6070000 		.4byte	.LASF99
+ 660 04a3 04       		.byte	0x4
+ 661 04a4 97       		.byte	0x97
+ 662 04a5 AD000000 		.4byte	0xad
+ 663 04a9 A8       		.byte	0xa8
+ 664 04aa 07       		.uleb128 0x7
+ 665 04ab A2090000 		.4byte	.LASF100
+ 666 04af 04       		.byte	0x4
+ 667 04b0 98       		.byte	0x98
+ 668 04b1 AD000000 		.4byte	0xad
+ 669 04b5 AA       		.byte	0xaa
+ 670 04b6 07       		.uleb128 0x7
+ 671 04b7 50050000 		.4byte	.LASF101
+ 672 04bb 04       		.byte	0x4
+ 673 04bc 99       		.byte	0x99
+ 674 04bd AD000000 		.4byte	0xad
+ 675 04c1 AC       		.byte	0xac
+ 676 04c2 07       		.uleb128 0x7
+ 677 04c3 03070000 		.4byte	.LASF102
+ 678 04c7 04       		.byte	0x4
+ 679 04c8 9A       		.byte	0x9a
+ 680 04c9 AD000000 		.4byte	0xad
+ 681 04cd AE       		.byte	0xae
+ 682 04ce 07       		.uleb128 0x7
+ 683 04cf 61070000 		.4byte	.LASF103
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc566hHT.s 			page 14
+
+
+ 684 04d3 04       		.byte	0x4
+ 685 04d4 9D       		.byte	0x9d
+ 686 04d5 AD000000 		.4byte	0xad
+ 687 04d9 B0       		.byte	0xb0
+ 688 04da 07       		.uleb128 0x7
+ 689 04db 55000000 		.4byte	.LASF104
+ 690 04df 04       		.byte	0x4
+ 691 04e0 9E       		.byte	0x9e
+ 692 04e1 B8000000 		.4byte	0xb8
+ 693 04e5 B4       		.byte	0xb4
+ 694 04e6 00       		.byte	0
+ 695 04e7 03       		.uleb128 0x3
+ 696 04e8 CC050000 		.4byte	.LASF105
+ 697 04ec 04       		.byte	0x4
+ 698 04ed 9F       		.byte	0x9f
+ 699 04ee D6000000 		.4byte	0xd6
+ 700 04f2 02       		.uleb128 0x2
+ 701 04f3 01       		.byte	0x1
+ 702 04f4 08       		.byte	0x8
+ 703 04f5 86090000 		.4byte	.LASF106
+ 704 04f9 02       		.uleb128 0x2
+ 705 04fa 04       		.byte	0x4
+ 706 04fb 04       		.byte	0x4
+ 707 04fc 85070000 		.4byte	.LASF107
+ 708 0500 02       		.uleb128 0x2
+ 709 0501 08       		.byte	0x8
+ 710 0502 04       		.byte	0x4
+ 711 0503 4E030000 		.4byte	.LASF108
+ 712 0507 08       		.uleb128 0x8
+ 713 0508 01       		.byte	0x1
+ 714 0509 2C000000 		.4byte	0x2c
+ 715 050d 05       		.byte	0x5
+ 716 050e 2305     		.2byte	0x523
+ 717 0510 21050000 		.4byte	0x521
+ 718 0514 09       		.uleb128 0x9
+ 719 0515 500A0000 		.4byte	.LASF109
+ 720 0519 00       		.byte	0
+ 721 051a 09       		.uleb128 0x9
+ 722 051b CE090000 		.4byte	.LASF110
+ 723 051f 01       		.byte	0x1
+ 724 0520 00       		.byte	0
+ 725 0521 0A       		.uleb128 0xa
+ 726 0522 04       		.byte	0x4
+ 727 0523 02       		.uleb128 0x2
+ 728 0524 01       		.byte	0x1
+ 729 0525 02       		.byte	0x2
+ 730 0526 74090000 		.4byte	.LASF111
+ 731 052a 08       		.uleb128 0x8
+ 732 052b 01       		.byte	0x1
+ 733 052c 2C000000 		.4byte	0x2c
+ 734 0530 06       		.byte	0x6
+ 735 0531 1304     		.2byte	0x413
+ 736 0533 50050000 		.4byte	0x550
+ 737 0537 09       		.uleb128 0x9
+ 738 0538 D5020000 		.4byte	.LASF112
+ 739 053c 00       		.byte	0
+ 740 053d 09       		.uleb128 0x9
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc566hHT.s 			page 15
+
+
+ 741 053e E0070000 		.4byte	.LASF113
+ 742 0542 01       		.byte	0x1
+ 743 0543 09       		.uleb128 0x9
+ 744 0544 2B030000 		.4byte	.LASF114
+ 745 0548 02       		.byte	0x2
+ 746 0549 09       		.uleb128 0x9
+ 747 054a A00B0000 		.4byte	.LASF115
+ 748 054e 03       		.byte	0x3
+ 749 054f 00       		.byte	0
+ 750 0550 0B       		.uleb128 0xb
+ 751 0551 2F020000 		.4byte	.LASF116
+ 752 0555 06       		.byte	0x6
+ 753 0556 1804     		.2byte	0x418
+ 754 0558 2A050000 		.4byte	0x52a
+ 755 055c 0C       		.uleb128 0xc
+ 756 055d 78       		.byte	0x78
+ 757 055e 06       		.byte	0x6
+ 758 055f 0205     		.2byte	0x502
+ 759 0561 29060000 		.4byte	0x629
+ 760 0565 0D       		.uleb128 0xd
+ 761 0566 FB090000 		.4byte	.LASF117
+ 762 056a 06       		.byte	0x6
+ 763 056b 0405     		.2byte	0x504
+ 764 056d B8000000 		.4byte	0xb8
+ 765 0571 00       		.byte	0
+ 766 0572 0D       		.uleb128 0xd
+ 767 0573 180B0000 		.4byte	.LASF118
+ 768 0577 06       		.byte	0x6
+ 769 0578 0505     		.2byte	0x505
+ 770 057a B8000000 		.4byte	0xb8
+ 771 057e 04       		.byte	0x4
+ 772 057f 0D       		.uleb128 0xd
+ 773 0580 8B030000 		.4byte	.LASF119
+ 774 0584 06       		.byte	0x6
+ 775 0585 0605     		.2byte	0x506
+ 776 0587 B8000000 		.4byte	0xb8
+ 777 058b 08       		.byte	0x8
+ 778 058c 0D       		.uleb128 0xd
+ 779 058d DF060000 		.4byte	.LASF120
+ 780 0591 06       		.byte	0x6
+ 781 0592 0705     		.2byte	0x507
+ 782 0594 B8000000 		.4byte	0xb8
+ 783 0598 0C       		.byte	0xc
+ 784 0599 0D       		.uleb128 0xd
+ 785 059a 6F050000 		.4byte	.LASF121
+ 786 059e 06       		.byte	0x6
+ 787 059f 0805     		.2byte	0x508
+ 788 05a1 B8000000 		.4byte	0xb8
+ 789 05a5 10       		.byte	0x10
+ 790 05a6 0D       		.uleb128 0xd
+ 791 05a7 D40A0000 		.4byte	.LASF122
+ 792 05ab 06       		.byte	0x6
+ 793 05ac 0905     		.2byte	0x509
+ 794 05ae 50050000 		.4byte	0x550
+ 795 05b2 14       		.byte	0x14
+ 796 05b3 0D       		.uleb128 0xd
+ 797 05b4 D1070000 		.4byte	.LASF123
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc566hHT.s 			page 16
+
+
+ 798 05b8 06       		.byte	0x6
+ 799 05b9 0A05     		.2byte	0x50a
+ 800 05bb B8000000 		.4byte	0xb8
+ 801 05bf 18       		.byte	0x18
+ 802 05c0 0D       		.uleb128 0xd
+ 803 05c1 DC050000 		.4byte	.LASF124
+ 804 05c5 06       		.byte	0x6
+ 805 05c6 0B05     		.2byte	0x50b
+ 806 05c8 29060000 		.4byte	0x629
+ 807 05cc 1C       		.byte	0x1c
+ 808 05cd 0D       		.uleb128 0xd
+ 809 05ce 3E080000 		.4byte	.LASF125
+ 810 05d2 06       		.byte	0x6
+ 811 05d3 0C05     		.2byte	0x50c
+ 812 05d5 B8000000 		.4byte	0xb8
+ 813 05d9 5C       		.byte	0x5c
+ 814 05da 0D       		.uleb128 0xd
+ 815 05db C0000000 		.4byte	.LASF126
+ 816 05df 06       		.byte	0x6
+ 817 05e0 0D05     		.2byte	0x50d
+ 818 05e2 B8000000 		.4byte	0xb8
+ 819 05e6 60       		.byte	0x60
+ 820 05e7 0D       		.uleb128 0xd
+ 821 05e8 6F070000 		.4byte	.LASF127
+ 822 05ec 06       		.byte	0x6
+ 823 05ed 0E05     		.2byte	0x50e
+ 824 05ef B8000000 		.4byte	0xb8
+ 825 05f3 64       		.byte	0x64
+ 826 05f4 0D       		.uleb128 0xd
+ 827 05f5 34080000 		.4byte	.LASF128
+ 828 05f9 06       		.byte	0x6
+ 829 05fa 0F05     		.2byte	0x50f
+ 830 05fc B8000000 		.4byte	0xb8
+ 831 0600 68       		.byte	0x68
+ 832 0601 0D       		.uleb128 0xd
+ 833 0602 E80B0000 		.4byte	.LASF129
+ 834 0606 06       		.byte	0x6
+ 835 0607 1005     		.2byte	0x510
+ 836 0609 B8000000 		.4byte	0xb8
+ 837 060d 6C       		.byte	0x6c
+ 838 060e 0D       		.uleb128 0xd
+ 839 060f 11070000 		.4byte	.LASF130
+ 840 0613 06       		.byte	0x6
+ 841 0614 1105     		.2byte	0x511
+ 842 0616 23050000 		.4byte	0x523
+ 843 061a 70       		.byte	0x70
+ 844 061b 0D       		.uleb128 0xd
+ 845 061c D6080000 		.4byte	.LASF131
+ 846 0620 06       		.byte	0x6
+ 847 0621 1205     		.2byte	0x512
+ 848 0623 B8000000 		.4byte	0xb8
+ 849 0627 74       		.byte	0x74
+ 850 0628 00       		.byte	0
+ 851 0629 0E       		.uleb128 0xe
+ 852 062a B8000000 		.4byte	0xb8
+ 853 062e 39060000 		.4byte	0x639
+ 854 0632 0F       		.uleb128 0xf
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc566hHT.s 			page 17
+
+
+ 855 0633 C3000000 		.4byte	0xc3
+ 856 0637 0F       		.byte	0xf
+ 857 0638 00       		.byte	0
+ 858 0639 0B       		.uleb128 0xb
+ 859 063a C3010000 		.4byte	.LASF132
+ 860 063e 06       		.byte	0x6
+ 861 063f 1305     		.2byte	0x513
+ 862 0641 5C050000 		.4byte	0x55c
+ 863 0645 10       		.uleb128 0x10
+ 864 0646 04       		.byte	0x4
+ 865 0647 4B060000 		.4byte	0x64b
+ 866 064b 11       		.uleb128 0x11
+ 867 064c 56060000 		.4byte	0x656
+ 868 0650 12       		.uleb128 0x12
+ 869 0651 B8000000 		.4byte	0xb8
+ 870 0655 00       		.byte	0
+ 871 0656 0B       		.uleb128 0xb
+ 872 0657 86020000 		.4byte	.LASF133
+ 873 065b 07       		.byte	0x7
+ 874 065c F201     		.2byte	0x1f2
+ 875 065e 45060000 		.4byte	0x645
+ 876 0662 13       		.uleb128 0x13
+ 877 0663 03020000 		.4byte	.LASF144
+ 878 0667 24       		.byte	0x24
+ 879 0668 07       		.byte	0x7
+ 880 0669 7402     		.2byte	0x274
+ 881 066b E5060000 		.4byte	0x6e5
+ 882 066f 0D       		.uleb128 0xd
+ 883 0670 DE0A0000 		.4byte	.LASF134
+ 884 0674 07       		.byte	0x7
+ 885 0675 7702     		.2byte	0x277
+ 886 0677 CA000000 		.4byte	0xca
+ 887 067b 00       		.byte	0
+ 888 067c 0D       		.uleb128 0xd
+ 889 067d C20A0000 		.4byte	.LASF135
+ 890 0681 07       		.byte	0x7
+ 891 0682 7902     		.2byte	0x279
+ 892 0684 21050000 		.4byte	0x521
+ 893 0688 04       		.byte	0x4
+ 894 0689 0D       		.uleb128 0xd
+ 895 068a 1A000000 		.4byte	.LASF136
+ 896 068e 07       		.byte	0x7
+ 897 068f 7A02     		.2byte	0x27a
+ 898 0691 B8000000 		.4byte	0xb8
+ 899 0695 08       		.byte	0x8
+ 900 0696 0D       		.uleb128 0xd
+ 901 0697 0A040000 		.4byte	.LASF137
+ 902 069b 07       		.byte	0x7
+ 903 069c 7B02     		.2byte	0x27b
+ 904 069e CA000000 		.4byte	0xca
+ 905 06a2 0C       		.byte	0xc
+ 906 06a3 0D       		.uleb128 0xd
+ 907 06a4 BA050000 		.4byte	.LASF138
+ 908 06a8 07       		.byte	0x7
+ 909 06a9 7D02     		.2byte	0x27d
+ 910 06ab 21050000 		.4byte	0x521
+ 911 06af 10       		.byte	0x10
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc566hHT.s 			page 18
+
+
+ 912 06b0 0D       		.uleb128 0xd
+ 913 06b1 28040000 		.4byte	.LASF139
+ 914 06b5 07       		.byte	0x7
+ 915 06b6 7E02     		.2byte	0x27e
+ 916 06b8 B8000000 		.4byte	0xb8
+ 917 06bc 14       		.byte	0x14
+ 918 06bd 0D       		.uleb128 0xd
+ 919 06be 430C0000 		.4byte	.LASF140
+ 920 06c2 07       		.byte	0x7
+ 921 06c3 7F02     		.2byte	0x27f
+ 922 06c5 CA000000 		.4byte	0xca
+ 923 06c9 18       		.byte	0x18
+ 924 06ca 0D       		.uleb128 0xd
+ 925 06cb 88050000 		.4byte	.LASF141
+ 926 06cf 07       		.byte	0x7
+ 927 06d0 8502     		.2byte	0x285
+ 928 06d2 56060000 		.4byte	0x656
+ 929 06d6 1C       		.byte	0x1c
+ 930 06d7 0D       		.uleb128 0xd
+ 931 06d8 BA0A0000 		.4byte	.LASF142
+ 932 06dc 07       		.byte	0x7
+ 933 06dd 8802     		.2byte	0x288
+ 934 06df B8000000 		.4byte	0xb8
+ 935 06e3 20       		.byte	0x20
+ 936 06e4 00       		.byte	0
+ 937 06e5 0B       		.uleb128 0xb
+ 938 06e6 E7050000 		.4byte	.LASF143
+ 939 06ea 07       		.byte	0x7
+ 940 06eb 8B02     		.2byte	0x28b
+ 941 06ed 62060000 		.4byte	0x662
+ 942 06f1 14       		.uleb128 0x14
+ 943 06f2 8C060000 		.4byte	.LASF145
+ 944 06f6 4C       		.byte	0x4c
+ 945 06f7 08       		.byte	0x8
+ 946 06f8 2F       		.byte	0x2f
+ 947 06f9 E2070000 		.4byte	0x7e2
+ 948 06fd 07       		.uleb128 0x7
+ 949 06fe 1F010000 		.4byte	.LASF146
+ 950 0702 08       		.byte	0x8
+ 951 0703 31       		.byte	0x31
+ 952 0704 B8000000 		.4byte	0xb8
+ 953 0708 00       		.byte	0
+ 954 0709 07       		.uleb128 0x7
+ 955 070a 56010000 		.4byte	.LASF147
+ 956 070e 08       		.byte	0x8
+ 957 070f 33       		.byte	0x33
+ 958 0710 B8000000 		.4byte	0xb8
+ 959 0714 04       		.byte	0x4
+ 960 0715 07       		.uleb128 0x7
+ 961 0716 12000000 		.4byte	.LASF148
+ 962 071a 08       		.byte	0x8
+ 963 071b 34       		.byte	0x34
+ 964 071c B8000000 		.4byte	0xb8
+ 965 0720 08       		.byte	0x8
+ 966 0721 07       		.uleb128 0x7
+ 967 0722 F8000000 		.4byte	.LASF149
+ 968 0726 08       		.byte	0x8
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc566hHT.s 			page 19
+
+
+ 969 0727 35       		.byte	0x35
+ 970 0728 B8000000 		.4byte	0xb8
+ 971 072c 0C       		.byte	0xc
+ 972 072d 07       		.uleb128 0x7
+ 973 072e 6C080000 		.4byte	.LASF150
+ 974 0732 08       		.byte	0x8
+ 975 0733 37       		.byte	0x37
+ 976 0734 B8000000 		.4byte	0xb8
+ 977 0738 10       		.byte	0x10
+ 978 0739 07       		.uleb128 0x7
+ 979 073a BA0B0000 		.4byte	.LASF151
+ 980 073e 08       		.byte	0x8
+ 981 073f 38       		.byte	0x38
+ 982 0740 B8000000 		.4byte	0xb8
+ 983 0744 14       		.byte	0x14
+ 984 0745 07       		.uleb128 0x7
+ 985 0746 890A0000 		.4byte	.LASF152
+ 986 074a 08       		.byte	0x8
+ 987 074b 39       		.byte	0x39
+ 988 074c B8000000 		.4byte	0xb8
+ 989 0750 18       		.byte	0x18
+ 990 0751 07       		.uleb128 0x7
+ 991 0752 ED040000 		.4byte	.LASF153
+ 992 0756 08       		.byte	0x8
+ 993 0757 3A       		.byte	0x3a
+ 994 0758 23050000 		.4byte	0x523
+ 995 075c 1C       		.byte	0x1c
+ 996 075d 07       		.uleb128 0x7
+ 997 075e 000A0000 		.4byte	.LASF154
+ 998 0762 08       		.byte	0x8
+ 999 0763 3C       		.byte	0x3c
+ 1000 0764 B8000000 		.4byte	0xb8
+ 1001 0768 20       		.byte	0x20
+ 1002 0769 07       		.uleb128 0x7
+ 1003 076a 7A030000 		.4byte	.LASF155
+ 1004 076e 08       		.byte	0x8
+ 1005 076f 3D       		.byte	0x3d
+ 1006 0770 B8000000 		.4byte	0xb8
+ 1007 0774 24       		.byte	0x24
+ 1008 0775 07       		.uleb128 0x7
+ 1009 0776 32010000 		.4byte	.LASF156
+ 1010 077a 08       		.byte	0x8
+ 1011 077b 3F       		.byte	0x3f
+ 1012 077c B8000000 		.4byte	0xb8
+ 1013 0780 28       		.byte	0x28
+ 1014 0781 07       		.uleb128 0x7
+ 1015 0782 900B0000 		.4byte	.LASF157
+ 1016 0786 08       		.byte	0x8
+ 1017 0787 40       		.byte	0x40
+ 1018 0788 B8000000 		.4byte	0xb8
+ 1019 078c 2C       		.byte	0x2c
+ 1020 078d 07       		.uleb128 0x7
+ 1021 078e 110A0000 		.4byte	.LASF158
+ 1022 0792 08       		.byte	0x8
+ 1023 0793 42       		.byte	0x42
+ 1024 0794 B8000000 		.4byte	0xb8
+ 1025 0798 30       		.byte	0x30
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc566hHT.s 			page 20
+
+
+ 1026 0799 07       		.uleb128 0x7
+ 1027 079a F9070000 		.4byte	.LASF159
+ 1028 079e 08       		.byte	0x8
+ 1029 079f 43       		.byte	0x43
+ 1030 07a0 B8000000 		.4byte	0xb8
+ 1031 07a4 34       		.byte	0x34
+ 1032 07a5 07       		.uleb128 0x7
+ 1033 07a6 53060000 		.4byte	.LASF160
+ 1034 07aa 08       		.byte	0x8
+ 1035 07ab 45       		.byte	0x45
+ 1036 07ac B8000000 		.4byte	0xb8
+ 1037 07b0 38       		.byte	0x38
+ 1038 07b1 07       		.uleb128 0x7
+ 1039 07b2 07010000 		.4byte	.LASF161
+ 1040 07b6 08       		.byte	0x8
+ 1041 07b7 46       		.byte	0x46
+ 1042 07b8 B8000000 		.4byte	0xb8
+ 1043 07bc 3C       		.byte	0x3c
+ 1044 07bd 07       		.uleb128 0x7
+ 1045 07be 460A0000 		.4byte	.LASF162
+ 1046 07c2 08       		.byte	0x8
+ 1047 07c3 48       		.byte	0x48
+ 1048 07c4 B8000000 		.4byte	0xb8
+ 1049 07c8 40       		.byte	0x40
+ 1050 07c9 07       		.uleb128 0x7
+ 1051 07ca D90B0000 		.4byte	.LASF163
+ 1052 07ce 08       		.byte	0x8
+ 1053 07cf 49       		.byte	0x49
+ 1054 07d0 B8000000 		.4byte	0xb8
+ 1055 07d4 44       		.byte	0x44
+ 1056 07d5 07       		.uleb128 0x7
+ 1057 07d6 8B090000 		.4byte	.LASF164
+ 1058 07da 08       		.byte	0x8
+ 1059 07db 4B       		.byte	0x4b
+ 1060 07dc B8000000 		.4byte	0xb8
+ 1061 07e0 48       		.byte	0x48
+ 1062 07e1 00       		.byte	0
+ 1063 07e2 03       		.uleb128 0x3
+ 1064 07e3 E5010000 		.4byte	.LASF165
+ 1065 07e7 08       		.byte	0x8
+ 1066 07e8 4C       		.byte	0x4c
+ 1067 07e9 F1060000 		.4byte	0x6f1
+ 1068 07ed 14       		.uleb128 0x14
+ 1069 07ee BD020000 		.4byte	.LASF166
+ 1070 07f2 64       		.byte	0x64
+ 1071 07f3 09       		.byte	0x9
+ 1072 07f4 2F       		.byte	0x2f
+ 1073 07f5 26090000 		.4byte	0x926
+ 1074 07f9 07       		.uleb128 0x7
+ 1075 07fa 7D070000 		.4byte	.LASF167
+ 1076 07fe 09       		.byte	0x9
+ 1077 07ff 31       		.byte	0x31
+ 1078 0800 B8000000 		.4byte	0xb8
+ 1079 0804 00       		.byte	0
+ 1080 0805 07       		.uleb128 0x7
+ 1081 0806 56010000 		.4byte	.LASF147
+ 1082 080a 09       		.byte	0x9
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc566hHT.s 			page 21
+
+
+ 1083 080b 33       		.byte	0x33
+ 1084 080c B8000000 		.4byte	0xb8
+ 1085 0810 04       		.byte	0x4
+ 1086 0811 07       		.uleb128 0x7
+ 1087 0812 9B000000 		.4byte	.LASF168
+ 1088 0816 09       		.byte	0x9
+ 1089 0817 34       		.byte	0x34
+ 1090 0818 B8000000 		.4byte	0xb8
+ 1091 081c 08       		.byte	0x8
+ 1092 081d 07       		.uleb128 0x7
+ 1093 081e 19060000 		.4byte	.LASF169
+ 1094 0822 09       		.byte	0x9
+ 1095 0823 35       		.byte	0x35
+ 1096 0824 B8000000 		.4byte	0xb8
+ 1097 0828 0C       		.byte	0xc
+ 1098 0829 07       		.uleb128 0x7
+ 1099 082a 12000000 		.4byte	.LASF148
+ 1100 082e 09       		.byte	0x9
+ 1101 082f 36       		.byte	0x36
+ 1102 0830 B8000000 		.4byte	0xb8
+ 1103 0834 10       		.byte	0x10
+ 1104 0835 07       		.uleb128 0x7
+ 1105 0836 790A0000 		.4byte	.LASF170
+ 1106 083a 09       		.byte	0x9
+ 1107 083b 37       		.byte	0x37
+ 1108 083c B8000000 		.4byte	0xb8
+ 1109 0840 14       		.byte	0x14
+ 1110 0841 07       		.uleb128 0x7
+ 1111 0842 810A0000 		.4byte	.LASF171
+ 1112 0846 09       		.byte	0x9
+ 1113 0847 38       		.byte	0x38
+ 1114 0848 B8000000 		.4byte	0xb8
+ 1115 084c 18       		.byte	0x18
+ 1116 084d 07       		.uleb128 0x7
+ 1117 084e 5B080000 		.4byte	.LASF172
+ 1118 0852 09       		.byte	0x9
+ 1119 0853 39       		.byte	0x39
+ 1120 0854 23050000 		.4byte	0x523
+ 1121 0858 1C       		.byte	0x1c
+ 1122 0859 07       		.uleb128 0x7
+ 1123 085a BA0B0000 		.4byte	.LASF151
+ 1124 085e 09       		.byte	0x9
+ 1125 085f 3A       		.byte	0x3a
+ 1126 0860 B8000000 		.4byte	0xb8
+ 1127 0864 20       		.byte	0x20
+ 1128 0865 07       		.uleb128 0x7
+ 1129 0866 890A0000 		.4byte	.LASF152
+ 1130 086a 09       		.byte	0x9
+ 1131 086b 3B       		.byte	0x3b
+ 1132 086c B8000000 		.4byte	0xb8
+ 1133 0870 24       		.byte	0x24
+ 1134 0871 07       		.uleb128 0x7
+ 1135 0872 ED040000 		.4byte	.LASF153
+ 1136 0876 09       		.byte	0x9
+ 1137 0877 3C       		.byte	0x3c
+ 1138 0878 23050000 		.4byte	0x523
+ 1139 087c 28       		.byte	0x28
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc566hHT.s 			page 22
+
+
+ 1140 087d 07       		.uleb128 0x7
+ 1141 087e 000A0000 		.4byte	.LASF154
+ 1142 0882 09       		.byte	0x9
+ 1143 0883 3E       		.byte	0x3e
+ 1144 0884 B8000000 		.4byte	0xb8
+ 1145 0888 2C       		.byte	0x2c
+ 1146 0889 07       		.uleb128 0x7
+ 1147 088a 0C060000 		.4byte	.LASF173
+ 1148 088e 09       		.byte	0x9
+ 1149 088f 3F       		.byte	0x3f
+ 1150 0890 B8000000 		.4byte	0xb8
+ 1151 0894 30       		.byte	0x30
+ 1152 0895 07       		.uleb128 0x7
+ 1153 0896 FA0A0000 		.4byte	.LASF174
+ 1154 089a 09       		.byte	0x9
+ 1155 089b 40       		.byte	0x40
+ 1156 089c B8000000 		.4byte	0xb8
+ 1157 08a0 34       		.byte	0x34
+ 1158 08a1 07       		.uleb128 0x7
+ 1159 08a2 C8070000 		.4byte	.LASF175
+ 1160 08a6 09       		.byte	0x9
+ 1161 08a7 41       		.byte	0x41
+ 1162 08a8 B8000000 		.4byte	0xb8
+ 1163 08ac 38       		.byte	0x38
+ 1164 08ad 07       		.uleb128 0x7
+ 1165 08ae 33050000 		.4byte	.LASF176
+ 1166 08b2 09       		.byte	0x9
+ 1167 08b3 42       		.byte	0x42
+ 1168 08b4 B8000000 		.4byte	0xb8
+ 1169 08b8 3C       		.byte	0x3c
+ 1170 08b9 07       		.uleb128 0x7
+ 1171 08ba 8B010000 		.4byte	.LASF177
+ 1172 08be 09       		.byte	0x9
+ 1173 08bf 44       		.byte	0x44
+ 1174 08c0 B8000000 		.4byte	0xb8
+ 1175 08c4 40       		.byte	0x40
+ 1176 08c5 07       		.uleb128 0x7
+ 1177 08c6 900B0000 		.4byte	.LASF157
+ 1178 08ca 09       		.byte	0x9
+ 1179 08cb 45       		.byte	0x45
+ 1180 08cc B8000000 		.4byte	0xb8
+ 1181 08d0 44       		.byte	0x44
+ 1182 08d1 07       		.uleb128 0x7
+ 1183 08d2 110A0000 		.4byte	.LASF158
+ 1184 08d6 09       		.byte	0x9
+ 1185 08d7 47       		.byte	0x47
+ 1186 08d8 B8000000 		.4byte	0xb8
+ 1187 08dc 48       		.byte	0x48
+ 1188 08dd 07       		.uleb128 0x7
+ 1189 08de F9070000 		.4byte	.LASF159
+ 1190 08e2 09       		.byte	0x9
+ 1191 08e3 48       		.byte	0x48
+ 1192 08e4 B8000000 		.4byte	0xb8
+ 1193 08e8 4C       		.byte	0x4c
+ 1194 08e9 07       		.uleb128 0x7
+ 1195 08ea 53060000 		.4byte	.LASF160
+ 1196 08ee 09       		.byte	0x9
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc566hHT.s 			page 23
+
+
+ 1197 08ef 4A       		.byte	0x4a
+ 1198 08f0 B8000000 		.4byte	0xb8
+ 1199 08f4 50       		.byte	0x50
+ 1200 08f5 07       		.uleb128 0x7
+ 1201 08f6 7A050000 		.4byte	.LASF178
+ 1202 08fa 09       		.byte	0x9
+ 1203 08fb 4B       		.byte	0x4b
+ 1204 08fc B8000000 		.4byte	0xb8
+ 1205 0900 54       		.byte	0x54
+ 1206 0901 07       		.uleb128 0x7
+ 1207 0902 4B000000 		.4byte	.LASF179
+ 1208 0906 09       		.byte	0x9
+ 1209 0907 4D       		.byte	0x4d
+ 1210 0908 B8000000 		.4byte	0xb8
+ 1211 090c 58       		.byte	0x58
+ 1212 090d 07       		.uleb128 0x7
+ 1213 090e D90B0000 		.4byte	.LASF163
+ 1214 0912 09       		.byte	0x9
+ 1215 0913 4E       		.byte	0x4e
+ 1216 0914 B8000000 		.4byte	0xb8
+ 1217 0918 5C       		.byte	0x5c
+ 1218 0919 07       		.uleb128 0x7
+ 1219 091a 8B090000 		.4byte	.LASF164
+ 1220 091e 09       		.byte	0x9
+ 1221 091f 50       		.byte	0x50
+ 1222 0920 B8000000 		.4byte	0xb8
+ 1223 0924 60       		.byte	0x60
+ 1224 0925 00       		.byte	0
+ 1225 0926 03       		.uleb128 0x3
+ 1226 0927 760B0000 		.4byte	.LASF180
+ 1227 092b 09       		.byte	0x9
+ 1228 092c 51       		.byte	0x51
+ 1229 092d ED070000 		.4byte	0x7ed
+ 1230 0931 06       		.uleb128 0x6
+ 1231 0932 14       		.byte	0x14
+ 1232 0933 0A       		.byte	0xa
+ 1233 0934 3B       		.byte	0x3b
+ 1234 0935 76090000 		.4byte	0x976
+ 1235 0939 07       		.uleb128 0x7
+ 1236 093a 00060000 		.4byte	.LASF181
+ 1237 093e 0A       		.byte	0xa
+ 1238 093f 3D       		.byte	0x3d
+ 1239 0940 B8000000 		.4byte	0xb8
+ 1240 0944 00       		.byte	0
+ 1241 0945 07       		.uleb128 0x7
+ 1242 0946 C0050000 		.4byte	.LASF182
+ 1243 094a 0A       		.byte	0xa
+ 1244 094b 3E       		.byte	0x3e
+ 1245 094c B8000000 		.4byte	0xb8
+ 1246 0950 04       		.byte	0x4
+ 1247 0951 07       		.uleb128 0x7
+ 1248 0952 CA080000 		.4byte	.LASF183
+ 1249 0956 0A       		.byte	0xa
+ 1250 0957 3F       		.byte	0x3f
+ 1251 0958 76090000 		.4byte	0x976
+ 1252 095c 08       		.byte	0x8
+ 1253 095d 07       		.uleb128 0x7
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc566hHT.s 			page 24
+
+
+ 1254 095e 1D0A0000 		.4byte	.LASF184
+ 1255 0962 0A       		.byte	0xa
+ 1256 0963 40       		.byte	0x40
+ 1257 0964 B8000000 		.4byte	0xb8
+ 1258 0968 0C       		.byte	0xc
+ 1259 0969 07       		.uleb128 0x7
+ 1260 096a 52020000 		.4byte	.LASF185
+ 1261 096e 0A       		.byte	0xa
+ 1262 096f 45       		.byte	0x45
+ 1263 0970 B8000000 		.4byte	0xb8
+ 1264 0974 10       		.byte	0x10
+ 1265 0975 00       		.byte	0
+ 1266 0976 10       		.uleb128 0x10
+ 1267 0977 04       		.byte	0x4
+ 1268 0978 7C090000 		.4byte	0x97c
+ 1269 097c 15       		.uleb128 0x15
+ 1270 097d 39060000 		.4byte	0x639
+ 1271 0981 03       		.uleb128 0x3
+ 1272 0982 230B0000 		.4byte	.LASF186
+ 1273 0986 0A       		.byte	0xa
+ 1274 0987 48       		.byte	0x48
+ 1275 0988 31090000 		.4byte	0x931
+ 1276 098c 16       		.uleb128 0x16
+ 1277 098d 75030000 		.4byte	.LASF198
+ 1278 0991 01       		.byte	0x1
+ 1279 0992 2E       		.byte	0x2e
+ 1280 0993 89000000 		.4byte	0x89
+ 1281 0997 00000000 		.4byte	.LFB549
+ 1282 099b 14000000 		.4byte	.LFE549-.LFB549
+ 1283 099f 01       		.uleb128 0x1
+ 1284 09a0 9C       		.byte	0x9c
+ 1285 09a1 CC090000 		.4byte	0x9cc
+ 1286 09a5 17       		.uleb128 0x17
+ 1287 09a6 08000000 		.4byte	.LVL0
+ 1288 09aa 3F0A0000 		.4byte	0xa3f
+ 1289 09ae BC090000 		.4byte	0x9bc
+ 1290 09b2 18       		.uleb128 0x18
+ 1291 09b3 01       		.uleb128 0x1
+ 1292 09b4 50       		.byte	0x50
+ 1293 09b5 05       		.uleb128 0x5
+ 1294 09b6 0C       		.byte	0xc
+ 1295 09b7 00000810 		.4byte	0x10080000
+ 1296 09bb 00       		.byte	0
+ 1297 09bc 19       		.uleb128 0x19
+ 1298 09bd 0E000000 		.4byte	.LVL1
+ 1299 09c1 4B0A0000 		.4byte	0xa4b
+ 1300 09c5 18       		.uleb128 0x18
+ 1301 09c6 01       		.uleb128 0x1
+ 1302 09c7 50       		.byte	0x50
+ 1303 09c8 01       		.uleb128 0x1
+ 1304 09c9 30       		.byte	0x30
+ 1305 09ca 00       		.byte	0
+ 1306 09cb 00       		.byte	0
+ 1307 09cc 1A       		.uleb128 0x1a
+ 1308 09cd 9C070000 		.4byte	.LASF187
+ 1309 09d1 04       		.byte	0x4
+ 1310 09d2 A7       		.byte	0xa7
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc566hHT.s 			page 25
+
+
+ 1311 09d3 D7090000 		.4byte	0x9d7
+ 1312 09d7 10       		.uleb128 0x10
+ 1313 09d8 04       		.byte	0x4
+ 1314 09d9 DD090000 		.4byte	0x9dd
+ 1315 09dd 15       		.uleb128 0x15
+ 1316 09de E7040000 		.4byte	0x4e7
+ 1317 09e2 1A       		.uleb128 0x1a
+ 1318 09e3 310A0000 		.4byte	.LASF188
+ 1319 09e7 0B       		.byte	0xb
+ 1320 09e8 5E       		.byte	0x5e
+ 1321 09e9 E5060000 		.4byte	0x6e5
+ 1322 09ed 1A       		.uleb128 0x1a
+ 1323 09ee 370B0000 		.4byte	.LASF189
+ 1324 09f2 0C       		.byte	0xc
+ 1325 09f3 1F       		.byte	0x1f
+ 1326 09f4 F8090000 		.4byte	0x9f8
+ 1327 09f8 15       		.uleb128 0x15
+ 1328 09f9 E2070000 		.4byte	0x7e2
+ 1329 09fd 1A       		.uleb128 0x1a
+ 1330 09fe 04030000 		.4byte	.LASF190
+ 1331 0a02 0D       		.byte	0xd
+ 1332 0a03 1F       		.byte	0x1f
+ 1333 0a04 080A0000 		.4byte	0xa08
+ 1334 0a08 15       		.uleb128 0x15
+ 1335 0a09 26090000 		.4byte	0x926
+ 1336 0a0d 1B       		.uleb128 0x1b
+ 1337 0a0e B6080000 		.4byte	.LASF191
+ 1338 0a12 0A       		.byte	0xa
+ 1339 0a13 6001     		.2byte	0x160
+ 1340 0a15 B8000000 		.4byte	0xb8
+ 1341 0a19 0E       		.uleb128 0xe
+ 1342 0a1a 290A0000 		.4byte	0xa29
+ 1343 0a1e 290A0000 		.4byte	0xa29
+ 1344 0a22 0F       		.uleb128 0xf
+ 1345 0a23 C3000000 		.4byte	0xc3
+ 1346 0a27 00       		.byte	0
+ 1347 0a28 00       		.byte	0
+ 1348 0a29 15       		.uleb128 0x15
+ 1349 0a2a 81090000 		.4byte	0x981
+ 1350 0a2e 1B       		.uleb128 0x1b
+ 1351 0a2f 5E050000 		.4byte	.LASF192
+ 1352 0a33 0A       		.byte	0xa
+ 1353 0a34 6401     		.2byte	0x164
+ 1354 0a36 3A0A0000 		.4byte	0xa3a
+ 1355 0a3a 15       		.uleb128 0x15
+ 1356 0a3b 190A0000 		.4byte	0xa19
+ 1357 0a3f 1C       		.uleb128 0x1c
+ 1358 0a40 9E050000 		.4byte	.LASF193
+ 1359 0a44 9E050000 		.4byte	.LASF193
+ 1360 0a48 0E       		.byte	0xe
+ 1361 0a49 1802     		.2byte	0x218
+ 1362 0a4b 1C       		.uleb128 0x1c
+ 1363 0a4c E5030000 		.4byte	.LASF194
+ 1364 0a50 E5030000 		.4byte	.LASF194
+ 1365 0a54 05       		.byte	0x5
+ 1366 0a55 4806     		.2byte	0x648
+ 1367 0a57 00       		.byte	0
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc566hHT.s 			page 26
+
+
+ 1368              		.section	.debug_abbrev,"",%progbits
+ 1369              	.Ldebug_abbrev0:
+ 1370 0000 01       		.uleb128 0x1
+ 1371 0001 11       		.uleb128 0x11
+ 1372 0002 01       		.byte	0x1
+ 1373 0003 25       		.uleb128 0x25
+ 1374 0004 0E       		.uleb128 0xe
+ 1375 0005 13       		.uleb128 0x13
+ 1376 0006 0B       		.uleb128 0xb
+ 1377 0007 03       		.uleb128 0x3
+ 1378 0008 0E       		.uleb128 0xe
+ 1379 0009 1B       		.uleb128 0x1b
+ 1380 000a 0E       		.uleb128 0xe
+ 1381 000b 55       		.uleb128 0x55
+ 1382 000c 17       		.uleb128 0x17
+ 1383 000d 11       		.uleb128 0x11
+ 1384 000e 01       		.uleb128 0x1
+ 1385 000f 10       		.uleb128 0x10
+ 1386 0010 17       		.uleb128 0x17
+ 1387 0011 00       		.byte	0
+ 1388 0012 00       		.byte	0
+ 1389 0013 02       		.uleb128 0x2
+ 1390 0014 24       		.uleb128 0x24
+ 1391 0015 00       		.byte	0
+ 1392 0016 0B       		.uleb128 0xb
+ 1393 0017 0B       		.uleb128 0xb
+ 1394 0018 3E       		.uleb128 0x3e
+ 1395 0019 0B       		.uleb128 0xb
+ 1396 001a 03       		.uleb128 0x3
+ 1397 001b 0E       		.uleb128 0xe
+ 1398 001c 00       		.byte	0
+ 1399 001d 00       		.byte	0
+ 1400 001e 03       		.uleb128 0x3
+ 1401 001f 16       		.uleb128 0x16
+ 1402 0020 00       		.byte	0
+ 1403 0021 03       		.uleb128 0x3
+ 1404 0022 0E       		.uleb128 0xe
+ 1405 0023 3A       		.uleb128 0x3a
+ 1406 0024 0B       		.uleb128 0xb
+ 1407 0025 3B       		.uleb128 0x3b
+ 1408 0026 0B       		.uleb128 0xb
+ 1409 0027 49       		.uleb128 0x49
+ 1410 0028 13       		.uleb128 0x13
+ 1411 0029 00       		.byte	0
+ 1412 002a 00       		.byte	0
+ 1413 002b 04       		.uleb128 0x4
+ 1414 002c 24       		.uleb128 0x24
+ 1415 002d 00       		.byte	0
+ 1416 002e 0B       		.uleb128 0xb
+ 1417 002f 0B       		.uleb128 0xb
+ 1418 0030 3E       		.uleb128 0x3e
+ 1419 0031 0B       		.uleb128 0xb
+ 1420 0032 03       		.uleb128 0x3
+ 1421 0033 08       		.uleb128 0x8
+ 1422 0034 00       		.byte	0
+ 1423 0035 00       		.byte	0
+ 1424 0036 05       		.uleb128 0x5
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc566hHT.s 			page 27
+
+
+ 1425 0037 35       		.uleb128 0x35
+ 1426 0038 00       		.byte	0
+ 1427 0039 49       		.uleb128 0x49
+ 1428 003a 13       		.uleb128 0x13
+ 1429 003b 00       		.byte	0
+ 1430 003c 00       		.byte	0
+ 1431 003d 06       		.uleb128 0x6
+ 1432 003e 13       		.uleb128 0x13
+ 1433 003f 01       		.byte	0x1
+ 1434 0040 0B       		.uleb128 0xb
+ 1435 0041 0B       		.uleb128 0xb
+ 1436 0042 3A       		.uleb128 0x3a
+ 1437 0043 0B       		.uleb128 0xb
+ 1438 0044 3B       		.uleb128 0x3b
+ 1439 0045 0B       		.uleb128 0xb
+ 1440 0046 01       		.uleb128 0x1
+ 1441 0047 13       		.uleb128 0x13
+ 1442 0048 00       		.byte	0
+ 1443 0049 00       		.byte	0
+ 1444 004a 07       		.uleb128 0x7
+ 1445 004b 0D       		.uleb128 0xd
+ 1446 004c 00       		.byte	0
+ 1447 004d 03       		.uleb128 0x3
+ 1448 004e 0E       		.uleb128 0xe
+ 1449 004f 3A       		.uleb128 0x3a
+ 1450 0050 0B       		.uleb128 0xb
+ 1451 0051 3B       		.uleb128 0x3b
+ 1452 0052 0B       		.uleb128 0xb
+ 1453 0053 49       		.uleb128 0x49
+ 1454 0054 13       		.uleb128 0x13
+ 1455 0055 38       		.uleb128 0x38
+ 1456 0056 0B       		.uleb128 0xb
+ 1457 0057 00       		.byte	0
+ 1458 0058 00       		.byte	0
+ 1459 0059 08       		.uleb128 0x8
+ 1460 005a 04       		.uleb128 0x4
+ 1461 005b 01       		.byte	0x1
+ 1462 005c 0B       		.uleb128 0xb
+ 1463 005d 0B       		.uleb128 0xb
+ 1464 005e 49       		.uleb128 0x49
+ 1465 005f 13       		.uleb128 0x13
+ 1466 0060 3A       		.uleb128 0x3a
+ 1467 0061 0B       		.uleb128 0xb
+ 1468 0062 3B       		.uleb128 0x3b
+ 1469 0063 05       		.uleb128 0x5
+ 1470 0064 01       		.uleb128 0x1
+ 1471 0065 13       		.uleb128 0x13
+ 1472 0066 00       		.byte	0
+ 1473 0067 00       		.byte	0
+ 1474 0068 09       		.uleb128 0x9
+ 1475 0069 28       		.uleb128 0x28
+ 1476 006a 00       		.byte	0
+ 1477 006b 03       		.uleb128 0x3
+ 1478 006c 0E       		.uleb128 0xe
+ 1479 006d 1C       		.uleb128 0x1c
+ 1480 006e 0B       		.uleb128 0xb
+ 1481 006f 00       		.byte	0
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc566hHT.s 			page 28
+
+
+ 1482 0070 00       		.byte	0
+ 1483 0071 0A       		.uleb128 0xa
+ 1484 0072 0F       		.uleb128 0xf
+ 1485 0073 00       		.byte	0
+ 1486 0074 0B       		.uleb128 0xb
+ 1487 0075 0B       		.uleb128 0xb
+ 1488 0076 00       		.byte	0
+ 1489 0077 00       		.byte	0
+ 1490 0078 0B       		.uleb128 0xb
+ 1491 0079 16       		.uleb128 0x16
+ 1492 007a 00       		.byte	0
+ 1493 007b 03       		.uleb128 0x3
+ 1494 007c 0E       		.uleb128 0xe
+ 1495 007d 3A       		.uleb128 0x3a
+ 1496 007e 0B       		.uleb128 0xb
+ 1497 007f 3B       		.uleb128 0x3b
+ 1498 0080 05       		.uleb128 0x5
+ 1499 0081 49       		.uleb128 0x49
+ 1500 0082 13       		.uleb128 0x13
+ 1501 0083 00       		.byte	0
+ 1502 0084 00       		.byte	0
+ 1503 0085 0C       		.uleb128 0xc
+ 1504 0086 13       		.uleb128 0x13
+ 1505 0087 01       		.byte	0x1
+ 1506 0088 0B       		.uleb128 0xb
+ 1507 0089 0B       		.uleb128 0xb
+ 1508 008a 3A       		.uleb128 0x3a
+ 1509 008b 0B       		.uleb128 0xb
+ 1510 008c 3B       		.uleb128 0x3b
+ 1511 008d 05       		.uleb128 0x5
+ 1512 008e 01       		.uleb128 0x1
+ 1513 008f 13       		.uleb128 0x13
+ 1514 0090 00       		.byte	0
+ 1515 0091 00       		.byte	0
+ 1516 0092 0D       		.uleb128 0xd
+ 1517 0093 0D       		.uleb128 0xd
+ 1518 0094 00       		.byte	0
+ 1519 0095 03       		.uleb128 0x3
+ 1520 0096 0E       		.uleb128 0xe
+ 1521 0097 3A       		.uleb128 0x3a
+ 1522 0098 0B       		.uleb128 0xb
+ 1523 0099 3B       		.uleb128 0x3b
+ 1524 009a 05       		.uleb128 0x5
+ 1525 009b 49       		.uleb128 0x49
+ 1526 009c 13       		.uleb128 0x13
+ 1527 009d 38       		.uleb128 0x38
+ 1528 009e 0B       		.uleb128 0xb
+ 1529 009f 00       		.byte	0
+ 1530 00a0 00       		.byte	0
+ 1531 00a1 0E       		.uleb128 0xe
+ 1532 00a2 01       		.uleb128 0x1
+ 1533 00a3 01       		.byte	0x1
+ 1534 00a4 49       		.uleb128 0x49
+ 1535 00a5 13       		.uleb128 0x13
+ 1536 00a6 01       		.uleb128 0x1
+ 1537 00a7 13       		.uleb128 0x13
+ 1538 00a8 00       		.byte	0
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc566hHT.s 			page 29
+
+
+ 1539 00a9 00       		.byte	0
+ 1540 00aa 0F       		.uleb128 0xf
+ 1541 00ab 21       		.uleb128 0x21
+ 1542 00ac 00       		.byte	0
+ 1543 00ad 49       		.uleb128 0x49
+ 1544 00ae 13       		.uleb128 0x13
+ 1545 00af 2F       		.uleb128 0x2f
+ 1546 00b0 0B       		.uleb128 0xb
+ 1547 00b1 00       		.byte	0
+ 1548 00b2 00       		.byte	0
+ 1549 00b3 10       		.uleb128 0x10
+ 1550 00b4 0F       		.uleb128 0xf
+ 1551 00b5 00       		.byte	0
+ 1552 00b6 0B       		.uleb128 0xb
+ 1553 00b7 0B       		.uleb128 0xb
+ 1554 00b8 49       		.uleb128 0x49
+ 1555 00b9 13       		.uleb128 0x13
+ 1556 00ba 00       		.byte	0
+ 1557 00bb 00       		.byte	0
+ 1558 00bc 11       		.uleb128 0x11
+ 1559 00bd 15       		.uleb128 0x15
+ 1560 00be 01       		.byte	0x1
+ 1561 00bf 27       		.uleb128 0x27
+ 1562 00c0 19       		.uleb128 0x19
+ 1563 00c1 01       		.uleb128 0x1
+ 1564 00c2 13       		.uleb128 0x13
+ 1565 00c3 00       		.byte	0
+ 1566 00c4 00       		.byte	0
+ 1567 00c5 12       		.uleb128 0x12
+ 1568 00c6 05       		.uleb128 0x5
+ 1569 00c7 00       		.byte	0
+ 1570 00c8 49       		.uleb128 0x49
+ 1571 00c9 13       		.uleb128 0x13
+ 1572 00ca 00       		.byte	0
+ 1573 00cb 00       		.byte	0
+ 1574 00cc 13       		.uleb128 0x13
+ 1575 00cd 13       		.uleb128 0x13
+ 1576 00ce 01       		.byte	0x1
+ 1577 00cf 03       		.uleb128 0x3
+ 1578 00d0 0E       		.uleb128 0xe
+ 1579 00d1 0B       		.uleb128 0xb
+ 1580 00d2 0B       		.uleb128 0xb
+ 1581 00d3 3A       		.uleb128 0x3a
+ 1582 00d4 0B       		.uleb128 0xb
+ 1583 00d5 3B       		.uleb128 0x3b
+ 1584 00d6 05       		.uleb128 0x5
+ 1585 00d7 01       		.uleb128 0x1
+ 1586 00d8 13       		.uleb128 0x13
+ 1587 00d9 00       		.byte	0
+ 1588 00da 00       		.byte	0
+ 1589 00db 14       		.uleb128 0x14
+ 1590 00dc 13       		.uleb128 0x13
+ 1591 00dd 01       		.byte	0x1
+ 1592 00de 03       		.uleb128 0x3
+ 1593 00df 0E       		.uleb128 0xe
+ 1594 00e0 0B       		.uleb128 0xb
+ 1595 00e1 0B       		.uleb128 0xb
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc566hHT.s 			page 30
+
+
+ 1596 00e2 3A       		.uleb128 0x3a
+ 1597 00e3 0B       		.uleb128 0xb
+ 1598 00e4 3B       		.uleb128 0x3b
+ 1599 00e5 0B       		.uleb128 0xb
+ 1600 00e6 01       		.uleb128 0x1
+ 1601 00e7 13       		.uleb128 0x13
+ 1602 00e8 00       		.byte	0
+ 1603 00e9 00       		.byte	0
+ 1604 00ea 15       		.uleb128 0x15
+ 1605 00eb 26       		.uleb128 0x26
+ 1606 00ec 00       		.byte	0
+ 1607 00ed 49       		.uleb128 0x49
+ 1608 00ee 13       		.uleb128 0x13
+ 1609 00ef 00       		.byte	0
+ 1610 00f0 00       		.byte	0
+ 1611 00f1 16       		.uleb128 0x16
+ 1612 00f2 2E       		.uleb128 0x2e
+ 1613 00f3 01       		.byte	0x1
+ 1614 00f4 3F       		.uleb128 0x3f
+ 1615 00f5 19       		.uleb128 0x19
+ 1616 00f6 03       		.uleb128 0x3
+ 1617 00f7 0E       		.uleb128 0xe
+ 1618 00f8 3A       		.uleb128 0x3a
+ 1619 00f9 0B       		.uleb128 0xb
+ 1620 00fa 3B       		.uleb128 0x3b
+ 1621 00fb 0B       		.uleb128 0xb
+ 1622 00fc 27       		.uleb128 0x27
+ 1623 00fd 19       		.uleb128 0x19
+ 1624 00fe 49       		.uleb128 0x49
+ 1625 00ff 13       		.uleb128 0x13
+ 1626 0100 8701     		.uleb128 0x87
+ 1627 0102 19       		.uleb128 0x19
+ 1628 0103 11       		.uleb128 0x11
+ 1629 0104 01       		.uleb128 0x1
+ 1630 0105 12       		.uleb128 0x12
+ 1631 0106 06       		.uleb128 0x6
+ 1632 0107 40       		.uleb128 0x40
+ 1633 0108 18       		.uleb128 0x18
+ 1634 0109 9742     		.uleb128 0x2117
+ 1635 010b 19       		.uleb128 0x19
+ 1636 010c 01       		.uleb128 0x1
+ 1637 010d 13       		.uleb128 0x13
+ 1638 010e 00       		.byte	0
+ 1639 010f 00       		.byte	0
+ 1640 0110 17       		.uleb128 0x17
+ 1641 0111 898201   		.uleb128 0x4109
+ 1642 0114 01       		.byte	0x1
+ 1643 0115 11       		.uleb128 0x11
+ 1644 0116 01       		.uleb128 0x1
+ 1645 0117 31       		.uleb128 0x31
+ 1646 0118 13       		.uleb128 0x13
+ 1647 0119 01       		.uleb128 0x1
+ 1648 011a 13       		.uleb128 0x13
+ 1649 011b 00       		.byte	0
+ 1650 011c 00       		.byte	0
+ 1651 011d 18       		.uleb128 0x18
+ 1652 011e 8A8201   		.uleb128 0x410a
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc566hHT.s 			page 31
+
+
+ 1653 0121 00       		.byte	0
+ 1654 0122 02       		.uleb128 0x2
+ 1655 0123 18       		.uleb128 0x18
+ 1656 0124 9142     		.uleb128 0x2111
+ 1657 0126 18       		.uleb128 0x18
+ 1658 0127 00       		.byte	0
+ 1659 0128 00       		.byte	0
+ 1660 0129 19       		.uleb128 0x19
+ 1661 012a 898201   		.uleb128 0x4109
+ 1662 012d 01       		.byte	0x1
+ 1663 012e 11       		.uleb128 0x11
+ 1664 012f 01       		.uleb128 0x1
+ 1665 0130 31       		.uleb128 0x31
+ 1666 0131 13       		.uleb128 0x13
+ 1667 0132 00       		.byte	0
+ 1668 0133 00       		.byte	0
+ 1669 0134 1A       		.uleb128 0x1a
+ 1670 0135 34       		.uleb128 0x34
+ 1671 0136 00       		.byte	0
+ 1672 0137 03       		.uleb128 0x3
+ 1673 0138 0E       		.uleb128 0xe
+ 1674 0139 3A       		.uleb128 0x3a
+ 1675 013a 0B       		.uleb128 0xb
+ 1676 013b 3B       		.uleb128 0x3b
+ 1677 013c 0B       		.uleb128 0xb
+ 1678 013d 49       		.uleb128 0x49
+ 1679 013e 13       		.uleb128 0x13
+ 1680 013f 3F       		.uleb128 0x3f
+ 1681 0140 19       		.uleb128 0x19
+ 1682 0141 3C       		.uleb128 0x3c
+ 1683 0142 19       		.uleb128 0x19
+ 1684 0143 00       		.byte	0
+ 1685 0144 00       		.byte	0
+ 1686 0145 1B       		.uleb128 0x1b
+ 1687 0146 34       		.uleb128 0x34
+ 1688 0147 00       		.byte	0
+ 1689 0148 03       		.uleb128 0x3
+ 1690 0149 0E       		.uleb128 0xe
+ 1691 014a 3A       		.uleb128 0x3a
+ 1692 014b 0B       		.uleb128 0xb
+ 1693 014c 3B       		.uleb128 0x3b
+ 1694 014d 05       		.uleb128 0x5
+ 1695 014e 49       		.uleb128 0x49
+ 1696 014f 13       		.uleb128 0x13
+ 1697 0150 3F       		.uleb128 0x3f
+ 1698 0151 19       		.uleb128 0x19
+ 1699 0152 3C       		.uleb128 0x3c
+ 1700 0153 19       		.uleb128 0x19
+ 1701 0154 00       		.byte	0
+ 1702 0155 00       		.byte	0
+ 1703 0156 1C       		.uleb128 0x1c
+ 1704 0157 2E       		.uleb128 0x2e
+ 1705 0158 00       		.byte	0
+ 1706 0159 3F       		.uleb128 0x3f
+ 1707 015a 19       		.uleb128 0x19
+ 1708 015b 3C       		.uleb128 0x3c
+ 1709 015c 19       		.uleb128 0x19
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc566hHT.s 			page 32
+
+
+ 1710 015d 6E       		.uleb128 0x6e
+ 1711 015e 0E       		.uleb128 0xe
+ 1712 015f 03       		.uleb128 0x3
+ 1713 0160 0E       		.uleb128 0xe
+ 1714 0161 3A       		.uleb128 0x3a
+ 1715 0162 0B       		.uleb128 0xb
+ 1716 0163 3B       		.uleb128 0x3b
+ 1717 0164 05       		.uleb128 0x5
+ 1718 0165 00       		.byte	0
+ 1719 0166 00       		.byte	0
+ 1720 0167 00       		.byte	0
+ 1721              		.section	.debug_aranges,"",%progbits
+ 1722 0000 1C000000 		.4byte	0x1c
+ 1723 0004 0200     		.2byte	0x2
+ 1724 0006 00000000 		.4byte	.Ldebug_info0
+ 1725 000a 04       		.byte	0x4
+ 1726 000b 00       		.byte	0
+ 1727 000c 0000     		.2byte	0
+ 1728 000e 0000     		.2byte	0
+ 1729 0010 00000000 		.4byte	.LFB549
+ 1730 0014 14000000 		.4byte	.LFE549-.LFB549
+ 1731 0018 00000000 		.4byte	0
+ 1732 001c 00000000 		.4byte	0
+ 1733              		.section	.debug_ranges,"",%progbits
+ 1734              	.Ldebug_ranges0:
+ 1735 0000 00000000 		.4byte	.LFB549
+ 1736 0004 14000000 		.4byte	.LFE549
+ 1737 0008 00000000 		.4byte	0
+ 1738 000c 00000000 		.4byte	0
+ 1739              		.section	.debug_line,"",%progbits
+ 1740              	.Ldebug_line0:
+ 1741 0000 02030000 		.section	.debug_str,"MS",%progbits,1
+ 1741      0200E702 
+ 1741      00000201 
+ 1741      FB0E0D00 
+ 1741      01010101 
+ 1742              	.LASF54:
+ 1743 0000 70726F74 		.ascii	"protBusMasterMask\000"
+ 1743      4275734D 
+ 1743      61737465 
+ 1743      724D6173 
+ 1743      6B00
+ 1744              	.LASF148:
+ 1745 0012 72756E4D 		.ascii	"runMode\000"
+ 1745      6F646500 
+ 1746              	.LASF136:
+ 1747 001a 72784275 		.ascii	"rxBufSize\000"
+ 1747      6653697A 
+ 1747      6500
+ 1748              	.LASF64:
+ 1749 0024 666C6173 		.ascii	"flashCtlMainWs3Freq\000"
+ 1749      6843746C 
+ 1749      4D61696E 
+ 1749      57733346 
+ 1749      72657100 
+ 1750              	.LASF86:
+ 1751 0038 6770696F 		.ascii	"gpioPrtCfgInOffset\000"
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc566hHT.s 			page 33
+
+
+ 1751      50727443 
+ 1751      6667496E 
+ 1751      4F666673 
+ 1751      657400
+ 1752              	.LASF179:
+ 1753 004b 6B696C6C 		.ascii	"killInput\000"
+ 1753      496E7075 
+ 1753      7400
+ 1754              	.LASF104:
+ 1755 0055 6970634C 		.ascii	"ipcLockStatusOffset\000"
+ 1755      6F636B53 
+ 1755      74617475 
+ 1755      734F6666 
+ 1755      73657400 
+ 1756              	.LASF30:
+ 1757 0069 63727970 		.ascii	"cryptoVersion\000"
+ 1757      746F5665 
+ 1757      7273696F 
+ 1757      6E00
+ 1758              	.LASF68:
+ 1759 0077 64774368 		.ascii	"dwChCtlPrioPos\000"
+ 1759      43746C50 
+ 1759      72696F50 
+ 1759      6F7300
+ 1760              	.LASF26:
+ 1761 0086 70617373 		.ascii	"passBase\000"
+ 1761      42617365 
+ 1761      00
+ 1762              	.LASF196:
+ 1763 008f 6D61696E 		.ascii	"main_cm0p.c\000"
+ 1763      5F636D30 
+ 1763      702E6300 
+ 1764              	.LASF168:
+ 1765 009b 70776D41 		.ascii	"pwmAlignment\000"
+ 1765      6C69676E 
+ 1765      6D656E74 
+ 1765      00
+ 1766              	.LASF39:
+ 1767 00a8 63707573 		.ascii	"cpussIpcIrqNr\000"
+ 1767      73497063 
+ 1767      4972714E 
+ 1767      7200
+ 1768              	.LASF3:
+ 1769 00b6 5F5F7569 		.ascii	"__uint8_t\000"
+ 1769      6E74385F 
+ 1769      7400
+ 1770              	.LASF126:
+ 1771 00c0 73617449 		.ascii	"satIntrMask\000"
+ 1771      6E74724D 
+ 1771      61736B00 
+ 1772              	.LASF83:
+ 1773 00cc 70657269 		.ascii	"periDiv24_5CtlOffset\000"
+ 1773      44697632 
+ 1773      345F3543 
+ 1773      746C4F66 
+ 1773      66736574 
+ 1774              	.LASF90:
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc566hHT.s 			page 34
+
+
+ 1775 00e1 63707573 		.ascii	"cpussCm4ClockCtlOffset\000"
+ 1775      73436D34 
+ 1775      436C6F63 
+ 1775      6B43746C 
+ 1775      4F666673 
+ 1776              	.LASF149:
+ 1777 00f8 636F756E 		.ascii	"countDirection\000"
+ 1777      74446972 
+ 1777      65637469 
+ 1777      6F6E00
+ 1778              	.LASF161:
+ 1779 0107 73746F70 		.ascii	"stopInputMode\000"
+ 1779      496E7075 
+ 1779      744D6F64 
+ 1779      6500
+ 1780              	.LASF19:
+ 1781 0115 63707573 		.ascii	"cpussBase\000"
+ 1781      73426173 
+ 1781      6500
+ 1782              	.LASF146:
+ 1783 011f 70657269 		.ascii	"period\000"
+ 1783      6F6400
+ 1784              	.LASF48:
+ 1785 0126 70657269 		.ascii	"periClockNr\000"
+ 1785      436C6F63 
+ 1785      6B4E7200 
+ 1786              	.LASF156:
+ 1787 0132 63617074 		.ascii	"captureInput\000"
+ 1787      75726549 
+ 1787      6E707574 
+ 1787      00
+ 1788              	.LASF11:
+ 1789 013f 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1789      206C6F6E 
+ 1789      6720756E 
+ 1789      7369676E 
+ 1789      65642069 
+ 1790              	.LASF147:
+ 1791 0156 636C6F63 		.ascii	"clockPrescaler\000"
+ 1791      6B507265 
+ 1791      7363616C 
+ 1791      657200
+ 1792              	.LASF72:
+ 1793 0165 70657269 		.ascii	"periTrCmdOffset\000"
+ 1793      5472436D 
+ 1793      644F6666 
+ 1793      73657400 
+ 1794              	.LASF96:
+ 1795 0175 63707573 		.ascii	"cpussSysTickCtlOffset\000"
+ 1795      73537973 
+ 1795      5469636B 
+ 1795      43746C4F 
+ 1795      66667365 
+ 1796              	.LASF177:
+ 1797 018b 73776170 		.ascii	"swapInput\000"
+ 1797      496E7075 
+ 1797      7400
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc566hHT.s 			page 35
+
+
+ 1798              	.LASF57:
+ 1799 0195 666C6173 		.ascii	"flashPipeRequired\000"
+ 1799      68506970 
+ 1799      65526571 
+ 1799      75697265 
+ 1799      6400
+ 1800              	.LASF61:
+ 1801 01a7 666C6173 		.ascii	"flashCtlMainWs0Freq\000"
+ 1801      6843746C 
+ 1801      4D61696E 
+ 1801      57733046 
+ 1801      72657100 
+ 1802              	.LASF14:
+ 1803 01bb 696E7431 		.ascii	"int16_t\000"
+ 1803      365F7400 
+ 1804              	.LASF132:
+ 1805 01c3 63795F73 		.ascii	"cy_stc_sar_config_t\000"
+ 1805      74635F73 
+ 1805      61725F63 
+ 1805      6F6E6669 
+ 1805      675F7400 
+ 1806              	.LASF10:
+ 1807 01d7 6C6F6E67 		.ascii	"long long int\000"
+ 1807      206C6F6E 
+ 1807      6720696E 
+ 1807      7400
+ 1808              	.LASF165:
+ 1809 01e5 63795F73 		.ascii	"cy_stc_tcpwm_counter_config_t\000"
+ 1809      74635F74 
+ 1809      6370776D 
+ 1809      5F636F75 
+ 1809      6E746572 
+ 1810              	.LASF144:
+ 1811 0203 63795F73 		.ascii	"cy_stc_scb_spi_context\000"
+ 1811      74635F73 
+ 1811      63625F73 
+ 1811      70695F63 
+ 1811      6F6E7465 
+ 1812              	.LASF77:
+ 1813 021a 70657269 		.ascii	"periDivCmdTypeSelPos\000"
+ 1813      44697643 
+ 1813      6D645479 
+ 1813      70655365 
+ 1813      6C506F73 
+ 1814              	.LASF116:
+ 1815 022f 63795F65 		.ascii	"cy_en_sar_range_detect_condition_t\000"
+ 1815      6E5F7361 
+ 1815      725F7261 
+ 1815      6E67655F 
+ 1815      64657465 
+ 1816              	.LASF185:
+ 1817 0252 636C6B44 		.ascii	"clkDivider\000"
+ 1817      69766964 
+ 1817      657200
+ 1818              	.LASF23:
+ 1819 025d 70726F74 		.ascii	"protBase\000"
+ 1819      42617365 
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc566hHT.s 			page 36
+
+
+ 1819      00
+ 1820              	.LASF35:
+ 1821 0266 69706356 		.ascii	"ipcVersion\000"
+ 1821      65727369 
+ 1821      6F6E00
+ 1822              	.LASF97:
+ 1823 0271 63707573 		.ascii	"cpussCm0NmiCtlOffset\000"
+ 1823      73436D30 
+ 1823      4E6D6943 
+ 1823      746C4F66 
+ 1823      66736574 
+ 1824              	.LASF133:
+ 1825 0286 63795F63 		.ascii	"cy_cb_scb_spi_handle_events_t\000"
+ 1825      625F7363 
+ 1825      625F7370 
+ 1825      695F6861 
+ 1825      6E646C65 
+ 1826              	.LASF45:
+ 1827 02a4 73727373 		.ascii	"srssNumClkpath\000"
+ 1827      4E756D43 
+ 1827      6C6B7061 
+ 1827      746800
+ 1828              	.LASF24:
+ 1829 02b3 6873696F 		.ascii	"hsiomBase\000"
+ 1829      6D426173 
+ 1829      6500
+ 1830              	.LASF166:
+ 1831 02bd 63795F73 		.ascii	"cy_stc_tcpwm_pwm_config\000"
+ 1831      74635F74 
+ 1831      6370776D 
+ 1831      5F70776D 
+ 1831      5F636F6E 
+ 1832              	.LASF112:
+ 1833 02d5 43595F53 		.ascii	"CY_SAR_RANGE_COND_BELOW\000"
+ 1833      41525F52 
+ 1833      414E4745 
+ 1833      5F434F4E 
+ 1833      445F4245 
+ 1834              	.LASF7:
+ 1835 02ed 6C6F6E67 		.ascii	"long int\000"
+ 1835      20696E74 
+ 1835      00
+ 1836              	.LASF55:
+ 1837 02f6 63727970 		.ascii	"cryptoMemSize\000"
+ 1837      746F4D65 
+ 1837      6D53697A 
+ 1837      6500
+ 1838              	.LASF190:
+ 1839 0304 50574D5F 		.ascii	"PWM_1_config\000"
+ 1839      315F636F 
+ 1839      6E666967 
+ 1839      00
+ 1840              	.LASF21:
+ 1841 0311 70657269 		.ascii	"periBase\000"
+ 1841      42617365 
+ 1841      00
+ 1842              	.LASF53:
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc566hHT.s 			page 37
+
+
+ 1843 031a 73797350 		.ascii	"sysPmSimoPresent\000"
+ 1843      6D53696D 
+ 1843      6F507265 
+ 1843      73656E74 
+ 1843      00
+ 1844              	.LASF114:
+ 1845 032b 43595F53 		.ascii	"CY_SAR_RANGE_COND_ABOVE\000"
+ 1845      41525F52 
+ 1845      414E4745 
+ 1845      5F434F4E 
+ 1845      445F4142 
+ 1846              	.LASF43:
+ 1847 0343 63707573 		.ascii	"cpussFmIrq\000"
+ 1847      73466D49 
+ 1847      727100
+ 1848              	.LASF108:
+ 1849 034e 646F7562 		.ascii	"double\000"
+ 1849      6C6500
+ 1850              	.LASF82:
+ 1851 0355 70657269 		.ascii	"periDiv16_5CtlOffset\000"
+ 1851      44697631 
+ 1851      365F3543 
+ 1851      746C4F66 
+ 1851      66736574 
+ 1852              	.LASF46:
+ 1853 036a 73727373 		.ascii	"srssNumPll\000"
+ 1853      4E756D50 
+ 1853      6C6C00
+ 1854              	.LASF198:
+ 1855 0375 6D61696E 		.ascii	"main\000"
+ 1855      00
+ 1856              	.LASF155:
+ 1857 037a 63617074 		.ascii	"captureInputMode\000"
+ 1857      75726549 
+ 1857      6E707574 
+ 1857      4D6F6465 
+ 1857      00
+ 1858              	.LASF119:
+ 1859 038b 73616D70 		.ascii	"sampleTime01\000"
+ 1859      6C655469 
+ 1859      6D653031 
+ 1859      00
+ 1860              	.LASF6:
+ 1861 0398 73686F72 		.ascii	"short unsigned int\000"
+ 1861      7420756E 
+ 1861      7369676E 
+ 1861      65642069 
+ 1861      6E7400
+ 1862              	.LASF87:
+ 1863 03ab 6770696F 		.ascii	"gpioPrtCfgOutOffset\000"
+ 1863      50727443 
+ 1863      66674F75 
+ 1863      744F6666 
+ 1863      73657400 
+ 1864              	.LASF20:
+ 1865 03bf 666C6173 		.ascii	"flashcBase\000"
+ 1865      68634261 
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc566hHT.s 			page 38
+
+
+ 1865      736500
+ 1866              	.LASF8:
+ 1867 03ca 5F5F7569 		.ascii	"__uint32_t\000"
+ 1867      6E743332 
+ 1867      5F7400
+ 1868              	.LASF50:
+ 1869 03d5 70617373 		.ascii	"passSarChannels\000"
+ 1869      53617243 
+ 1869      68616E6E 
+ 1869      656C7300 
+ 1870              	.LASF194:
+ 1871 03e5 43795F53 		.ascii	"Cy_SysPm_CpuEnterDeepSleep\000"
+ 1871      7973506D 
+ 1871      5F437075 
+ 1871      456E7465 
+ 1871      72446565 
+ 1872              	.LASF4:
+ 1873 0400 5F5F696E 		.ascii	"__int16_t\000"
+ 1873      7431365F 
+ 1873      7400
+ 1874              	.LASF137:
+ 1875 040a 72784275 		.ascii	"rxBufIdx\000"
+ 1875      66496478 
+ 1875      00
+ 1876              	.LASF93:
+ 1877 0413 63707573 		.ascii	"cpussCm4PwrCtlOffset\000"
+ 1877      73436D34 
+ 1877      50777243 
+ 1877      746C4F66 
+ 1877      66736574 
+ 1878              	.LASF139:
+ 1879 0428 74784275 		.ascii	"txBufSize\000"
+ 1879      6653697A 
+ 1879      6500
+ 1880              	.LASF88:
+ 1881 0432 6770696F 		.ascii	"gpioPrtCfgSioOffset\000"
+ 1881      50727443 
+ 1881      66675369 
+ 1881      6F4F6666 
+ 1881      73657400 
+ 1882              	.LASF40:
+ 1883 0446 63707573 		.ascii	"cpussDwChNr\000"
+ 1883      73447743 
+ 1883      684E7200 
+ 1884              	.LASF12:
+ 1885 0452 756E7369 		.ascii	"unsigned int\000"
+ 1885      676E6564 
+ 1885      20696E74 
+ 1885      00
+ 1886              	.LASF15:
+ 1887 045f 75696E74 		.ascii	"uint16_t\000"
+ 1887      31365F74 
+ 1887      00
+ 1888              	.LASF197:
+ 1889 0468 433A5C55 		.ascii	"C:\\Users\\nicpa\\OneDrive\\Documents\\PolyDoc\\GBM"
+ 1889      73657273 
+ 1889      5C6E6963 
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc566hHT.s 			page 39
+
+
+ 1889      70615C4F 
+ 1889      6E654472 
+ 1890 0495 32313030 		.ascii	"2100\\Laboratoire3\\Laboratoire3\\Laboratoire3.cyds"
+ 1890      5C4C6162 
+ 1890      6F726174 
+ 1890      6F697265 
+ 1890      335C4C61 
+ 1891 04c5 6E00     		.ascii	"n\000"
+ 1892              	.LASF62:
+ 1893 04c7 666C6173 		.ascii	"flashCtlMainWs1Freq\000"
+ 1893      6843746C 
+ 1893      4D61696E 
+ 1893      57733146 
+ 1893      72657100 
+ 1894              	.LASF9:
+ 1895 04db 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1895      20756E73 
+ 1895      69676E65 
+ 1895      6420696E 
+ 1895      7400
+ 1896              	.LASF153:
+ 1897 04ed 656E6162 		.ascii	"enableCompareSwap\000"
+ 1897      6C65436F 
+ 1897      6D706172 
+ 1897      65537761 
+ 1897      7000
+ 1898              	.LASF38:
+ 1899 04ff 63707573 		.ascii	"cpussIpcNr\000"
+ 1899      73497063 
+ 1899      4E7200
+ 1900              	.LASF25:
+ 1901 050a 6770696F 		.ascii	"gpioBase\000"
+ 1901      42617365 
+ 1901      00
+ 1902              	.LASF51:
+ 1903 0513 65704D6F 		.ascii	"epMonitorNr\000"
+ 1903      6E69746F 
+ 1903      724E7200 
+ 1904              	.LASF63:
+ 1905 051f 666C6173 		.ascii	"flashCtlMainWs2Freq\000"
+ 1905      6843746C 
+ 1905      4D61696E 
+ 1905      57733246 
+ 1905      72657100 
+ 1906              	.LASF176:
+ 1907 0533 73776170 		.ascii	"swapInputMode\000"
+ 1907      496E7075 
+ 1907      744D6F64 
+ 1907      6500
+ 1908              	.LASF74:
+ 1909 0541 70657269 		.ascii	"periTrGrOffset\000"
+ 1909      54724772 
+ 1909      4F666673 
+ 1909      657400
+ 1910              	.LASF101:
+ 1911 0550 63707573 		.ascii	"cpussRam1Ctl0\000"
+ 1911      7352616D 
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc566hHT.s 			page 40
+
+
+ 1911      3143746C 
+ 1911      3000
+ 1912              	.LASF192:
+ 1913 055e 4144435F 		.ascii	"ADC_1_allConfigs\000"
+ 1913      315F616C 
+ 1913      6C436F6E 
+ 1913      66696773 
+ 1913      00
+ 1914              	.LASF121:
+ 1915 056f 72616E67 		.ascii	"rangeThres\000"
+ 1915      65546872 
+ 1915      657300
+ 1916              	.LASF178:
+ 1917 057a 6B696C6C 		.ascii	"killInputMode\000"
+ 1917      496E7075 
+ 1917      744D6F64 
+ 1917      6500
+ 1918              	.LASF141:
+ 1919 0588 63624576 		.ascii	"cbEvents\000"
+ 1919      656E7473 
+ 1919      00
+ 1920              	.LASF75:
+ 1921 0591 70657269 		.ascii	"periTrGrSize\000"
+ 1921      54724772 
+ 1921      53697A65 
+ 1921      00
+ 1922              	.LASF193:
+ 1923 059e 43795F53 		.ascii	"Cy_SysEnableCM4\000"
+ 1923      7973456E 
+ 1923      61626C65 
+ 1923      434D3400 
+ 1924              	.LASF33:
+ 1925 05ae 6770696F 		.ascii	"gpioVersion\000"
+ 1925      56657273 
+ 1925      696F6E00 
+ 1926              	.LASF138:
+ 1927 05ba 74784275 		.ascii	"txBuf\000"
+ 1927      6600
+ 1928              	.LASF182:
+ 1929 05c0 6E756D43 		.ascii	"numChannels\000"
+ 1929      68616E6E 
+ 1929      656C7300 
+ 1930              	.LASF105:
+ 1931 05cc 63795F73 		.ascii	"cy_stc_device_t\000"
+ 1931      74635F64 
+ 1931      65766963 
+ 1931      655F7400 
+ 1932              	.LASF124:
+ 1933 05dc 6368616E 		.ascii	"chanConfig\000"
+ 1933      436F6E66 
+ 1933      696700
+ 1934              	.LASF143:
+ 1935 05e7 63795F73 		.ascii	"cy_stc_scb_spi_context_t\000"
+ 1935      74635F73 
+ 1935      63625F73 
+ 1935      70695F63 
+ 1935      6F6E7465 
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc566hHT.s 			page 41
+
+
+ 1936              	.LASF181:
+ 1937 0600 6368616E 		.ascii	"channelBase\000"
+ 1937      6E656C42 
+ 1937      61736500 
+ 1938              	.LASF173:
+ 1939 060c 696E7665 		.ascii	"invertPWMOut\000"
+ 1939      72745057 
+ 1939      4D4F7574 
+ 1939      00
+ 1940              	.LASF169:
+ 1941 0619 64656164 		.ascii	"deadTimeClocks\000"
+ 1941      54696D65 
+ 1941      436C6F63 
+ 1941      6B7300
+ 1942              	.LASF98:
+ 1943 0628 63707573 		.ascii	"cpussCm4NmiCtlOffset\000"
+ 1943      73436D34 
+ 1943      4E6D6943 
+ 1943      746C4F66 
+ 1943      66736574 
+ 1944              	.LASF94:
+ 1945 063d 63707573 		.ascii	"cpussTrimRamCtlOffset\000"
+ 1945      73547269 
+ 1945      6D52616D 
+ 1945      43746C4F 
+ 1945      66667365 
+ 1946              	.LASF160:
+ 1947 0653 73746172 		.ascii	"startInput\000"
+ 1947      74496E70 
+ 1947      757400
+ 1948              	.LASF29:
+ 1949 065e 63707573 		.ascii	"cpussVersion\000"
+ 1949      73566572 
+ 1949      73696F6E 
+ 1949      00
+ 1950              	.LASF36:
+ 1951 066b 70657269 		.ascii	"periVersion\000"
+ 1951      56657273 
+ 1951      696F6E00 
+ 1952              	.LASF92:
+ 1953 0677 63707573 		.ascii	"cpussCm0StatusOffset\000"
+ 1953      73436D30 
+ 1953      53746174 
+ 1953      75734F66 
+ 1953      66736574 
+ 1954              	.LASF145:
+ 1955 068c 63795F73 		.ascii	"cy_stc_tcpwm_counter_config\000"
+ 1955      74635F74 
+ 1955      6370776D 
+ 1955      5F636F75 
+ 1955      6E746572 
+ 1956              	.LASF73:
+ 1957 06a8 70657269 		.ascii	"periTrCmdGrSelMsk\000"
+ 1957      5472436D 
+ 1957      64477253 
+ 1957      656C4D73 
+ 1957      6B00
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc566hHT.s 			page 42
+
+
+ 1958              	.LASF17:
+ 1959 06ba 73697A65 		.ascii	"sizetype\000"
+ 1959      74797065 
+ 1959      00
+ 1960              	.LASF66:
+ 1961 06c3 64774368 		.ascii	"dwChOffset\000"
+ 1961      4F666673 
+ 1961      657400
+ 1962              	.LASF41:
+ 1963 06ce 63707573 		.ascii	"cpussFlashPaSize\000"
+ 1963      73466C61 
+ 1963      73685061 
+ 1963      53697A65 
+ 1963      00
+ 1964              	.LASF120:
+ 1965 06df 73616D70 		.ascii	"sampleTime23\000"
+ 1965      6C655469 
+ 1965      6D653233 
+ 1965      00
+ 1966              	.LASF79:
+ 1967 06ec 70657269 		.ascii	"periDivCmdPaTypeSelPos\000"
+ 1967      44697643 
+ 1967      6D645061 
+ 1967      54797065 
+ 1967      53656C50 
+ 1968              	.LASF102:
+ 1969 0703 63707573 		.ascii	"cpussRam2Ctl0\000"
+ 1969      7352616D 
+ 1969      3243746C 
+ 1969      3000
+ 1970              	.LASF130:
+ 1971 0711 636F6E66 		.ascii	"configRouting\000"
+ 1971      6967526F 
+ 1971      7574696E 
+ 1971      6700
+ 1972              	.LASF70:
+ 1973 071f 64775374 		.ascii	"dwStatusChIdxPos\000"
+ 1973      61747573 
+ 1973      43684964 
+ 1973      78506F73 
+ 1973      00
+ 1974              	.LASF52:
+ 1975 0730 75646250 		.ascii	"udbPresent\000"
+ 1975      72657365 
+ 1975      6E7400
+ 1976              	.LASF32:
+ 1977 073b 666C6173 		.ascii	"flashcVersion\000"
+ 1977      68635665 
+ 1977      7273696F 
+ 1977      6E00
+ 1978              	.LASF28:
+ 1979 0749 63727970 		.ascii	"cryptoBase\000"
+ 1979      746F4261 
+ 1979      736500
+ 1980              	.LASF49:
+ 1981 0754 736D6966 		.ascii	"smifDeviceNr\000"
+ 1981      44657669 
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc566hHT.s 			page 43
+
+
+ 1981      63654E72 
+ 1981      00
+ 1982              	.LASF103:
+ 1983 0761 69706353 		.ascii	"ipcStructSize\000"
+ 1983      74727563 
+ 1983      7453697A 
+ 1983      6500
+ 1984              	.LASF127:
+ 1985 076f 72616E67 		.ascii	"rangeIntrMask\000"
+ 1985      65496E74 
+ 1985      724D6173 
+ 1985      6B00
+ 1986              	.LASF167:
+ 1987 077d 70776D4D 		.ascii	"pwmMode\000"
+ 1987      6F646500 
+ 1988              	.LASF107:
+ 1989 0785 666C6F61 		.ascii	"float\000"
+ 1989      7400
+ 1990              	.LASF71:
+ 1991 078b 64775374 		.ascii	"dwStatusChIdxMsk\000"
+ 1991      61747573 
+ 1991      43684964 
+ 1991      784D736B 
+ 1991      00
+ 1992              	.LASF187:
+ 1993 079c 63795F64 		.ascii	"cy_device\000"
+ 1993      65766963 
+ 1993      6500
+ 1994              	.LASF99:
+ 1995 07a6 63707573 		.ascii	"cpussRomCtl\000"
+ 1995      73526F6D 
+ 1995      43746C00 
+ 1996              	.LASF69:
+ 1997 07b2 64774368 		.ascii	"dwChCtlPreemptablePos\000"
+ 1997      43746C50 
+ 1997      7265656D 
+ 1997      70746162 
+ 1997      6C65506F 
+ 1998              	.LASF175:
+ 1999 07c8 6B696C6C 		.ascii	"killMode\000"
+ 1999      4D6F6465 
+ 1999      00
+ 2000              	.LASF123:
+ 2001 07d1 6368616E 		.ascii	"chanEn\000"
+ 2001      456E00
+ 2002              	.LASF22:
+ 2003 07d8 75646242 		.ascii	"udbBase\000"
+ 2003      61736500 
+ 2004              	.LASF113:
+ 2005 07e0 43595F53 		.ascii	"CY_SAR_RANGE_COND_INSIDE\000"
+ 2005      41525F52 
+ 2005      414E4745 
+ 2005      5F434F4E 
+ 2005      445F494E 
+ 2006              	.LASF159:
+ 2007 07f9 73746172 		.ascii	"startInputMode\000"
+ 2007      74496E70 
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc566hHT.s 			page 44
+
+
+ 2007      75744D6F 
+ 2007      646500
+ 2008              	.LASF1:
+ 2009 0808 756E7369 		.ascii	"unsigned char\000"
+ 2009      676E6564 
+ 2009      20636861 
+ 2009      7200
+ 2010              	.LASF65:
+ 2011 0816 666C6173 		.ascii	"flashCtlMainWs4Freq\000"
+ 2011      6843746C 
+ 2011      4D61696E 
+ 2011      57733446 
+ 2011      72657100 
+ 2012              	.LASF0:
+ 2013 082a 73686F72 		.ascii	"short int\000"
+ 2013      7420696E 
+ 2013      7400
+ 2014              	.LASF128:
+ 2015 0834 6D757853 		.ascii	"muxSwitch\000"
+ 2015      77697463 
+ 2015      6800
+ 2016              	.LASF125:
+ 2017 083e 696E7472 		.ascii	"intrMask\000"
+ 2017      4D61736B 
+ 2017      00
+ 2018              	.LASF76:
+ 2019 0847 70657269 		.ascii	"periDivCmdDivSelMsk\000"
+ 2019      44697643 
+ 2019      6D644469 
+ 2019      7653656C 
+ 2019      4D736B00 
+ 2020              	.LASF172:
+ 2021 085b 656E6162 		.ascii	"enablePeriodSwap\000"
+ 2021      6C655065 
+ 2021      72696F64 
+ 2021      53776170 
+ 2021      00
+ 2022              	.LASF150:
+ 2023 086c 636F6D70 		.ascii	"compareOrCapture\000"
+ 2023      6172654F 
+ 2023      72436170 
+ 2023      74757265 
+ 2023      00
+ 2024              	.LASF47:
+ 2025 087d 73727373 		.ascii	"srssNumHfroot\000"
+ 2025      4E756D48 
+ 2025      66726F6F 
+ 2025      7400
+ 2026              	.LASF60:
+ 2027 088b 666C6173 		.ascii	"flashEraseDelay\000"
+ 2027      68457261 
+ 2027      73654465 
+ 2027      6C617900 
+ 2028              	.LASF80:
+ 2029 089b 70657269 		.ascii	"periDiv8CtlOffset\000"
+ 2029      44697638 
+ 2029      43746C4F 
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc566hHT.s 			page 45
+
+
+ 2029      66667365 
+ 2029      7400
+ 2030              	.LASF16:
+ 2031 08ad 75696E74 		.ascii	"uint32_t\000"
+ 2031      33325F74 
+ 2031      00
+ 2032              	.LASF191:
+ 2033 08b6 4144435F 		.ascii	"ADC_1_currentConfig\000"
+ 2033      315F6375 
+ 2033      7272656E 
+ 2033      74436F6E 
+ 2033      66696700 
+ 2034              	.LASF183:
+ 2035 08ca 6877436F 		.ascii	"hwConfigStc\000"
+ 2035      6E666967 
+ 2035      53746300 
+ 2036              	.LASF131:
+ 2037 08d6 76726566 		.ascii	"vrefMvValue\000"
+ 2037      4D765661 
+ 2037      6C756500 
+ 2038              	.LASF195:
+ 2039 08e2 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 2039      43313120 
+ 2039      352E342E 
+ 2039      31203230 
+ 2039      31363036 
+ 2040 0915 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0plus -mthumb -"
+ 2040      20726576 
+ 2040      6973696F 
+ 2040      6E203233 
+ 2040      37373135 
+ 2041 0948 67202D4F 		.ascii	"g -Og -ffunction-sections -ffat-lto-objects\000"
+ 2041      67202D66 
+ 2041      66756E63 
+ 2041      74696F6E 
+ 2041      2D736563 
+ 2042              	.LASF111:
+ 2043 0974 5F426F6F 		.ascii	"_Bool\000"
+ 2043      6C00
+ 2044              	.LASF18:
+ 2045 097a 6C6F6E67 		.ascii	"long double\000"
+ 2045      20646F75 
+ 2045      626C6500 
+ 2046              	.LASF106:
+ 2047 0986 63686172 		.ascii	"char\000"
+ 2047      00
+ 2048              	.LASF164:
+ 2049 098b 636F756E 		.ascii	"countInput\000"
+ 2049      74496E70 
+ 2049      757400
+ 2050              	.LASF37:
+ 2051 0996 70726F74 		.ascii	"protVersion\000"
+ 2051      56657273 
+ 2051      696F6E00 
+ 2052              	.LASF100:
+ 2053 09a2 63707573 		.ascii	"cpussRam0Ctl0\000"
+ 2053      7352616D 
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc566hHT.s 			page 46
+
+
+ 2053      3043746C 
+ 2053      3000
+ 2054              	.LASF5:
+ 2055 09b0 5F5F7569 		.ascii	"__uint16_t\000"
+ 2055      6E743136 
+ 2055      5F7400
+ 2056              	.LASF81:
+ 2057 09bb 70657269 		.ascii	"periDiv16CtlOffset\000"
+ 2057      44697631 
+ 2057      3643746C 
+ 2057      4F666673 
+ 2057      657400
+ 2058              	.LASF110:
+ 2059 09ce 43595F53 		.ascii	"CY_SYSPM_WAIT_FOR_EVENT\000"
+ 2059      5953504D 
+ 2059      5F574149 
+ 2059      545F464F 
+ 2059      525F4556 
+ 2060              	.LASF13:
+ 2061 09e6 75696E74 		.ascii	"uint8_t\000"
+ 2061      385F7400 
+ 2062              	.LASF34:
+ 2063 09ee 6873696F 		.ascii	"hsiomVersion\000"
+ 2063      6D566572 
+ 2063      73696F6E 
+ 2063      00
+ 2064              	.LASF117:
+ 2065 09fb 6374726C 		.ascii	"ctrl\000"
+ 2065      00
+ 2066              	.LASF154:
+ 2067 0a00 696E7465 		.ascii	"interruptSources\000"
+ 2067      72727570 
+ 2067      74536F75 
+ 2067      72636573 
+ 2067      00
+ 2068              	.LASF158:
+ 2069 0a11 72656C6F 		.ascii	"reloadInput\000"
+ 2069      6164496E 
+ 2069      70757400 
+ 2070              	.LASF184:
+ 2071 0a1d 6D697363 		.ascii	"miscConfig\000"
+ 2071      436F6E66 
+ 2071      696700
+ 2072              	.LASF67:
+ 2073 0a28 64774368 		.ascii	"dwChSize\000"
+ 2073      53697A65 
+ 2073      00
+ 2074              	.LASF188:
+ 2075 0a31 43595F45 		.ascii	"CY_EINK_SPIM_context\000"
+ 2075      494E4B5F 
+ 2075      5350494D 
+ 2075      5F636F6E 
+ 2075      74657874 
+ 2076              	.LASF162:
+ 2077 0a46 73746F70 		.ascii	"stopInput\000"
+ 2077      496E7075 
+ 2077      7400
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc566hHT.s 			page 47
+
+
+ 2078              	.LASF109:
+ 2079 0a50 43595F53 		.ascii	"CY_SYSPM_WAIT_FOR_INTERRUPT\000"
+ 2079      5953504D 
+ 2079      5F574149 
+ 2079      545F464F 
+ 2079      525F494E 
+ 2080              	.LASF42:
+ 2081 0a6c 63707573 		.ascii	"cpussIpc0Irq\000"
+ 2081      73497063 
+ 2081      30497271 
+ 2081      00
+ 2082              	.LASF170:
+ 2083 0a79 70657269 		.ascii	"period0\000"
+ 2083      6F643000 
+ 2084              	.LASF171:
+ 2085 0a81 70657269 		.ascii	"period1\000"
+ 2085      6F643100 
+ 2086              	.LASF152:
+ 2087 0a89 636F6D70 		.ascii	"compare1\000"
+ 2087      61726531 
+ 2087      00
+ 2088              	.LASF89:
+ 2089 0a92 63707573 		.ascii	"cpussCm0ClockCtlOffset\000"
+ 2089      73436D30 
+ 2089      436C6F63 
+ 2089      6B43746C 
+ 2089      4F666673 
+ 2090              	.LASF85:
+ 2091 0aa9 6770696F 		.ascii	"gpioPrtCfgOffset\000"
+ 2091      50727443 
+ 2091      66674F66 
+ 2091      66736574 
+ 2091      00
+ 2092              	.LASF142:
+ 2093 0aba 696E6974 		.ascii	"initKey\000"
+ 2093      4B657900 
+ 2094              	.LASF135:
+ 2095 0ac2 72784275 		.ascii	"rxBuf\000"
+ 2095      6600
+ 2096              	.LASF2:
+ 2097 0ac8 7369676E 		.ascii	"signed char\000"
+ 2097      65642063 
+ 2097      68617200 
+ 2098              	.LASF122:
+ 2099 0ad4 72616E67 		.ascii	"rangeCond\000"
+ 2099      65436F6E 
+ 2099      6400
+ 2100              	.LASF134:
+ 2101 0ade 73746174 		.ascii	"status\000"
+ 2101      757300
+ 2102              	.LASF44:
+ 2103 0ae5 63707573 		.ascii	"cpussNotConnectedIrq\000"
+ 2103      734E6F74 
+ 2103      436F6E6E 
+ 2103      65637465 
+ 2103      64497271 
+ 2104              	.LASF174:
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc566hHT.s 			page 48
+
+
+ 2105 0afa 696E7665 		.ascii	"invertPWMOutN\000"
+ 2105      72745057 
+ 2105      4D4F7574 
+ 2105      4E00
+ 2106              	.LASF58:
+ 2107 0b08 666C6173 		.ascii	"flashWriteDelay\000"
+ 2107      68577269 
+ 2107      74654465 
+ 2107      6C617900 
+ 2108              	.LASF118:
+ 2109 0b18 73616D70 		.ascii	"sampleCtrl\000"
+ 2109      6C654374 
+ 2109      726C00
+ 2110              	.LASF186:
+ 2111 0b23 4144435F 		.ascii	"ADC_1_CONFIG_STRUCT\000"
+ 2111      315F434F 
+ 2111      4E464947 
+ 2111      5F535452 
+ 2111      55435400 
+ 2112              	.LASF189:
+ 2113 0b37 43595F45 		.ascii	"CY_EINK_Timer_config\000"
+ 2113      494E4B5F 
+ 2113      54696D65 
+ 2113      725F636F 
+ 2113      6E666967 
+ 2114              	.LASF91:
+ 2115 0b4c 63707573 		.ascii	"cpussCm4StatusOffset\000"
+ 2115      73436D34 
+ 2115      53746174 
+ 2115      75734F66 
+ 2115      66736574 
+ 2116              	.LASF84:
+ 2117 0b61 6770696F 		.ascii	"gpioPrtIntrCfgOffset\000"
+ 2117      50727449 
+ 2117      6E747243 
+ 2117      66674F66 
+ 2117      66736574 
+ 2118              	.LASF180:
+ 2119 0b76 63795F73 		.ascii	"cy_stc_tcpwm_pwm_config_t\000"
+ 2119      74635F74 
+ 2119      6370776D 
+ 2119      5F70776D 
+ 2119      5F636F6E 
+ 2120              	.LASF157:
+ 2121 0b90 72656C6F 		.ascii	"reloadInputMode\000"
+ 2121      6164496E 
+ 2121      7075744D 
+ 2121      6F646500 
+ 2122              	.LASF115:
+ 2123 0ba0 43595F53 		.ascii	"CY_SAR_RANGE_COND_OUTSIDE\000"
+ 2123      41525F52 
+ 2123      414E4745 
+ 2123      5F434F4E 
+ 2123      445F4F55 
+ 2124              	.LASF151:
+ 2125 0bba 636F6D70 		.ascii	"compare0\000"
+ 2125      61726530 
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc566hHT.s 			page 49
+
+
+ 2125      00
+ 2126              	.LASF95:
+ 2127 0bc3 63707573 		.ascii	"cpussTrimRomCtlOffset\000"
+ 2127      73547269 
+ 2127      6D526F6D 
+ 2127      43746C4F 
+ 2127      66667365 
+ 2128              	.LASF163:
+ 2129 0bd9 636F756E 		.ascii	"countInputMode\000"
+ 2129      74496E70 
+ 2129      75744D6F 
+ 2129      646500
+ 2130              	.LASF129:
+ 2131 0be8 6D757853 		.ascii	"muxSwitchSqCtrl\000"
+ 2131      77697463 
+ 2131      68537143 
+ 2131      74726C00 
+ 2132              	.LASF31:
+ 2133 0bf8 64775665 		.ascii	"dwVersion\000"
+ 2133      7273696F 
+ 2133      6E00
+ 2134              	.LASF27:
+ 2135 0c02 69706342 		.ascii	"ipcBase\000"
+ 2135      61736500 
+ 2136              	.LASF78:
+ 2137 0c0a 70657269 		.ascii	"periDivCmdPaDivSelPos\000"
+ 2137      44697643 
+ 2137      6D645061 
+ 2137      44697653 
+ 2137      656C506F 
+ 2138              	.LASF59:
+ 2139 0c20 666C6173 		.ascii	"flashProgramDelay\000"
+ 2139      6850726F 
+ 2139      6772616D 
+ 2139      44656C61 
+ 2139      7900
+ 2140              	.LASF56:
+ 2141 0c32 666C6173 		.ascii	"flashRwwRequired\000"
+ 2141      68527777 
+ 2141      52657175 
+ 2141      69726564 
+ 2141      00
+ 2142              	.LASF140:
+ 2143 0c43 74784275 		.ascii	"txBufIdx\000"
+ 2143      66496478 
+ 2143      00
+ 2144              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CyXmlSerializer>
+<!--This file is machine generated and read. It is not intended to be edited by hand.-->
+<!--Due to this, there is no schema for this file.-->
+<CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWrkspcCustomData" version="4">
+<CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997 type_name="CyDesigner.Common.Base.CyCustomData" version="2">
+<userData>
+<dataGuid v="1b906a0f-a7b6-4e4d-a428-82f98b53cb35">
+<CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35 type_name="CyDesigner.Common.ProjMgmt.GUI.CyExplorerWindow+CyExplorerWindowState" version="3" SelectedTab="Source">
+<TreeKeys>
+<v>Source</v>
+<v>Components</v>
+<v>Output</v>
+</TreeKeys>
+<TreeStates>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Laboratoire3\Laboratoire3\CM0p (Core 0)">
+<ExpandedNodeIds>
+<v>Laboratoire3</v>
+<v>Laboratoire3\Laboratoire3</v>
+<v>Laboratoire3\Laboratoire3\TopDesign</v>
+<v>Laboratoire3\Laboratoire3\Laboratoire3.cydwr</v>
+<v>Laboratoire3\Laboratoire3\Laboratoire3.cydwr\Pins</v>
+<v>Laboratoire3\Laboratoire3\Laboratoire3.cydwr\Analog</v>
+<v>Laboratoire3\Laboratoire3\Laboratoire3.cydwr\DMA</v>
+<v>Laboratoire3\Laboratoire3\Laboratoire3.cydwr\Clocks</v>
+<v>Laboratoire3\Laboratoire3\Laboratoire3.cydwr\Interrupts</v>
+<v>Laboratoire3\Laboratoire3\Laboratoire3.cydwr\System</v>
+<v>Laboratoire3\Laboratoire3\Laboratoire3.cydwr\Directives</v>
+<v>Laboratoire3\Laboratoire3\CM0p (Core 0)\ARM GCC Generic</v>
+<v>Laboratoire3\Laboratoire3\CM0p (Core 0)\ARM GCC Generic\cy8c6xx7_cm0plus.ld</v>
+<v>Laboratoire3\Laboratoire3\CM0p (Core 0)\ARM IAR Generic</v>
+<v>Laboratoire3\Laboratoire3\CM0p (Core 0)\ARM IAR Generic\cy8c6xx7_cm0plus.icf</v>
+<v>Laboratoire3\Laboratoire3\CM0p (Core 0)\ARM MDK Generic</v>
+<v>Laboratoire3\Laboratoire3\CM0p (Core 0)\ARM MDK Generic\cy8c6xx7_cm0plus.scat</v>
+<v>Laboratoire3\Laboratoire3\CM0p (Core 0)\Header Files</v>
+<v>Laboratoire3\Laboratoire3\CM0p (Core 0)\Source Files</v>
+<v>Laboratoire3\Laboratoire3\CM0p (Core 0)\Source Files\ARM GCC Generic</v>
+<v>Laboratoire3\Laboratoire3\CM0p (Core 0)\Source Files\ARM GCC Generic\startup_psoc6_01_cm0plus.S</v>
+<v>Laboratoire3\Laboratoire3\CM0p (Core 0)\Source Files\ARM IAR Generic</v>
+<v>Laboratoire3\Laboratoire3\CM0p (Core 0)\Source Files\ARM IAR Generic\startup_psoc6_01_cm0plus.s</v>
+<v>Laboratoire3\Laboratoire3\CM0p (Core 0)\Source Files\ARM MDK Generic</v>
+<v>Laboratoire3\Laboratoire3\CM0p (Core 0)\Source Files\ARM MDK Generic\startup_psoc6_01_cm0plus.s</v>
+<v>Laboratoire3\Laboratoire3\CM0p (Core 0)\Source Files\main_cm0p.c</v>
+<v>Laboratoire3\Laboratoire3\CM0p (Core 0)\Source Files\system_psoc6_cm0plus.c</v>
+<v>Laboratoire3\Laboratoire3\CM4 (Core 1)</v>
+<v>Laboratoire3\Laboratoire3\CM4 (Core 1)\ARM GCC Generic</v>
+<v>Laboratoire3\Laboratoire3\CM4 (Core 1)\ARM GCC Generic\cy8c6xx7_cm4_dual.ld</v>
+<v>Laboratoire3\Laboratoire3\CM4 (Core 1)\ARM IAR Generic</v>
+<v>Laboratoire3\Laboratoire3\CM4 (Core 1)\ARM IAR Generic\cy8c6xx7_cm4_dual.icf</v>
+<v>Laboratoire3\Laboratoire3\CM4 (Core 1)\ARM MDK Generic</v>
+<v>Laboratoire3\Laboratoire3\CM4 (Core 1)\ARM MDK Generic\cy8c6xx7_cm4_dual.scat</v>
+<v>Laboratoire3\Laboratoire3\CM4 (Core 1)\eInk Library</v>
+<v>Laboratoire3\Laboratoire3\CM4 (Core 1)\eInk Library\cy_eink_fonts.h</v>
+<v>Laboratoire3\Laboratoire3\CM4 (Core 1)\eInk Library\cy_eink_library.c</v>
+<v>Laboratoire3\Laboratoire3\CM4 (Core 1)\eInk Library\cy_eink_library.h</v>
+<v>Laboratoire3\Laboratoire3\CM4 (Core 1)\eInk Library\cy_eink_psoc_interface.c</v>
+<v>Laboratoire3\Laboratoire3\CM4 (Core 1)\eInk Library\cy_eink_psoc_interface.h</v>
+<v>Laboratoire3\Laboratoire3\CM4 (Core 1)\eInk Library\pervasive_eink_configuration.h</v>
+<v>Laboratoire3\Laboratoire3\CM4 (Core 1)\eInk Library\pervasive_eink_hardware_driver.c</v>
+<v>Laboratoire3\Laboratoire3\CM4 (Core 1)\eInk Library\pervasive_eink_hardware_driver.h</v>
+<v>Laboratoire3\Laboratoire3\CM4 (Core 1)\Header Files</v>
+<v>Laboratoire3\Laboratoire3\CM4 (Core 1)\Header Files\debug.h</v>
+<v>Laboratoire3\Laboratoire3\CM4 (Core 1)\Images</v>
+<v>Laboratoire3\Laboratoire3\CM4 (Core 1)\Images\Cypress Logo Full Color_PNG_1bpp.c</v>
+<v>Laboratoire3\Laboratoire3\CM4 (Core 1)\Source Files</v>
+<v>Laboratoire3\Laboratoire3\CM4 (Core 1)\Source Files\ARM GCC Generic</v>
+<v>Laboratoire3\Laboratoire3\CM4 (Core 1)\Source Files\ARM GCC Generic\startup_psoc6_01_cm4.S</v>
+<v>Laboratoire3\Laboratoire3\CM4 (Core 1)\Source Files\ARM IAR Generic</v>
+<v>Laboratoire3\Laboratoire3\CM4 (Core 1)\Source Files\ARM IAR Generic\startup_psoc6_01_cm4.s</v>
+<v>Laboratoire3\Laboratoire3\CM4 (Core 1)\Source Files\ARM MDK Generic</v>
+<v>Laboratoire3\Laboratoire3\CM4 (Core 1)\Source Files\ARM MDK Generic\startup_psoc6_01_cm4.s</v>
+<v>Laboratoire3\Laboratoire3\CM4 (Core 1)\Source Files\main_cm4.c</v>
+<v>Laboratoire3\Laboratoire3\CM4 (Core 1)\Source Files\system_psoc6_cm4.c</v>
+<v>Laboratoire3\Laboratoire3\Shared Files</v>
+<v>Laboratoire3\Laboratoire3\Shared Files\cy_ble_config.h</v>
+<v>Laboratoire3\Laboratoire3\Shared Files\GUI_X.c</v>
+<v>Laboratoire3\Laboratoire3\Shared Files\GUIConf.c</v>
+<v>Laboratoire3\Laboratoire3\Shared Files\GUIConf.h</v>
+<v>Laboratoire3\Laboratoire3\Shared Files\LCDConf.c</v>
+<v>Laboratoire3\Laboratoire3\Shared Files\LCDConf.h</v>
+<v>Laboratoire3\Laboratoire3\Shared Files\system_psoc6.h</v>
+<v>Laboratoire3\Laboratoire3\Generated_Source</v>
+<v>Laboratoire3\Laboratoire3\Generated_Source\PSoC6</v>
+<v>Laboratoire3\CE223727_EmWin_EInk_Display.pdf</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Laboratoire3\Laboratoire3\CM4 (Core 1)\eInk Library\cy_eink_library.c</v>
+<v>Laboratoire3\Laboratoire3\CM4 (Core 1)\eInk Library\cy_eink_library.h</v>
+<v>Laboratoire3\Laboratoire3\CM4 (Core 1)\eInk Library\cy_eink_psoc_interface.c</v>
+<v>Laboratoire3\Laboratoire3\CM4 (Core 1)\eInk Library\cy_eink_psoc_interface.h</v>
+<v>Laboratoire3\Laboratoire3\CM4 (Core 1)\eInk Library\pervasive_eink_configuration.h</v>
+<v>Laboratoire3\Laboratoire3\CM4 (Core 1)\eInk Library\pervasive_eink_hardware_driver.c</v>
+<v>Laboratoire3\Laboratoire3\CM4 (Core 1)\eInk Library\pervasive_eink_hardware_driver.h</v>
+<v>Laboratoire3\Laboratoire3\CM4 (Core 1)\Header Files</v>
+<v>Laboratoire3\Laboratoire3\CM4 (Core 1)\Header Files\debug.h</v>
+<v>Laboratoire3\Laboratoire3\CM4 (Core 1)\Images</v>
+<v>Laboratoire3\Laboratoire3\CM4 (Core 1)\Images\Cypress Logo Full Color_PNG_1bpp.c</v>
+<v>Laboratoire3\Laboratoire3\CM4 (Core 1)\Source Files</v>
+<v>Laboratoire3\Laboratoire3\CM4 (Core 1)\Source Files\ARM GCC Generic</v>
+<v>Laboratoire3\Laboratoire3\CM4 (Core 1)\Source Files\ARM GCC Generic\startup_psoc6_01_cm4.S</v>
+<v>Laboratoire3\Laboratoire3\CM4 (Core 1)\Source Files\ARM IAR Generic</v>
+<v>Laboratoire3\Laboratoire3\CM4 (Core 1)\Source Files\ARM IAR Generic\startup_psoc6_01_cm4.s</v>
+<v>Laboratoire3\Laboratoire3\CM4 (Core 1)\Source Files\ARM MDK Generic</v>
+<v>Laboratoire3\Laboratoire3\CM4 (Core 1)\Source Files\ARM MDK Generic\startup_psoc6_01_cm4.s</v>
+<v>Laboratoire3\Laboratoire3\CM4 (Core 1)\Source Files\main_cm4.c</v>
+<v>Laboratoire3\Laboratoire3\CM4 (Core 1)\Source Files\system_psoc6_cm4.c</v>
+<v>Laboratoire3\Laboratoire3\Shared Files</v>
+<v>Laboratoire3\Laboratoire3\Shared Files\cy_ble_config.h</v>
+<v>Laboratoire3\Laboratoire3\Shared Files\GUI_X.c</v>
+<v>Laboratoire3\Laboratoire3\Shared Files\GUIConf.c</v>
+<v>Laboratoire3\Laboratoire3\Shared Files\GUIConf.h</v>
+<v>Laboratoire3\Laboratoire3\Shared Files\LCDConf.c</v>
+<v>Laboratoire3\Laboratoire3\Shared Files\LCDConf.h</v>
+<v>Laboratoire3\Laboratoire3\Shared Files\system_psoc6.h</v>
+<v>Laboratoire3\Laboratoire3\Generated_Source</v>
+<v>Laboratoire3\Laboratoire3\Generated_Source\PSoC6</v>
+<v>Laboratoire3\Laboratoire3\Generated_Source\PSoC6\pdl</v>
+<v>Laboratoire3\Laboratoire3\Generated_Source\PSoC6\Clock_2</v>
+<v>Laboratoire3\Laboratoire3\Generated_Source\PSoC6\CY_EINK_SPIM</v>
+<v>Laboratoire3\Laboratoire3\Generated_Source\PSoC6\CY_EINK_SPIM_SCBCLK</v>
+<v>Laboratoire3\Laboratoire3\Generated_Source\PSoC6\CY_EINK_Timer</v>
+<v>Laboratoire3\Laboratoire3\Generated_Source\PSoC6\EINK_Clock</v>
+<v>Laboratoire3\Laboratoire3\Generated_Source\PSoC6\Pins and Interrupts</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Laboratoire3">
+<ExpandedNodeIds>
+<v>Laboratoire3</v>
+<v>Laboratoire3\Laboratoire3</v>
+<v>Laboratoire3\Laboratoire3\TopDesign</v>
+<v>Laboratoire3\Laboratoire3\TopDesign\TopDesign.cysch</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Laboratoire3</v>
+<v>Laboratoire3\Laboratoire3</v>
+<v>Laboratoire3\Laboratoire3\TopDesign</v>
+<v>Laboratoire3\Laboratoire3\TopDesign\TopDesign.cysch</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>Laboratoire3</v>
+<v>Laboratoire3\Laboratoire3</v>
+<v>Laboratoire3\Laboratoire3\CortexM0p</v>
+<v>Laboratoire3\Laboratoire3\CortexM0p\ARM_GCC_541</v>
+<v>Laboratoire3\Laboratoire3\CortexM0p\ARM_GCC_541\Debug</v>
+<v>Laboratoire3\Laboratoire3\CortexM0p\ARM_GCC_541\Debug\Listing Files</v>
+<v>Laboratoire3\Laboratoire3\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_clk.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_device.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_efuse.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM0p\ARM_GCC_541\Debug\Listing Files\CY_EINK_SPIM.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM0p\ARM_GCC_541\Debug\Listing Files\CY_EINK_Timer.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_flash.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_gpio.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ipc_drv.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ipc_pipe.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ipc_sema.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_lvd.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_profile.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_prot.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_scb_common.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_scb_ezi2c.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_scb_i2c.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_scb_spi.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_scb_uart.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_sysanalog.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_sysclk.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_sysint.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_syslib.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_syslib_gcc.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_syspm.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_systick.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_tcpwm_counter.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_tcpwm_pwm.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_tcpwm_quaddec.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_trigmux.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_wdt.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM0p\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM0p\ARM_GCC_541\Debug\Listing Files\cyfitter_sysint_cfg.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM0p\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM0p\ARM_GCC_541\Debug\Listing Files\GUI_X.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM0p\ARM_GCC_541\Debug\Listing Files\GUIConf.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM0p\ARM_GCC_541\Debug\Listing Files\LCDConf.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM0p\ARM_GCC_541\Debug\Listing Files\main_cm0p.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM0p\ARM_GCC_541\Debug\Listing Files\startup_psoc6_01_cm0plus.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM0p\ARM_GCC_541\Debug\Listing Files\Status_SW2.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM0p\ARM_GCC_541\Debug\Listing Files\system_psoc6_cm0plus.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM0p\ARM_GCC_541\Debug\Laboratoire3.elf</v>
+<v>Laboratoire3\Laboratoire3\CortexM0p\ARM_GCC_541\Debug\Laboratoire3.hex</v>
+<v>Laboratoire3\Laboratoire3\CortexM0p\ARM_GCC_541\Debug\Laboratoire3.map</v>
+<v>Laboratoire3\Laboratoire3\CortexM4</v>
+<v>Laboratoire3\Laboratoire3\CortexM4\ARM_GCC_541</v>
+<v>Laboratoire3\Laboratoire3\CortexM4\ARM_GCC_541\Debug</v>
+<v>Laboratoire3\Laboratoire3\CortexM4\ARM_GCC_541\Debug\Listing Files</v>
+<v>Laboratoire3\Laboratoire3\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_ble_clk.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_device.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_efuse.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_eink_library.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_eink_psoc_interface.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM4\ARM_GCC_541\Debug\Listing Files\CY_EINK_SPIM.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM4\ARM_GCC_541\Debug\Listing Files\CY_EINK_Timer.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_flash.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_gpio.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_ipc_drv.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_ipc_pipe.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_ipc_sema.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_lvd.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_profile.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_prot.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_scb_common.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_scb_ezi2c.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_scb_i2c.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_scb_spi.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_scb_uart.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_sysanalog.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_sysclk.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_sysint.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_syslib.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_syslib_gcc.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_syspm.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_systick.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_tcpwm_counter.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_tcpwm_pwm.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_tcpwm_quaddec.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_trigmux.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_wdt.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM4\ARM_GCC_541\Debug\Listing Files\cyfitter_sysint_cfg.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM4\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM4\ARM_GCC_541\Debug\Listing Files\Cypress Logo Full Color_PNG_1bpp.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM4\ARM_GCC_541\Debug\Listing Files\GUI_X.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM4\ARM_GCC_541\Debug\Listing Files\GUIConf.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM4\ARM_GCC_541\Debug\Listing Files\LCDConf.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM4\ARM_GCC_541\Debug\Listing Files\main_cm4.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM4\ARM_GCC_541\Debug\Listing Files\pervasive_eink_hardware_driver.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM4\ARM_GCC_541\Debug\Listing Files\startup_psoc6_01_cm4.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM4\ARM_GCC_541\Debug\Listing Files\Status_SW2.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM4\ARM_GCC_541\Debug\Listing Files\system_psoc6_cm4.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM4\ARM_GCC_541\Debug\Laboratoire3.elf</v>
+<v>Laboratoire3\Laboratoire3\CortexM4\ARM_GCC_541\Debug\Laboratoire3.hex</v>
+<v>Laboratoire3\Laboratoire3\CortexM4\ARM_GCC_541\Debug\Laboratoire3.map</v>
+<v>Laboratoire3\Laboratoire3\Laboratoire3.gpdsc</v>
+<v>Laboratoire3\Laboratoire3\Laboratoire3.rpt</v>
+<v>Laboratoire3\Laboratoire3\Laboratoire3_timing.html</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Laboratoire3</v>
+<v>Laboratoire3\Laboratoire3</v>
+<v>Laboratoire3\Laboratoire3\CortexM0p</v>
+<v>Laboratoire3\Laboratoire3\CortexM0p\ARM_GCC_541</v>
+<v>Laboratoire3\Laboratoire3\CortexM0p\ARM_GCC_541\Debug</v>
+<v>Laboratoire3\Laboratoire3\CortexM0p\ARM_GCC_541\Debug\Listing Files</v>
+<v>Laboratoire3\Laboratoire3\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_clk.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_device.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_efuse.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM0p\ARM_GCC_541\Debug\Listing Files\CY_EINK_SPIM.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM0p\ARM_GCC_541\Debug\Listing Files\CY_EINK_Timer.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_flash.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_gpio.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ipc_drv.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ipc_pipe.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ipc_sema.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_lvd.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_profile.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_prot.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_scb_common.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_scb_ezi2c.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_scb_i2c.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_scb_spi.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_scb_uart.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_sysanalog.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_sysclk.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_sysint.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_syslib.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_syslib_gcc.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_syspm.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_systick.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_tcpwm_counter.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_tcpwm_pwm.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_tcpwm_quaddec.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_trigmux.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_wdt.lst</v>
+<v>Laboratoire3\Laboratoire3\CortexM0p\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStates>
+<TreeKeysV2>
+<v>Datasheet</v>
+</TreeKeysV2>
+<TreeStatesV2>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Laboratoire3">
+<ExpandedNodeIds>
+<v>Laboratoire3</v>
+<v>Laboratoire3\Laboratoire3</v>
+<v>Laboratoire3\Laboratoire3\PSoC 6 Architecture TRM</v>
+<v>Laboratoire3\Laboratoire3\PSoC 63 Family Datasheet</v>
+<v>Laboratoire3\Laboratoire3\Peripheral Driver Library</v>
+<v>Laboratoire3\Laboratoire3\System Reference Guides</v>
+<v>Laboratoire3\Laboratoire3\CyStatusReg_v1_90.pdf</v>
+<v>Laboratoire3\Laboratoire3\GPIO_PDL_v1_0</v>
+<v>Laboratoire3\Laboratoire3\GPIO_PDL_v1_0\GPIO_PDL_v1_0.pdf</v>
+<v>Laboratoire3\Laboratoire3\SCB_SPI_PDL_v2_0.pdf</v>
+<v>Laboratoire3\Laboratoire3\SysClk_PDL_v1_0</v>
+<v>Laboratoire3\Laboratoire3\SysClk_PDL_v1_0\SysClk_PDL_v1_0.pdf</v>
+<v>Laboratoire3\Laboratoire3\TCPWM_Counter_PDL_v1_0.pdf</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Laboratoire3</v>
+<v>Laboratoire3\Laboratoire3</v>
+<v>Laboratoire3\Laboratoire3\PSoC 6 Architecture TRM</v>
+<v>Laboratoire3\Laboratoire3\PSoC 63 Family Datasheet</v>
+<v>Laboratoire3\Laboratoire3\Peripheral Driver Library</v>
+<v>Laboratoire3\Laboratoire3\System Reference Guides</v>
+<v>Laboratoire3\Laboratoire3\CyStatusReg_v1_90.pdf</v>
+<v>Laboratoire3\Laboratoire3\GPIO_PDL_v1_0</v>
+<v>Laboratoire3\Laboratoire3\GPIO_PDL_v1_0\GPIO_PDL_v1_0.pdf</v>
+<v>Laboratoire3\Laboratoire3\SCB_SPI_PDL_v2_0.pdf</v>
+<v>Laboratoire3\Laboratoire3\SysClk_PDL_v1_0</v>
+<v>Laboratoire3\Laboratoire3\SysClk_PDL_v1_0\SysClk_PDL_v1_0.pdf</v>
+<v>Laboratoire3\Laboratoire3\TCPWM_Counter_PDL_v1_0.pdf</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStatesV2>
+</CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35>
+</dataGuid>
+<dataGuid v="5f2be1a5-0687-4501-bb8c-cf21cb8211bf">
+<CyGuid_5f2be1a5-0687-4501-bb8c-cf21cb8211bf type_name="CyDesigner.Common.ProjMgmt.GUI.CyBookmarkData" version="1">
+<indicators />
+</CyGuid_5f2be1a5-0687-4501-bb8c-cf21cb8211bf>
+</dataGuid>
+</userData>
+</CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
+<Unloaded />
+<OpenDocs>
+<name v=".\Laboratoire3.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\Laboratoire3.cydsn\main_cm4.c" />
+<name v=".\Laboratoire3.cydsn\Generated_Source\PSoC6\pdl\middleware\emWin\code\include\GUI.h" />
+</OpenDocs>
+<OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
+
+  Actipro Docking/MDI for WinForms
+  Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
+  http://www.actiprosoftware.com
+
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1085, 490" SelectedTabbedMdiWindow="26684dcc-fcaa-45d7-8e51-2a63f6762f76"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="2191dcaa-18a8-4ede-a6c8-648718412623" /><DocumentWindow Key="C:\Users\Labeo\Desktop\GBM2100\_Christophe\Laboratoire3\Laboratoire3.cydsn\TopDesign\TopDesign.cysch" Guid="26684dcc-fcaa-45d7-8e51-2a63f6762f76" /><DocumentWindow Key="C:\Users\Labeo\Desktop\GBM2100\_Christophe\Laboratoire3\Laboratoire3.cydsn\main_cm4.c" Guid="e322b75b-8a87-4194-b878-71c3a337ef34" /><DocumentWindow Key="C:\Users\Labeo\Desktop\GBM2100\_Christophe\Laboratoire3\Laboratoire3.cydsn\Generated_Source\PSoC6\pdl\middleware\emWin\code\include\GUI.h" Guid="ab9aa6ca-ba84-412e-b734-8e17fb2a9ca6" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+<config v="" />
+<AutoUpdate v="true" />
+</CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
+</CyXmlSerializer>

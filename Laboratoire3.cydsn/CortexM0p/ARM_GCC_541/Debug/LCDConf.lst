@@ -1,0 +1,2334 @@
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc4FRUF7.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m0plus
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 0
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"LCDConf.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.LCD_X_Config,"ax",%progbits
+  20              		.align	2
+  21              		.global	LCD_X_Config
+  22              		.code	16
+  23              		.thumb_func
+  24              		.type	LCD_X_Config, %function
+  25              	LCD_X_Config:
+  26              	.LFB45:
+  27              		.file 1 "LCDConf.c"
+   1:LCDConf.c     **** /*********************************************************************
+   2:LCDConf.c     **** *                SEGGER Microcontroller GmbH & Co. KG                *
+   3:LCDConf.c     **** *        Solutions for real time microcontroller applications        *
+   4:LCDConf.c     **** **********************************************************************
+   5:LCDConf.c     **** *                                                                    *
+   6:LCDConf.c     **** *        (c) 1996 - 2017  SEGGER Microcontroller GmbH & Co. KG       *
+   7:LCDConf.c     **** *                                                                    *
+   8:LCDConf.c     **** *        Internet: www.segger.com    Support:  support@segger.com    *
+   9:LCDConf.c     **** *                                                                    *
+  10:LCDConf.c     **** **********************************************************************
+  11:LCDConf.c     **** 
+  12:LCDConf.c     **** ** emWin V5.46 - Graphical user interface for embedded applications **
+  13:LCDConf.c     **** All  Intellectual Property rights  in the Software belongs to  SEGGER.
+  14:LCDConf.c     **** emWin is protected by  international copyright laws.  Knowledge of the
+  15:LCDConf.c     **** source code may not be used to write a similar product.  This file may
+  16:LCDConf.c     **** only be used in accordance with the following terms:
+  17:LCDConf.c     **** 
+  18:LCDConf.c     **** The software  has been licensed to  Cypress Semiconductor Corporation,
+  19:LCDConf.c     **** whose registered  office is situated  at 198 Champion Ct. San Jose, CA 
+  20:LCDConf.c     **** 95134 USA  solely for the  purposes of creating  libraries for Cypress
+  21:LCDConf.c     **** PSoC3 and  PSoC5 processor-based devices,  sublicensed and distributed
+  22:LCDConf.c     **** under  the  terms  and  conditions  of  the  Cypress  End User License
+  23:LCDConf.c     **** Agreement.
+  24:LCDConf.c     **** Full source code is available at: www.segger.com
+  25:LCDConf.c     **** 
+  26:LCDConf.c     **** We appreciate your understanding and fairness.
+  27:LCDConf.c     **** ----------------------------------------------------------------------
+  28:LCDConf.c     **** Licensing information
+  29:LCDConf.c     **** Licensor:                 SEGGER Microcontroller Systems LLC
+  30:LCDConf.c     **** Licensed to:              Cypress Semiconductor Corp, 198 Champion Ct., San Jose, CA 95134, USA
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc4FRUF7.s 			page 2
+
+
+  31:LCDConf.c     **** Licensed SEGGER software: emWin
+  32:LCDConf.c     **** License number:           GUI-00319
+  33:LCDConf.c     **** License model:            Services and License Agreement, signed June 10th, 2009
+  34:LCDConf.c     **** Licensed platform:        Any Cypress platform (Initial targets are: PSoC3, PSoC5)
+  35:LCDConf.c     **** ----------------------------------------------------------------------
+  36:LCDConf.c     **** Support and Update Agreement (SUA)
+  37:LCDConf.c     **** SUA period:               2009-06-12 - 2022-07-27
+  38:LCDConf.c     **** Contact to extend SUA:    sales@segger.com
+  39:LCDConf.c     **** ----------------------------------------------------------------------
+  40:LCDConf.c     **** File        : LCDConf.c
+  41:LCDConf.c     **** Purpose     : Display configuration file for GUIDRV_Bitplains to be
+  42:LCDConf.c     ****               used without any display controller. This implementation
+  43:LCDConf.c     ****               has been written and tested with the RSKR32C111 with
+  44:LCDConf.c     ****               Visualization Add On.
+  45:LCDConf.c     **** ---------------------------END-OF-HEADER------------------------------
+  46:LCDConf.c     **** */
+  47:LCDConf.c     **** 
+  48:LCDConf.c     **** #include <stddef.h>
+  49:LCDConf.c     **** #include "syslib/cy_syslib.h"
+  50:LCDConf.c     **** 
+  51:LCDConf.c     **** #include "GUI.h"
+  52:LCDConf.c     **** 
+  53:LCDConf.c     **** #include "GUIDRV_BitPlains.h"
+  54:LCDConf.c     **** 
+  55:LCDConf.c     **** /*********************************************************************
+  56:LCDConf.c     **** *
+  57:LCDConf.c     **** *       Layer configuration
+  58:LCDConf.c     **** *
+  59:LCDConf.c     **** **********************************************************************
+  60:LCDConf.c     **** */
+  61:LCDConf.c     **** //
+  62:LCDConf.c     **** // Physical display size
+  63:LCDConf.c     **** //
+  64:LCDConf.c     **** #define XSIZE_PHYS 264
+  65:LCDConf.c     **** #define YSIZE_PHYS 176
+  66:LCDConf.c     **** 
+  67:LCDConf.c     **** //
+  68:LCDConf.c     **** // Initial color conversion API
+  69:LCDConf.c     **** //
+  70:LCDConf.c     **** #define COLOR_CONVERSION GUICC_1
+  71:LCDConf.c     **** 
+  72:LCDConf.c     **** /*********************************************************************
+  73:LCDConf.c     **** *
+  74:LCDConf.c     **** *       Configuration checking
+  75:LCDConf.c     **** *
+  76:LCDConf.c     **** **********************************************************************
+  77:LCDConf.c     **** */
+  78:LCDConf.c     **** //
+  79:LCDConf.c     **** // Checking display driver configuration
+  80:LCDConf.c     **** //
+  81:LCDConf.c     **** #ifndef   XSIZE_PHYS
+  82:LCDConf.c     ****   #error Physical X size of display is not defined!
+  83:LCDConf.c     **** #endif
+  84:LCDConf.c     **** #ifndef   YSIZE_PHYS
+  85:LCDConf.c     ****   #error Physical Y size of display is not defined!
+  86:LCDConf.c     **** #endif
+  87:LCDConf.c     **** #ifndef   COLOR_CONVERSION
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc4FRUF7.s 			page 3
+
+
+  88:LCDConf.c     ****   #error Color conversion not defined!
+  89:LCDConf.c     **** #endif
+  90:LCDConf.c     **** 
+  91:LCDConf.c     **** //
+  92:LCDConf.c     **** // Number of bytes per line
+  93:LCDConf.c     **** //
+  94:LCDConf.c     **** #define BYTES_PER_LINE ((XSIZE_PHYS + 7) >> 3)
+  95:LCDConf.c     **** 
+  96:LCDConf.c     **** /*********************************************************************
+  97:LCDConf.c     **** *
+  98:LCDConf.c     **** *       Static data
+  99:LCDConf.c     **** *
+ 100:LCDConf.c     **** **********************************************************************
+ 101:LCDConf.c     **** */
+ 102:LCDConf.c     **** //
+ 103:LCDConf.c     **** // Data arrays to be used by the display driver
+ 104:LCDConf.c     **** //
+ 105:LCDConf.c     **** static U8 _aPlain_0[BYTES_PER_LINE * YSIZE_PHYS];
+ 106:LCDConf.c     **** 
+ 107:LCDConf.c     **** //
+ 108:LCDConf.c     **** // Structure to be passed to the driver
+ 109:LCDConf.c     **** //
+ 110:LCDConf.c     **** static struct {
+ 111:LCDConf.c     ****   U8 * apVRAM[8];
+ 112:LCDConf.c     **** } _VRAM_Desc = {{
+ 113:LCDConf.c     ****   _aPlain_0,
+ 114:LCDConf.c     **** }};
+ 115:LCDConf.c     **** 
+ 116:LCDConf.c     **** /*********************************************************************
+ 117:LCDConf.c     **** *
+ 118:LCDConf.c     **** *       Public code
+ 119:LCDConf.c     **** *
+ 120:LCDConf.c     **** **********************************************************************
+ 121:LCDConf.c     **** */
+ 122:LCDConf.c     **** /*********************************************************************
+ 123:LCDConf.c     **** *
+ 124:LCDConf.c     **** *       LCD_X_Config
+ 125:LCDConf.c     **** *
+ 126:LCDConf.c     **** * Purpose:
+ 127:LCDConf.c     **** *   Called during the initialization process in order to set up the
+ 128:LCDConf.c     **** *   display driver configuration.
+ 129:LCDConf.c     **** *   
+ 130:LCDConf.c     **** */
+ 131:LCDConf.c     **** void LCD_X_Config(void) {
+  28              		.loc 1 131 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 8
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32 0000 10B5     		push	{r4, lr}
+  33              		.cfi_def_cfa_offset 8
+  34              		.cfi_offset 4, -8
+  35              		.cfi_offset 14, -4
+  36 0002 82B0     		sub	sp, sp, #8
+  37              		.cfi_def_cfa_offset 16
+ 132:LCDConf.c     **** 	
+ 133:LCDConf.c     **** 	GUI_DEVICE * pDevice;
+ 134:LCDConf.c     **** 	CONFIG_BITPLAINS Config;
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc4FRUF7.s 			page 4
+
+
+ 135:LCDConf.c     **** 	
+ 136:LCDConf.c     **** 	Config.Mirror = 1;
+  38              		.loc 1 136 0
+  39 0004 0123     		movs	r3, #1
+  40 0006 0193     		str	r3, [sp, #4]
+ 137:LCDConf.c     **** 	
+ 138:LCDConf.c     **** 	
+ 139:LCDConf.c     ****   //
+ 140:LCDConf.c     ****   // Set display driver and color conversion for 1st layer
+ 141:LCDConf.c     ****   //
+ 142:LCDConf.c     ****   pDevice = GUI_DEVICE_CreateAndLink(GUIDRV_BITPLAINS, COLOR_CONVERSION, 0, 0);
+  41              		.loc 1 142 0
+  42 0008 0023     		movs	r3, #0
+  43 000a 0022     		movs	r2, #0
+  44 000c 1449     		ldr	r1, .L4
+  45 000e 1548     		ldr	r0, .L4+4
+  46 0010 FFF7FEFF 		bl	GUI_DEVICE_CreateAndLink
+  47              	.LVL0:
+ 143:LCDConf.c     ****   GUIDRV_BitPlains_Config(pDevice, &Config);
+  48              		.loc 1 143 0
+  49 0014 01A9     		add	r1, sp, #4
+  50 0016 FFF7FEFF 		bl	GUIDRV_BitPlains_Config
+  51              	.LVL1:
+ 144:LCDConf.c     **** 
+ 145:LCDConf.c     ****   //
+ 146:LCDConf.c     ****   // Display driver configuration
+ 147:LCDConf.c     ****   //
+ 148:LCDConf.c     ****   if (LCD_GetSwapXY()) {
+  52              		.loc 1 148 0
+  53 001a FFF7FEFF 		bl	LCD_GetSwapXY
+  54              	.LVL2:
+  55 001e 0028     		cmp	r0, #0
+  56 0020 0CD0     		beq	.L2
+ 149:LCDConf.c     ****     LCD_SetSizeEx (0, YSIZE_PHYS, XSIZE_PHYS);
+  57              		.loc 1 149 0
+  58 0022 8424     		movs	r4, #132
+  59 0024 6400     		lsls	r4, r4, #1
+  60 0026 2200     		movs	r2, r4
+  61 0028 B021     		movs	r1, #176
+  62 002a 0020     		movs	r0, #0
+  63 002c FFF7FEFF 		bl	LCD_SetSizeEx
+  64              	.LVL3:
+ 150:LCDConf.c     ****     LCD_SetVSizeEx(0, YSIZE_PHYS, XSIZE_PHYS);
+  65              		.loc 1 150 0
+  66 0030 2200     		movs	r2, r4
+  67 0032 B021     		movs	r1, #176
+  68 0034 0020     		movs	r0, #0
+  69 0036 FFF7FEFF 		bl	LCD_SetVSizeEx
+  70              	.LVL4:
+  71 003a 0BE0     		b	.L3
+  72              	.L2:
+ 151:LCDConf.c     ****   } else {
+ 152:LCDConf.c     ****     LCD_SetSizeEx (0, XSIZE_PHYS, YSIZE_PHYS);
+  73              		.loc 1 152 0
+  74 003c 8424     		movs	r4, #132
+  75 003e 6400     		lsls	r4, r4, #1
+  76 0040 B022     		movs	r2, #176
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc4FRUF7.s 			page 5
+
+
+  77 0042 2100     		movs	r1, r4
+  78 0044 0020     		movs	r0, #0
+  79 0046 FFF7FEFF 		bl	LCD_SetSizeEx
+  80              	.LVL5:
+ 153:LCDConf.c     ****     LCD_SetVSizeEx(0, XSIZE_PHYS, YSIZE_PHYS);
+  81              		.loc 1 153 0
+  82 004a B022     		movs	r2, #176
+  83 004c 2100     		movs	r1, r4
+  84 004e 0020     		movs	r0, #0
+  85 0050 FFF7FEFF 		bl	LCD_SetVSizeEx
+  86              	.LVL6:
+  87              	.L3:
+ 154:LCDConf.c     ****   }
+ 155:LCDConf.c     ****   //
+ 156:LCDConf.c     ****   // Initialize VRAM access off driver
+ 157:LCDConf.c     ****   //
+ 158:LCDConf.c     ****   LCD_SetVRAMAddrEx(0, (void *)&_VRAM_Desc);
+  88              		.loc 1 158 0
+  89 0054 0449     		ldr	r1, .L4+8
+  90 0056 0020     		movs	r0, #0
+  91 0058 FFF7FEFF 		bl	LCD_SetVRAMAddrEx
+  92              	.LVL7:
+ 159:LCDConf.c     **** }
+  93              		.loc 1 159 0
+  94 005c 02B0     		add	sp, sp, #8
+  95              		@ sp needed
+  96 005e 10BD     		pop	{r4, pc}
+  97              	.L5:
+  98              		.align	2
+  99              	.L4:
+ 100 0060 00000000 		.word	LCD_API_ColorConv_1
+ 101 0064 00000000 		.word	GUIDRV_BitPlains_API
+ 102 0068 00000000 		.word	.LANCHOR0
+ 103              		.cfi_endproc
+ 104              	.LFE45:
+ 105              		.size	LCD_X_Config, .-LCD_X_Config
+ 106              		.section	.text.LCD_X_DisplayDriver,"ax",%progbits
+ 107              		.align	2
+ 108              		.global	LCD_X_DisplayDriver
+ 109              		.code	16
+ 110              		.thumb_func
+ 111              		.type	LCD_X_DisplayDriver, %function
+ 112              	LCD_X_DisplayDriver:
+ 113              	.LFB46:
+ 160:LCDConf.c     **** 
+ 161:LCDConf.c     **** /*********************************************************************
+ 162:LCDConf.c     **** *
+ 163:LCDConf.c     **** *       LCD_X_DisplayDriver
+ 164:LCDConf.c     **** *
+ 165:LCDConf.c     **** * Purpose:
+ 166:LCDConf.c     **** *   This function is called by the display driver for several purposes.
+ 167:LCDConf.c     **** *   To support the according task the routine needs to be adapted to
+ 168:LCDConf.c     **** *   the display controller. Please note that the commands marked with
+ 169:LCDConf.c     **** *   'optional' are not cogently required and should only be adapted if 
+ 170:LCDConf.c     **** *   the display controller supports these features.
+ 171:LCDConf.c     **** *
+ 172:LCDConf.c     **** * Parameter:
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc4FRUF7.s 			page 6
+
+
+ 173:LCDConf.c     **** *   LayerIndex - Index of layer to be configured
+ 174:LCDConf.c     **** *   Cmd        - Please refer to the details in the switch statement below
+ 175:LCDConf.c     **** *   pData      - Pointer to a LCD_X_DATA structure
+ 176:LCDConf.c     **** *
+ 177:LCDConf.c     **** * Return Value:
+ 178:LCDConf.c     **** *   < -1 - Error
+ 179:LCDConf.c     **** *     -1 - Command not handled
+ 180:LCDConf.c     **** *      0 - Ok
+ 181:LCDConf.c     **** */
+ 182:LCDConf.c     **** int LCD_X_DisplayDriver(unsigned LayerIndex, unsigned Cmd, void * p) {
+ 114              		.loc 1 182 0
+ 115              		.cfi_startproc
+ 116              		@ args = 0, pretend = 0, frame = 0
+ 117              		@ frame_needed = 0, uses_anonymous_args = 0
+ 118              		@ link register save eliminated.
+ 119              	.LVL8:
+ 183:LCDConf.c     ****   int r;
+ 184:LCDConf.c     ****   GUI_USE_PARA(LayerIndex);
+ 185:LCDConf.c     ****   GUI_USE_PARA(p);
+ 186:LCDConf.c     **** 
+ 187:LCDConf.c     ****   switch (Cmd) {
+ 120              		.loc 1 187 0
+ 121 0000 0129     		cmp	r1, #1
+ 122 0002 01D1     		bne	.L10
+ 188:LCDConf.c     ****   case LCD_X_INITCONTROLLER: {
+ 189:LCDConf.c     **** 	//
+ 190:LCDConf.c     ****     // Called during the initialization process in order to set up the
+ 191:LCDConf.c     ****     // display controller and put it into operation. If the display
+ 192:LCDConf.c     ****     // controller is not initialized by any external routine this needs
+ 193:LCDConf.c     ****     // to be adapted by the customer...
+ 194:LCDConf.c     ****     //
+ 195:LCDConf.c     ****     return 0;
+ 123              		.loc 1 195 0
+ 124 0004 0020     		movs	r0, #0
+ 125              	.LVL9:
+ 126 0006 01E0     		b	.L7
+ 127              	.LVL10:
+ 128              	.L10:
+ 196:LCDConf.c     ****   }
+ 197:LCDConf.c     ****   default:
+ 198:LCDConf.c     ****     r = -1;
+ 199:LCDConf.c     ****   }
+ 200:LCDConf.c     ****   return r;
+ 129              		.loc 1 200 0
+ 130 0008 0120     		movs	r0, #1
+ 131              	.LVL11:
+ 132 000a 4042     		rsbs	r0, r0, #0
+ 133              	.L7:
+ 201:LCDConf.c     **** }
+ 134              		.loc 1 201 0
+ 135              		@ sp needed
+ 136 000c 7047     		bx	lr
+ 137              		.cfi_endproc
+ 138              	.LFE46:
+ 139              		.size	LCD_X_DisplayDriver, .-LCD_X_DisplayDriver
+ 140 000e C046     		.section	.text.LCD_GetDisplayBuffer,"ax",%progbits
+ 141              		.align	2
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc4FRUF7.s 			page 7
+
+
+ 142              		.global	LCD_GetDisplayBuffer
+ 143              		.code	16
+ 144              		.thumb_func
+ 145              		.type	LCD_GetDisplayBuffer, %function
+ 146              	LCD_GetDisplayBuffer:
+ 147              	.LFB47:
+ 202:LCDConf.c     **** 
+ 203:LCDConf.c     **** /*********************************************************************
+ 204:LCDConf.c     **** *
+ 205:LCDConf.c     **** *       LCD_GetDisplayBuffer
+ 206:LCDConf.c     **** *
+ 207:LCDConf.c     **** * Purpose:
+ 208:LCDConf.c     **** *   This function returns the pointer to EmWin's dispay buffer
+ 209:LCDConf.c     **** 
+ 210:LCDConf.c     **** * Parameter:
+ 211:LCDConf.c     **** *   None
+ 212:LCDConf.c     **** *
+ 213:LCDConf.c     **** * Return Value:
+ 214:LCDConf.c     **** *   U8* - Pointer to the EmWin's display buffer
+ 215:LCDConf.c     **** */
+ 216:LCDConf.c     **** U8* LCD_GetDisplayBuffer(void)
+ 217:LCDConf.c     **** {
+ 148              		.loc 1 217 0
+ 149              		.cfi_startproc
+ 150              		@ args = 0, pretend = 0, frame = 0
+ 151              		@ frame_needed = 0, uses_anonymous_args = 0
+ 152              		@ link register save eliminated.
+ 218:LCDConf.c     ****   /* Copy the Bitplains display buffer to user memory */
+ 219:LCDConf.c     ****   return _aPlain_0;
+ 220:LCDConf.c     **** }
+ 153              		.loc 1 220 0
+ 154 0000 0048     		ldr	r0, .L12
+ 155              		@ sp needed
+ 156 0002 7047     		bx	lr
+ 157              	.L13:
+ 158              		.align	2
+ 159              	.L12:
+ 160 0004 00000000 		.word	.LANCHOR1
+ 161              		.cfi_endproc
+ 162              	.LFE47:
+ 163              		.size	LCD_GetDisplayBuffer, .-LCD_GetDisplayBuffer
+ 164              		.data
+ 165              		.align	2
+ 166              		.set	.LANCHOR0,. + 0
+ 167              		.type	_VRAM_Desc, %object
+ 168              		.size	_VRAM_Desc, 32
+ 169              	_VRAM_Desc:
+ 170 0000 00000000 		.word	_aPlain_0
+ 171 0004 00000000 		.space	28
+ 171      00000000 
+ 171      00000000 
+ 171      00000000 
+ 171      00000000 
+ 172              		.bss
+ 173              		.align	2
+ 174              		.set	.LANCHOR1,. + 0
+ 175              		.type	_aPlain_0, %object
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc4FRUF7.s 			page 8
+
+
+ 176              		.size	_aPlain_0, 5808
+ 177              	_aPlain_0:
+ 178 0000 00000000 		.space	5808
+ 178      00000000 
+ 178      00000000 
+ 178      00000000 
+ 178      00000000 
+ 179              		.text
+ 180              	.Letext0:
+ 181              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 182              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 183              		.file 4 "Generated_Source\\PSoC6\\pdl\\middleware/emWin/code/include/LCD.h"
+ 184              		.file 5 "Generated_Source\\PSoC6\\pdl\\middleware/emWin/code/include/GUI.h"
+ 185              		.file 6 "Generated_Source\\PSoC6\\pdl\\middleware/emWin/code/drivers/BitPlains/GUIDRV_BitPlains.h"
+ 186              		.section	.debug_info,"",%progbits
+ 187              	.Ldebug_info0:
+ 188 0000 F7060000 		.4byte	0x6f7
+ 189 0004 0400     		.2byte	0x4
+ 190 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 191 000a 04       		.byte	0x4
+ 192 000b 01       		.uleb128 0x1
+ 193 000c 88000000 		.4byte	.LASF68
+ 194 0010 0C       		.byte	0xc
+ 195 0011 CE020000 		.4byte	.LASF69
+ 196 0015 63020000 		.4byte	.LASF70
+ 197 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 198 001d 00000000 		.4byte	0
+ 199 0021 00000000 		.4byte	.Ldebug_line0
+ 200 0025 02       		.uleb128 0x2
+ 201 0026 04       		.byte	0x4
+ 202 0027 05       		.byte	0x5
+ 203 0028 696E7400 		.ascii	"int\000"
+ 204 002c 03       		.uleb128 0x3
+ 205 002d 04       		.byte	0x4
+ 206 002e 07       		.byte	0x7
+ 207 002f 23030000 		.4byte	.LASF0
+ 208 0033 03       		.uleb128 0x3
+ 209 0034 08       		.byte	0x8
+ 210 0035 05       		.byte	0x5
+ 211 0036 D0010000 		.4byte	.LASF1
+ 212 003a 03       		.uleb128 0x3
+ 213 003b 08       		.byte	0x8
+ 214 003c 04       		.byte	0x4
+ 215 003d C2020000 		.4byte	.LASF2
+ 216 0041 03       		.uleb128 0x3
+ 217 0042 01       		.byte	0x1
+ 218 0043 06       		.byte	0x6
+ 219 0044 E1020000 		.4byte	.LASF3
+ 220 0048 03       		.uleb128 0x3
+ 221 0049 01       		.byte	0x1
+ 222 004a 08       		.byte	0x8
+ 223 004b 4C020000 		.4byte	.LASF4
+ 224 004f 03       		.uleb128 0x3
+ 225 0050 02       		.byte	0x2
+ 226 0051 05       		.byte	0x5
+ 227 0052 53000000 		.4byte	.LASF5
+ 228 0056 03       		.uleb128 0x3
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc4FRUF7.s 			page 9
+
+
+ 229 0057 02       		.byte	0x2
+ 230 0058 07       		.byte	0x7
+ 231 0059 8F030000 		.4byte	.LASF6
+ 232 005d 03       		.uleb128 0x3
+ 233 005e 04       		.byte	0x4
+ 234 005f 05       		.byte	0x5
+ 235 0060 F9010000 		.4byte	.LASF7
+ 236 0064 04       		.uleb128 0x4
+ 237 0065 26010000 		.4byte	.LASF10
+ 238 0069 02       		.byte	0x2
+ 239 006a 41       		.byte	0x41
+ 240 006b 6F000000 		.4byte	0x6f
+ 241 006f 03       		.uleb128 0x3
+ 242 0070 04       		.byte	0x4
+ 243 0071 07       		.byte	0x7
+ 244 0072 E8030000 		.4byte	.LASF8
+ 245 0076 03       		.uleb128 0x3
+ 246 0077 08       		.byte	0x8
+ 247 0078 07       		.byte	0x7
+ 248 0079 ED020000 		.4byte	.LASF9
+ 249 007d 04       		.uleb128 0x4
+ 250 007e 04030000 		.4byte	.LASF11
+ 251 0082 03       		.byte	0x3
+ 252 0083 30       		.byte	0x30
+ 253 0084 64000000 		.4byte	0x64
+ 254 0088 03       		.uleb128 0x3
+ 255 0089 04       		.byte	0x4
+ 256 008a 07       		.byte	0x7
+ 257 008b 5D000000 		.4byte	.LASF12
+ 258 008f 05       		.uleb128 0x5
+ 259 0090 04       		.byte	0x4
+ 260 0091 95000000 		.4byte	0x95
+ 261 0095 06       		.uleb128 0x6
+ 262 0096 03       		.uleb128 0x3
+ 263 0097 01       		.byte	0x1
+ 264 0098 08       		.byte	0x8
+ 265 0099 5F030000 		.4byte	.LASF13
+ 266 009d 03       		.uleb128 0x3
+ 267 009e 04       		.byte	0x4
+ 268 009f 04       		.byte	0x4
+ 269 00a0 AA010000 		.4byte	.LASF14
+ 270 00a4 03       		.uleb128 0x3
+ 271 00a5 08       		.byte	0x8
+ 272 00a6 04       		.byte	0x4
+ 273 00a7 FA030000 		.4byte	.LASF15
+ 274 00ab 04       		.uleb128 0x4
+ 275 00ac 55010000 		.4byte	.LASF16
+ 276 00b0 04       		.byte	0x4
+ 277 00b1 6A       		.byte	0x6a
+ 278 00b2 6F000000 		.4byte	0x6f
+ 279 00b6 07       		.uleb128 0x7
+ 280 00b7 08       		.byte	0x8
+ 281 00b8 04       		.byte	0x4
+ 282 00b9 71       		.byte	0x71
+ 283 00ba EB000000 		.4byte	0xeb
+ 284 00be 08       		.uleb128 0x8
+ 285 00bf 783000   		.ascii	"x0\000"
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc4FRUF7.s 			page 10
+
+
+ 286 00c2 04       		.byte	0x4
+ 287 00c3 71       		.byte	0x71
+ 288 00c4 4F000000 		.4byte	0x4f
+ 289 00c8 00       		.byte	0
+ 290 00c9 08       		.uleb128 0x8
+ 291 00ca 793000   		.ascii	"y0\000"
+ 292 00cd 04       		.byte	0x4
+ 293 00ce 71       		.byte	0x71
+ 294 00cf 4F000000 		.4byte	0x4f
+ 295 00d3 02       		.byte	0x2
+ 296 00d4 08       		.uleb128 0x8
+ 297 00d5 783100   		.ascii	"x1\000"
+ 298 00d8 04       		.byte	0x4
+ 299 00d9 71       		.byte	0x71
+ 300 00da 4F000000 		.4byte	0x4f
+ 301 00de 04       		.byte	0x4
+ 302 00df 08       		.uleb128 0x8
+ 303 00e0 793100   		.ascii	"y1\000"
+ 304 00e3 04       		.byte	0x4
+ 305 00e4 71       		.byte	0x71
+ 306 00e5 4F000000 		.4byte	0x4f
+ 307 00e9 06       		.byte	0x6
+ 308 00ea 00       		.byte	0
+ 309 00eb 04       		.uleb128 0x4
+ 310 00ec D8020000 		.4byte	.LASF17
+ 311 00f0 04       		.byte	0x4
+ 312 00f1 71       		.byte	0x71
+ 313 00f2 B6000000 		.4byte	0xb6
+ 314 00f6 04       		.uleb128 0x4
+ 315 00f7 7F040000 		.4byte	.LASF18
+ 316 00fb 04       		.byte	0x4
+ 317 00fc 88       		.byte	0x88
+ 318 00fd 01010000 		.4byte	0x101
+ 319 0101 09       		.uleb128 0x9
+ 320 0102 AB000000 		.4byte	0xab
+ 321 0106 10010000 		.4byte	0x110
+ 322 010a 0A       		.uleb128 0xa
+ 323 010b 6F000000 		.4byte	0x6f
+ 324 010f 00       		.byte	0
+ 325 0110 04       		.uleb128 0x4
+ 326 0111 A8040000 		.4byte	.LASF19
+ 327 0115 04       		.byte	0x4
+ 328 0116 89       		.byte	0x89
+ 329 0117 1B010000 		.4byte	0x11b
+ 330 011b 09       		.uleb128 0x9
+ 331 011c 6F000000 		.4byte	0x6f
+ 332 0120 2A010000 		.4byte	0x12a
+ 333 0124 0A       		.uleb128 0xa
+ 334 0125 AB000000 		.4byte	0xab
+ 335 0129 00       		.byte	0
+ 336 012a 04       		.uleb128 0x4
+ 337 012b E4010000 		.4byte	.LASF20
+ 338 012f 04       		.byte	0x4
+ 339 0130 8A       		.byte	0x8a
+ 340 0131 35010000 		.4byte	0x135
+ 341 0135 0B       		.uleb128 0xb
+ 342 0136 6F000000 		.4byte	0x6f
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc4FRUF7.s 			page 11
+
+
+ 343 013a 04       		.uleb128 0x4
+ 344 013b 53040000 		.4byte	.LASF21
+ 345 013f 04       		.byte	0x4
+ 346 0140 8C       		.byte	0x8c
+ 347 0141 45010000 		.4byte	0x145
+ 348 0145 0C       		.uleb128 0xc
+ 349 0146 5F010000 		.4byte	0x15f
+ 350 014a 0A       		.uleb128 0xa
+ 351 014b 5F010000 		.4byte	0x15f
+ 352 014f 0A       		.uleb128 0xa
+ 353 0150 61010000 		.4byte	0x161
+ 354 0154 0A       		.uleb128 0xa
+ 355 0155 6F000000 		.4byte	0x6f
+ 356 0159 0A       		.uleb128 0xa
+ 357 015a 48000000 		.4byte	0x48
+ 358 015e 00       		.byte	0
+ 359 015f 0D       		.uleb128 0xd
+ 360 0160 04       		.byte	0x4
+ 361 0161 05       		.uleb128 0x5
+ 362 0162 04       		.byte	0x4
+ 363 0163 AB000000 		.4byte	0xab
+ 364 0167 04       		.uleb128 0x4
+ 365 0168 27040000 		.4byte	.LASF22
+ 366 016c 04       		.byte	0x4
+ 367 016d 8D       		.byte	0x8d
+ 368 016e 72010000 		.4byte	0x172
+ 369 0172 0C       		.uleb128 0xc
+ 370 0173 8C010000 		.4byte	0x18c
+ 371 0177 0A       		.uleb128 0xa
+ 372 0178 61010000 		.4byte	0x161
+ 373 017c 0A       		.uleb128 0xa
+ 374 017d 5F010000 		.4byte	0x15f
+ 375 0181 0A       		.uleb128 0xa
+ 376 0182 6F000000 		.4byte	0x6f
+ 377 0186 0A       		.uleb128 0xa
+ 378 0187 48000000 		.4byte	0x48
+ 379 018b 00       		.byte	0
+ 380 018c 07       		.uleb128 0x7
+ 381 018d 18       		.byte	0x18
+ 382 018e 04       		.byte	0x4
+ 383 018f 93       		.byte	0x93
+ 384 0190 DD010000 		.4byte	0x1dd
+ 385 0194 0E       		.uleb128 0xe
+ 386 0195 51030000 		.4byte	.LASF23
+ 387 0199 04       		.byte	0x4
+ 388 019a 94       		.byte	0x94
+ 389 019b DD010000 		.4byte	0x1dd
+ 390 019f 00       		.byte	0
+ 391 01a0 0E       		.uleb128 0xe
+ 392 01a1 15030000 		.4byte	.LASF24
+ 393 01a5 04       		.byte	0x4
+ 394 01a6 95       		.byte	0x95
+ 395 01a7 E3010000 		.4byte	0x1e3
+ 396 01ab 04       		.byte	0x4
+ 397 01ac 0E       		.uleb128 0xe
+ 398 01ad 5F010000 		.4byte	.LASF25
+ 399 01b1 04       		.byte	0x4
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc4FRUF7.s 			page 12
+
+
+ 400 01b2 96       		.byte	0x96
+ 401 01b3 E9010000 		.4byte	0x1e9
+ 402 01b7 08       		.byte	0x8
+ 403 01b8 0E       		.uleb128 0xe
+ 404 01b9 0D030000 		.4byte	.LASF26
+ 405 01bd 04       		.byte	0x4
+ 406 01be 97       		.byte	0x97
+ 407 01bf 25000000 		.4byte	0x25
+ 408 01c3 0C       		.byte	0xc
+ 409 01c4 0E       		.uleb128 0xe
+ 410 01c5 6E010000 		.4byte	.LASF27
+ 411 01c9 04       		.byte	0x4
+ 412 01ca 98       		.byte	0x98
+ 413 01cb EF010000 		.4byte	0x1ef
+ 414 01cf 10       		.byte	0x10
+ 415 01d0 0E       		.uleb128 0xe
+ 416 01d1 01040000 		.4byte	.LASF28
+ 417 01d5 04       		.byte	0x4
+ 418 01d6 99       		.byte	0x99
+ 419 01d7 F5010000 		.4byte	0x1f5
+ 420 01db 14       		.byte	0x14
+ 421 01dc 00       		.byte	0
+ 422 01dd 05       		.uleb128 0x5
+ 423 01de 04       		.byte	0x4
+ 424 01df 10010000 		.4byte	0x110
+ 425 01e3 05       		.uleb128 0x5
+ 426 01e4 04       		.byte	0x4
+ 427 01e5 F6000000 		.4byte	0xf6
+ 428 01e9 05       		.uleb128 0x5
+ 429 01ea 04       		.byte	0x4
+ 430 01eb 2A010000 		.4byte	0x12a
+ 431 01ef 05       		.uleb128 0x5
+ 432 01f0 04       		.byte	0x4
+ 433 01f1 67010000 		.4byte	0x167
+ 434 01f5 05       		.uleb128 0x5
+ 435 01f6 04       		.byte	0x4
+ 436 01f7 3A010000 		.4byte	0x13a
+ 437 01fb 04       		.uleb128 0x4
+ 438 01fc 12020000 		.4byte	.LASF29
+ 439 0200 04       		.byte	0x4
+ 440 0201 9A       		.byte	0x9a
+ 441 0202 8C010000 		.4byte	0x18c
+ 442 0206 05       		.uleb128 0x5
+ 443 0207 04       		.byte	0x4
+ 444 0208 EB000000 		.4byte	0xeb
+ 445 020c 0F       		.uleb128 0xf
+ 446 020d 84030000 		.4byte	.LASF30
+ 447 0211 04       		.byte	0x4
+ 448 0212 4301     		.2byte	0x143
+ 449 0214 18020000 		.4byte	0x218
+ 450 0218 10       		.uleb128 0x10
+ 451 0219 84030000 		.4byte	.LASF30
+ 452 021d 1C       		.byte	0x1c
+ 453 021e 05       		.byte	0x5
+ 454 021f B0       		.byte	0xb0
+ 455 0220 77020000 		.4byte	0x277
+ 456 0224 0E       		.uleb128 0xe
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc4FRUF7.s 			page 13
+
+
+ 457 0225 DE010000 		.4byte	.LASF31
+ 458 0229 05       		.byte	0x5
+ 459 022a B4       		.byte	0xb4
+ 460 022b 80030000 		.4byte	0x380
+ 461 022f 00       		.byte	0
+ 462 0230 0E       		.uleb128 0xe
+ 463 0231 92010000 		.4byte	.LASF32
+ 464 0235 05       		.byte	0x5
+ 465 0236 B5       		.byte	0xb5
+ 466 0237 80030000 		.4byte	0x380
+ 467 023b 04       		.byte	0x4
+ 468 023c 08       		.uleb128 0x8
+ 469 023d 7500     		.ascii	"u\000"
+ 470 023f 05       		.byte	0x5
+ 471 0240 BC       		.byte	0xbc
+ 472 0241 A0040000 		.4byte	0x4a0
+ 473 0245 08       		.byte	0x8
+ 474 0246 0E       		.uleb128 0xe
+ 475 0247 3B010000 		.4byte	.LASF33
+ 476 024b 05       		.byte	0x5
+ 477 024c C0       		.byte	0xc0
+ 478 024d BF040000 		.4byte	0x4bf
+ 479 0251 0C       		.byte	0xc
+ 480 0252 0E       		.uleb128 0xe
+ 481 0253 00000000 		.4byte	.LASF34
+ 482 0257 05       		.byte	0x5
+ 483 0258 C1       		.byte	0xc1
+ 484 0259 37030000 		.4byte	0x337
+ 485 025d 10       		.byte	0x10
+ 486 025e 0E       		.uleb128 0xe
+ 487 025f A4010000 		.4byte	.LASF35
+ 488 0263 05       		.byte	0x5
+ 489 0264 C2       		.byte	0xc2
+ 490 0265 56000000 		.4byte	0x56
+ 491 0269 14       		.byte	0x14
+ 492 026a 0E       		.uleb128 0xe
+ 493 026b C5010000 		.4byte	.LASF36
+ 494 026f 05       		.byte	0x5
+ 495 0270 C3       		.byte	0xc3
+ 496 0271 25000000 		.4byte	0x25
+ 497 0275 18       		.byte	0x18
+ 498 0276 00       		.byte	0
+ 499 0277 0F       		.uleb128 0xf
+ 500 0278 46010000 		.4byte	.LASF37
+ 501 027c 04       		.byte	0x4
+ 502 027d 4401     		.2byte	0x144
+ 503 027f 83020000 		.4byte	0x283
+ 504 0283 10       		.uleb128 0x10
+ 505 0284 46010000 		.4byte	.LASF37
+ 506 0288 34       		.byte	0x34
+ 507 0289 05       		.byte	0x5
+ 508 028a 6A       		.byte	0x6a
+ 509 028b 2C030000 		.4byte	0x32c
+ 510 028f 0E       		.uleb128 0xe
+ 511 0290 73030000 		.4byte	.LASF38
+ 512 0294 05       		.byte	0x5
+ 513 0295 6E       		.byte	0x6e
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc4FRUF7.s 			page 14
+
+
+ 514 0296 25000000 		.4byte	0x25
+ 515 029a 00       		.byte	0
+ 516 029b 0E       		.uleb128 0xe
+ 517 029c C3030000 		.4byte	.LASF39
+ 518 02a0 05       		.byte	0x5
+ 519 02a1 72       		.byte	0x72
+ 520 02a2 91030000 		.4byte	0x391
+ 521 02a6 04       		.byte	0x4
+ 522 02a7 0E       		.uleb128 0xe
+ 523 02a8 98010000 		.4byte	.LASF40
+ 524 02ac 05       		.byte	0x5
+ 525 02ad 73       		.byte	0x73
+ 526 02ae B1030000 		.4byte	0x3b1
+ 527 02b2 08       		.byte	0x8
+ 528 02b3 0E       		.uleb128 0xe
+ 529 02b4 1A010000 		.4byte	.LASF41
+ 530 02b8 05       		.byte	0x5
+ 531 02b9 74       		.byte	0x74
+ 532 02ba B1030000 		.4byte	0x3b1
+ 533 02be 0C       		.byte	0xc
+ 534 02bf 0E       		.uleb128 0xe
+ 535 02c0 3E000000 		.4byte	.LASF42
+ 536 02c4 05       		.byte	0x5
+ 537 02c5 75       		.byte	0x75
+ 538 02c6 D6030000 		.4byte	0x3d6
+ 539 02ca 10       		.byte	0x10
+ 540 02cb 0E       		.uleb128 0xe
+ 541 02cc 02020000 		.4byte	.LASF43
+ 542 02d0 05       		.byte	0x5
+ 543 02d1 76       		.byte	0x76
+ 544 02d2 F5030000 		.4byte	0x3f5
+ 545 02d6 14       		.byte	0x14
+ 546 02d7 0E       		.uleb128 0xe
+ 547 02d8 30030000 		.4byte	.LASF44
+ 548 02dc 05       		.byte	0x5
+ 549 02dd 77       		.byte	0x77
+ 550 02de 15040000 		.4byte	0x415
+ 551 02e2 18       		.byte	0x18
+ 552 02e3 0E       		.uleb128 0xe
+ 553 02e4 13040000 		.4byte	.LASF45
+ 554 02e8 05       		.byte	0x5
+ 555 02e9 78       		.byte	0x78
+ 556 02ea 30040000 		.4byte	0x430
+ 557 02ee 1C       		.byte	0x1c
+ 558 02ef 0E       		.uleb128 0xe
+ 559 02f0 1E040000 		.4byte	.LASF46
+ 560 02f4 05       		.byte	0x5
+ 561 02f5 7C       		.byte	0x7c
+ 562 02f6 30040000 		.4byte	0x430
+ 563 02fa 20       		.byte	0x20
+ 564 02fb 0E       		.uleb128 0xe
+ 565 02fc D0030000 		.4byte	.LASF47
+ 566 0300 05       		.byte	0x5
+ 567 0301 80       		.byte	0x80
+ 568 0302 50040000 		.4byte	0x450
+ 569 0306 24       		.byte	0x24
+ 570 0307 0E       		.uleb128 0xe
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc4FRUF7.s 			page 15
+
+
+ 571 0308 9B040000 		.4byte	.LASF48
+ 572 030c 05       		.byte	0x5
+ 573 030d 81       		.byte	0x81
+ 574 030e 6A040000 		.4byte	0x46a
+ 575 0312 28       		.byte	0x28
+ 576 0313 0E       		.uleb128 0xe
+ 577 0314 66000000 		.4byte	.LASF49
+ 578 0318 05       		.byte	0x5
+ 579 0319 82       		.byte	0x82
+ 580 031a 84040000 		.4byte	0x484
+ 581 031e 2C       		.byte	0x2c
+ 582 031f 0E       		.uleb128 0xe
+ 583 0320 31010000 		.4byte	.LASF50
+ 584 0324 05       		.byte	0x5
+ 585 0325 83       		.byte	0x83
+ 586 0326 9A040000 		.4byte	0x49a
+ 587 032a 30       		.byte	0x30
+ 588 032b 00       		.byte	0
+ 589 032c 05       		.uleb128 0x5
+ 590 032d 04       		.byte	0x4
+ 591 032e 32030000 		.4byte	0x332
+ 592 0332 11       		.uleb128 0x11
+ 593 0333 48000000 		.4byte	0x48
+ 594 0337 05       		.uleb128 0x5
+ 595 0338 04       		.byte	0x4
+ 596 0339 3D030000 		.4byte	0x33d
+ 597 033d 11       		.uleb128 0x11
+ 598 033e FB010000 		.4byte	0x1fb
+ 599 0342 05       		.uleb128 0x5
+ 600 0343 04       		.byte	0x4
+ 601 0344 48000000 		.4byte	0x48
+ 602 0348 0C       		.uleb128 0xc
+ 603 0349 80030000 		.4byte	0x380
+ 604 034d 0A       		.uleb128 0xa
+ 605 034e 80030000 		.4byte	0x380
+ 606 0352 0A       		.uleb128 0xa
+ 607 0353 25000000 		.4byte	0x25
+ 608 0357 0A       		.uleb128 0xa
+ 609 0358 25000000 		.4byte	0x25
+ 610 035c 0A       		.uleb128 0xa
+ 611 035d 25000000 		.4byte	0x25
+ 612 0361 0A       		.uleb128 0xa
+ 613 0362 25000000 		.4byte	0x25
+ 614 0366 0A       		.uleb128 0xa
+ 615 0367 25000000 		.4byte	0x25
+ 616 036b 0A       		.uleb128 0xa
+ 617 036c 25000000 		.4byte	0x25
+ 618 0370 0A       		.uleb128 0xa
+ 619 0371 2C030000 		.4byte	0x32c
+ 620 0375 0A       		.uleb128 0xa
+ 621 0376 25000000 		.4byte	0x25
+ 622 037a 0A       		.uleb128 0xa
+ 623 037b 86030000 		.4byte	0x386
+ 624 037f 00       		.byte	0
+ 625 0380 05       		.uleb128 0x5
+ 626 0381 04       		.byte	0x4
+ 627 0382 0C020000 		.4byte	0x20c
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc4FRUF7.s 			page 16
+
+
+ 628 0386 05       		.uleb128 0x5
+ 629 0387 04       		.byte	0x4
+ 630 0388 8C030000 		.4byte	0x38c
+ 631 038c 11       		.uleb128 0x11
+ 632 038d 6F000000 		.4byte	0x6f
+ 633 0391 05       		.uleb128 0x5
+ 634 0392 04       		.byte	0x4
+ 635 0393 48030000 		.4byte	0x348
+ 636 0397 0C       		.uleb128 0xc
+ 637 0398 B1030000 		.4byte	0x3b1
+ 638 039c 0A       		.uleb128 0xa
+ 639 039d 80030000 		.4byte	0x380
+ 640 03a1 0A       		.uleb128 0xa
+ 641 03a2 25000000 		.4byte	0x25
+ 642 03a6 0A       		.uleb128 0xa
+ 643 03a7 25000000 		.4byte	0x25
+ 644 03ab 0A       		.uleb128 0xa
+ 645 03ac 25000000 		.4byte	0x25
+ 646 03b0 00       		.byte	0
+ 647 03b1 05       		.uleb128 0x5
+ 648 03b2 04       		.byte	0x4
+ 649 03b3 97030000 		.4byte	0x397
+ 650 03b7 0C       		.uleb128 0xc
+ 651 03b8 D6030000 		.4byte	0x3d6
+ 652 03bc 0A       		.uleb128 0xa
+ 653 03bd 80030000 		.4byte	0x380
+ 654 03c1 0A       		.uleb128 0xa
+ 655 03c2 25000000 		.4byte	0x25
+ 656 03c6 0A       		.uleb128 0xa
+ 657 03c7 25000000 		.4byte	0x25
+ 658 03cb 0A       		.uleb128 0xa
+ 659 03cc 25000000 		.4byte	0x25
+ 660 03d0 0A       		.uleb128 0xa
+ 661 03d1 25000000 		.4byte	0x25
+ 662 03d5 00       		.byte	0
+ 663 03d6 05       		.uleb128 0x5
+ 664 03d7 04       		.byte	0x4
+ 665 03d8 B7030000 		.4byte	0x3b7
+ 666 03dc 09       		.uleb128 0x9
+ 667 03dd 6F000000 		.4byte	0x6f
+ 668 03e1 F5030000 		.4byte	0x3f5
+ 669 03e5 0A       		.uleb128 0xa
+ 670 03e6 80030000 		.4byte	0x380
+ 671 03ea 0A       		.uleb128 0xa
+ 672 03eb 25000000 		.4byte	0x25
+ 673 03ef 0A       		.uleb128 0xa
+ 674 03f0 25000000 		.4byte	0x25
+ 675 03f4 00       		.byte	0
+ 676 03f5 05       		.uleb128 0x5
+ 677 03f6 04       		.byte	0x4
+ 678 03f7 DC030000 		.4byte	0x3dc
+ 679 03fb 0C       		.uleb128 0xc
+ 680 03fc 15040000 		.4byte	0x415
+ 681 0400 0A       		.uleb128 0xa
+ 682 0401 80030000 		.4byte	0x380
+ 683 0405 0A       		.uleb128 0xa
+ 684 0406 25000000 		.4byte	0x25
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc4FRUF7.s 			page 17
+
+
+ 685 040a 0A       		.uleb128 0xa
+ 686 040b 25000000 		.4byte	0x25
+ 687 040f 0A       		.uleb128 0xa
+ 688 0410 6F000000 		.4byte	0x6f
+ 689 0414 00       		.byte	0
+ 690 0415 05       		.uleb128 0x5
+ 691 0416 04       		.byte	0x4
+ 692 0417 FB030000 		.4byte	0x3fb
+ 693 041b 0C       		.uleb128 0xc
+ 694 041c 30040000 		.4byte	0x430
+ 695 0420 0A       		.uleb128 0xa
+ 696 0421 80030000 		.4byte	0x380
+ 697 0425 0A       		.uleb128 0xa
+ 698 0426 25000000 		.4byte	0x25
+ 699 042a 0A       		.uleb128 0xa
+ 700 042b 25000000 		.4byte	0x25
+ 701 042f 00       		.byte	0
+ 702 0430 05       		.uleb128 0x5
+ 703 0431 04       		.byte	0x4
+ 704 0432 1B040000 		.4byte	0x41b
+ 705 0436 09       		.uleb128 0x9
+ 706 0437 8F000000 		.4byte	0x8f
+ 707 043b 4A040000 		.4byte	0x44a
+ 708 043f 0A       		.uleb128 0xa
+ 709 0440 4A040000 		.4byte	0x44a
+ 710 0444 0A       		.uleb128 0xa
+ 711 0445 25000000 		.4byte	0x25
+ 712 0449 00       		.byte	0
+ 713 044a 05       		.uleb128 0x5
+ 714 044b 04       		.byte	0x4
+ 715 044c 80030000 		.4byte	0x380
+ 716 0450 05       		.uleb128 0x5
+ 717 0451 04       		.byte	0x4
+ 718 0452 36040000 		.4byte	0x436
+ 719 0456 09       		.uleb128 0x9
+ 720 0457 5D000000 		.4byte	0x5d
+ 721 045b 6A040000 		.4byte	0x46a
+ 722 045f 0A       		.uleb128 0xa
+ 723 0460 80030000 		.4byte	0x380
+ 724 0464 0A       		.uleb128 0xa
+ 725 0465 25000000 		.4byte	0x25
+ 726 0469 00       		.byte	0
+ 727 046a 05       		.uleb128 0x5
+ 728 046b 04       		.byte	0x4
+ 729 046c 56040000 		.4byte	0x456
+ 730 0470 09       		.uleb128 0x9
+ 731 0471 5F010000 		.4byte	0x15f
+ 732 0475 84040000 		.4byte	0x484
+ 733 0479 0A       		.uleb128 0xa
+ 734 047a 80030000 		.4byte	0x380
+ 735 047e 0A       		.uleb128 0xa
+ 736 047f 25000000 		.4byte	0x25
+ 737 0483 00       		.byte	0
+ 738 0484 05       		.uleb128 0x5
+ 739 0485 04       		.byte	0x4
+ 740 0486 70040000 		.4byte	0x470
+ 741 048a 0C       		.uleb128 0xc
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc4FRUF7.s 			page 18
+
+
+ 742 048b 9A040000 		.4byte	0x49a
+ 743 048f 0A       		.uleb128 0xa
+ 744 0490 80030000 		.4byte	0x380
+ 745 0494 0A       		.uleb128 0xa
+ 746 0495 06020000 		.4byte	0x206
+ 747 0499 00       		.byte	0
+ 748 049a 05       		.uleb128 0x5
+ 749 049b 04       		.byte	0x4
+ 750 049c 8A040000 		.4byte	0x48a
+ 751 04a0 12       		.uleb128 0x12
+ 752 04a1 04       		.byte	0x4
+ 753 04a2 05       		.byte	0x5
+ 754 04a3 B9       		.byte	0xb9
+ 755 04a4 BF040000 		.4byte	0x4bf
+ 756 04a8 13       		.uleb128 0x13
+ 757 04a9 5A020000 		.4byte	.LASF51
+ 758 04ad 05       		.byte	0x5
+ 759 04ae BA       		.byte	0xba
+ 760 04af 5D000000 		.4byte	0x5d
+ 761 04b3 13       		.uleb128 0x13
+ 762 04b4 BA030000 		.4byte	.LASF52
+ 763 04b8 05       		.byte	0x5
+ 764 04b9 BB       		.byte	0xbb
+ 765 04ba 5F010000 		.4byte	0x15f
+ 766 04be 00       		.byte	0
+ 767 04bf 05       		.uleb128 0x5
+ 768 04c0 04       		.byte	0x4
+ 769 04c1 C5040000 		.4byte	0x4c5
+ 770 04c5 11       		.uleb128 0x11
+ 771 04c6 77020000 		.4byte	0x277
+ 772 04ca 07       		.uleb128 0x7
+ 773 04cb 04       		.byte	0x4
+ 774 04cc 06       		.byte	0x6
+ 775 04cd 38       		.byte	0x38
+ 776 04ce DF040000 		.4byte	0x4df
+ 777 04d2 0E       		.uleb128 0xe
+ 778 04d3 29000000 		.4byte	.LASF53
+ 779 04d7 06       		.byte	0x6
+ 780 04d8 39       		.byte	0x39
+ 781 04d9 25000000 		.4byte	0x25
+ 782 04dd 00       		.byte	0
+ 783 04de 00       		.byte	0
+ 784 04df 04       		.uleb128 0x4
+ 785 04e0 40030000 		.4byte	.LASF54
+ 786 04e4 06       		.byte	0x6
+ 787 04e5 3A       		.byte	0x3a
+ 788 04e6 CA040000 		.4byte	0x4ca
+ 789 04ea 14       		.uleb128 0x14
+ 790 04eb 42030000 		.4byte	0x342
+ 791 04ef FA040000 		.4byte	0x4fa
+ 792 04f3 15       		.uleb128 0x15
+ 793 04f4 88000000 		.4byte	0x88
+ 794 04f8 07       		.byte	0x7
+ 795 04f9 00       		.byte	0
+ 796 04fa 07       		.uleb128 0x7
+ 797 04fb 20       		.byte	0x20
+ 798 04fc 01       		.byte	0x1
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc4FRUF7.s 			page 19
+
+
+ 799 04fd 6E       		.byte	0x6e
+ 800 04fe 0F050000 		.4byte	0x50f
+ 801 0502 0E       		.uleb128 0xe
+ 802 0503 25020000 		.4byte	.LASF55
+ 803 0507 01       		.byte	0x1
+ 804 0508 6F       		.byte	0x6f
+ 805 0509 EA040000 		.4byte	0x4ea
+ 806 050d 00       		.byte	0
+ 807 050e 00       		.byte	0
+ 808 050f 16       		.uleb128 0x16
+ 809 0510 1C000000 		.4byte	.LASF71
+ 810 0514 01       		.byte	0x1
+ 811 0515 83       		.byte	0x83
+ 812 0516 00000000 		.4byte	.LFB45
+ 813 051a 6C000000 		.4byte	.LFE45-.LFB45
+ 814 051e 01       		.uleb128 0x1
+ 815 051f 9C       		.byte	0x9c
+ 816 0520 0B060000 		.4byte	0x60b
+ 817 0524 17       		.uleb128 0x17
+ 818 0525 93040000 		.4byte	.LASF56
+ 819 0529 01       		.byte	0x1
+ 820 052a 85       		.byte	0x85
+ 821 052b 80030000 		.4byte	0x380
+ 822 052f 00000000 		.4byte	.LLST0
+ 823 0533 18       		.uleb128 0x18
+ 824 0534 45020000 		.4byte	.LASF57
+ 825 0538 01       		.byte	0x1
+ 826 0539 86       		.byte	0x86
+ 827 053a DF040000 		.4byte	0x4df
+ 828 053e 02       		.uleb128 0x2
+ 829 053f 91       		.byte	0x91
+ 830 0540 74       		.sleb128 -12
+ 831 0541 19       		.uleb128 0x19
+ 832 0542 14000000 		.4byte	.LVL0
+ 833 0546 B3060000 		.4byte	0x6b3
+ 834 054a 59050000 		.4byte	0x559
+ 835 054e 1A       		.uleb128 0x1a
+ 836 054f 01       		.uleb128 0x1
+ 837 0550 52       		.byte	0x52
+ 838 0551 01       		.uleb128 0x1
+ 839 0552 30       		.byte	0x30
+ 840 0553 1A       		.uleb128 0x1a
+ 841 0554 01       		.uleb128 0x1
+ 842 0555 53       		.byte	0x53
+ 843 0556 01       		.uleb128 0x1
+ 844 0557 30       		.byte	0x30
+ 845 0558 00       		.byte	0
+ 846 0559 19       		.uleb128 0x19
+ 847 055a 1A000000 		.4byte	.LVL1
+ 848 055e BF060000 		.4byte	0x6bf
+ 849 0562 6D050000 		.4byte	0x56d
+ 850 0566 1A       		.uleb128 0x1a
+ 851 0567 01       		.uleb128 0x1
+ 852 0568 51       		.byte	0x51
+ 853 0569 02       		.uleb128 0x2
+ 854 056a 91       		.byte	0x91
+ 855 056b 74       		.sleb128 -12
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc4FRUF7.s 			page 20
+
+
+ 856 056c 00       		.byte	0
+ 857 056d 1B       		.uleb128 0x1b
+ 858 056e 1E000000 		.4byte	.LVL2
+ 859 0572 CA060000 		.4byte	0x6ca
+ 860 0576 19       		.uleb128 0x19
+ 861 0577 30000000 		.4byte	.LVL3
+ 862 057b D6060000 		.4byte	0x6d6
+ 863 057f 95050000 		.4byte	0x595
+ 864 0583 1A       		.uleb128 0x1a
+ 865 0584 01       		.uleb128 0x1
+ 866 0585 50       		.byte	0x50
+ 867 0586 01       		.uleb128 0x1
+ 868 0587 30       		.byte	0x30
+ 869 0588 1A       		.uleb128 0x1a
+ 870 0589 01       		.uleb128 0x1
+ 871 058a 51       		.byte	0x51
+ 872 058b 02       		.uleb128 0x2
+ 873 058c 08       		.byte	0x8
+ 874 058d B0       		.byte	0xb0
+ 875 058e 1A       		.uleb128 0x1a
+ 876 058f 01       		.uleb128 0x1
+ 877 0590 52       		.byte	0x52
+ 878 0591 02       		.uleb128 0x2
+ 879 0592 74       		.byte	0x74
+ 880 0593 00       		.sleb128 0
+ 881 0594 00       		.byte	0
+ 882 0595 19       		.uleb128 0x19
+ 883 0596 3A000000 		.4byte	.LVL4
+ 884 059a E2060000 		.4byte	0x6e2
+ 885 059e B4050000 		.4byte	0x5b4
+ 886 05a2 1A       		.uleb128 0x1a
+ 887 05a3 01       		.uleb128 0x1
+ 888 05a4 50       		.byte	0x50
+ 889 05a5 01       		.uleb128 0x1
+ 890 05a6 30       		.byte	0x30
+ 891 05a7 1A       		.uleb128 0x1a
+ 892 05a8 01       		.uleb128 0x1
+ 893 05a9 51       		.byte	0x51
+ 894 05aa 02       		.uleb128 0x2
+ 895 05ab 08       		.byte	0x8
+ 896 05ac B0       		.byte	0xb0
+ 897 05ad 1A       		.uleb128 0x1a
+ 898 05ae 01       		.uleb128 0x1
+ 899 05af 52       		.byte	0x52
+ 900 05b0 02       		.uleb128 0x2
+ 901 05b1 74       		.byte	0x74
+ 902 05b2 00       		.sleb128 0
+ 903 05b3 00       		.byte	0
+ 904 05b4 19       		.uleb128 0x19
+ 905 05b5 4A000000 		.4byte	.LVL5
+ 906 05b9 D6060000 		.4byte	0x6d6
+ 907 05bd D3050000 		.4byte	0x5d3
+ 908 05c1 1A       		.uleb128 0x1a
+ 909 05c2 01       		.uleb128 0x1
+ 910 05c3 50       		.byte	0x50
+ 911 05c4 01       		.uleb128 0x1
+ 912 05c5 30       		.byte	0x30
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc4FRUF7.s 			page 21
+
+
+ 913 05c6 1A       		.uleb128 0x1a
+ 914 05c7 01       		.uleb128 0x1
+ 915 05c8 51       		.byte	0x51
+ 916 05c9 02       		.uleb128 0x2
+ 917 05ca 74       		.byte	0x74
+ 918 05cb 00       		.sleb128 0
+ 919 05cc 1A       		.uleb128 0x1a
+ 920 05cd 01       		.uleb128 0x1
+ 921 05ce 52       		.byte	0x52
+ 922 05cf 02       		.uleb128 0x2
+ 923 05d0 08       		.byte	0x8
+ 924 05d1 B0       		.byte	0xb0
+ 925 05d2 00       		.byte	0
+ 926 05d3 19       		.uleb128 0x19
+ 927 05d4 54000000 		.4byte	.LVL6
+ 928 05d8 E2060000 		.4byte	0x6e2
+ 929 05dc F2050000 		.4byte	0x5f2
+ 930 05e0 1A       		.uleb128 0x1a
+ 931 05e1 01       		.uleb128 0x1
+ 932 05e2 50       		.byte	0x50
+ 933 05e3 01       		.uleb128 0x1
+ 934 05e4 30       		.byte	0x30
+ 935 05e5 1A       		.uleb128 0x1a
+ 936 05e6 01       		.uleb128 0x1
+ 937 05e7 51       		.byte	0x51
+ 938 05e8 02       		.uleb128 0x2
+ 939 05e9 74       		.byte	0x74
+ 940 05ea 00       		.sleb128 0
+ 941 05eb 1A       		.uleb128 0x1a
+ 942 05ec 01       		.uleb128 0x1
+ 943 05ed 52       		.byte	0x52
+ 944 05ee 02       		.uleb128 0x2
+ 945 05ef 08       		.byte	0x8
+ 946 05f0 B0       		.byte	0xb0
+ 947 05f1 00       		.byte	0
+ 948 05f2 1C       		.uleb128 0x1c
+ 949 05f3 5C000000 		.4byte	.LVL7
+ 950 05f7 EE060000 		.4byte	0x6ee
+ 951 05fb 1A       		.uleb128 0x1a
+ 952 05fc 01       		.uleb128 0x1
+ 953 05fd 50       		.byte	0x50
+ 954 05fe 01       		.uleb128 0x1
+ 955 05ff 30       		.byte	0x30
+ 956 0600 1A       		.uleb128 0x1a
+ 957 0601 01       		.uleb128 0x1
+ 958 0602 51       		.byte	0x51
+ 959 0603 05       		.uleb128 0x5
+ 960 0604 03       		.byte	0x3
+ 961 0605 00000000 		.4byte	.LANCHOR0
+ 962 0609 00       		.byte	0
+ 963 060a 00       		.byte	0
+ 964 060b 1D       		.uleb128 0x1d
+ 965 060c 3F040000 		.4byte	.LASF72
+ 966 0610 01       		.byte	0x1
+ 967 0611 B6       		.byte	0xb6
+ 968 0612 25000000 		.4byte	0x25
+ 969 0616 00000000 		.4byte	.LFB46
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc4FRUF7.s 			page 22
+
+
+ 970 061a 0E000000 		.4byte	.LFE46-.LFB46
+ 971 061e 01       		.uleb128 0x1
+ 972 061f 9C       		.byte	0x9c
+ 973 0620 55060000 		.4byte	0x655
+ 974 0624 1E       		.uleb128 0x1e
+ 975 0625 C5010000 		.4byte	.LASF36
+ 976 0629 01       		.byte	0x1
+ 977 062a B6       		.byte	0xb6
+ 978 062b 2C000000 		.4byte	0x2c
+ 979 062f 13000000 		.4byte	.LLST1
+ 980 0633 1F       		.uleb128 0x1f
+ 981 0634 436D6400 		.ascii	"Cmd\000"
+ 982 0638 01       		.byte	0x1
+ 983 0639 B6       		.byte	0xb6
+ 984 063a 2C000000 		.4byte	0x2c
+ 985 063e 01       		.uleb128 0x1
+ 986 063f 51       		.byte	0x51
+ 987 0640 1F       		.uleb128 0x1f
+ 988 0641 7000     		.ascii	"p\000"
+ 989 0643 01       		.byte	0x1
+ 990 0644 B6       		.byte	0xb6
+ 991 0645 5F010000 		.4byte	0x15f
+ 992 0649 01       		.uleb128 0x1
+ 993 064a 52       		.byte	0x52
+ 994 064b 20       		.uleb128 0x20
+ 995 064c 7200     		.ascii	"r\000"
+ 996 064e 01       		.byte	0x1
+ 997 064f B7       		.byte	0xb7
+ 998 0650 25000000 		.4byte	0x25
+ 999 0654 00       		.byte	0
+ 1000 0655 21       		.uleb128 0x21
+ 1001 0656 73000000 		.4byte	.LASF73
+ 1002 065a 01       		.byte	0x1
+ 1003 065b D8       		.byte	0xd8
+ 1004 065c 42030000 		.4byte	0x342
+ 1005 0660 00000000 		.4byte	.LFB47
+ 1006 0664 08000000 		.4byte	.LFE47-.LFB47
+ 1007 0668 01       		.uleb128 0x1
+ 1008 0669 9C       		.byte	0x9c
+ 1009 066a 14       		.uleb128 0x14
+ 1010 066b 48000000 		.4byte	0x48
+ 1011 066f 7B060000 		.4byte	0x67b
+ 1012 0673 22       		.uleb128 0x22
+ 1013 0674 88000000 		.4byte	0x88
+ 1014 0678 AF16     		.2byte	0x16af
+ 1015 067a 00       		.byte	0
+ 1016 067b 18       		.uleb128 0x18
+ 1017 067c 49000000 		.4byte	.LASF58
+ 1018 0680 01       		.byte	0x1
+ 1019 0681 69       		.byte	0x69
+ 1020 0682 6A060000 		.4byte	0x66a
+ 1021 0686 05       		.uleb128 0x5
+ 1022 0687 03       		.byte	0x3
+ 1023 0688 00000000 		.4byte	_aPlain_0
+ 1024 068c 18       		.uleb128 0x18
+ 1025 068d DD030000 		.4byte	.LASF59
+ 1026 0691 01       		.byte	0x1
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc4FRUF7.s 			page 23
+
+
+ 1027 0692 70       		.byte	0x70
+ 1028 0693 FA040000 		.4byte	0x4fa
+ 1029 0697 05       		.uleb128 0x5
+ 1030 0698 03       		.byte	0x3
+ 1031 0699 00000000 		.4byte	_VRAM_Desc
+ 1032 069d 23       		.uleb128 0x23
+ 1033 069e 6B040000 		.4byte	.LASF60
+ 1034 06a2 04       		.byte	0x4
+ 1035 06a3 9D       		.byte	0x9d
+ 1036 06a4 3D030000 		.4byte	0x33d
+ 1037 06a8 23       		.uleb128 0x23
+ 1038 06a9 B0010000 		.4byte	.LASF61
+ 1039 06ad 06       		.byte	0x6
+ 1040 06ae 49       		.byte	0x49
+ 1041 06af C5040000 		.4byte	0x4c5
+ 1042 06b3 24       		.uleb128 0x24
+ 1043 06b4 2C020000 		.4byte	.LASF62
+ 1044 06b8 2C020000 		.4byte	.LASF62
+ 1045 06bc 05       		.byte	0x5
+ 1046 06bd 2201     		.2byte	0x122
+ 1047 06bf 25       		.uleb128 0x25
+ 1048 06c0 A2030000 		.4byte	.LASF63
+ 1049 06c4 A2030000 		.4byte	.LASF63
+ 1050 06c8 06       		.byte	0x6
+ 1051 06c9 5C       		.byte	0x5c
+ 1052 06ca 24       		.uleb128 0x24
+ 1053 06cb 30000000 		.4byte	.LASF64
+ 1054 06cf 30000000 		.4byte	.LASF64
+ 1055 06d3 04       		.byte	0x4
+ 1056 06d4 8F01     		.2byte	0x18f
+ 1057 06d6 24       		.uleb128 0x24
+ 1058 06d7 0E000000 		.4byte	.LASF65
+ 1059 06db 0E000000 		.4byte	.LASF65
+ 1060 06df 04       		.byte	0x4
+ 1061 06e0 4902     		.2byte	0x249
+ 1062 06e2 24       		.uleb128 0x24
+ 1063 06e3 64030000 		.4byte	.LASF66
+ 1064 06e7 64030000 		.4byte	.LASF66
+ 1065 06eb 04       		.byte	0x4
+ 1066 06ec 4C02     		.2byte	0x24c
+ 1067 06ee 24       		.uleb128 0x24
+ 1068 06ef 80010000 		.4byte	.LASF67
+ 1069 06f3 80010000 		.4byte	.LASF67
+ 1070 06f7 04       		.byte	0x4
+ 1071 06f8 4B02     		.2byte	0x24b
+ 1072 06fa 00       		.byte	0
+ 1073              		.section	.debug_abbrev,"",%progbits
+ 1074              	.Ldebug_abbrev0:
+ 1075 0000 01       		.uleb128 0x1
+ 1076 0001 11       		.uleb128 0x11
+ 1077 0002 01       		.byte	0x1
+ 1078 0003 25       		.uleb128 0x25
+ 1079 0004 0E       		.uleb128 0xe
+ 1080 0005 13       		.uleb128 0x13
+ 1081 0006 0B       		.uleb128 0xb
+ 1082 0007 03       		.uleb128 0x3
+ 1083 0008 0E       		.uleb128 0xe
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc4FRUF7.s 			page 24
+
+
+ 1084 0009 1B       		.uleb128 0x1b
+ 1085 000a 0E       		.uleb128 0xe
+ 1086 000b 55       		.uleb128 0x55
+ 1087 000c 17       		.uleb128 0x17
+ 1088 000d 11       		.uleb128 0x11
+ 1089 000e 01       		.uleb128 0x1
+ 1090 000f 10       		.uleb128 0x10
+ 1091 0010 17       		.uleb128 0x17
+ 1092 0011 00       		.byte	0
+ 1093 0012 00       		.byte	0
+ 1094 0013 02       		.uleb128 0x2
+ 1095 0014 24       		.uleb128 0x24
+ 1096 0015 00       		.byte	0
+ 1097 0016 0B       		.uleb128 0xb
+ 1098 0017 0B       		.uleb128 0xb
+ 1099 0018 3E       		.uleb128 0x3e
+ 1100 0019 0B       		.uleb128 0xb
+ 1101 001a 03       		.uleb128 0x3
+ 1102 001b 08       		.uleb128 0x8
+ 1103 001c 00       		.byte	0
+ 1104 001d 00       		.byte	0
+ 1105 001e 03       		.uleb128 0x3
+ 1106 001f 24       		.uleb128 0x24
+ 1107 0020 00       		.byte	0
+ 1108 0021 0B       		.uleb128 0xb
+ 1109 0022 0B       		.uleb128 0xb
+ 1110 0023 3E       		.uleb128 0x3e
+ 1111 0024 0B       		.uleb128 0xb
+ 1112 0025 03       		.uleb128 0x3
+ 1113 0026 0E       		.uleb128 0xe
+ 1114 0027 00       		.byte	0
+ 1115 0028 00       		.byte	0
+ 1116 0029 04       		.uleb128 0x4
+ 1117 002a 16       		.uleb128 0x16
+ 1118 002b 00       		.byte	0
+ 1119 002c 03       		.uleb128 0x3
+ 1120 002d 0E       		.uleb128 0xe
+ 1121 002e 3A       		.uleb128 0x3a
+ 1122 002f 0B       		.uleb128 0xb
+ 1123 0030 3B       		.uleb128 0x3b
+ 1124 0031 0B       		.uleb128 0xb
+ 1125 0032 49       		.uleb128 0x49
+ 1126 0033 13       		.uleb128 0x13
+ 1127 0034 00       		.byte	0
+ 1128 0035 00       		.byte	0
+ 1129 0036 05       		.uleb128 0x5
+ 1130 0037 0F       		.uleb128 0xf
+ 1131 0038 00       		.byte	0
+ 1132 0039 0B       		.uleb128 0xb
+ 1133 003a 0B       		.uleb128 0xb
+ 1134 003b 49       		.uleb128 0x49
+ 1135 003c 13       		.uleb128 0x13
+ 1136 003d 00       		.byte	0
+ 1137 003e 00       		.byte	0
+ 1138 003f 06       		.uleb128 0x6
+ 1139 0040 15       		.uleb128 0x15
+ 1140 0041 00       		.byte	0
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc4FRUF7.s 			page 25
+
+
+ 1141 0042 27       		.uleb128 0x27
+ 1142 0043 19       		.uleb128 0x19
+ 1143 0044 00       		.byte	0
+ 1144 0045 00       		.byte	0
+ 1145 0046 07       		.uleb128 0x7
+ 1146 0047 13       		.uleb128 0x13
+ 1147 0048 01       		.byte	0x1
+ 1148 0049 0B       		.uleb128 0xb
+ 1149 004a 0B       		.uleb128 0xb
+ 1150 004b 3A       		.uleb128 0x3a
+ 1151 004c 0B       		.uleb128 0xb
+ 1152 004d 3B       		.uleb128 0x3b
+ 1153 004e 0B       		.uleb128 0xb
+ 1154 004f 01       		.uleb128 0x1
+ 1155 0050 13       		.uleb128 0x13
+ 1156 0051 00       		.byte	0
+ 1157 0052 00       		.byte	0
+ 1158 0053 08       		.uleb128 0x8
+ 1159 0054 0D       		.uleb128 0xd
+ 1160 0055 00       		.byte	0
+ 1161 0056 03       		.uleb128 0x3
+ 1162 0057 08       		.uleb128 0x8
+ 1163 0058 3A       		.uleb128 0x3a
+ 1164 0059 0B       		.uleb128 0xb
+ 1165 005a 3B       		.uleb128 0x3b
+ 1166 005b 0B       		.uleb128 0xb
+ 1167 005c 49       		.uleb128 0x49
+ 1168 005d 13       		.uleb128 0x13
+ 1169 005e 38       		.uleb128 0x38
+ 1170 005f 0B       		.uleb128 0xb
+ 1171 0060 00       		.byte	0
+ 1172 0061 00       		.byte	0
+ 1173 0062 09       		.uleb128 0x9
+ 1174 0063 15       		.uleb128 0x15
+ 1175 0064 01       		.byte	0x1
+ 1176 0065 27       		.uleb128 0x27
+ 1177 0066 19       		.uleb128 0x19
+ 1178 0067 49       		.uleb128 0x49
+ 1179 0068 13       		.uleb128 0x13
+ 1180 0069 01       		.uleb128 0x1
+ 1181 006a 13       		.uleb128 0x13
+ 1182 006b 00       		.byte	0
+ 1183 006c 00       		.byte	0
+ 1184 006d 0A       		.uleb128 0xa
+ 1185 006e 05       		.uleb128 0x5
+ 1186 006f 00       		.byte	0
+ 1187 0070 49       		.uleb128 0x49
+ 1188 0071 13       		.uleb128 0x13
+ 1189 0072 00       		.byte	0
+ 1190 0073 00       		.byte	0
+ 1191 0074 0B       		.uleb128 0xb
+ 1192 0075 15       		.uleb128 0x15
+ 1193 0076 00       		.byte	0
+ 1194 0077 27       		.uleb128 0x27
+ 1195 0078 19       		.uleb128 0x19
+ 1196 0079 49       		.uleb128 0x49
+ 1197 007a 13       		.uleb128 0x13
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc4FRUF7.s 			page 26
+
+
+ 1198 007b 00       		.byte	0
+ 1199 007c 00       		.byte	0
+ 1200 007d 0C       		.uleb128 0xc
+ 1201 007e 15       		.uleb128 0x15
+ 1202 007f 01       		.byte	0x1
+ 1203 0080 27       		.uleb128 0x27
+ 1204 0081 19       		.uleb128 0x19
+ 1205 0082 01       		.uleb128 0x1
+ 1206 0083 13       		.uleb128 0x13
+ 1207 0084 00       		.byte	0
+ 1208 0085 00       		.byte	0
+ 1209 0086 0D       		.uleb128 0xd
+ 1210 0087 0F       		.uleb128 0xf
+ 1211 0088 00       		.byte	0
+ 1212 0089 0B       		.uleb128 0xb
+ 1213 008a 0B       		.uleb128 0xb
+ 1214 008b 00       		.byte	0
+ 1215 008c 00       		.byte	0
+ 1216 008d 0E       		.uleb128 0xe
+ 1217 008e 0D       		.uleb128 0xd
+ 1218 008f 00       		.byte	0
+ 1219 0090 03       		.uleb128 0x3
+ 1220 0091 0E       		.uleb128 0xe
+ 1221 0092 3A       		.uleb128 0x3a
+ 1222 0093 0B       		.uleb128 0xb
+ 1223 0094 3B       		.uleb128 0x3b
+ 1224 0095 0B       		.uleb128 0xb
+ 1225 0096 49       		.uleb128 0x49
+ 1226 0097 13       		.uleb128 0x13
+ 1227 0098 38       		.uleb128 0x38
+ 1228 0099 0B       		.uleb128 0xb
+ 1229 009a 00       		.byte	0
+ 1230 009b 00       		.byte	0
+ 1231 009c 0F       		.uleb128 0xf
+ 1232 009d 16       		.uleb128 0x16
+ 1233 009e 00       		.byte	0
+ 1234 009f 03       		.uleb128 0x3
+ 1235 00a0 0E       		.uleb128 0xe
+ 1236 00a1 3A       		.uleb128 0x3a
+ 1237 00a2 0B       		.uleb128 0xb
+ 1238 00a3 3B       		.uleb128 0x3b
+ 1239 00a4 05       		.uleb128 0x5
+ 1240 00a5 49       		.uleb128 0x49
+ 1241 00a6 13       		.uleb128 0x13
+ 1242 00a7 00       		.byte	0
+ 1243 00a8 00       		.byte	0
+ 1244 00a9 10       		.uleb128 0x10
+ 1245 00aa 13       		.uleb128 0x13
+ 1246 00ab 01       		.byte	0x1
+ 1247 00ac 03       		.uleb128 0x3
+ 1248 00ad 0E       		.uleb128 0xe
+ 1249 00ae 0B       		.uleb128 0xb
+ 1250 00af 0B       		.uleb128 0xb
+ 1251 00b0 3A       		.uleb128 0x3a
+ 1252 00b1 0B       		.uleb128 0xb
+ 1253 00b2 3B       		.uleb128 0x3b
+ 1254 00b3 0B       		.uleb128 0xb
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc4FRUF7.s 			page 27
+
+
+ 1255 00b4 01       		.uleb128 0x1
+ 1256 00b5 13       		.uleb128 0x13
+ 1257 00b6 00       		.byte	0
+ 1258 00b7 00       		.byte	0
+ 1259 00b8 11       		.uleb128 0x11
+ 1260 00b9 26       		.uleb128 0x26
+ 1261 00ba 00       		.byte	0
+ 1262 00bb 49       		.uleb128 0x49
+ 1263 00bc 13       		.uleb128 0x13
+ 1264 00bd 00       		.byte	0
+ 1265 00be 00       		.byte	0
+ 1266 00bf 12       		.uleb128 0x12
+ 1267 00c0 17       		.uleb128 0x17
+ 1268 00c1 01       		.byte	0x1
+ 1269 00c2 0B       		.uleb128 0xb
+ 1270 00c3 0B       		.uleb128 0xb
+ 1271 00c4 3A       		.uleb128 0x3a
+ 1272 00c5 0B       		.uleb128 0xb
+ 1273 00c6 3B       		.uleb128 0x3b
+ 1274 00c7 0B       		.uleb128 0xb
+ 1275 00c8 01       		.uleb128 0x1
+ 1276 00c9 13       		.uleb128 0x13
+ 1277 00ca 00       		.byte	0
+ 1278 00cb 00       		.byte	0
+ 1279 00cc 13       		.uleb128 0x13
+ 1280 00cd 0D       		.uleb128 0xd
+ 1281 00ce 00       		.byte	0
+ 1282 00cf 03       		.uleb128 0x3
+ 1283 00d0 0E       		.uleb128 0xe
+ 1284 00d1 3A       		.uleb128 0x3a
+ 1285 00d2 0B       		.uleb128 0xb
+ 1286 00d3 3B       		.uleb128 0x3b
+ 1287 00d4 0B       		.uleb128 0xb
+ 1288 00d5 49       		.uleb128 0x49
+ 1289 00d6 13       		.uleb128 0x13
+ 1290 00d7 00       		.byte	0
+ 1291 00d8 00       		.byte	0
+ 1292 00d9 14       		.uleb128 0x14
+ 1293 00da 01       		.uleb128 0x1
+ 1294 00db 01       		.byte	0x1
+ 1295 00dc 49       		.uleb128 0x49
+ 1296 00dd 13       		.uleb128 0x13
+ 1297 00de 01       		.uleb128 0x1
+ 1298 00df 13       		.uleb128 0x13
+ 1299 00e0 00       		.byte	0
+ 1300 00e1 00       		.byte	0
+ 1301 00e2 15       		.uleb128 0x15
+ 1302 00e3 21       		.uleb128 0x21
+ 1303 00e4 00       		.byte	0
+ 1304 00e5 49       		.uleb128 0x49
+ 1305 00e6 13       		.uleb128 0x13
+ 1306 00e7 2F       		.uleb128 0x2f
+ 1307 00e8 0B       		.uleb128 0xb
+ 1308 00e9 00       		.byte	0
+ 1309 00ea 00       		.byte	0
+ 1310 00eb 16       		.uleb128 0x16
+ 1311 00ec 2E       		.uleb128 0x2e
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc4FRUF7.s 			page 28
+
+
+ 1312 00ed 01       		.byte	0x1
+ 1313 00ee 3F       		.uleb128 0x3f
+ 1314 00ef 19       		.uleb128 0x19
+ 1315 00f0 03       		.uleb128 0x3
+ 1316 00f1 0E       		.uleb128 0xe
+ 1317 00f2 3A       		.uleb128 0x3a
+ 1318 00f3 0B       		.uleb128 0xb
+ 1319 00f4 3B       		.uleb128 0x3b
+ 1320 00f5 0B       		.uleb128 0xb
+ 1321 00f6 27       		.uleb128 0x27
+ 1322 00f7 19       		.uleb128 0x19
+ 1323 00f8 11       		.uleb128 0x11
+ 1324 00f9 01       		.uleb128 0x1
+ 1325 00fa 12       		.uleb128 0x12
+ 1326 00fb 06       		.uleb128 0x6
+ 1327 00fc 40       		.uleb128 0x40
+ 1328 00fd 18       		.uleb128 0x18
+ 1329 00fe 9742     		.uleb128 0x2117
+ 1330 0100 19       		.uleb128 0x19
+ 1331 0101 01       		.uleb128 0x1
+ 1332 0102 13       		.uleb128 0x13
+ 1333 0103 00       		.byte	0
+ 1334 0104 00       		.byte	0
+ 1335 0105 17       		.uleb128 0x17
+ 1336 0106 34       		.uleb128 0x34
+ 1337 0107 00       		.byte	0
+ 1338 0108 03       		.uleb128 0x3
+ 1339 0109 0E       		.uleb128 0xe
+ 1340 010a 3A       		.uleb128 0x3a
+ 1341 010b 0B       		.uleb128 0xb
+ 1342 010c 3B       		.uleb128 0x3b
+ 1343 010d 0B       		.uleb128 0xb
+ 1344 010e 49       		.uleb128 0x49
+ 1345 010f 13       		.uleb128 0x13
+ 1346 0110 02       		.uleb128 0x2
+ 1347 0111 17       		.uleb128 0x17
+ 1348 0112 00       		.byte	0
+ 1349 0113 00       		.byte	0
+ 1350 0114 18       		.uleb128 0x18
+ 1351 0115 34       		.uleb128 0x34
+ 1352 0116 00       		.byte	0
+ 1353 0117 03       		.uleb128 0x3
+ 1354 0118 0E       		.uleb128 0xe
+ 1355 0119 3A       		.uleb128 0x3a
+ 1356 011a 0B       		.uleb128 0xb
+ 1357 011b 3B       		.uleb128 0x3b
+ 1358 011c 0B       		.uleb128 0xb
+ 1359 011d 49       		.uleb128 0x49
+ 1360 011e 13       		.uleb128 0x13
+ 1361 011f 02       		.uleb128 0x2
+ 1362 0120 18       		.uleb128 0x18
+ 1363 0121 00       		.byte	0
+ 1364 0122 00       		.byte	0
+ 1365 0123 19       		.uleb128 0x19
+ 1366 0124 898201   		.uleb128 0x4109
+ 1367 0127 01       		.byte	0x1
+ 1368 0128 11       		.uleb128 0x11
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc4FRUF7.s 			page 29
+
+
+ 1369 0129 01       		.uleb128 0x1
+ 1370 012a 31       		.uleb128 0x31
+ 1371 012b 13       		.uleb128 0x13
+ 1372 012c 01       		.uleb128 0x1
+ 1373 012d 13       		.uleb128 0x13
+ 1374 012e 00       		.byte	0
+ 1375 012f 00       		.byte	0
+ 1376 0130 1A       		.uleb128 0x1a
+ 1377 0131 8A8201   		.uleb128 0x410a
+ 1378 0134 00       		.byte	0
+ 1379 0135 02       		.uleb128 0x2
+ 1380 0136 18       		.uleb128 0x18
+ 1381 0137 9142     		.uleb128 0x2111
+ 1382 0139 18       		.uleb128 0x18
+ 1383 013a 00       		.byte	0
+ 1384 013b 00       		.byte	0
+ 1385 013c 1B       		.uleb128 0x1b
+ 1386 013d 898201   		.uleb128 0x4109
+ 1387 0140 00       		.byte	0
+ 1388 0141 11       		.uleb128 0x11
+ 1389 0142 01       		.uleb128 0x1
+ 1390 0143 31       		.uleb128 0x31
+ 1391 0144 13       		.uleb128 0x13
+ 1392 0145 00       		.byte	0
+ 1393 0146 00       		.byte	0
+ 1394 0147 1C       		.uleb128 0x1c
+ 1395 0148 898201   		.uleb128 0x4109
+ 1396 014b 01       		.byte	0x1
+ 1397 014c 11       		.uleb128 0x11
+ 1398 014d 01       		.uleb128 0x1
+ 1399 014e 31       		.uleb128 0x31
+ 1400 014f 13       		.uleb128 0x13
+ 1401 0150 00       		.byte	0
+ 1402 0151 00       		.byte	0
+ 1403 0152 1D       		.uleb128 0x1d
+ 1404 0153 2E       		.uleb128 0x2e
+ 1405 0154 01       		.byte	0x1
+ 1406 0155 3F       		.uleb128 0x3f
+ 1407 0156 19       		.uleb128 0x19
+ 1408 0157 03       		.uleb128 0x3
+ 1409 0158 0E       		.uleb128 0xe
+ 1410 0159 3A       		.uleb128 0x3a
+ 1411 015a 0B       		.uleb128 0xb
+ 1412 015b 3B       		.uleb128 0x3b
+ 1413 015c 0B       		.uleb128 0xb
+ 1414 015d 27       		.uleb128 0x27
+ 1415 015e 19       		.uleb128 0x19
+ 1416 015f 49       		.uleb128 0x49
+ 1417 0160 13       		.uleb128 0x13
+ 1418 0161 11       		.uleb128 0x11
+ 1419 0162 01       		.uleb128 0x1
+ 1420 0163 12       		.uleb128 0x12
+ 1421 0164 06       		.uleb128 0x6
+ 1422 0165 40       		.uleb128 0x40
+ 1423 0166 18       		.uleb128 0x18
+ 1424 0167 9742     		.uleb128 0x2117
+ 1425 0169 19       		.uleb128 0x19
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc4FRUF7.s 			page 30
+
+
+ 1426 016a 01       		.uleb128 0x1
+ 1427 016b 13       		.uleb128 0x13
+ 1428 016c 00       		.byte	0
+ 1429 016d 00       		.byte	0
+ 1430 016e 1E       		.uleb128 0x1e
+ 1431 016f 05       		.uleb128 0x5
+ 1432 0170 00       		.byte	0
+ 1433 0171 03       		.uleb128 0x3
+ 1434 0172 0E       		.uleb128 0xe
+ 1435 0173 3A       		.uleb128 0x3a
+ 1436 0174 0B       		.uleb128 0xb
+ 1437 0175 3B       		.uleb128 0x3b
+ 1438 0176 0B       		.uleb128 0xb
+ 1439 0177 49       		.uleb128 0x49
+ 1440 0178 13       		.uleb128 0x13
+ 1441 0179 02       		.uleb128 0x2
+ 1442 017a 17       		.uleb128 0x17
+ 1443 017b 00       		.byte	0
+ 1444 017c 00       		.byte	0
+ 1445 017d 1F       		.uleb128 0x1f
+ 1446 017e 05       		.uleb128 0x5
+ 1447 017f 00       		.byte	0
+ 1448 0180 03       		.uleb128 0x3
+ 1449 0181 08       		.uleb128 0x8
+ 1450 0182 3A       		.uleb128 0x3a
+ 1451 0183 0B       		.uleb128 0xb
+ 1452 0184 3B       		.uleb128 0x3b
+ 1453 0185 0B       		.uleb128 0xb
+ 1454 0186 49       		.uleb128 0x49
+ 1455 0187 13       		.uleb128 0x13
+ 1456 0188 02       		.uleb128 0x2
+ 1457 0189 18       		.uleb128 0x18
+ 1458 018a 00       		.byte	0
+ 1459 018b 00       		.byte	0
+ 1460 018c 20       		.uleb128 0x20
+ 1461 018d 34       		.uleb128 0x34
+ 1462 018e 00       		.byte	0
+ 1463 018f 03       		.uleb128 0x3
+ 1464 0190 08       		.uleb128 0x8
+ 1465 0191 3A       		.uleb128 0x3a
+ 1466 0192 0B       		.uleb128 0xb
+ 1467 0193 3B       		.uleb128 0x3b
+ 1468 0194 0B       		.uleb128 0xb
+ 1469 0195 49       		.uleb128 0x49
+ 1470 0196 13       		.uleb128 0x13
+ 1471 0197 00       		.byte	0
+ 1472 0198 00       		.byte	0
+ 1473 0199 21       		.uleb128 0x21
+ 1474 019a 2E       		.uleb128 0x2e
+ 1475 019b 00       		.byte	0
+ 1476 019c 3F       		.uleb128 0x3f
+ 1477 019d 19       		.uleb128 0x19
+ 1478 019e 03       		.uleb128 0x3
+ 1479 019f 0E       		.uleb128 0xe
+ 1480 01a0 3A       		.uleb128 0x3a
+ 1481 01a1 0B       		.uleb128 0xb
+ 1482 01a2 3B       		.uleb128 0x3b
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc4FRUF7.s 			page 31
+
+
+ 1483 01a3 0B       		.uleb128 0xb
+ 1484 01a4 27       		.uleb128 0x27
+ 1485 01a5 19       		.uleb128 0x19
+ 1486 01a6 49       		.uleb128 0x49
+ 1487 01a7 13       		.uleb128 0x13
+ 1488 01a8 11       		.uleb128 0x11
+ 1489 01a9 01       		.uleb128 0x1
+ 1490 01aa 12       		.uleb128 0x12
+ 1491 01ab 06       		.uleb128 0x6
+ 1492 01ac 40       		.uleb128 0x40
+ 1493 01ad 18       		.uleb128 0x18
+ 1494 01ae 9742     		.uleb128 0x2117
+ 1495 01b0 19       		.uleb128 0x19
+ 1496 01b1 00       		.byte	0
+ 1497 01b2 00       		.byte	0
+ 1498 01b3 22       		.uleb128 0x22
+ 1499 01b4 21       		.uleb128 0x21
+ 1500 01b5 00       		.byte	0
+ 1501 01b6 49       		.uleb128 0x49
+ 1502 01b7 13       		.uleb128 0x13
+ 1503 01b8 2F       		.uleb128 0x2f
+ 1504 01b9 05       		.uleb128 0x5
+ 1505 01ba 00       		.byte	0
+ 1506 01bb 00       		.byte	0
+ 1507 01bc 23       		.uleb128 0x23
+ 1508 01bd 34       		.uleb128 0x34
+ 1509 01be 00       		.byte	0
+ 1510 01bf 03       		.uleb128 0x3
+ 1511 01c0 0E       		.uleb128 0xe
+ 1512 01c1 3A       		.uleb128 0x3a
+ 1513 01c2 0B       		.uleb128 0xb
+ 1514 01c3 3B       		.uleb128 0x3b
+ 1515 01c4 0B       		.uleb128 0xb
+ 1516 01c5 49       		.uleb128 0x49
+ 1517 01c6 13       		.uleb128 0x13
+ 1518 01c7 3F       		.uleb128 0x3f
+ 1519 01c8 19       		.uleb128 0x19
+ 1520 01c9 3C       		.uleb128 0x3c
+ 1521 01ca 19       		.uleb128 0x19
+ 1522 01cb 00       		.byte	0
+ 1523 01cc 00       		.byte	0
+ 1524 01cd 24       		.uleb128 0x24
+ 1525 01ce 2E       		.uleb128 0x2e
+ 1526 01cf 00       		.byte	0
+ 1527 01d0 3F       		.uleb128 0x3f
+ 1528 01d1 19       		.uleb128 0x19
+ 1529 01d2 3C       		.uleb128 0x3c
+ 1530 01d3 19       		.uleb128 0x19
+ 1531 01d4 6E       		.uleb128 0x6e
+ 1532 01d5 0E       		.uleb128 0xe
+ 1533 01d6 03       		.uleb128 0x3
+ 1534 01d7 0E       		.uleb128 0xe
+ 1535 01d8 3A       		.uleb128 0x3a
+ 1536 01d9 0B       		.uleb128 0xb
+ 1537 01da 3B       		.uleb128 0x3b
+ 1538 01db 05       		.uleb128 0x5
+ 1539 01dc 00       		.byte	0
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc4FRUF7.s 			page 32
+
+
+ 1540 01dd 00       		.byte	0
+ 1541 01de 25       		.uleb128 0x25
+ 1542 01df 2E       		.uleb128 0x2e
+ 1543 01e0 00       		.byte	0
+ 1544 01e1 3F       		.uleb128 0x3f
+ 1545 01e2 19       		.uleb128 0x19
+ 1546 01e3 3C       		.uleb128 0x3c
+ 1547 01e4 19       		.uleb128 0x19
+ 1548 01e5 6E       		.uleb128 0x6e
+ 1549 01e6 0E       		.uleb128 0xe
+ 1550 01e7 03       		.uleb128 0x3
+ 1551 01e8 0E       		.uleb128 0xe
+ 1552 01e9 3A       		.uleb128 0x3a
+ 1553 01ea 0B       		.uleb128 0xb
+ 1554 01eb 3B       		.uleb128 0x3b
+ 1555 01ec 0B       		.uleb128 0xb
+ 1556 01ed 00       		.byte	0
+ 1557 01ee 00       		.byte	0
+ 1558 01ef 00       		.byte	0
+ 1559              		.section	.debug_loc,"",%progbits
+ 1560              	.Ldebug_loc0:
+ 1561              	.LLST0:
+ 1562 0000 14000000 		.4byte	.LVL0
+ 1563 0004 19000000 		.4byte	.LVL1-1
+ 1564 0008 0100     		.2byte	0x1
+ 1565 000a 50       		.byte	0x50
+ 1566 000b 00000000 		.4byte	0
+ 1567 000f 00000000 		.4byte	0
+ 1568              	.LLST1:
+ 1569 0013 00000000 		.4byte	.LVL8
+ 1570 0017 06000000 		.4byte	.LVL9
+ 1571 001b 0100     		.2byte	0x1
+ 1572 001d 50       		.byte	0x50
+ 1573 001e 06000000 		.4byte	.LVL9
+ 1574 0022 08000000 		.4byte	.LVL10
+ 1575 0026 0400     		.2byte	0x4
+ 1576 0028 F3       		.byte	0xf3
+ 1577 0029 01       		.uleb128 0x1
+ 1578 002a 50       		.byte	0x50
+ 1579 002b 9F       		.byte	0x9f
+ 1580 002c 08000000 		.4byte	.LVL10
+ 1581 0030 0A000000 		.4byte	.LVL11
+ 1582 0034 0100     		.2byte	0x1
+ 1583 0036 50       		.byte	0x50
+ 1584 0037 0A000000 		.4byte	.LVL11
+ 1585 003b 0E000000 		.4byte	.LFE46
+ 1586 003f 0400     		.2byte	0x4
+ 1587 0041 F3       		.byte	0xf3
+ 1588 0042 01       		.uleb128 0x1
+ 1589 0043 50       		.byte	0x50
+ 1590 0044 9F       		.byte	0x9f
+ 1591 0045 00000000 		.4byte	0
+ 1592 0049 00000000 		.4byte	0
+ 1593              		.section	.debug_aranges,"",%progbits
+ 1594 0000 2C000000 		.4byte	0x2c
+ 1595 0004 0200     		.2byte	0x2
+ 1596 0006 00000000 		.4byte	.Ldebug_info0
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc4FRUF7.s 			page 33
+
+
+ 1597 000a 04       		.byte	0x4
+ 1598 000b 00       		.byte	0
+ 1599 000c 0000     		.2byte	0
+ 1600 000e 0000     		.2byte	0
+ 1601 0010 00000000 		.4byte	.LFB45
+ 1602 0014 6C000000 		.4byte	.LFE45-.LFB45
+ 1603 0018 00000000 		.4byte	.LFB46
+ 1604 001c 0E000000 		.4byte	.LFE46-.LFB46
+ 1605 0020 00000000 		.4byte	.LFB47
+ 1606 0024 08000000 		.4byte	.LFE47-.LFB47
+ 1607 0028 00000000 		.4byte	0
+ 1608 002c 00000000 		.4byte	0
+ 1609              		.section	.debug_ranges,"",%progbits
+ 1610              	.Ldebug_ranges0:
+ 1611 0000 00000000 		.4byte	.LFB45
+ 1612 0004 6C000000 		.4byte	.LFE45
+ 1613 0008 00000000 		.4byte	.LFB46
+ 1614 000c 0E000000 		.4byte	.LFE46
+ 1615 0010 00000000 		.4byte	.LFB47
+ 1616 0014 08000000 		.4byte	.LFE47
+ 1617 0018 00000000 		.4byte	0
+ 1618 001c 00000000 		.4byte	0
+ 1619              		.section	.debug_line,"",%progbits
+ 1620              	.Ldebug_line0:
+ 1621 0000 06020000 		.section	.debug_str,"MS",%progbits,1
+ 1621      0200C101 
+ 1621      00000201 
+ 1621      FB0E0D00 
+ 1621      01010101 
+ 1622              	.LASF34:
+ 1623 0000 70436F6C 		.ascii	"pColorConvAPI\000"
+ 1623      6F72436F 
+ 1623      6E764150 
+ 1623      4900
+ 1624              	.LASF65:
+ 1625 000e 4C43445F 		.ascii	"LCD_SetSizeEx\000"
+ 1625      53657453 
+ 1625      697A6545 
+ 1625      7800
+ 1626              	.LASF71:
+ 1627 001c 4C43445F 		.ascii	"LCD_X_Config\000"
+ 1627      585F436F 
+ 1627      6E666967 
+ 1627      00
+ 1628              	.LASF53:
+ 1629 0029 4D697272 		.ascii	"Mirror\000"
+ 1629      6F7200
+ 1630              	.LASF64:
+ 1631 0030 4C43445F 		.ascii	"LCD_GetSwapXY\000"
+ 1631      47657453 
+ 1631      77617058 
+ 1631      5900
+ 1632              	.LASF42:
+ 1633 003e 70664669 		.ascii	"pfFillRect\000"
+ 1633      6C6C5265 
+ 1633      637400
+ 1634              	.LASF58:
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc4FRUF7.s 			page 34
+
+
+ 1635 0049 5F61506C 		.ascii	"_aPlain_0\000"
+ 1635      61696E5F 
+ 1635      3000
+ 1636              	.LASF5:
+ 1637 0053 73686F72 		.ascii	"short int\000"
+ 1637      7420696E 
+ 1637      7400
+ 1638              	.LASF12:
+ 1639 005d 73697A65 		.ascii	"sizetype\000"
+ 1639      74797065 
+ 1639      00
+ 1640              	.LASF49:
+ 1641 0066 70664765 		.ascii	"pfGetDevData\000"
+ 1641      74446576 
+ 1641      44617461 
+ 1641      00
+ 1642              	.LASF73:
+ 1643 0073 4C43445F 		.ascii	"LCD_GetDisplayBuffer\000"
+ 1643      47657444 
+ 1643      6973706C 
+ 1643      61794275 
+ 1643      66666572 
+ 1644              	.LASF68:
+ 1645 0088 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1645      43313120 
+ 1645      352E342E 
+ 1645      31203230 
+ 1645      31363036 
+ 1646 00bb 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0plus -mthumb -"
+ 1646      20726576 
+ 1646      6973696F 
+ 1646      6E203233 
+ 1646      37373135 
+ 1647 00ee 67202D4F 		.ascii	"g -Og -ffunction-sections -ffat-lto-objects\000"
+ 1647      67202D66 
+ 1647      66756E63 
+ 1647      74696F6E 
+ 1647      2D736563 
+ 1648              	.LASF41:
+ 1649 011a 70664472 		.ascii	"pfDrawVLine\000"
+ 1649      6177564C 
+ 1649      696E6500 
+ 1650              	.LASF10:
+ 1651 0126 5F5F7569 		.ascii	"__uint32_t\000"
+ 1651      6E743332 
+ 1651      5F7400
+ 1652              	.LASF50:
+ 1653 0131 70664765 		.ascii	"pfGetRect\000"
+ 1653      74526563 
+ 1653      7400
+ 1654              	.LASF33:
+ 1655 013b 70446576 		.ascii	"pDeviceAPI\000"
+ 1655      69636541 
+ 1655      504900
+ 1656              	.LASF37:
+ 1657 0146 4755495F 		.ascii	"GUI_DEVICE_API\000"
+ 1657      44455649 
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc4FRUF7.s 			page 35
+
+
+ 1657      43455F41 
+ 1657      504900
+ 1658              	.LASF16:
+ 1659 0155 4C43445F 		.ascii	"LCD_COLOR\000"
+ 1659      434F4C4F 
+ 1659      5200
+ 1660              	.LASF25:
+ 1661 015f 70664765 		.ascii	"pfGetIndexMask\000"
+ 1661      74496E64 
+ 1661      65784D61 
+ 1661      736B00
+ 1662              	.LASF27:
+ 1663 016e 7066436F 		.ascii	"pfColor2IndexBulk\000"
+ 1663      6C6F7232 
+ 1663      496E6465 
+ 1663      7842756C 
+ 1663      6B00
+ 1664              	.LASF67:
+ 1665 0180 4C43445F 		.ascii	"LCD_SetVRAMAddrEx\000"
+ 1665      53657456 
+ 1665      52414D41 
+ 1665      64647245 
+ 1665      7800
+ 1666              	.LASF32:
+ 1667 0192 70507265 		.ascii	"pPrev\000"
+ 1667      7600
+ 1668              	.LASF40:
+ 1669 0198 70664472 		.ascii	"pfDrawHLine\000"
+ 1669      6177484C 
+ 1669      696E6500 
+ 1670              	.LASF35:
+ 1671 01a4 466C6167 		.ascii	"Flags\000"
+ 1671      7300
+ 1672              	.LASF14:
+ 1673 01aa 666C6F61 		.ascii	"float\000"
+ 1673      7400
+ 1674              	.LASF61:
+ 1675 01b0 47554944 		.ascii	"GUIDRV_BitPlains_API\000"
+ 1675      52565F42 
+ 1675      6974506C 
+ 1675      61696E73 
+ 1675      5F415049 
+ 1676              	.LASF36:
+ 1677 01c5 4C617965 		.ascii	"LayerIndex\000"
+ 1677      72496E64 
+ 1677      657800
+ 1678              	.LASF1:
+ 1679 01d0 6C6F6E67 		.ascii	"long long int\000"
+ 1679      206C6F6E 
+ 1679      6720696E 
+ 1679      7400
+ 1680              	.LASF31:
+ 1681 01de 704E6578 		.ascii	"pNext\000"
+ 1681      7400
+ 1682              	.LASF20:
+ 1683 01e4 744C4344 		.ascii	"tLCDDEV_GetIndexMask\000"
+ 1683      4445565F 
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc4FRUF7.s 			page 36
+
+
+ 1683      47657449 
+ 1683      6E646578 
+ 1683      4D61736B 
+ 1684              	.LASF7:
+ 1685 01f9 6C6F6E67 		.ascii	"long int\000"
+ 1685      20696E74 
+ 1685      00
+ 1686              	.LASF43:
+ 1687 0202 70664765 		.ascii	"pfGetPixelIndex\000"
+ 1687      74506978 
+ 1687      656C496E 
+ 1687      64657800 
+ 1688              	.LASF29:
+ 1689 0212 4C43445F 		.ascii	"LCD_API_COLOR_CONV\000"
+ 1689      4150495F 
+ 1689      434F4C4F 
+ 1689      525F434F 
+ 1689      4E5600
+ 1690              	.LASF55:
+ 1691 0225 61705652 		.ascii	"apVRAM\000"
+ 1691      414D00
+ 1692              	.LASF62:
+ 1693 022c 4755495F 		.ascii	"GUI_DEVICE_CreateAndLink\000"
+ 1693      44455649 
+ 1693      43455F43 
+ 1693      72656174 
+ 1693      65416E64 
+ 1694              	.LASF57:
+ 1695 0245 436F6E66 		.ascii	"Config\000"
+ 1695      696700
+ 1696              	.LASF4:
+ 1697 024c 756E7369 		.ascii	"unsigned char\000"
+ 1697      676E6564 
+ 1697      20636861 
+ 1697      7200
+ 1698              	.LASF51:
+ 1699 025a 68436F6E 		.ascii	"hContext\000"
+ 1699      74657874 
+ 1699      00
+ 1700              	.LASF70:
+ 1701 0263 433A5C55 		.ascii	"C:\\Users\\nicpa\\OneDrive\\Documents\\PolyDoc\\GBM"
+ 1701      73657273 
+ 1701      5C6E6963 
+ 1701      70615C4F 
+ 1701      6E654472 
+ 1702 0290 32313030 		.ascii	"2100\\Laboratoire3\\Laboratoire3\\Laboratoire3.cyds"
+ 1702      5C4C6162 
+ 1702      6F726174 
+ 1702      6F697265 
+ 1702      335C4C61 
+ 1703 02c0 6E00     		.ascii	"n\000"
+ 1704              	.LASF2:
+ 1705 02c2 6C6F6E67 		.ascii	"long double\000"
+ 1705      20646F75 
+ 1705      626C6500 
+ 1706              	.LASF69:
+ 1707 02ce 4C434443 		.ascii	"LCDConf.c\000"
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc4FRUF7.s 			page 37
+
+
+ 1707      6F6E662E 
+ 1707      6300
+ 1708              	.LASF17:
+ 1709 02d8 4C43445F 		.ascii	"LCD_RECT\000"
+ 1709      52454354 
+ 1709      00
+ 1710              	.LASF3:
+ 1711 02e1 7369676E 		.ascii	"signed char\000"
+ 1711      65642063 
+ 1711      68617200 
+ 1712              	.LASF9:
+ 1713 02ed 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1713      206C6F6E 
+ 1713      6720756E 
+ 1713      7369676E 
+ 1713      65642069 
+ 1714              	.LASF11:
+ 1715 0304 75696E74 		.ascii	"uint32_t\000"
+ 1715      33325F74 
+ 1715      00
+ 1716              	.LASF26:
+ 1717 030d 4E6F416C 		.ascii	"NoAlpha\000"
+ 1717      70686100 
+ 1718              	.LASF24:
+ 1719 0315 7066496E 		.ascii	"pfIndex2Color\000"
+ 1719      64657832 
+ 1719      436F6C6F 
+ 1719      7200
+ 1720              	.LASF0:
+ 1721 0323 756E7369 		.ascii	"unsigned int\000"
+ 1721      676E6564 
+ 1721      20696E74 
+ 1721      00
+ 1722              	.LASF44:
+ 1723 0330 70665365 		.ascii	"pfSetPixelIndex\000"
+ 1723      74506978 
+ 1723      656C496E 
+ 1723      64657800 
+ 1724              	.LASF54:
+ 1725 0340 434F4E46 		.ascii	"CONFIG_BITPLAINS\000"
+ 1725      49475F42 
+ 1725      4954504C 
+ 1725      41494E53 
+ 1725      00
+ 1726              	.LASF23:
+ 1727 0351 7066436F 		.ascii	"pfColor2Index\000"
+ 1727      6C6F7232 
+ 1727      496E6465 
+ 1727      7800
+ 1728              	.LASF13:
+ 1729 035f 63686172 		.ascii	"char\000"
+ 1729      00
+ 1730              	.LASF66:
+ 1731 0364 4C43445F 		.ascii	"LCD_SetVSizeEx\000"
+ 1731      53657456 
+ 1731      53697A65 
+ 1731      457800
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc4FRUF7.s 			page 38
+
+
+ 1732              	.LASF38:
+ 1733 0373 44657669 		.ascii	"DeviceClassIndex\000"
+ 1733      6365436C 
+ 1733      61737349 
+ 1733      6E646578 
+ 1733      00
+ 1734              	.LASF30:
+ 1735 0384 4755495F 		.ascii	"GUI_DEVICE\000"
+ 1735      44455649 
+ 1735      434500
+ 1736              	.LASF6:
+ 1737 038f 73686F72 		.ascii	"short unsigned int\000"
+ 1737      7420756E 
+ 1737      7369676E 
+ 1737      65642069 
+ 1737      6E7400
+ 1738              	.LASF63:
+ 1739 03a2 47554944 		.ascii	"GUIDRV_BitPlains_Config\000"
+ 1739      52565F42 
+ 1739      6974506C 
+ 1739      61696E73 
+ 1739      5F436F6E 
+ 1740              	.LASF52:
+ 1741 03ba 70436F6E 		.ascii	"pContext\000"
+ 1741      74657874 
+ 1741      00
+ 1742              	.LASF39:
+ 1743 03c3 70664472 		.ascii	"pfDrawBitmap\000"
+ 1743      61774269 
+ 1743      746D6170 
+ 1743      00
+ 1744              	.LASF47:
+ 1745 03d0 70664765 		.ascii	"pfGetDevFunc\000"
+ 1745      74446576 
+ 1745      46756E63 
+ 1745      00
+ 1746              	.LASF59:
+ 1747 03dd 5F565241 		.ascii	"_VRAM_Desc\000"
+ 1747      4D5F4465 
+ 1747      736300
+ 1748              	.LASF8:
+ 1749 03e8 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1749      20756E73 
+ 1749      69676E65 
+ 1749      6420696E 
+ 1749      7400
+ 1750              	.LASF15:
+ 1751 03fa 646F7562 		.ascii	"double\000"
+ 1751      6C6500
+ 1752              	.LASF28:
+ 1753 0401 7066496E 		.ascii	"pfIndex2ColorBulk\000"
+ 1753      64657832 
+ 1753      436F6C6F 
+ 1753      7242756C 
+ 1753      6B00
+ 1754              	.LASF45:
+ 1755 0413 7066586F 		.ascii	"pfXorPixel\000"
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc4FRUF7.s 			page 39
+
+
+ 1755      72506978 
+ 1755      656C00
+ 1756              	.LASF46:
+ 1757 041e 70665365 		.ascii	"pfSetOrg\000"
+ 1757      744F7267 
+ 1757      00
+ 1758              	.LASF22:
+ 1759 0427 744C4344 		.ascii	"tLCDDEV_Color2IndexBulk\000"
+ 1759      4445565F 
+ 1759      436F6C6F 
+ 1759      7232496E 
+ 1759      64657842 
+ 1760              	.LASF72:
+ 1761 043f 4C43445F 		.ascii	"LCD_X_DisplayDriver\000"
+ 1761      585F4469 
+ 1761      73706C61 
+ 1761      79447269 
+ 1761      76657200 
+ 1762              	.LASF21:
+ 1763 0453 744C4344 		.ascii	"tLCDDEV_Index2ColorBulk\000"
+ 1763      4445565F 
+ 1763      496E6465 
+ 1763      7832436F 
+ 1763      6C6F7242 
+ 1764              	.LASF60:
+ 1765 046b 4C43445F 		.ascii	"LCD_API_ColorConv_1\000"
+ 1765      4150495F 
+ 1765      436F6C6F 
+ 1765      72436F6E 
+ 1765      765F3100 
+ 1766              	.LASF18:
+ 1767 047f 744C4344 		.ascii	"tLCDDEV_Index2Color\000"
+ 1767      4445565F 
+ 1767      496E6465 
+ 1767      7832436F 
+ 1767      6C6F7200 
+ 1768              	.LASF56:
+ 1769 0493 70446576 		.ascii	"pDevice\000"
+ 1769      69636500 
+ 1770              	.LASF48:
+ 1771 049b 70664765 		.ascii	"pfGetDevProp\000"
+ 1771      74446576 
+ 1771      50726F70 
+ 1771      00
+ 1772              	.LASF19:
+ 1773 04a8 744C4344 		.ascii	"tLCDDEV_Color2Index\000"
+ 1773      4445565F 
+ 1773      436F6C6F 
+ 1773      7232496E 
+ 1773      64657800 
+ 1774              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
