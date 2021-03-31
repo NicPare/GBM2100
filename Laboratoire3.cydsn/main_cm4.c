@@ -95,7 +95,7 @@ void UpdateDisplay(cy_eink_update_t updateMethod, bool powerCycle)
     memcpy(imageBufferCache, pEmwinBuffer, CY_EINK_FRAME_SIZE);
 }
 
-
+//xd
 /*******************************************************************************
 * Function Name: void ClearScreen(void)
 ********************************************************************************
