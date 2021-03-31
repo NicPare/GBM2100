@@ -312,16 +312,16 @@
 <v>Laboratoire3\Laboratoire3\PSoC 63 Family Datasheet</v>
 <v>Laboratoire3\Laboratoire3\Peripheral Driver Library</v>
 <v>Laboratoire3\Laboratoire3\System Reference Guides</v>
+<v>Laboratoire3\Laboratoire3\CapSense_v3_0.pdf</v>
 <v>Laboratoire3\Laboratoire3\CyStatusReg_v1_90.pdf</v>
 <v>Laboratoire3\Laboratoire3\GPIO_PDL_v1_0</v>
 <v>Laboratoire3\Laboratoire3\GPIO_PDL_v1_0\GPIO_PDL_v1_0.pdf</v>
-<v>Laboratoire3\Laboratoire3\Scan_ADC_P6_v3_10.pdf</v>
+<v>Laboratoire3\Laboratoire3\SCB_I2C_PDL_v2_0.pdf</v>
 <v>Laboratoire3\Laboratoire3\SCB_SPI_PDL_v2_0.pdf</v>
+<v>Laboratoire3\Laboratoire3\SCB_UART_PDL_v2_0.pdf</v>
 <v>Laboratoire3\Laboratoire3\SysClk_PDL_v1_0</v>
 <v>Laboratoire3\Laboratoire3\SysClk_PDL_v1_0\SysClk_PDL_v1_0.pdf</v>
-<v>Laboratoire3\Laboratoire3\SysInt_PDL_v1_0.pdf</v>
 <v>Laboratoire3\Laboratoire3\TCPWM_Counter_PDL_v1_0.pdf</v>
-<v>Laboratoire3\Laboratoire3\TCPWM_PWM_PDL_v1_0.pdf</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>Laboratoire3</v>
@@ -330,16 +330,16 @@
 <v>Laboratoire3\Laboratoire3\PSoC 63 Family Datasheet</v>
 <v>Laboratoire3\Laboratoire3\Peripheral Driver Library</v>
 <v>Laboratoire3\Laboratoire3\System Reference Guides</v>
+<v>Laboratoire3\Laboratoire3\CapSense_v3_0.pdf</v>
 <v>Laboratoire3\Laboratoire3\CyStatusReg_v1_90.pdf</v>
 <v>Laboratoire3\Laboratoire3\GPIO_PDL_v1_0</v>
 <v>Laboratoire3\Laboratoire3\GPIO_PDL_v1_0\GPIO_PDL_v1_0.pdf</v>
-<v>Laboratoire3\Laboratoire3\Scan_ADC_P6_v3_10.pdf</v>
+<v>Laboratoire3\Laboratoire3\SCB_I2C_PDL_v2_0.pdf</v>
 <v>Laboratoire3\Laboratoire3\SCB_SPI_PDL_v2_0.pdf</v>
+<v>Laboratoire3\Laboratoire3\SCB_UART_PDL_v2_0.pdf</v>
 <v>Laboratoire3\Laboratoire3\SysClk_PDL_v1_0</v>
 <v>Laboratoire3\Laboratoire3\SysClk_PDL_v1_0\SysClk_PDL_v1_0.pdf</v>
-<v>Laboratoire3\Laboratoire3\SysInt_PDL_v1_0.pdf</v>
 <v>Laboratoire3\Laboratoire3\TCPWM_Counter_PDL_v1_0.pdf</v>
-<v>Laboratoire3\Laboratoire3\TCPWM_PWM_PDL_v1_0.pdf</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStatesV2>
