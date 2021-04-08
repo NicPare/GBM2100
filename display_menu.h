@@ -12,4 +12,4 @@
 
 /* [] END OF FILE */
 
-void updateHR();
+void display_menu(void);
