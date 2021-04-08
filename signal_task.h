@@ -12,4 +12,4 @@
 
 /* [] END OF FILE */
 
-void capSense_task(void);
+void updateSignal();
