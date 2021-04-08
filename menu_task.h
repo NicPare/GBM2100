@@ -12,4 +12,5 @@
 
 /* [] END OF FILE */
 
-void capSense_task(void);
+void vmenu_task ();
+void updateMenu();
