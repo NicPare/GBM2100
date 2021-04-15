@@ -12,5 +12,6 @@
 
 /* [] END OF FILE */
 
-void updateHR();
-void vHR_task();
+void updateSignal();
+
+void vsignal_task();

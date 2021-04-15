@@ -25,18 +25,20 @@
 #include "cy_eink_library.h"
 #include "LCDConf.h"
 #include "hr_task.h"
+#include "signal_task.h"
 
-uint8_t etatBouton;
-int8_t selection = 1;
+
+
+uint8_t etatBouton = NO_TOUCH;
 
 void updateMenu(int n){
     
-    ClearScreen();
+    GUI_Clear();
     
     GUI_SetPenSize(2);
     GUI_SetColor(GUI_BLACK);
     GUI_SetBkColor(GUI_WHITE);
-    GUI_Clear();
+    
     
     //Rectangle
     GUI_DrawRect(1,1,263,175);
@@ -89,49 +91,60 @@ void updateMenu(int n){
     }
     
     
-    UpdateDisplay(CY_EINK_FULL_4STAGE, true);
+    UpdateDisplay(CY_EINK_FULL_2STAGE, true);
+    
 }
 
 
 void vmenu_task (){
- 
+    GUI_Init();
+    Cy_EINK_Start(20);
+    Cy_EINK_Power(1);
+    int8_t selection = 1;
+    updateMenu(selection);
+    
     for(;;){
         
         if(currentpage == PAGE_MENU){
             
             // Efface la valeur précédente de etatBouton si la file est vide
-            etatBouton = 10;
-            
-            while( touchData!=NULL){
+            //etatBouton = 10;
+                etatBouton = NO_TOUCH;
+        //    while( touchData!=NULL){
                
-                xQueueReceive(touchData, &etatBouton, portMAX_DELAY);
+             //  xQueueReceive(touchData, &etatBouton, portMAX_DELAY);
        
-                if(etatBouton == BUTTON_R){
+                if(currenttouch == BUTTON_R){
                     selection++;
                     if(selection == 5){
                         selection = 1;
                     }
+
                 }
     
-                if(etatBouton==BUTTON_L){
-                    
+                if(currenttouch==BUTTON_L){
                     selection--;
                     if(selection == 0){
                         selection = 4;
                     }
+
                 }
-            }
+           // }
             
-            // Affichage menu ou selection est en gras
+            // Affichage menu dont selection est en gras
+            
             updateMenu(selection);
             
-            // délai #à écrire
+      
             
-            if(etatBouton == BUTTON_0){
-                currentpage = selection;
+            if(currenttouch == BUTTON_MENU){
+                currentpage = selection;          
             }
+            currenttouch = NO_TOUCH;
         }
-    
+        
+        
+        vTaskDelay(pdMS_TO_TICKS(1000));
     }
     
  

@@ -58,7 +58,11 @@
 #include "queue.h"
 #include "touch_task.h"
 #include "menu_task.h"
+#include "signal_task.h"
 #include "global_variables.h"
+#include "hr_task.h"
+#include "LED_task.h"
+
 
 
 int main(void)
@@ -66,28 +70,42 @@ int main(void)
     __enable_irq(); /* Enable global interrupts. */
     
     // Initialize emWin Graphics and start einkdisplay interface
-    GUI_Init();
-    Cy_EINK_Start(20);
-    Cy_EINK_POWER(1);
+    
     
 
     
     //variables
     currentpage = PAGE_MENU;
-    
+    currenttouch = NO_TOUCH;
+    hrmin=30;
+    hrmax=130;
+    LED=80;
+    button_menu = false;
+    heart_rate=99;
+    SPO2=22;
+
     //touch
-    CapSense_Start();
-    CapSense_ScanAllWidgets();
     
-    touchData = xQueueCreate(5, sizeof(int8_t));
     
-    xTaskCreate(vtouch_task,"touch task",400,NULL,1,0);
-    vTaskStartScheduler();
+    //touchData = xQueueCreate(5, sizeof(int8_t*));
+    
+    xTaskCreate(vtouch_task,"touch task",configMINIMAL_STACK_SIZE,NULL,1,0);
+    
+    xTaskCreate(vmenu_task,"vmenu_task",configMINIMAL_STACK_SIZE,NULL,1,0);
+    
+    xTaskCreate(vsignal_task,"vsignal_task",configMINIMAL_STACK_SIZE,NULL,1,NULL);
+
+    xTaskCreate(vHR_task,"vHR_task",configMINIMAL_STACK_SIZE,NULL,1,NULL);
+    
+    xTaskCreate(vLED_task,"vLED_task",configMINIMAL_STACK_SIZE,NULL,1,NULL);
+    
+   // xTaskCreate(vsignal_task,"vsignal_task",1000,NULL,1,NULL);
+    
 
     
     //menu
     
-    xTaskCreate(vmenu_task,"vmenu_task",400,NULL,1,0);
+    
     vTaskStartScheduler();
     
     //while(CapSense_IsBusy());

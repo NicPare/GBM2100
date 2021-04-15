@@ -12,5 +12,5 @@
 
 /* [] END OF FILE */
 
-void updateHR();
-void vHR_task();
+void updateLED();
+void vLED_task();

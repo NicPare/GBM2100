@@ -12,5 +12,7 @@
 
 /* [] END OF FILE */
 
-void updateHR();
-void vHR_task();
+
+void UpdateDisplay();
+void ClearScreen();
+void WaitforSwitchPressAndRelease();
