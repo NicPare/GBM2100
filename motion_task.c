@@ -79,6 +79,7 @@ static void Orientation_Interrupt(void);
 static int8_t MotionSensor_Init(void);
 static int8_t MotionSensor_ConfigOrientIntr(void);
 static int8_t MotionSensor_UpdateOrientation(orientation_t*);
+bool LED_flag = false;
 
 /*******************************************************************************
 * Function Name: void Task_Motion(void *pvParameters)
@@ -94,7 +95,7 @@ static int8_t MotionSensor_UpdateOrientation(orientation_t*);
 *  None
 *
 *******************************************************************************/
-void Task_Motion(void* pvParameters)
+void Task_Motion(void*pvParameters)
 {
     /* Variable used to store the return values of Motion Sensor APIs */
     static int8_t motionSensorApiResult;
@@ -104,12 +105,10 @@ void Task_Motion(void* pvParameters)
     
     /* Remove warning for unused parameter */
     (void)pvParameters;
-    
     /* Create binary semaphore and check the operation */
     xSemaphoreI2C = xSemaphoreCreateBinary();
     if(xSemaphoreI2C == NULL)
-    {
-    }
+    {}
     
     /* Initialize BMI160 Motion Sensor and check the operation */
     motionSensorApiResult = MotionSensor_Init();
@@ -128,10 +127,10 @@ void Task_Motion(void* pvParameters)
     }
         
     for(;;)
-    {  
-        vTaskDelay(100);
+    {
+        vTaskDelay(50);
     }
-    /* Suspend the task */
+    //Suspend the task 
     vTaskSuspend(NULL);
 }
 
@@ -154,9 +153,9 @@ static void Orientation_Interrupt(void)
     BaseType_t xHigherPriorityTaskWoken = pdFALSE;
     
     /* Clear any pending interrupts */
-    Cy_GPIO_ClearInterrupt(P13_1_PORT, P13_1_NUM );
+    Cy_GPIO_ClearInterrupt(P13_0_PORT, P13_0_NUM );
     NVIC_ClearPendingIRQ(SysInt_OrientINT_cfg.intrSrc);
-    
+    LED_flag = true;
     /* Resume Task_Motion */
     xHigherPriorityTaskWoken = xTaskResumeFromISR(xTaskHandleMotion);
     portYIELD_FROM_ISR(xHigherPriorityTaskWoken );

@@ -33,6 +33,7 @@ void readMultipleBytes_MAX(uint8_t baseAddress, uint8_t *buffer, uint8_t length)
 
 
 //Fonctions MAX
+bool MAX_Init();
 
 bool MAX_Reset();
 

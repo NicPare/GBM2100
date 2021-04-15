@@ -12,7 +12,7 @@
 #include "MAX30102_functions.h"
 
 //Fonctions i2c
-bool MAX_init()
+bool MAX_Init(void)
 {
     if (!write_register_MAX(0x02, 0xc0))
         return false;
@@ -84,10 +84,10 @@ void readMultipleBytes_MAX(uint8_t baseAddress, uint8_t *buffer, uint8_t length)
 int read_idx_MAX = 0;
 int write_idx_MAX = 0;
 bool read_flag_MAX = false;
-uint8_t buffer[1500];
+uint8_t buffer[6];
 
-uint32 red_data[750];
-uint32 ir_data[750];
+uint32 red_data[1000];
+uint32 ir_data[1000];
 
 //Fonction de lecture du capteur
 
@@ -97,15 +97,15 @@ void read_MAX30102()
     for(;;)
     {
         readMultipleBytes_MAX(MAX_FIFO_ADDR, buffer, 6);
-        red_data[read_idx_MAX] = (buffer[0] + (buffer[1]<<8) + (buffer[2]<<16));
-        ir_data[read_idx_MAX] = (buffer[3] + (buffer[4]<<8) + (buffer[5]<<16));
+        red_data[read_idx_MAX] = (buffer[2] + (buffer[1]<<8) + (buffer[0]<<16));
+        ir_data[read_idx_MAX] = (buffer[5] + (buffer[4]<<8) + (buffer[3]<<16));
         write_idx_MAX++;
         if (!(write_idx_MAX % 1000))
         {
             read_flag_MAX = true;
             write_idx_MAX = 0;
         }
-        vTaskDelay(10);
+        //vTaskDelay(100);
     }
 }
 

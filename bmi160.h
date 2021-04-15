@@ -40,7 +40,8 @@
  * @defgroup bmi160 BMI160
  */
 #include "project.h"
-
+#include "bmi160_defs.h"
+#include "i2cm_support.h"
 
 #ifndef BMI160_H_
 #define BMI160_H_
