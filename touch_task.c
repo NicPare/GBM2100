@@ -26,27 +26,28 @@
 
 uint8_t currenttouch;
 
-
+/*
 void isr_bouton(void)
 {  
    
- /* Clears the triggered pin interrupt */
+  Clears the triggered pin interrupt 
     Cy_GPIO_ClearInterrupt(P0_4_PORT, P0_4_NUM);
     NVIC_ClearPendingIRQ(bouton_isr_cfg.intrSrc);
     button_menu=true;
 }
-
+*/
 
 
 void vtouch_task(){
     //
+    
+   // bool previoustouch = false;
     /*
-    bool previoustouch = false;
     Cy_SysInt_Init(&bouton_isr_cfg, isr_bouton);
     NVIC_ClearPendingIRQ(bouton_isr_cfg.intrSrc);
-    NVIC_EnableIRQ(bouton_isr_cfg.intrSrc);
+    NVIC_EnableIRQ(bouton_isr_cfg.intrSrc);*/
     //
-    */
+    
     cy_status capSenseApiResult;
 
 
@@ -85,10 +86,6 @@ void vtouch_task(){
         
         CapSense_UpdateAllBaselines();
         CapSense_ScanAllWidgets();
-        
-
-
-        
         
    
         //CyDelay(500);

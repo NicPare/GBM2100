@@ -1,16 +1,10 @@
 /* ========================================
  *
- * Copyright YOUR COMPANY, THE YEAR
- * All Rights Reserved
- * UNPUBLISHED, LICENSED SOFTWARE.
- *
- * CONFIDENTIAL AND PROPRIETARY INFORMATION
- * WHICH IS THE PROPERTY OF your company.
+ 
  *
  * ========================================
 */
 
-/* [] END OF FILE */
 
 #include "project.h"
 #include "FreeRTOS.h"
@@ -22,8 +16,10 @@
 #include "LCDConf.h"
 #include "queue.h"
 #include "touch_task.h"
-#include "signal_task.h"
+#include "LED_task.h"
 
+
+// TOUCH AND PAGE
 extern const uint8_t PAGE_MENU;
 extern const uint8_t PAGE_SIGNAL_IR;
 extern const uint8_t PAGE_SIGNAL_R;
@@ -32,14 +28,7 @@ extern const uint8_t PAGE_LED;
 
 uint8_t currentpage;
 uint8_t currenttouch;
-uint32_t hrmax;
-uint32_t hrmin;
-uint32_t LED;
-uint8_t button_menu;
-bool first;
-uint32_t signalR[];
 
-QueueHandle_t touchData;
 
 #define NO_TOUCH 0
 #define BUTTON_L 1
@@ -48,8 +37,19 @@ QueueHandle_t touchData;
 #define BUTTON_MENU 4
 
 
-//signal
-uint32_t signalR[5];
-uint32_t signalIR[5];
+//SIGNAL
+
+// déclarer ir_data
+// déclarer r_data
 uint32_t heart_rate;
 uint32_t SPO2;
+
+//LED
+uint32_t LED;
+
+//HR
+bool maxormin;
+uint32_t hrmax;
+uint32_t hrmin;
+
+/* [] END OF FILE */

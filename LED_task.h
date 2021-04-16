@@ -13,4 +13,9 @@
 /* [] END OF FILE */
 
 void updateLED();
-void vLED_task();
+void updateMenu();
+void updateHR();
+void updateSignal();
+void vINTERFACE_task();
+void UpdateDisplay();
+void ClearScreen();

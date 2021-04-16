@@ -1,6 +1,0 @@
-C:\Users\nicpa\OneDrive\Documents\PolyDoc\GBM2100\Laboratoire3\Laboratoire3\Laboratoire3.cydsn\Laboratoire3.cyprj|c5eef7ea-3882-4415-af85-4fbacafbed78
-C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|97427097-0f29-4eb6-a660-056d9f58a3dd
-C:\Users\nicpa\OneDrive\Documents\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|6b4c7f77-f0ff-45df-888e-49cf597e0cca
-C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|3a9c2714-e48d-4bfd-a109-81c91cd154fb
-C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|0b05c9dc-9260-4011-a471-587c46cdb2e9
-C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|0ae967b5-23cd-49cf-9d91-ed53c6a640d4

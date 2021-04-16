@@ -1,16 +1,9 @@
 /* ========================================
  *
- * Copyright YOUR COMPANY, THE YEAR
- * All Rights Reserved
- * UNPUBLISHED, LICENSED SOFTWARE.
- *
- * CONFIDENTIAL AND PROPRIETARY INFORMATION
- * WHICH IS THE PROPERTY OF your company.
- *
+
  * ========================================
 */
 
-/* [] END OF FILE */
 
 #include "project.h"
 #include "FreeRTOS.h"
@@ -29,4 +22,5 @@ const uint8_t PAGE_SIGNAL_R = 1;
 const uint8_t PAGE_SIGNAL_IR = 2;
 const uint8_t PAGE_LED = 3;
 const uint8_t PAGE_HR = 4;
-uint32_t signalR[5]= {1,4,1,4,1};
+
+/* [] END OF FILE */
