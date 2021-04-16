@@ -20,33 +20,52 @@
 #include "cyfitter_gpio.h"
 #include "cyfitter_sysint.h"
 
-/* ADC_1 */
-#define ADC_1_intSarClock__DIV_IDX 1
-#define ADC_1_intSarClock__DIV_NUM 1
-#define ADC_1_intSarClock__DIV_TYPE CY_SYSCLK_DIV_8_BIT
-#define ADC_1_SAR__HW SAR
-#define ADC_1_SAR__IDX 0
-#define ADC_1_SAR__TR_SAR_IN TRIG6_OUT_PASS_TR_SAR_IN
-
-/* PWM_1 */
-#define PWM_1_TCPWM__CNT_HW TCPWM0_CNT1
-#define PWM_1_TCPWM__CNT_IDX 1u
-#define PWM_1_TCPWM__HW TCPWM0
-#define PWM_1_TCPWM__IDX 0u
+/* I2Cm */
+#define I2Cm_SCB__HW SCB3
+#define I2Cm_SCB__IDX 3
+#define I2Cm_SCB__SS0_POSITION 0u
+#define I2Cm_SCB__SS1_POSITION 1u
+#define I2Cm_SCB__SS2_POSITION 2u
+#define I2Cm_SCB__SS3_POSITION 3u
+#define I2Cm_SCBCLK__DIV_IDX 2
+#define I2Cm_SCBCLK__DIV_NUM 2
+#define I2Cm_SCBCLK__DIV_TYPE CY_SYSCLK_DIV_8_BIT
 
 /* Clock_2 */
 #define Clock_2__DIV_IDX 28
 #define Clock_2__DIV_NUM 0
 #define Clock_2__DIV_TYPE CY_SYSCLK_DIV_24_5_BIT
 
-/* PWM_CLOCK */
-#define PWM_CLOCK__DIV_IDX 8
-#define PWM_CLOCK__DIV_NUM 0
-#define PWM_CLOCK__DIV_TYPE CY_SYSCLK_DIV_16_BIT
+/* I2C_MAX */
+#define I2C_MAX_SCB__HW SCB2
+#define I2C_MAX_SCB__IDX 2
+#define I2C_MAX_SCB__SS0_POSITION 0u
+#define I2C_MAX_SCB__SS1_POSITION 1u
+#define I2C_MAX_SCB__SS2_POSITION 2u
+#define I2C_MAX_SCB__SS3_POSITION 3u
+#define I2C_MAX_SCBCLK__DIV_IDX 3
+#define I2C_MAX_SCBCLK__DIV_NUM 3
+#define I2C_MAX_SCBCLK__DIV_TYPE CY_SYSCLK_DIV_8_BIT
+
+/* CapSense */
+#define CapSense_CSD__CMOD_PAD 1u
+#define CapSense_CSD__CSH_TANK_PAD 2u
+#define CapSense_CSD__CSHIELD_PAD 4u
+#define CapSense_CSD__DEDICATED_IO0 CapSense_CSD__CSHIELD_PAD
+#define CapSense_CSD__HW CSD0
+#define CapSense_CSD__IDX 0
+#define CapSense_CSD__VREF_EXT_PAD 8u
+#define CapSense_IDACComp__HW CSD0
+#define CapSense_IDACComp__IDX 1
+#define CapSense_IDACMod__HW CSD0
+#define CapSense_IDACMod__IDX 0
+#define CapSense_ModClk__DIV_IDX 0
+#define CapSense_ModClk__DIV_NUM 0
+#define CapSense_ModClk__DIV_TYPE CY_SYSCLK_DIV_8_BIT
 
 /* EINK_Clock */
-#define EINK_Clock__DIV_IDX 9
-#define EINK_Clock__DIV_NUM 1
+#define EINK_Clock__DIV_IDX 8
+#define EINK_Clock__DIV_NUM 0
 #define EINK_Clock__DIV_TYPE CY_SYSCLK_DIV_16_BIT
 
 /* Status_SW2 */
@@ -73,8 +92,8 @@
 #define CY_EINK_SPIM_SCB__SS1_POSITION 1u
 #define CY_EINK_SPIM_SCB__SS2_POSITION 2u
 #define CY_EINK_SPIM_SCB__SS3_POSITION 3u
-#define CY_EINK_SPIM_SCBCLK__DIV_IDX 0
-#define CY_EINK_SPIM_SCBCLK__DIV_NUM 0
+#define CY_EINK_SPIM_SCBCLK__DIV_IDX 1
+#define CY_EINK_SPIM_SCBCLK__DIV_NUM 1
 #define CY_EINK_SPIM_SCBCLK__DIV_TYPE CY_SYSCLK_DIV_8_BIT
 
 /* CY_EINK_Timer */

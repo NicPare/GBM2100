@@ -1,5 +1,5 @@
 # Laboratoire3
-# 2021-03-09 02:40:27Z
+# 2021-04-16 14:25:30Z
 
 dont_use_location p4usbcell -1 -1 0
 dont_use_location USB -1 -1 0
@@ -18,7 +18,15 @@ set_io "CY_EINK_DispIoEn(0)" iocell 0 2
 set_io "CY_EINK_DispBusy(0)" iocell 5 3
 set_io "CY_EINK_Ssel(0)" iocell 12 3
 set_io "SW2(0)" iocell 0 4
-set_io "GreenLED(0)" iocell 1 1
-set_io "PWM_OUT(0)" iocell 6 2
-set_io "ADC_IN(0)" iocell 10 6
-set_location "\ADC_1:SAR\" SARADC -1 -1 0
+set_io "LED(0)" iocell 0 3
+set_io "Pin_Orient_INT(0)" iocell 13 0
+set_io "\I2C_MAX:scl(0)\" iocell 9 0
+set_io "\I2C_MAX:sda(0)\" iocell 9 1
+set_io "\CapSense:Cmod(0)\" iocell 7 7
+set_io "\CapSense:Sns(0)\" iocell 9 7
+set_io "\I2Cm:scl(0)\" iocell 6 0
+set_io "\I2Cm:sda(0)\" iocell 6 1
+set_io "VIN(0)" iocell 13 6
+set_location "\CapSense:IDACMod\" CSIDAC7 -1 -1 0
+set_location "\CapSense:IDACComp\" CSIDAC7 -1 -1 1
+set_location "\CapSense:CSD\" CSD -1 -1 0

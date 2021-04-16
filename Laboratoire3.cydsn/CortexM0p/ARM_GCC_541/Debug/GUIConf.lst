@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccrRCdsW.s 			page 1
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccbkFOfY.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccrRCdsW.s 			page 1
   28:GUIConf.c     **** Licensing information
   29:GUIConf.c     **** Licensor:                 SEGGER Microcontroller Systems LLC
   30:GUIConf.c     **** Licensed to:              Cypress Semiconductor Corp, 198 Champion Ct., San Jose, CA 95134, USA
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccrRCdsW.s 			page 2
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccbkFOfY.s 			page 2
 
 
   31:GUIConf.c     **** Licensed SEGGER software: emWin
@@ -86,7 +86,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccrRCdsW.s 			page 1
   53:GUIConf.c     **** //
   54:GUIConf.c     **** // Define the available number of bytes available for the GUI
   55:GUIConf.c     **** //
-  56:GUIConf.c     **** #define GUI_NUMBYTES  0x0100
+  56:GUIConf.c     **** #define GUI_NUMBYTES  0x8000
   57:GUIConf.c     **** 
   58:GUIConf.c     **** /*********************************************************************
   59:GUIConf.c     **** *
@@ -118,13 +118,13 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccrRCdsW.s 			page 1
   77:GUIConf.c     ****   //
   78:GUIConf.c     ****   // Assign memory to emWin
   79:GUIConf.c     ****   //
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccrRCdsW.s 			page 3
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccbkFOfY.s 			page 3
 
 
   80:GUIConf.c     ****   GUI_ALLOC_AssignMemory(aMemory, GUI_NUMBYTES);
   36              		.loc 1 80 0
   37 0002 8021     		movs	r1, #128
-  38 0004 4900     		lsls	r1, r1, #1
+  38 0004 0902     		lsls	r1, r1, #8
   39 0006 0348     		ldr	r0, .L2
   40 0008 FFF7FEFF 		bl	GUI_ALLOC_AssignMemory
   41              	.LVL0:
@@ -151,10 +151,10 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccrRCdsW.s 			page 1
   57              		.bss
   58              		.align	2
   59              		.set	.LANCHOR0,. + 0
-  60              		.type	aMemory.8078, %object
-  61              		.size	aMemory.8078, 256
-  62              	aMemory.8078:
-  63 0000 00000000 		.space	256
+  60              		.type	aMemory.8092, %object
+  61              		.size	aMemory.8092, 32768
+  62              	aMemory.8092:
+  63 0000 00000000 		.space	32768
   63      00000000 
   63      00000000 
   63      00000000 
@@ -165,20 +165,20 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccrRCdsW.s 			page 1
   67              		.file 3 "Generated_Source\\PSoC6\\pdl\\middleware/emWin/code/include/GUI.h"
   68              		.section	.debug_info,"",%progbits
   69              	.Ldebug_info0:
-  70 0000 3A060000 		.4byte	0x63a
+  70 0000 3B060000 		.4byte	0x63b
   71 0004 0400     		.2byte	0x4
   72 0006 00000000 		.4byte	.Ldebug_abbrev0
   73 000a 04       		.byte	0x4
   74 000b 01       		.uleb128 0x1
   75 000c 65000000 		.4byte	.LASF67
   76 0010 0C       		.byte	0xc
-  77 0011 84030000 		.4byte	.LASF68
-  78 0015 18020000 		.4byte	.LASF69
+  77 0011 62030000 		.4byte	.LASF68
+  78 0015 11030000 		.4byte	.LASF69
   79 0019 00000000 		.4byte	.Ldebug_ranges0+0
   80 001d 00000000 		.4byte	0
   81 0021 00000000 		.4byte	.Ldebug_line0
   82 0025 02       		.uleb128 0x2
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccrRCdsW.s 			page 4
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccbkFOfY.s 			page 4
 
 
   83 0026 04       		.byte	0x4
@@ -187,7 +187,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccrRCdsW.s 			page 1
   86 002c 03       		.uleb128 0x3
   87 002d 04       		.byte	0x4
   88 002e 07       		.byte	0x7
-  89 002f AE020000 		.4byte	.LASF0
+  89 002f 4F020000 		.4byte	.LASF0
   90 0033 03       		.uleb128 0x3
   91 0034 08       		.byte	0x8
   92 0035 05       		.byte	0x5
@@ -195,11 +195,11 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccrRCdsW.s 			page 1
   94 003a 03       		.uleb128 0x3
   95 003b 08       		.byte	0x8
   96 003c 04       		.byte	0x4
-  97 003d 77020000 		.4byte	.LASF2
+  97 003d 18020000 		.4byte	.LASF2
   98 0041 03       		.uleb128 0x3
   99 0042 04       		.byte	0x4
  100 0043 07       		.byte	0x7
- 101 0044 5E030000 		.4byte	.LASF3
+ 101 0044 FF020000 		.4byte	.LASF3
  102 0048 03       		.uleb128 0x3
  103 0049 02       		.byte	0x2
  104 004a 05       		.byte	0x5
@@ -207,7 +207,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccrRCdsW.s 			page 1
  106 004f 03       		.uleb128 0x3
  107 0050 01       		.byte	0x1
  108 0051 08       		.byte	0x8
- 109 0052 F7020000 		.4byte	.LASF5
+ 109 0052 98020000 		.4byte	.LASF5
  110 0056 03       		.uleb128 0x3
  111 0057 01       		.byte	0x1
  112 0058 08       		.byte	0x8
@@ -233,12 +233,12 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccrRCdsW.s 			page 1
  132 0081 03       		.uleb128 0x3
  133 0082 02       		.byte	0x2
  134 0083 07       		.byte	0x7
- 135 0084 E4020000 		.4byte	.LASF8
+ 135 0084 85020000 		.4byte	.LASF8
  136 0088 07       		.uleb128 0x7
  137 0089 04       		.byte	0x4
  138 008a 02       		.byte	0x2
  139 008b B6       		.byte	0xb6
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccrRCdsW.s 			page 5
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccbkFOfY.s 			page 5
 
 
  140 008c A7000000 		.4byte	0xa7
@@ -266,13 +266,13 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccrRCdsW.s 			page 1
  162 00b5 BB       		.byte	0xbb
  163 00b6 DF000000 		.4byte	0xdf
  164 00ba 0A       		.uleb128 0xa
- 165 00bb FC020000 		.4byte	.LASF9
+ 165 00bb 9D020000 		.4byte	.LASF9
  166 00bf 02       		.byte	0x2
  167 00c0 BC       		.byte	0xbc
  168 00c1 81000000 		.4byte	0x81
  169 00c5 00       		.byte	0
  170 00c6 0A       		.uleb128 0xa
- 171 00c7 0D040000 		.4byte	.LASF10
+ 171 00c7 EB030000 		.4byte	.LASF10
  172 00cb 02       		.byte	0x2
  173 00cc BD       		.byte	0xbd
  174 00cd 81000000 		.4byte	0x81
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccrRCdsW.s 			page 1
  194 00f6 08       		.byte	0x8
  195 00f7 02       		.byte	0x2
  196 00f8 C1       		.byte	0xc1
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccrRCdsW.s 			page 6
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccbkFOfY.s 			page 6
 
 
  197 00f9 2E010000 		.4byte	0x12e
@@ -309,7 +309,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccrRCdsW.s 			page 1
  202 0104 56000000 		.4byte	0x56
  203 0108 00       		.byte	0
  204 0109 0A       		.uleb128 0xa
- 205 010a A8020000 		.4byte	.LASF15
+ 205 010a 49020000 		.4byte	.LASF15
  206 010e 02       		.byte	0x2
  207 010f C3       		.byte	0xc3
  208 0110 56000000 		.4byte	0x56
@@ -344,7 +344,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccrRCdsW.s 			page 1
  237 0148 56000000 		.4byte	0x56
  238 014c 00       		.byte	0
  239 014d 0A       		.uleb128 0xa
- 240 014e DE020000 		.4byte	.LASF19
+ 240 014e 7F020000 		.4byte	.LASF19
  241 0152 02       		.byte	0x2
  242 0153 CA       		.byte	0xca
  243 0154 56000000 		.4byte	0x56
@@ -356,16 +356,16 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccrRCdsW.s 			page 1
  249 0160 8A010000 		.4byte	0x18a
  250 0164 02       		.byte	0x2
  251 0165 0A       		.uleb128 0xa
- 252 0166 BB020000 		.4byte	.LASF21
+ 252 0166 5C020000 		.4byte	.LASF21
  253 016a 02       		.byte	0x2
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccrRCdsW.s 			page 7
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccbkFOfY.s 			page 7
 
 
  254 016b CC       		.byte	0xcc
  255 016c 8A010000 		.4byte	0x18a
  256 0170 03       		.byte	0x3
  257 0171 0A       		.uleb128 0xa
- 258 0172 A8020000 		.4byte	.LASF15
+ 258 0172 49020000 		.4byte	.LASF15
  259 0176 02       		.byte	0x2
  260 0177 CD       		.byte	0xcd
  261 0178 56000000 		.4byte	0x56
@@ -380,20 +380,20 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccrRCdsW.s 			page 1
  270 018a 03       		.uleb128 0x3
  271 018b 01       		.byte	0x1
  272 018c 06       		.byte	0x6
- 273 018d 9C020000 		.4byte	.LASF22
+ 273 018d 3D020000 		.4byte	.LASF22
  274 0191 09       		.uleb128 0x9
  275 0192 D1010000 		.4byte	.LASF23
  276 0196 02       		.byte	0x2
  277 0197 CF       		.byte	0xcf
  278 0198 39010000 		.4byte	0x139
  279 019c 0B       		.uleb128 0xb
- 280 019d 43030000 		.4byte	.LASF28
+ 280 019d E4020000 		.4byte	.LASF28
  281 01a1 0C       		.byte	0xc
  282 01a2 02       		.byte	0x2
  283 01a3 D1       		.byte	0xd1
  284 01a4 D9010000 		.4byte	0x1d9
  285 01a8 0A       		.uleb128 0xa
- 286 01a9 70030000 		.4byte	.LASF24
+ 286 01a9 4E030000 		.4byte	.LASF24
  287 01ad 02       		.byte	0x2
  288 01ae D2       		.byte	0xd2
  289 01af 81000000 		.4byte	0x81
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccrRCdsW.s 			page 1
  308 01d7 08       		.byte	0x8
  309 01d8 00       		.byte	0
  310 01d9 04       		.uleb128 0x4
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccrRCdsW.s 			page 8
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccbkFOfY.s 			page 8
 
 
  311 01da 04       		.byte	0x4
@@ -431,7 +431,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccrRCdsW.s 			page 1
  318 01ea 05       		.uleb128 0x5
  319 01eb 9C010000 		.4byte	0x19c
  320 01ef 09       		.uleb128 0x9
- 321 01f0 43030000 		.4byte	.LASF28
+ 321 01f0 E4020000 		.4byte	.LASF28
  322 01f4 02       		.byte	0x2
  323 01f5 D6       		.byte	0xd6
  324 01f6 9C010000 		.4byte	0x19c
@@ -442,7 +442,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccrRCdsW.s 			page 1
  329 0201 D8       		.byte	0xd8
  330 0202 37020000 		.4byte	0x237
  331 0206 0A       		.uleb128 0xa
- 332 0207 70030000 		.4byte	.LASF24
+ 332 0207 4E030000 		.4byte	.LASF24
  333 020b 02       		.byte	0x2
  334 020c D9       		.byte	0xd9
  335 020d 81000000 		.4byte	0x81
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccrRCdsW.s 			page 1
  365 0249 FA010000 		.4byte	0x1fa
  366 024d 09       		.uleb128 0x9
  367 024e 0B010000 		.4byte	.LASF29
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccrRCdsW.s 			page 9
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccbkFOfY.s 			page 9
 
 
  368 0252 02       		.byte	0x2
@@ -508,13 +508,13 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccrRCdsW.s 			page 1
  392 027f C1020000 		.4byte	0x2c1
  393 0283 08       		.byte	0x8
  394 0284 0A       		.uleb128 0xa
- 395 0285 FC020000 		.4byte	.LASF9
+ 395 0285 9D020000 		.4byte	.LASF9
  396 0289 02       		.byte	0x2
  397 028a E3       		.byte	0xe3
  398 028b 81000000 		.4byte	0x81
  399 028f 0C       		.byte	0xc
  400 0290 0A       		.uleb128 0xa
- 401 0291 0D040000 		.4byte	.LASF10
+ 401 0291 EB030000 		.4byte	.LASF10
  402 0295 02       		.byte	0x2
  403 0296 E4       		.byte	0xe4
  404 0297 81000000 		.4byte	0x81
@@ -526,7 +526,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccrRCdsW.s 			page 1
  410 02a3 56000000 		.4byte	0x56
  411 02a7 10       		.byte	0x10
  412 02a8 0A       		.uleb128 0xa
- 413 02a9 A8020000 		.4byte	.LASF15
+ 413 02a9 49020000 		.4byte	.LASF15
  414 02ad 02       		.byte	0x2
  415 02ae E6       		.byte	0xe6
  416 02af 56000000 		.4byte	0x56
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccrRCdsW.s 			page 1
  422 02bb 56000000 		.4byte	0x56
  423 02bf 12       		.byte	0x12
  424 02c0 00       		.byte	0
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccrRCdsW.s 			page 10
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccbkFOfY.s 			page 10
 
 
  425 02c1 04       		.uleb128 0x4
@@ -547,7 +547,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccrRCdsW.s 			page 1
  428 02c7 05       		.uleb128 0x5
  429 02c8 EA000000 		.4byte	0xea
  430 02cc 09       		.uleb128 0x9
- 431 02cd 76030000 		.4byte	.LASF32
+ 431 02cd 54030000 		.4byte	.LASF32
  432 02d1 02       		.byte	0x2
  433 02d2 E8       		.byte	0xe8
  434 02d3 58020000 		.4byte	0x258
@@ -582,12 +582,12 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccrRCdsW.s 			page 1
  463 030e 04       		.byte	0x4
  464 030f 00       		.byte	0
  465 0310 09       		.uleb128 0x9
- 466 0311 00040000 		.4byte	.LASF37
+ 466 0311 DE030000 		.4byte	.LASF37
  467 0315 02       		.byte	0x2
  468 0316 F6       		.byte	0xf6
  469 0317 D7020000 		.4byte	0x2d7
  470 031b 0C       		.uleb128 0xc
- 471 031c 28030000 		.4byte	.LASF38
+ 471 031c C9020000 		.4byte	.LASF38
  472 0320 02       		.byte	0x2
  473 0321 1301     		.2byte	0x113
  474 0323 27030000 		.4byte	0x327
@@ -598,17 +598,17 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccrRCdsW.s 			page 1
  479 0331 76000000 		.4byte	0x76
  480 0335 0E       		.uleb128 0xe
  481 0336 25000000 		.4byte	0x25
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccrRCdsW.s 			page 11
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccbkFOfY.s 			page 11
 
 
  482 033a 00       		.byte	0
  483 033b 0C       		.uleb128 0xc
- 484 033c CF030000 		.4byte	.LASF39
+ 484 033c AD030000 		.4byte	.LASF39
  485 0340 02       		.byte	0x2
  486 0341 1401     		.2byte	0x114
  487 0343 27030000 		.4byte	0x327
  488 0347 0C       		.uleb128 0xc
- 489 0348 F3030000 		.4byte	.LASF40
+ 489 0348 D1030000 		.4byte	.LASF40
  490 034c 02       		.byte	0x2
  491 034d 1501     		.2byte	0x115
  492 034f 53030000 		.4byte	0x353
@@ -625,7 +625,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccrRCdsW.s 			page 1
  503 0366 1701     		.2byte	0x117
  504 0368 94030000 		.4byte	0x394
  505 036c 11       		.uleb128 0x11
- 506 036d 06030000 		.4byte	.LASF41
+ 506 036d A7020000 		.4byte	.LASF41
  507 0371 02       		.byte	0x2
  508 0372 1801     		.2byte	0x118
  509 0374 94030000 		.4byte	0x394
@@ -637,7 +637,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccrRCdsW.s 			page 1
  515 0381 9A030000 		.4byte	0x39a
  516 0385 04       		.byte	0x4
  517 0386 11       		.uleb128 0x11
- 518 0387 91020000 		.4byte	.LASF43
+ 518 0387 32020000 		.4byte	.LASF43
  519 038b 02       		.byte	0x2
  520 038c 1A01     		.2byte	0x11a
  521 038e A0030000 		.4byte	0x3a0
@@ -658,33 +658,33 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccrRCdsW.s 			page 1
  536 03ac 1B01     		.2byte	0x11b
  537 03ae 63030000 		.4byte	0x363
  538 03b2 0C       		.uleb128 0xc
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccrRCdsW.s 			page 12
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccbkFOfY.s 			page 12
 
 
- 539 03b3 3A030000 		.4byte	.LASF45
+ 539 03b3 DB020000 		.4byte	.LASF45
  540 03b7 02       		.byte	0x2
  541 03b8 2401     		.2byte	0x124
  542 03ba BE030000 		.4byte	0x3be
  543 03be 12       		.uleb128 0x12
- 544 03bf 3A030000 		.4byte	.LASF45
+ 544 03bf DB020000 		.4byte	.LASF45
  545 03c3 24       		.byte	0x24
  546 03c4 02       		.byte	0x2
  547 03c5 B101     		.2byte	0x1b1
  548 03c7 80040000 		.4byte	0x480
  549 03cb 11       		.uleb128 0x11
- 550 03cc BE030000 		.4byte	.LASF46
+ 550 03cc 9C030000 		.4byte	.LASF46
  551 03d0 02       		.byte	0x2
  552 03d1 B201     		.2byte	0x1b2
  553 03d3 8B050000 		.4byte	0x58b
  554 03d7 00       		.byte	0
  555 03d8 11       		.uleb128 0x11
- 556 03d9 8E030000 		.4byte	.LASF47
+ 556 03d9 6C030000 		.4byte	.LASF47
  557 03dd 02       		.byte	0x2
  558 03de B301     		.2byte	0x1b3
  559 03e0 91050000 		.4byte	0x591
  560 03e4 04       		.byte	0x4
  561 03e5 11       		.uleb128 0x11
- 562 03e6 E5030000 		.4byte	.LASF48
+ 562 03e6 C3030000 		.4byte	.LASF48
  563 03ea 02       		.byte	0x2
  564 03eb B401     		.2byte	0x1b4
  565 03ed 97050000 		.4byte	0x597
@@ -696,7 +696,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccrRCdsW.s 			page 1
  571 03fa 9D050000 		.4byte	0x59d
  572 03fe 0C       		.byte	0xc
  573 03ff 11       		.uleb128 0x11
- 574 0400 83020000 		.4byte	.LASF50
+ 574 0400 24020000 		.4byte	.LASF50
  575 0404 02       		.byte	0x2
  576 0405 B601     		.2byte	0x1b6
  577 0407 A3050000 		.4byte	0x5a3
@@ -708,22 +708,22 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccrRCdsW.s 			page 1
  583 0414 A9050000 		.4byte	0x5a9
  584 0418 14       		.byte	0x14
  585 0419 11       		.uleb128 0x11
- 586 041a DE020000 		.4byte	.LASF19
+ 586 041a 7F020000 		.4byte	.LASF19
  587 041e 02       		.byte	0x2
  588 041f B801     		.2byte	0x1b8
  589 0421 56000000 		.4byte	0x56
  590 0425 18       		.byte	0x18
  591 0426 11       		.uleb128 0x11
- 592 0427 C9030000 		.4byte	.LASF52
+ 592 0427 A7030000 		.4byte	.LASF52
  593 042b 02       		.byte	0x2
  594 042c B901     		.2byte	0x1b9
  595 042e 56000000 		.4byte	0x56
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccrRCdsW.s 			page 13
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccbkFOfY.s 			page 13
 
 
  596 0432 19       		.byte	0x19
  597 0433 11       		.uleb128 0x11
- 598 0434 B9030000 		.4byte	.LASF53
+ 598 0434 97030000 		.4byte	.LASF53
  599 0438 02       		.byte	0x2
  600 0439 BA01     		.2byte	0x1ba
  601 043b 56000000 		.4byte	0x56
@@ -770,7 +770,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccrRCdsW.s 			page 1
  642 0492 81000000 		.4byte	0x81
  643 0496 00       		.byte	0
  644 0497 0C       		.uleb128 0xc
- 645 0498 C0020000 		.4byte	.LASF56
+ 645 0498 61020000 		.4byte	.LASF56
  646 049c 02       		.byte	0x2
  647 049d 2701     		.2byte	0x127
  648 049f A3040000 		.4byte	0x4a3
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccrRCdsW.s 			page 1
  650 04a4 25000000 		.4byte	0x25
  651 04a8 B7040000 		.4byte	0x4b7
  652 04ac 0E       		.uleb128 0xe
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccrRCdsW.s 			page 14
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccbkFOfY.s 			page 14
 
 
  653 04ad 81000000 		.4byte	0x81
@@ -789,7 +789,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccrRCdsW.s 			page 1
  658 04b8 04       		.byte	0x4
  659 04b9 25000000 		.4byte	0x25
  660 04bd 0C       		.uleb128 0xc
- 661 04be 9D030000 		.4byte	.LASF57
+ 661 04be 7B030000 		.4byte	.LASF57
  662 04c2 02       		.byte	0x2
  663 04c3 2801     		.2byte	0x128
  664 04c5 C9040000 		.4byte	0x4c9
@@ -809,7 +809,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccrRCdsW.s 			page 1
  678 04e5 04       		.byte	0x4
  679 04e6 10030000 		.4byte	0x310
  680 04ea 0C       		.uleb128 0xc
- 681 04eb D1020000 		.4byte	.LASF58
+ 681 04eb 72020000 		.4byte	.LASF58
  682 04ef 02       		.byte	0x2
  683 04f0 2901     		.2byte	0x129
  684 04f2 F6040000 		.4byte	0x4f6
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccrRCdsW.s 			page 1
  707 052b 04       		.byte	0x4
  708 052c 91010000 		.4byte	0x191
  709 0530 14       		.uleb128 0x14
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccrRCdsW.s 			page 15
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccbkFOfY.s 			page 15
 
 
  710 0531 04       		.byte	0x4
@@ -856,7 +856,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccrRCdsW.s 			page 1
  722 054b BE01     		.2byte	0x1be
  723 054d 6A050000 		.4byte	0x56a
  724 0551 15       		.uleb128 0x15
- 725 0552 DF030000 		.4byte	.LASF62
+ 725 0552 BD030000 		.4byte	.LASF62
  726 0556 02       		.byte	0x2
  727 0557 BF01     		.2byte	0x1bf
  728 0559 75050000 		.4byte	0x575
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccrRCdsW.s 			page 1
  764 05a5 0A050000 		.4byte	0x50a
  765 05a9 04       		.uleb128 0x4
  766 05aa 04       		.byte	0x4
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccrRCdsW.s 			page 16
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccbkFOfY.s 			page 16
 
 
  767 05ab AF050000 		.4byte	0x5af
@@ -909,7 +909,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccrRCdsW.s 			page 1
  772 05b6 07       		.byte	0x7
  773 05b7 38000000 		.4byte	.LASF64
  774 05bb 16       		.uleb128 0x16
- 775 05bc 51030000 		.4byte	.LASF70
+ 775 05bc F2020000 		.4byte	.LASF70
  776 05c0 01       		.byte	0x1
  777 05c1 48       		.byte	0x48
  778 05c2 00000000 		.4byte	.LFB0
@@ -924,10 +924,10 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccrRCdsW.s 			page 1
  787 05d7 09060000 		.4byte	0x609
  788 05db 05       		.uleb128 0x5
  789 05dc 03       		.byte	0x3
- 790 05dd 00000000 		.4byte	aMemory.8078
+ 790 05dd 00000000 		.4byte	aMemory.8092
  791 05e1 18       		.uleb128 0x18
  792 05e2 0C000000 		.4byte	.LVL0
- 793 05e6 25060000 		.4byte	0x625
+ 793 05e6 26060000 		.4byte	0x626
  794 05ea FF050000 		.4byte	0x5ff
  795 05ee 19       		.uleb128 0x19
  796 05ef 01       		.uleb128 0x1
@@ -940,38 +940,38 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccrRCdsW.s 			page 1
  803 05f9 51       		.byte	0x51
  804 05fa 03       		.uleb128 0x3
  805 05fb 0A       		.byte	0xa
- 806 05fc 0001     		.2byte	0x100
+ 806 05fc 0080     		.2byte	0x8000
  807 05fe 00       		.byte	0
  808 05ff 1A       		.uleb128 0x1a
  809 0600 12000000 		.4byte	.LVL1
- 810 0604 31060000 		.4byte	0x631
+ 810 0604 32060000 		.4byte	0x632
  811 0608 00       		.byte	0
  812 0609 1B       		.uleb128 0x1b
  813 060a 41000000 		.4byte	0x41
- 814 060e 19060000 		.4byte	0x619
+ 814 060e 1A060000 		.4byte	0x61a
  815 0612 1C       		.uleb128 0x1c
  816 0613 B4050000 		.4byte	0x5b4
- 817 0617 3F       		.byte	0x3f
- 818 0618 00       		.byte	0
- 819 0619 1D       		.uleb128 0x1d
- 820 061a AD030000 		.4byte	.LASF72
- 821 061e 03       		.byte	0x3
- 822 061f 1908     		.2byte	0x819
- 823 0621 DF040000 		.4byte	0x4df
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccrRCdsW.s 			page 17
+ 817 0617 FF1F     		.2byte	0x1fff
+ 818 0619 00       		.byte	0
+ 819 061a 1D       		.uleb128 0x1d
+ 820 061b 8B030000 		.4byte	.LASF72
+ 821 061f 03       		.byte	0x3
+ 822 0620 1908     		.2byte	0x819
+ 823 0622 DF040000 		.4byte	0x4df
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccbkFOfY.s 			page 17
 
 
- 824 0625 1E       		.uleb128 0x1e
- 825 0626 41000000 		.4byte	.LASF65
- 826 062a 41000000 		.4byte	.LASF65
- 827 062e 03       		.byte	0x3
- 828 062f B203     		.2byte	0x3b2
- 829 0631 1E       		.uleb128 0x1e
- 830 0632 15030000 		.4byte	.LASF66
- 831 0636 15030000 		.4byte	.LASF66
- 832 063a 03       		.byte	0x3
- 833 063b 7801     		.2byte	0x178
- 834 063d 00       		.byte	0
+ 824 0626 1E       		.uleb128 0x1e
+ 825 0627 41000000 		.4byte	.LASF65
+ 826 062b 41000000 		.4byte	.LASF65
+ 827 062f 03       		.byte	0x3
+ 828 0630 B203     		.2byte	0x3b2
+ 829 0632 1E       		.uleb128 0x1e
+ 830 0633 B6020000 		.4byte	.LASF66
+ 831 0637 B6020000 		.4byte	.LASF66
+ 832 063b 03       		.byte	0x3
+ 833 063c 7801     		.2byte	0x178
+ 834 063e 00       		.byte	0
  835              		.section	.debug_abbrev,"",%progbits
  836              	.Ldebug_abbrev0:
  837 0000 01       		.uleb128 0x1
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccrRCdsW.s 			page 1
  878 0029 04       		.uleb128 0x4
  879 002a 0F       		.uleb128 0xf
  880 002b 00       		.byte	0
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccrRCdsW.s 			page 18
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccbkFOfY.s 			page 18
 
 
  881 002c 0B       		.uleb128 0xb
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccrRCdsW.s 			page 1
  935 0062 0B       		.uleb128 0xb
  936 0063 49       		.uleb128 0x49
  937 0064 13       		.uleb128 0x13
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccrRCdsW.s 			page 19
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccbkFOfY.s 			page 19
 
 
  938 0065 00       		.byte	0
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccrRCdsW.s 			page 1
  992 009b 00       		.byte	0
  993 009c 00       		.byte	0
  994 009d 0E       		.uleb128 0xe
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccrRCdsW.s 			page 20
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccbkFOfY.s 			page 20
 
 
  995 009e 05       		.uleb128 0x5
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccrRCdsW.s 			page 1
  1049 00d4 01       		.uleb128 0x1
  1050 00d5 13       		.uleb128 0x13
  1051 00d6 00       		.byte	0
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccrRCdsW.s 			page 21
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccbkFOfY.s 			page 21
 
 
  1052 00d7 00       		.byte	0
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccrRCdsW.s 			page 1
  1106 010d 19       		.uleb128 0x19
  1107 010e 11       		.uleb128 0x11
  1108 010f 01       		.uleb128 0x1
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccrRCdsW.s 			page 22
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccbkFOfY.s 			page 22
 
 
  1109 0110 12       		.uleb128 0x12
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccrRCdsW.s 			page 1
  1163 014e 1B       		.uleb128 0x1b
  1164 014f 01       		.uleb128 0x1
  1165 0150 01       		.byte	0x1
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccrRCdsW.s 			page 23
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccbkFOfY.s 			page 23
 
 
  1166 0151 49       		.uleb128 0x49
@@ -1333,7 +1333,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccrRCdsW.s 			page 1
  1175 015a 49       		.uleb128 0x49
  1176 015b 13       		.uleb128 0x13
  1177 015c 2F       		.uleb128 0x2f
- 1178 015d 0B       		.uleb128 0xb
+ 1178 015d 05       		.uleb128 0x5
  1179 015e 00       		.byte	0
  1180 015f 00       		.byte	0
  1181 0160 1D       		.uleb128 0x1d
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccrRCdsW.s 			page 1
  1220 000a 04       		.byte	0x4
  1221 000b 00       		.byte	0
  1222 000c 0000     		.2byte	0
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccrRCdsW.s 			page 24
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccbkFOfY.s 			page 24
 
 
  1223 000e 0000     		.2byte	0
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccrRCdsW.s 			page 1
  1254      4C696E65 
  1254      00
  1255              	.LASF67:
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccrRCdsW.s 			page 25
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccbkFOfY.s 			page 25
 
 
  1256 0065 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccrRCdsW.s 			page 1
  1278 015a 704D6F6E 		.ascii	"pMono\000"
  1278      6F00
  1279              	.LASF63:
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccrRCdsW.s 			page 26
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccbkFOfY.s 			page 26
 
 
  1280 0160 7050726F 		.ascii	"pPropExt\000"
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccrRCdsW.s 			page 1
  1306      746100
  1307              	.LASF59:
  1308 01ed 4755495F 		.ascii	"GUI_GETCHARINFO\000"
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccrRCdsW.s 			page 27
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccbkFOfY.s 			page 27
 
 
  1308      47455443 
@@ -1574,180 +1574,178 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccrRCdsW.s 			page 1
  1312      676E6564 
  1312      20636861 
  1312      7200
- 1313              	.LASF69:
- 1314 0218 433A5C55 		.ascii	"C:\\Users\\nicpa\\OneDrive\\Documents\\PolyDoc\\GBM"
- 1314      73657273 
- 1314      5C6E6963 
- 1314      70615C4F 
- 1314      6E654472 
- 1315 0245 32313030 		.ascii	"2100\\Laboratoire3\\Laboratoire3\\Laboratoire3.cyds"
- 1315      5C4C6162 
- 1315      6F726174 
- 1315      6F697265 
- 1315      335C4C61 
- 1316 0275 6E00     		.ascii	"n\000"
- 1317              	.LASF2:
- 1318 0277 6C6F6E67 		.ascii	"long double\000"
- 1318      20646F75 
- 1318      626C6500 
- 1319              	.LASF50:
- 1320 0283 70664765 		.ascii	"pfGetCharInfo\000"
- 1320      74436861 
- 1320      72496E66 
- 1320      6F00
- 1321              	.LASF43:
- 1322 0291 70664469 		.ascii	"pfDispLine\000"
- 1322      73704C69 
- 1322      6E6500
- 1323              	.LASF22:
- 1324 029c 7369676E 		.ascii	"signed char\000"
- 1324      65642063 
- 1324      68617200 
- 1325              	.LASF15:
- 1326 02a8 58446973 		.ascii	"XDist\000"
- 1326      7400
- 1327              	.LASF0:
- 1328 02ae 756E7369 		.ascii	"unsigned int\000"
- 1328      676E6564 
- 1328      20696E74 
+ 1313              	.LASF2:
+ 1314 0218 6C6F6E67 		.ascii	"long double\000"
+ 1314      20646F75 
+ 1314      626C6500 
+ 1315              	.LASF50:
+ 1316 0224 70664765 		.ascii	"pfGetCharInfo\000"
+ 1316      74436861 
+ 1316      72496E66 
+ 1316      6F00
+ 1317              	.LASF43:
+ 1318 0232 70664469 		.ascii	"pfDispLine\000"
+ 1318      73704C69 
+ 1318      6E6500
+ 1319              	.LASF22:
+ 1320 023d 7369676E 		.ascii	"signed char\000"
+ 1320      65642063 
+ 1320      68617200 
+ 1321              	.LASF15:
+ 1322 0249 58446973 		.ascii	"XDist\000"
+ 1322      7400
+ 1323              	.LASF0:
+ 1324 024f 756E7369 		.ascii	"unsigned int\000"
+ 1324      676E6564 
+ 1324      20696E74 
+ 1324      00
+ 1325              	.LASF21:
+ 1326 025c 59506F73 		.ascii	"YPos\000"
+ 1326      00
+ 1327              	.LASF56:
+ 1328 0261 4755495F 		.ascii	"GUI_GETCHARDISTX\000"
+ 1328      47455443 
+ 1328      48415244 
+ 1328      49535458 
  1328      00
- 1329              	.LASF21:
- 1330 02bb 59506F73 		.ascii	"YPos\000"
+ 1329              	.LASF58:
+ 1330 0272 4755495F 		.ascii	"GUI_ISINFONT\000"
+ 1330      4953494E 
+ 1330      464F4E54 
  1330      00
- 1331              	.LASF56:
- 1332 02c0 4755495F 		.ascii	"GUI_GETCHARDISTX\000"
- 1332      47455443 
- 1332      48415244 
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccrRCdsW.s 			page 28
+ 1331              	.LASF19:
+ 1332 027f 5953697A 		.ascii	"YSize\000"
+ 1332      6500
+ 1333              	.LASF8:
+ 1334 0285 73686F72 		.ascii	"short unsigned int\000"
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccbkFOfY.s 			page 28
 
 
- 1332      49535458 
- 1332      00
- 1333              	.LASF58:
- 1334 02d1 4755495F 		.ascii	"GUI_ISINFONT\000"
- 1334      4953494E 
- 1334      464F4E54 
- 1334      00
- 1335              	.LASF19:
- 1336 02de 5953697A 		.ascii	"YSize\000"
- 1336      6500
- 1337              	.LASF8:
- 1338 02e4 73686F72 		.ascii	"short unsigned int\000"
- 1338      7420756E 
- 1338      7369676E 
- 1338      65642069 
- 1338      6E7400
- 1339              	.LASF5:
- 1340 02f7 63686172 		.ascii	"char\000"
- 1340      00
- 1341              	.LASF9:
- 1342 02fc 46697273 		.ascii	"FirstChar\000"
- 1342      74436861 
- 1342      7200
- 1343              	.LASF41:
- 1344 0306 70664765 		.ascii	"pfGetLineDistX\000"
- 1344      744C696E 
- 1344      65446973 
- 1344      745800
- 1345              	.LASF66:
- 1346 0315 4755495F 		.ascii	"GUI_SetDefaultFont\000"
- 1346      53657444 
- 1346      65666175 
- 1346      6C74466F 
- 1346      6E7400
- 1347              	.LASF38:
- 1348 0328 74475549 		.ascii	"tGUI_GetLineDistX\000"
- 1348      5F476574 
- 1348      4C696E65 
- 1348      44697374 
- 1348      5800
- 1349              	.LASF45:
- 1350 033a 4755495F 		.ascii	"GUI_FONT\000"
- 1350      464F4E54 
+ 1334      7420756E 
+ 1334      7369676E 
+ 1334      65642069 
+ 1334      6E7400
+ 1335              	.LASF5:
+ 1336 0298 63686172 		.ascii	"char\000"
+ 1336      00
+ 1337              	.LASF9:
+ 1338 029d 46697273 		.ascii	"FirstChar\000"
+ 1338      74436861 
+ 1338      7200
+ 1339              	.LASF41:
+ 1340 02a7 70664765 		.ascii	"pfGetLineDistX\000"
+ 1340      744C696E 
+ 1340      65446973 
+ 1340      745800
+ 1341              	.LASF66:
+ 1342 02b6 4755495F 		.ascii	"GUI_SetDefaultFont\000"
+ 1342      53657444 
+ 1342      65666175 
+ 1342      6C74466F 
+ 1342      6E7400
+ 1343              	.LASF38:
+ 1344 02c9 74475549 		.ascii	"tGUI_GetLineDistX\000"
+ 1344      5F476574 
+ 1344      4C696E65 
+ 1344      44697374 
+ 1344      5800
+ 1345              	.LASF45:
+ 1346 02db 4755495F 		.ascii	"GUI_FONT\000"
+ 1346      464F4E54 
+ 1346      00
+ 1347              	.LASF28:
+ 1348 02e4 4755495F 		.ascii	"GUI_FONT_PROP\000"
+ 1348      464F4E54 
+ 1348      5F50524F 
+ 1348      5000
+ 1349              	.LASF70:
+ 1350 02f2 4755495F 		.ascii	"GUI_X_Config\000"
+ 1350      585F436F 
+ 1350      6E666967 
  1350      00
- 1351              	.LASF28:
- 1352 0343 4755495F 		.ascii	"GUI_FONT_PROP\000"
- 1352      464F4E54 
- 1352      5F50524F 
- 1352      5000
- 1353              	.LASF70:
- 1354 0351 4755495F 		.ascii	"GUI_X_Config\000"
- 1354      585F436F 
- 1354      6E666967 
- 1354      00
- 1355              	.LASF3:
- 1356 035e 6C6F6E67 		.ascii	"long unsigned int\000"
- 1356      20756E73 
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccrRCdsW.s 			page 29
+ 1351              	.LASF3:
+ 1352 02ff 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1352      20756E73 
+ 1352      69676E65 
+ 1352      6420696E 
+ 1352      7400
+ 1353              	.LASF69:
+ 1354 0311 433A5C55 		.ascii	"C:\\Users\\nicpa\\OneDrive\\Documents\\GBM2100\\Lab"
+ 1354      73657273 
+ 1354      5C6E6963 
+ 1354      70615C4F 
+ 1354      6E654472 
+ 1355 033e 6F726174 		.ascii	"oratoire3.cydsn\000"
+ 1355      6F697265 
+ 1355      332E6379 
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccbkFOfY.s 			page 29
 
 
- 1356      69676E65 
- 1356      6420696E 
- 1356      7400
- 1357              	.LASF24:
- 1358 0370 46697273 		.ascii	"First\000"
- 1358      7400
- 1359              	.LASF32:
- 1360 0376 4755495F 		.ascii	"GUI_FONT_MONO\000"
- 1360      464F4E54 
- 1360      5F4D4F4E 
- 1360      4F00
- 1361              	.LASF68:
- 1362 0384 47554943 		.ascii	"GUIConf.c\000"
- 1362      6F6E662E 
- 1362      6300
- 1363              	.LASF47:
- 1364 038e 70664765 		.ascii	"pfGetCharDistX\000"
- 1364      74436861 
- 1364      72446973 
- 1364      745800
- 1365              	.LASF57:
- 1366 039d 4755495F 		.ascii	"GUI_GETFONTINFO\000"
- 1366      47455446 
- 1366      4F4E5449 
- 1366      4E464F00 
- 1367              	.LASF72:
- 1368 03ad 4755495F 		.ascii	"GUI_Font6x8\000"
- 1368      466F6E74 
- 1368      36783800 
- 1369              	.LASF53:
- 1370 03b9 584D6167 		.ascii	"XMag\000"
- 1370      00
- 1371              	.LASF46:
- 1372 03be 70664469 		.ascii	"pfDispChar\000"
- 1372      73704368 
- 1372      617200
- 1373              	.LASF52:
- 1374 03c9 59446973 		.ascii	"YDist\000"
- 1374      7400
- 1375              	.LASF39:
- 1376 03cf 74475549 		.ascii	"tGUI_GetLineLen\000"
- 1376      5F476574 
- 1376      4C696E65 
- 1376      4C656E00 
- 1377              	.LASF62:
- 1378 03df 7050726F 		.ascii	"pProp\000"
- 1378      7000
- 1379              	.LASF48:
- 1380 03e5 70664765 		.ascii	"pfGetFontInfo\000"
- 1380      74466F6E 
- 1380      74496E66 
- 1380      6F00
- 1381              	.LASF40:
- 1382 03f3 74474C5F 		.ascii	"tGL_DispLine\000"
- 1382      44697370 
- 1382      4C696E65 
- 1382      00
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccrRCdsW.s 			page 30
+ 1355      64736E00 
+ 1356              	.LASF24:
+ 1357 034e 46697273 		.ascii	"First\000"
+ 1357      7400
+ 1358              	.LASF32:
+ 1359 0354 4755495F 		.ascii	"GUI_FONT_MONO\000"
+ 1359      464F4E54 
+ 1359      5F4D4F4E 
+ 1359      4F00
+ 1360              	.LASF68:
+ 1361 0362 47554943 		.ascii	"GUIConf.c\000"
+ 1361      6F6E662E 
+ 1361      6300
+ 1362              	.LASF47:
+ 1363 036c 70664765 		.ascii	"pfGetCharDistX\000"
+ 1363      74436861 
+ 1363      72446973 
+ 1363      745800
+ 1364              	.LASF57:
+ 1365 037b 4755495F 		.ascii	"GUI_GETFONTINFO\000"
+ 1365      47455446 
+ 1365      4F4E5449 
+ 1365      4E464F00 
+ 1366              	.LASF72:
+ 1367 038b 4755495F 		.ascii	"GUI_Font6x8\000"
+ 1367      466F6E74 
+ 1367      36783800 
+ 1368              	.LASF53:
+ 1369 0397 584D6167 		.ascii	"XMag\000"
+ 1369      00
+ 1370              	.LASF46:
+ 1371 039c 70664469 		.ascii	"pfDispChar\000"
+ 1371      73704368 
+ 1371      617200
+ 1372              	.LASF52:
+ 1373 03a7 59446973 		.ascii	"YDist\000"
+ 1373      7400
+ 1374              	.LASF39:
+ 1375 03ad 74475549 		.ascii	"tGUI_GetLineLen\000"
+ 1375      5F476574 
+ 1375      4C696E65 
+ 1375      4C656E00 
+ 1376              	.LASF62:
+ 1377 03bd 7050726F 		.ascii	"pProp\000"
+ 1377      7000
+ 1378              	.LASF48:
+ 1379 03c3 70664765 		.ascii	"pfGetFontInfo\000"
+ 1379      74466F6E 
+ 1379      74496E66 
+ 1379      6F00
+ 1380              	.LASF40:
+ 1381 03d1 74474C5F 		.ascii	"tGL_DispLine\000"
+ 1381      44697370 
+ 1381      4C696E65 
+ 1381      00
+ 1382              	.LASF37:
+ 1383 03de 4755495F 		.ascii	"GUI_FONTINFO\000"
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccbkFOfY.s 			page 30
 
 
- 1383              	.LASF37:
- 1384 0400 4755495F 		.ascii	"GUI_FONTINFO\000"
- 1384      464F4E54 
- 1384      494E464F 
- 1384      00
- 1385              	.LASF10:
- 1386 040d 4C617374 		.ascii	"LastChar\000"
- 1386      43686172 
- 1386      00
- 1387              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 1383      464F4E54 
+ 1383      494E464F 
+ 1383      00
+ 1384              	.LASF10:
+ 1385 03eb 4C617374 		.ascii	"LastChar\000"
+ 1385      43686172 
+ 1385      00
+ 1386              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

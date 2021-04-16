@@ -1,0 +1,3596 @@
+ARM GAS  C:\Users\Labeo\AppData\Local\Temp\cchoLg3G.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m0plus
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 0
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"CapSense_1_Tuner.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.CapSense_1_TuInitialize,"ax",%progbits
+  20              		.align	2
+  21              		.global	CapSense_1_TuInitialize
+  22              		.code	16
+  23              		.thumb_func
+  24              		.type	CapSense_1_TuInitialize, %function
+  25              	CapSense_1_TuInitialize:
+  26              	.LFB79:
+  27              		.file 1 "Generated_Source\\PSoC6\\CapSense_1_Tuner.c"
+   1:Generated_Source\PSoC6/CapSense_1_Tuner.c **** /***************************************************************************//**
+   2:Generated_Source\PSoC6/CapSense_1_Tuner.c **** * \file CapSense_1_Tuner.c
+   3:Generated_Source\PSoC6/CapSense_1_Tuner.c **** * \version 3.0
+   4:Generated_Source\PSoC6/CapSense_1_Tuner.c **** *
+   5:Generated_Source\PSoC6/CapSense_1_Tuner.c **** * \brief
+   6:Generated_Source\PSoC6/CapSense_1_Tuner.c **** *   This file provides the source code for the Tuner module API of the 
+   7:Generated_Source\PSoC6/CapSense_1_Tuner.c **** *   Component.
+   8:Generated_Source\PSoC6/CapSense_1_Tuner.c **** *
+   9:Generated_Source\PSoC6/CapSense_1_Tuner.c **** * \see CapSense_1 v3.0 Datasheet
+  10:Generated_Source\PSoC6/CapSense_1_Tuner.c **** *
+  11:Generated_Source\PSoC6/CapSense_1_Tuner.c **** *//*****************************************************************************
+  12:Generated_Source\PSoC6/CapSense_1_Tuner.c **** * Copyright (2016-2017), Cypress Semiconductor Corporation.
+  13:Generated_Source\PSoC6/CapSense_1_Tuner.c **** ********************************************************************************
+  14:Generated_Source\PSoC6/CapSense_1_Tuner.c **** * This software is owned by Cypress Semiconductor Corporation (Cypress) and is
+  15:Generated_Source\PSoC6/CapSense_1_Tuner.c **** * protected by and subject to worldwide patent protection (United States and
+  16:Generated_Source\PSoC6/CapSense_1_Tuner.c **** * foreign), United States copyright laws and international treaty provisions.
+  17:Generated_Source\PSoC6/CapSense_1_Tuner.c **** * Cypress hereby grants to licensee a personal, non-exclusive, non-transferable
+  18:Generated_Source\PSoC6/CapSense_1_Tuner.c **** * license to copy, use, modify, create derivative works of, and compile the
+  19:Generated_Source\PSoC6/CapSense_1_Tuner.c **** * Cypress Source Code and derivative works for the sole purpose of creating
+  20:Generated_Source\PSoC6/CapSense_1_Tuner.c **** * custom software in support of licensee product to be used only in conjunction
+  21:Generated_Source\PSoC6/CapSense_1_Tuner.c **** * with a Cypress integrated circuit as specified in the applicable agreement.
+  22:Generated_Source\PSoC6/CapSense_1_Tuner.c **** * Any reproduction, modification, translation, compilation, or representation of
+  23:Generated_Source\PSoC6/CapSense_1_Tuner.c **** * this software except as specified above is prohibited without the express
+  24:Generated_Source\PSoC6/CapSense_1_Tuner.c **** * written permission of Cypress.
+  25:Generated_Source\PSoC6/CapSense_1_Tuner.c **** *
+  26:Generated_Source\PSoC6/CapSense_1_Tuner.c **** * Disclaimer: CYPRESS MAKES NO WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, WITH
+  27:Generated_Source\PSoC6/CapSense_1_Tuner.c **** * REGARD TO THIS MATERIAL, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+  28:Generated_Source\PSoC6/CapSense_1_Tuner.c **** * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+  29:Generated_Source\PSoC6/CapSense_1_Tuner.c **** * Cypress reserves the right to make changes without further notice to the
+  30:Generated_Source\PSoC6/CapSense_1_Tuner.c **** * materials described herein. Cypress does not assume any liability arising out
+ARM GAS  C:\Users\Labeo\AppData\Local\Temp\cchoLg3G.s 			page 2
+
+
+  31:Generated_Source\PSoC6/CapSense_1_Tuner.c **** * of the application or use of any product or circuit described herein. Cypress
+  32:Generated_Source\PSoC6/CapSense_1_Tuner.c **** * does not authorize its products for use as critical components in life-support
+  33:Generated_Source\PSoC6/CapSense_1_Tuner.c **** * systems where a malfunction or failure may reasonably be expected to result in
+  34:Generated_Source\PSoC6/CapSense_1_Tuner.c **** * significant injury to the user. The inclusion of Cypress' product in a life-
+  35:Generated_Source\PSoC6/CapSense_1_Tuner.c **** * support systems application implies that the manufacturer assumes all risk of
+  36:Generated_Source\PSoC6/CapSense_1_Tuner.c **** * such use and in doing so indemnifies Cypress against all charges. Use may be
+  37:Generated_Source\PSoC6/CapSense_1_Tuner.c **** * limited by and subject to the applicable Cypress software license agreement.
+  38:Generated_Source\PSoC6/CapSense_1_Tuner.c **** *******************************************************************************/
+  39:Generated_Source\PSoC6/CapSense_1_Tuner.c **** 
+  40:Generated_Source\PSoC6/CapSense_1_Tuner.c **** #include "syslib/cy_syslib.h"
+  41:Generated_Source\PSoC6/CapSense_1_Tuner.c **** #include "CapSense_1_Structure.h"
+  42:Generated_Source\PSoC6/CapSense_1_Tuner.c **** #include "CapSense_1_Tuner.h"
+  43:Generated_Source\PSoC6/CapSense_1_Tuner.c **** #include "CapSense_1_Control.h"
+  44:Generated_Source\PSoC6/CapSense_1_Tuner.c **** #include "CapSense_1_Configuration.h"
+  45:Generated_Source\PSoC6/CapSense_1_Tuner.c **** 
+  46:Generated_Source\PSoC6/CapSense_1_Tuner.c **** /* Tuner states definition */
+  47:Generated_Source\PSoC6/CapSense_1_Tuner.c **** #define TU_FSM_RUNNING      (0u)
+  48:Generated_Source\PSoC6/CapSense_1_Tuner.c **** #define TU_FSM_SUSPENDED    (1u)
+  49:Generated_Source\PSoC6/CapSense_1_Tuner.c **** #define TU_FSM_SNR_TEST     (2u)
+  50:Generated_Source\PSoC6/CapSense_1_Tuner.c **** #define TU_FSM_ONE_SCAN     (3u)
+  51:Generated_Source\PSoC6/CapSense_1_Tuner.c **** 
+  52:Generated_Source\PSoC6/CapSense_1_Tuner.c **** /* Tuner state variable */
+  53:Generated_Source\PSoC6/CapSense_1_Tuner.c **** static uint32 tunerFsm = TU_FSM_RUNNING;
+  54:Generated_Source\PSoC6/CapSense_1_Tuner.c **** 
+  55:Generated_Source\PSoC6/CapSense_1_Tuner.c **** 
+  56:Generated_Source\PSoC6/CapSense_1_Tuner.c **** /*******************************************************************************
+  57:Generated_Source\PSoC6/CapSense_1_Tuner.c **** * Function Name: CapSense_1_TuInitialize
+  58:Generated_Source\PSoC6/CapSense_1_Tuner.c **** ****************************************************************************//**
+  59:Generated_Source\PSoC6/CapSense_1_Tuner.c **** *
+  60:Generated_Source\PSoC6/CapSense_1_Tuner.c **** * \brief
+  61:Generated_Source\PSoC6/CapSense_1_Tuner.c **** *   This function initializes the communication interface with the Tuner GUI.
+  62:Generated_Source\PSoC6/CapSense_1_Tuner.c **** *
+  63:Generated_Source\PSoC6/CapSense_1_Tuner.c **** * \details
+  64:Generated_Source\PSoC6/CapSense_1_Tuner.c **** *   This API sets the tuner state machine to the default state. It is called by
+  65:Generated_Source\PSoC6/CapSense_1_Tuner.c **** *   the CapSense_1_Start() API.
+  66:Generated_Source\PSoC6/CapSense_1_Tuner.c **** *
+  67:Generated_Source\PSoC6/CapSense_1_Tuner.c **** *******************************************************************************/
+  68:Generated_Source\PSoC6/CapSense_1_Tuner.c **** void CapSense_1_TuInitialize(void)
+  69:Generated_Source\PSoC6/CapSense_1_Tuner.c **** {
+  28              		.loc 1 69 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              		@ link register save eliminated.
+  33              	.LVL0:
+  70:Generated_Source\PSoC6/CapSense_1_Tuner.c ****     volatile CapSense_1_RAM_STRUCT *ptrDsRam = &CapSense_1_dsRam;
+  71:Generated_Source\PSoC6/CapSense_1_Tuner.c **** 
+  72:Generated_Source\PSoC6/CapSense_1_Tuner.c ****     ptrDsRam->tunerCmd = (uint16)CapSense_1_TU_CMD_NONE_E;
+  34              		.loc 1 72 0
+  35 0000 0023     		movs	r3, #0
+  36 0002 024A     		ldr	r2, .L2
+  37 0004 D380     		strh	r3, [r2, #6]
+  73:Generated_Source\PSoC6/CapSense_1_Tuner.c ****     tunerFsm = TU_FSM_RUNNING;
+  38              		.loc 1 73 0
+  39 0006 024A     		ldr	r2, .L2+4
+  40 0008 1360     		str	r3, [r2]
+  74:Generated_Source\PSoC6/CapSense_1_Tuner.c **** }
+ARM GAS  C:\Users\Labeo\AppData\Local\Temp\cchoLg3G.s 			page 3
+
+
+  41              		.loc 1 74 0
+  42              		@ sp needed
+  43 000a 7047     		bx	lr
+  44              	.L3:
+  45              		.align	2
+  46              	.L2:
+  47 000c 00000000 		.word	CapSense_1_dsRam
+  48 0010 00000000 		.word	.LANCHOR0
+  49              		.cfi_endproc
+  50              	.LFE79:
+  51              		.size	CapSense_1_TuInitialize, .-CapSense_1_TuInitialize
+  52              		.section	.text.CapSense_1_RunTuner,"ax",%progbits
+  53              		.align	2
+  54              		.global	CapSense_1_RunTuner
+  55              		.code	16
+  56              		.thumb_func
+  57              		.type	CapSense_1_RunTuner, %function
+  58              	CapSense_1_RunTuner:
+  59              	.LFB80:
+  75:Generated_Source\PSoC6/CapSense_1_Tuner.c **** 
+  76:Generated_Source\PSoC6/CapSense_1_Tuner.c **** /*******************************************************************************
+  77:Generated_Source\PSoC6/CapSense_1_Tuner.c **** * Function Name: CapSense_1_RunTuner
+  78:Generated_Source\PSoC6/CapSense_1_Tuner.c **** ****************************************************************************//**
+  79:Generated_Source\PSoC6/CapSense_1_Tuner.c **** *
+  80:Generated_Source\PSoC6/CapSense_1_Tuner.c **** * \brief
+  81:Generated_Source\PSoC6/CapSense_1_Tuner.c **** *  Establishes synchronized communication with the Tuner application.
+  82:Generated_Source\PSoC6/CapSense_1_Tuner.c **** *
+  83:Generated_Source\PSoC6/CapSense_1_Tuner.c **** * \details
+  84:Generated_Source\PSoC6/CapSense_1_Tuner.c **** *  This function is used to establish synchronized communication between the
+  85:Generated_Source\PSoC6/CapSense_1_Tuner.c **** *  CapSense_1 Component and Tuner application (or other host controllers).
+  86:Generated_Source\PSoC6/CapSense_1_Tuner.c **** *  This function is called periodically in the application program loop
+  87:Generated_Source\PSoC6/CapSense_1_Tuner.c **** *  to serve the Tuner application (or host controller) requests and commands.
+  88:Generated_Source\PSoC6/CapSense_1_Tuner.c **** *  In most cases, the best place to call this function is after processing and
+  89:Generated_Source\PSoC6/CapSense_1_Tuner.c **** *  before next scanning.
+  90:Generated_Source\PSoC6/CapSense_1_Tuner.c **** *
+  91:Generated_Source\PSoC6/CapSense_1_Tuner.c **** *  If this function is absent in the application program, then communication is
+  92:Generated_Source\PSoC6/CapSense_1_Tuner.c **** *  asynchronous and the following disadvantages are applicable:
+  93:Generated_Source\PSoC6/CapSense_1_Tuner.c **** *    - The raw counts displayed in the tuner may be filtered and/or unfiltered.
+  94:Generated_Source\PSoC6/CapSense_1_Tuner.c **** *      As a result, noise and SNR measurements will not be accurate.
+  95:Generated_Source\PSoC6/CapSense_1_Tuner.c **** *    - The Tuner tool may read the sensor data such as raw counts from a scan
+  96:Generated_Source\PSoC6/CapSense_1_Tuner.c **** *      multiple times, as a result, noise and SNR measurement will not be
+  97:Generated_Source\PSoC6/CapSense_1_Tuner.c **** *      accurate.
+  98:Generated_Source\PSoC6/CapSense_1_Tuner.c **** *    - The Tuner tool and host controller should not change the Component parameters
+  99:Generated_Source\PSoC6/CapSense_1_Tuner.c **** *      via the tuner interface. Changing the Component parameters via the tuner
+ 100:Generated_Source\PSoC6/CapSense_1_Tuner.c **** *      interface in the async mode will result in Component abnormal behavior.
+ 101:Generated_Source\PSoC6/CapSense_1_Tuner.c **** *
+ 102:Generated_Source\PSoC6/CapSense_1_Tuner.c **** *  Note that calling this function is not mandatory for the application, but
+ 103:Generated_Source\PSoC6/CapSense_1_Tuner.c **** *  required only to synchronize the communication with the host controller or
+ 104:Generated_Source\PSoC6/CapSense_1_Tuner.c **** *  tuner application.
+ 105:Generated_Source\PSoC6/CapSense_1_Tuner.c **** *
+ 106:Generated_Source\PSoC6/CapSense_1_Tuner.c **** * \return
+ 107:Generated_Source\PSoC6/CapSense_1_Tuner.c **** *  In some cases, the application program may need to know if the Component was
+ 108:Generated_Source\PSoC6/CapSense_1_Tuner.c **** *  re-initialized. The return indicates if a restart command was executed or not:
+ 109:Generated_Source\PSoC6/CapSense_1_Tuner.c **** *    - CapSense_1_STATUS_RESTART_DONE - Based on a received command, the
+ 110:Generated_Source\PSoC6/CapSense_1_Tuner.c **** *      Component was restarted.
+ 111:Generated_Source\PSoC6/CapSense_1_Tuner.c **** *    -  CapSense_1_STATUS_RESTART_NONE - No restart was executed by this
+ 112:Generated_Source\PSoC6/CapSense_1_Tuner.c **** *      function.
+ARM GAS  C:\Users\Labeo\AppData\Local\Temp\cchoLg3G.s 			page 4
+
+
+ 113:Generated_Source\PSoC6/CapSense_1_Tuner.c **** *
+ 114:Generated_Source\PSoC6/CapSense_1_Tuner.c **** *******************************************************************************/
+ 115:Generated_Source\PSoC6/CapSense_1_Tuner.c **** uint32 CapSense_1_RunTuner(void)
+ 116:Generated_Source\PSoC6/CapSense_1_Tuner.c **** {
+  60              		.loc 1 116 0
+  61              		.cfi_startproc
+  62              		@ args = 0, pretend = 0, frame = 0
+  63              		@ frame_needed = 0, uses_anonymous_args = 0
+  64 0000 70B5     		push	{r4, r5, r6, lr}
+  65              		.cfi_def_cfa_offset 16
+  66              		.cfi_offset 4, -16
+  67              		.cfi_offset 5, -12
+  68              		.cfi_offset 6, -8
+  69              		.cfi_offset 14, -4
+  70              	.LVL1:
+ 117:Generated_Source\PSoC6/CapSense_1_Tuner.c ****     uint32 interruptState;
+ 118:Generated_Source\PSoC6/CapSense_1_Tuner.c ****     uint32 widgetId;
+ 119:Generated_Source\PSoC6/CapSense_1_Tuner.c ****     uint32 sensorId;
+ 120:Generated_Source\PSoC6/CapSense_1_Tuner.c ****     uint32 updateFlag = 0Lu;
+ 121:Generated_Source\PSoC6/CapSense_1_Tuner.c ****     CapSense_1_TU_CMD_ENUM command;
+ 122:Generated_Source\PSoC6/CapSense_1_Tuner.c ****     uint32 tunerStatus = CapSense_1_STATUS_RESTART_NONE;
+  71              		.loc 1 122 0
+  72 0002 0025     		movs	r5, #0
+ 120:Generated_Source\PSoC6/CapSense_1_Tuner.c ****     CapSense_1_TU_CMD_ENUM command;
+  73              		.loc 1 120 0
+  74 0004 0026     		movs	r6, #0
+  75              	.LVL2:
+  76              	.L16:
+ 123:Generated_Source\PSoC6/CapSense_1_Tuner.c **** 
+ 124:Generated_Source\PSoC6/CapSense_1_Tuner.c ****     volatile CapSense_1_RAM_STRUCT *ptrDsRam;
+ 125:Generated_Source\PSoC6/CapSense_1_Tuner.c ****     volatile CapSense_1_RAM_SNS_STRUCT *ptrSnsTmp;
+ 126:Generated_Source\PSoC6/CapSense_1_Tuner.c **** 
+ 127:Generated_Source\PSoC6/CapSense_1_Tuner.c ****     ptrDsRam = &CapSense_1_dsRam;
+ 128:Generated_Source\PSoC6/CapSense_1_Tuner.c **** 
+ 129:Generated_Source\PSoC6/CapSense_1_Tuner.c ****     do
+ 130:Generated_Source\PSoC6/CapSense_1_Tuner.c ****     {
+ 131:Generated_Source\PSoC6/CapSense_1_Tuner.c ****         /* ONE_SCAN command could be interpreted as two commands:
+ 132:Generated_Source\PSoC6/CapSense_1_Tuner.c ****         * RESUME till next call of this function and then
+ 133:Generated_Source\PSoC6/CapSense_1_Tuner.c ****         * SUSPEND till next command receiving.
+ 134:Generated_Source\PSoC6/CapSense_1_Tuner.c ****         */
+ 135:Generated_Source\PSoC6/CapSense_1_Tuner.c ****         if (TU_FSM_ONE_SCAN == tunerFsm)
+  77              		.loc 1 135 0
+  78 0006 3B4B     		ldr	r3, .L18
+  79 0008 1B68     		ldr	r3, [r3]
+  80 000a 032B     		cmp	r3, #3
+  81 000c 06D1     		bne	.L5
+ 136:Generated_Source\PSoC6/CapSense_1_Tuner.c ****         {
+ 137:Generated_Source\PSoC6/CapSense_1_Tuner.c ****             interruptState = Cy_SysLib_EnterCriticalSection();
+  82              		.loc 1 137 0
+  83 000e FFF7FEFF 		bl	Cy_SysLib_EnterCriticalSection
+  84              	.LVL3:
+ 138:Generated_Source\PSoC6/CapSense_1_Tuner.c ****             ptrDsRam->tunerCmd = (uint16)CapSense_1_TU_CMD_SUSPEND_E;
+  85              		.loc 1 138 0
+  86 0012 0122     		movs	r2, #1
+  87 0014 384B     		ldr	r3, .L18+4
+  88 0016 DA80     		strh	r2, [r3, #6]
+ 139:Generated_Source\PSoC6/CapSense_1_Tuner.c ****             Cy_SysLib_ExitCriticalSection(interruptState);
+ARM GAS  C:\Users\Labeo\AppData\Local\Temp\cchoLg3G.s 			page 5
+
+
+  89              		.loc 1 139 0
+  90 0018 FFF7FEFF 		bl	Cy_SysLib_ExitCriticalSection
+  91              	.LVL4:
+  92              	.L5:
+ 140:Generated_Source\PSoC6/CapSense_1_Tuner.c ****         }
+ 141:Generated_Source\PSoC6/CapSense_1_Tuner.c ****         command = (CapSense_1_TU_CMD_ENUM)ptrDsRam->tunerCmd;
+  93              		.loc 1 141 0
+  94 001c 364B     		ldr	r3, .L18+4
+  95 001e DC88     		ldrh	r4, [r3, #6]
+  96 0020 E4B2     		uxtb	r4, r4
+  97              	.LVL5:
+ 142:Generated_Source\PSoC6/CapSense_1_Tuner.c **** 
+ 143:Generated_Source\PSoC6/CapSense_1_Tuner.c ****         /* Check command register */
+ 144:Generated_Source\PSoC6/CapSense_1_Tuner.c ****         switch (command)
+  98              		.loc 1 144 0
+  99 0022 062C     		cmp	r4, #6
+ 100 0024 23D8     		bhi	.L6
+ 101 0026 A300     		lsls	r3, r4, #2
+ 102 0028 344A     		ldr	r2, .L18+8
+ 103 002a D358     		ldr	r3, [r2, r3]
+ 104 002c 9F46     		mov	pc, r3
+ 105              		.section	.rodata
+ 106              		.align	2
+ 107              	.L8:
+ 108 0000 6E000000 		.word	.L6
+ 109 0004 2E000000 		.word	.L7
+ 110 0008 38000000 		.word	.L9
+ 111 000c 42000000 		.word	.L10
+ 112 0010 52000000 		.word	.L11
+ 113 0014 5C000000 		.word	.L12
+ 114 0018 66000000 		.word	.L13
+ 115              		.section	.text.CapSense_1_RunTuner
+ 116              	.L7:
+ 145:Generated_Source\PSoC6/CapSense_1_Tuner.c ****         {
+ 146:Generated_Source\PSoC6/CapSense_1_Tuner.c ****         case CapSense_1_TU_CMD_SUSPEND_E:
+ 147:Generated_Source\PSoC6/CapSense_1_Tuner.c ****             tunerFsm = TU_FSM_SUSPENDED;
+ 117              		.loc 1 147 0
+ 118 002e 0122     		movs	r2, #1
+ 119 0030 304B     		ldr	r3, .L18
+ 120 0032 1A60     		str	r2, [r3]
+ 121              	.LVL6:
+ 148:Generated_Source\PSoC6/CapSense_1_Tuner.c ****             updateFlag = 1Lu;
+ 122              		.loc 1 148 0
+ 123 0034 0126     		movs	r6, #1
+ 149:Generated_Source\PSoC6/CapSense_1_Tuner.c ****             break;
+ 124              		.loc 1 149 0
+ 125 0036 1AE0     		b	.L6
+ 126              	.LVL7:
+ 127              	.L9:
+ 150:Generated_Source\PSoC6/CapSense_1_Tuner.c **** 
+ 151:Generated_Source\PSoC6/CapSense_1_Tuner.c ****         case CapSense_1_TU_CMD_RESUME_E:
+ 152:Generated_Source\PSoC6/CapSense_1_Tuner.c ****             tunerFsm = TU_FSM_RUNNING;
+ 128              		.loc 1 152 0
+ 129 0038 0022     		movs	r2, #0
+ 130 003a 2E4B     		ldr	r3, .L18
+ 131 003c 1A60     		str	r2, [r3]
+ 132              	.LVL8:
+ARM GAS  C:\Users\Labeo\AppData\Local\Temp\cchoLg3G.s 			page 6
+
+
+ 153:Generated_Source\PSoC6/CapSense_1_Tuner.c ****             updateFlag = 1Lu;
+ 133              		.loc 1 153 0
+ 134 003e 0126     		movs	r6, #1
+ 154:Generated_Source\PSoC6/CapSense_1_Tuner.c ****             break;
+ 135              		.loc 1 154 0
+ 136 0040 15E0     		b	.L6
+ 137              	.LVL9:
+ 138              	.L10:
+ 155:Generated_Source\PSoC6/CapSense_1_Tuner.c **** 
+ 156:Generated_Source\PSoC6/CapSense_1_Tuner.c ****         case CapSense_1_TU_CMD_RESTART_E:
+ 157:Generated_Source\PSoC6/CapSense_1_Tuner.c ****             (void)CapSense_1_Start();
+ 139              		.loc 1 157 0
+ 140 0042 FFF7FEFF 		bl	CapSense_1_Start
+ 141              	.LVL10:
+ 158:Generated_Source\PSoC6/CapSense_1_Tuner.c ****             tunerStatus = CapSense_1_STATUS_RESTART_DONE;
+ 159:Generated_Source\PSoC6/CapSense_1_Tuner.c ****             tunerFsm = TU_FSM_RUNNING;
+ 142              		.loc 1 159 0
+ 143 0046 0022     		movs	r2, #0
+ 144 0048 2A4B     		ldr	r3, .L18
+ 145 004a 1A60     		str	r2, [r3]
+ 146              	.LVL11:
+ 158:Generated_Source\PSoC6/CapSense_1_Tuner.c ****             tunerStatus = CapSense_1_STATUS_RESTART_DONE;
+ 147              		.loc 1 158 0
+ 148 004c 0125     		movs	r5, #1
+ 160:Generated_Source\PSoC6/CapSense_1_Tuner.c ****             updateFlag = 1Lu;
+ 149              		.loc 1 160 0
+ 150 004e 0126     		movs	r6, #1
+ 161:Generated_Source\PSoC6/CapSense_1_Tuner.c ****             break;
+ 151              		.loc 1 161 0
+ 152 0050 0DE0     		b	.L6
+ 153              	.LVL12:
+ 154              	.L11:
+ 162:Generated_Source\PSoC6/CapSense_1_Tuner.c **** 
+ 163:Generated_Source\PSoC6/CapSense_1_Tuner.c ****         case CapSense_1_TU_CMD_RUN_SNR_TEST_E:
+ 164:Generated_Source\PSoC6/CapSense_1_Tuner.c ****             tunerFsm = TU_FSM_SNR_TEST;
+ 155              		.loc 1 164 0
+ 156 0052 0222     		movs	r2, #2
+ 157 0054 274B     		ldr	r3, .L18
+ 158 0056 1A60     		str	r2, [r3]
+ 159              	.LVL13:
+ 165:Generated_Source\PSoC6/CapSense_1_Tuner.c ****             updateFlag = 1Lu;
+ 160              		.loc 1 165 0
+ 161 0058 0126     		movs	r6, #1
+ 166:Generated_Source\PSoC6/CapSense_1_Tuner.c ****             break;
+ 162              		.loc 1 166 0
+ 163 005a 08E0     		b	.L6
+ 164              	.LVL14:
+ 165              	.L12:
+ 167:Generated_Source\PSoC6/CapSense_1_Tuner.c **** 
+ 168:Generated_Source\PSoC6/CapSense_1_Tuner.c ****         case CapSense_1_TU_CMD_PING_E:
+ 169:Generated_Source\PSoC6/CapSense_1_Tuner.c ****             tunerFsm = TU_FSM_RUNNING;
+ 166              		.loc 1 169 0
+ 167 005c 0022     		movs	r2, #0
+ 168 005e 254B     		ldr	r3, .L18
+ 169 0060 1A60     		str	r2, [r3]
+ 170              	.LVL15:
+ 170:Generated_Source\PSoC6/CapSense_1_Tuner.c ****             updateFlag = 1Lu;
+ARM GAS  C:\Users\Labeo\AppData\Local\Temp\cchoLg3G.s 			page 7
+
+
+ 171              		.loc 1 170 0
+ 172 0062 0126     		movs	r6, #1
+ 171:Generated_Source\PSoC6/CapSense_1_Tuner.c ****             break;
+ 173              		.loc 1 171 0
+ 174 0064 03E0     		b	.L6
+ 175              	.LVL16:
+ 176              	.L13:
+ 172:Generated_Source\PSoC6/CapSense_1_Tuner.c **** 
+ 173:Generated_Source\PSoC6/CapSense_1_Tuner.c ****         case CapSense_1_TU_CMD_ONE_SCAN_E:
+ 174:Generated_Source\PSoC6/CapSense_1_Tuner.c ****             tunerFsm = TU_FSM_ONE_SCAN;
+ 177              		.loc 1 174 0
+ 178 0066 0322     		movs	r2, #3
+ 179 0068 224B     		ldr	r3, .L18
+ 180 006a 1A60     		str	r2, [r3]
+ 181              	.LVL17:
+ 175:Generated_Source\PSoC6/CapSense_1_Tuner.c ****             updateFlag = 0Lu;
+ 182              		.loc 1 175 0
+ 183 006c 0026     		movs	r6, #0
+ 184              	.LVL18:
+ 185              	.L6:
+ 176:Generated_Source\PSoC6/CapSense_1_Tuner.c ****             break;
+ 177:Generated_Source\PSoC6/CapSense_1_Tuner.c **** 
+ 178:Generated_Source\PSoC6/CapSense_1_Tuner.c ****         default:
+ 179:Generated_Source\PSoC6/CapSense_1_Tuner.c ****             break;
+ 180:Generated_Source\PSoC6/CapSense_1_Tuner.c ****         }
+ 181:Generated_Source\PSoC6/CapSense_1_Tuner.c **** 
+ 182:Generated_Source\PSoC6/CapSense_1_Tuner.c ****         /* Set Complete flag in command register if needed */
+ 183:Generated_Source\PSoC6/CapSense_1_Tuner.c ****         if (0Lu != updateFlag)
+ 186              		.loc 1 183 0
+ 187 006e 002E     		cmp	r6, #0
+ 188 0070 0FD0     		beq	.L14
+ 184:Generated_Source\PSoC6/CapSense_1_Tuner.c ****         {
+ 185:Generated_Source\PSoC6/CapSense_1_Tuner.c ****             interruptState = Cy_SysLib_EnterCriticalSection();
+ 189              		.loc 1 185 0
+ 190 0072 FFF7FEFF 		bl	Cy_SysLib_EnterCriticalSection
+ 191              	.LVL19:
+ 186:Generated_Source\PSoC6/CapSense_1_Tuner.c **** 
+ 187:Generated_Source\PSoC6/CapSense_1_Tuner.c ****             /* Check if command wasn't overwritten with new command */
+ 188:Generated_Source\PSoC6/CapSense_1_Tuner.c ****             if (command == (CapSense_1_TU_CMD_ENUM)ptrDsRam->tunerCmd)
+ 192              		.loc 1 188 0
+ 193 0076 204B     		ldr	r3, .L18+4
+ 194 0078 DB88     		ldrh	r3, [r3, #6]
+ 195 007a DBB2     		uxtb	r3, r3
+ 196 007c 9C42     		cmp	r4, r3
+ 197 007e 05D1     		bne	.L15
+ 189:Generated_Source\PSoC6/CapSense_1_Tuner.c ****             {
+ 190:Generated_Source\PSoC6/CapSense_1_Tuner.c ****                 ptrDsRam->tunerCmd |= CapSense_1_TU_CMD_COMPLETE_BIT;
+ 198              		.loc 1 190 0
+ 199 0080 1D4A     		ldr	r2, .L18+4
+ 200 0082 D188     		ldrh	r1, [r2, #6]
+ 201 0084 1E4B     		ldr	r3, .L18+12
+ 202 0086 0B43     		orrs	r3, r1
+ 203 0088 9BB2     		uxth	r3, r3
+ 204 008a D380     		strh	r3, [r2, #6]
+ 205              	.L15:
+ 191:Generated_Source\PSoC6/CapSense_1_Tuner.c ****             }
+ 192:Generated_Source\PSoC6/CapSense_1_Tuner.c ****             Cy_SysLib_ExitCriticalSection(interruptState);
+ARM GAS  C:\Users\Labeo\AppData\Local\Temp\cchoLg3G.s 			page 8
+
+
+ 206              		.loc 1 192 0
+ 207 008c FFF7FEFF 		bl	Cy_SysLib_ExitCriticalSection
+ 208              	.LVL20:
+ 193:Generated_Source\PSoC6/CapSense_1_Tuner.c **** 
+ 194:Generated_Source\PSoC6/CapSense_1_Tuner.c ****             updateFlag = 0Lu;
+ 209              		.loc 1 194 0
+ 210 0090 0026     		movs	r6, #0
+ 211              	.LVL21:
+ 212              	.L14:
+ 195:Generated_Source\PSoC6/CapSense_1_Tuner.c ****         }
+ 196:Generated_Source\PSoC6/CapSense_1_Tuner.c ****     } while (TU_FSM_SUSPENDED == tunerFsm);
+ 213              		.loc 1 196 0
+ 214 0092 184B     		ldr	r3, .L18
+ 215 0094 1B68     		ldr	r3, [r3]
+ 216 0096 012B     		cmp	r3, #1
+ 217 0098 B5D0     		beq	.L16
+ 197:Generated_Source\PSoC6/CapSense_1_Tuner.c **** 
+ 198:Generated_Source\PSoC6/CapSense_1_Tuner.c ****     /* Check for SNR Test mode and do appropriate actions */
+ 199:Generated_Source\PSoC6/CapSense_1_Tuner.c ****     if (TU_FSM_SNR_TEST == tunerFsm)
+ 218              		.loc 1 199 0
+ 219 009a 022B     		cmp	r3, #2
+ 220 009c 28D1     		bne	.L17
+ 200:Generated_Source\PSoC6/CapSense_1_Tuner.c ****     {
+ 201:Generated_Source\PSoC6/CapSense_1_Tuner.c ****         widgetId = ptrDsRam->snrTestWidgetId;
+ 221              		.loc 1 201 0
+ 222 009e 164A     		ldr	r2, .L18+4
+ 223 00a0 3833     		adds	r3, r3, #56
+ 224 00a2 D35C     		ldrb	r3, [r2, r3]
+ 225 00a4 DBB2     		uxtb	r3, r3
+ 226              	.LVL22:
+ 202:Generated_Source\PSoC6/CapSense_1_Tuner.c ****         sensorId = ptrDsRam->snrTestSensorId;
+ 227              		.loc 1 202 0
+ 228 00a6 3B21     		movs	r1, #59
+ 229 00a8 525C     		ldrb	r2, [r2, r1]
+ 230 00aa D2B2     		uxtb	r2, r2
+ 231              	.LVL23:
+ 203:Generated_Source\PSoC6/CapSense_1_Tuner.c **** 
+ 204:Generated_Source\PSoC6/CapSense_1_Tuner.c ****         /* Check if widgetId and sensorId are in range,
+ 205:Generated_Source\PSoC6/CapSense_1_Tuner.c ****          * and data was updated in RAM (scan counter changed)
+ 206:Generated_Source\PSoC6/CapSense_1_Tuner.c ****          */
+ 207:Generated_Source\PSoC6/CapSense_1_Tuner.c ****         if ((widgetId < CapSense_1_TOTAL_WIDGETS)              &&
+ 232              		.loc 1 207 0
+ 233 00ac 002B     		cmp	r3, #0
+ 234 00ae 1FD1     		bne	.L17
+ 208:Generated_Source\PSoC6/CapSense_1_Tuner.c ****             (sensorId < CapSense_1_GET_SENSOR_COUNT(widgetId)) &&
+ 235              		.loc 1 208 0 discriminator 1
+ 236 00b0 5901     		lsls	r1, r3, #5
+ 237 00b2 1448     		ldr	r0, .L18+16
+ 238 00b4 4118     		adds	r1, r0, r1
+ 239 00b6 098B     		ldrh	r1, [r1, #24]
+ 207:Generated_Source\PSoC6/CapSense_1_Tuner.c ****             (sensorId < CapSense_1_GET_SENSOR_COUNT(widgetId)) &&
+ 240              		.loc 1 207 0 discriminator 1
+ 241 00b8 8A42     		cmp	r2, r1
+ 242 00ba 19D2     		bcs	.L17
+ 209:Generated_Source\PSoC6/CapSense_1_Tuner.c ****             (ptrDsRam->scanCounter != ptrDsRam->snrTestScanCounter))
+ 243              		.loc 1 209 0
+ 244 00bc 0E49     		ldr	r1, .L18+4
+ARM GAS  C:\Users\Labeo\AppData\Local\Temp\cchoLg3G.s 			page 9
+
+
+ 245 00be 0889     		ldrh	r0, [r1, #8]
+ 246 00c0 80B2     		uxth	r0, r0
+ 247 00c2 898F     		ldrh	r1, [r1, #60]
+ 248 00c4 89B2     		uxth	r1, r1
+ 208:Generated_Source\PSoC6/CapSense_1_Tuner.c ****             (sensorId < CapSense_1_GET_SENSOR_COUNT(widgetId)) &&
+ 249              		.loc 1 208 0
+ 250 00c6 8842     		cmp	r0, r1
+ 251 00c8 12D0     		beq	.L17
+ 210:Generated_Source\PSoC6/CapSense_1_Tuner.c ****         {
+ 211:Generated_Source\PSoC6/CapSense_1_Tuner.c ****             /* Get access to the Sensor Object */
+ 212:Generated_Source\PSoC6/CapSense_1_Tuner.c ****             ptrSnsTmp = CapSense_1_dsFlash.wdgtArray[widgetId].ptr2SnsRam;
+ 252              		.loc 1 212 0
+ 253 00ca 5B01     		lsls	r3, r3, #5
+ 254              	.LVL24:
+ 255 00cc 0D49     		ldr	r1, .L18+16
+ 256 00ce CB18     		adds	r3, r1, r3
+ 257 00d0 9C68     		ldr	r4, [r3, #8]
+ 258              	.LVL25:
+ 213:Generated_Source\PSoC6/CapSense_1_Tuner.c ****             ptrSnsTmp += sensorId;
+ 259              		.loc 1 213 0
+ 260 00d2 9300     		lsls	r3, r2, #2
+ 261 00d4 9A18     		adds	r2, r3, r2
+ 262              	.LVL26:
+ 263 00d6 5300     		lsls	r3, r2, #1
+ 264 00d8 E418     		adds	r4, r4, r3
+ 265              	.LVL27:
+ 214:Generated_Source\PSoC6/CapSense_1_Tuner.c **** 
+ 215:Generated_Source\PSoC6/CapSense_1_Tuner.c ****             /* Update data in SNR Test Object */
+ 216:Generated_Source\PSoC6/CapSense_1_Tuner.c ****             interruptState = Cy_SysLib_EnterCriticalSection();
+ 266              		.loc 1 216 0
+ 267 00da FFF7FEFF 		bl	Cy_SysLib_EnterCriticalSection
+ 268              	.LVL28:
+ 217:Generated_Source\PSoC6/CapSense_1_Tuner.c ****             ptrDsRam->snrTestScanCounter = ptrDsRam->scanCounter;
+ 269              		.loc 1 217 0
+ 270 00de 064B     		ldr	r3, .L18+4
+ 271 00e0 1A89     		ldrh	r2, [r3, #8]
+ 272 00e2 92B2     		uxth	r2, r2
+ 273 00e4 9A87     		strh	r2, [r3, #60]
+ 218:Generated_Source\PSoC6/CapSense_1_Tuner.c ****             ptrDsRam->snrTestRawCount[0u] = ptrSnsTmp->raw[0u];
+ 274              		.loc 1 218 0
+ 275 00e6 2288     		ldrh	r2, [r4]
+ 276 00e8 92B2     		uxth	r2, r2
+ 277 00ea DA87     		strh	r2, [r3, #62]
+ 219:Generated_Source\PSoC6/CapSense_1_Tuner.c **** 
+ 220:Generated_Source\PSoC6/CapSense_1_Tuner.c ****             #if (0u != CapSense_1_MULTI_FREQ_SCAN_EN)
+ 221:Generated_Source\PSoC6/CapSense_1_Tuner.c ****                 ptrDsRam->snrTestRawCount[1u] = ptrSnsTmp->raw[1u];
+ 222:Generated_Source\PSoC6/CapSense_1_Tuner.c ****                 ptrDsRam->snrTestRawCount[2u] = ptrSnsTmp->raw[2u];
+ 223:Generated_Source\PSoC6/CapSense_1_Tuner.c ****             #endif
+ 224:Generated_Source\PSoC6/CapSense_1_Tuner.c **** 
+ 225:Generated_Source\PSoC6/CapSense_1_Tuner.c ****             Cy_SysLib_ExitCriticalSection(interruptState);
+ 278              		.loc 1 225 0
+ 279 00ec FFF7FEFF 		bl	Cy_SysLib_ExitCriticalSection
+ 280              	.LVL29:
+ 281              	.L17:
+ 226:Generated_Source\PSoC6/CapSense_1_Tuner.c ****         }
+ 227:Generated_Source\PSoC6/CapSense_1_Tuner.c ****     }
+ 228:Generated_Source\PSoC6/CapSense_1_Tuner.c ****     return tunerStatus;
+ARM GAS  C:\Users\Labeo\AppData\Local\Temp\cchoLg3G.s 			page 10
+
+
+ 229:Generated_Source\PSoC6/CapSense_1_Tuner.c **** }
+ 282              		.loc 1 229 0
+ 283 00f0 2800     		movs	r0, r5
+ 284              		@ sp needed
+ 285              	.LVL30:
+ 286              	.LVL31:
+ 287 00f2 70BD     		pop	{r4, r5, r6, pc}
+ 288              	.L19:
+ 289              		.align	2
+ 290              	.L18:
+ 291 00f4 00000000 		.word	.LANCHOR0
+ 292 00f8 00000000 		.word	CapSense_1_dsRam
+ 293 00fc 00000000 		.word	.L8
+ 294 0100 0080FFFF 		.word	-32768
+ 295 0104 00000000 		.word	CapSense_1_dsFlash
+ 296              		.cfi_endproc
+ 297              	.LFE80:
+ 298              		.size	CapSense_1_RunTuner, .-CapSense_1_RunTuner
+ 299              		.bss
+ 300              		.align	2
+ 301              		.set	.LANCHOR0,. + 0
+ 302              		.type	tunerFsm, %object
+ 303              		.size	tunerFsm, 4
+ 304              	tunerFsm:
+ 305 0000 00000000 		.space	4
+ 306              		.text
+ 307              	.Letext0:
+ 308              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 309              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 310              		.file 4 "Generated_Source\\PSoC6\\pdl\\drivers/peripheral/device/cy_device.h"
+ 311              		.file 5 "Generated_Source\\PSoC6\\pdl\\drivers/peripheral/syslib/cy_syslib.h"
+ 312              		.file 6 "Generated_Source\\PSoC6\\CapSense_1_Configuration.h"
+ 313              		.file 7 "Generated_Source\\PSoC6\\CapSense_1_SmartSense_LL.h"
+ 314              		.file 8 "Generated_Source\\PSoC6\\CapSense_1_Structure.h"
+ 315              		.file 9 "Generated_Source\\PSoC6\\CapSense_1_Tuner.h"
+ 316              		.file 10 "Generated_Source\\PSoC6\\CapSense_1_Control.h"
+ 317              		.section	.debug_info,"",%progbits
+ 318              	.Ldebug_info0:
+ 319 0000 D10A0000 		.4byte	0xad1
+ 320 0004 0400     		.2byte	0x4
+ 321 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 322 000a 04       		.byte	0x4
+ 323 000b 01       		.uleb128 0x1
+ 324 000c 2E090000 		.4byte	.LASF198
+ 325 0010 0C       		.byte	0xc
+ 326 0011 CF040000 		.4byte	.LASF199
+ 327 0015 9A0B0000 		.4byte	.LASF200
+ 328 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 329 001d 00000000 		.4byte	0
+ 330 0021 00000000 		.4byte	.Ldebug_line0
+ 331 0025 02       		.uleb128 0x2
+ 332 0026 01       		.byte	0x1
+ 333 0027 06       		.byte	0x6
+ 334 0028 F5010000 		.4byte	.LASF0
+ 335 002c 03       		.uleb128 0x3
+ 336 002d 9B000000 		.4byte	.LASF2
+ 337 0031 02       		.byte	0x2
+ARM GAS  C:\Users\Labeo\AppData\Local\Temp\cchoLg3G.s 			page 11
+
+
+ 338 0032 1D       		.byte	0x1d
+ 339 0033 37000000 		.4byte	0x37
+ 340 0037 02       		.uleb128 0x2
+ 341 0038 01       		.byte	0x1
+ 342 0039 08       		.byte	0x8
+ 343 003a 19000000 		.4byte	.LASF1
+ 344 003e 03       		.uleb128 0x3
+ 345 003f 03040000 		.4byte	.LASF3
+ 346 0043 02       		.byte	0x2
+ 347 0044 29       		.byte	0x29
+ 348 0045 49000000 		.4byte	0x49
+ 349 0049 02       		.uleb128 0x2
+ 350 004a 02       		.byte	0x2
+ 351 004b 05       		.byte	0x5
+ 352 004c 64080000 		.4byte	.LASF4
+ 353 0050 03       		.uleb128 0x3
+ 354 0051 EB090000 		.4byte	.LASF5
+ 355 0055 02       		.byte	0x2
+ 356 0056 2B       		.byte	0x2b
+ 357 0057 5B000000 		.4byte	0x5b
+ 358 005b 02       		.uleb128 0x2
+ 359 005c 02       		.byte	0x2
+ 360 005d 07       		.byte	0x7
+ 361 005e 720A0000 		.4byte	.LASF6
+ 362 0062 02       		.uleb128 0x2
+ 363 0063 04       		.byte	0x4
+ 364 0064 05       		.byte	0x5
+ 365 0065 1C0C0000 		.4byte	.LASF7
+ 366 0069 03       		.uleb128 0x3
+ 367 006a C3030000 		.4byte	.LASF8
+ 368 006e 02       		.byte	0x2
+ 369 006f 41       		.byte	0x41
+ 370 0070 74000000 		.4byte	0x74
+ 371 0074 02       		.uleb128 0x2
+ 372 0075 04       		.byte	0x4
+ 373 0076 07       		.byte	0x7
+ 374 0077 8F040000 		.4byte	.LASF9
+ 375 007b 02       		.uleb128 0x2
+ 376 007c 08       		.byte	0x8
+ 377 007d 05       		.byte	0x5
+ 378 007e E7010000 		.4byte	.LASF10
+ 379 0082 02       		.uleb128 0x2
+ 380 0083 08       		.byte	0x8
+ 381 0084 07       		.byte	0x7
+ 382 0085 19010000 		.4byte	.LASF11
+ 383 0089 04       		.uleb128 0x4
+ 384 008a 04       		.byte	0x4
+ 385 008b 05       		.byte	0x5
+ 386 008c 696E7400 		.ascii	"int\000"
+ 387 0090 02       		.uleb128 0x2
+ 388 0091 04       		.byte	0x4
+ 389 0092 07       		.byte	0x7
+ 390 0093 52040000 		.4byte	.LASF12
+ 391 0097 03       		.uleb128 0x3
+ 392 0098 5B0B0000 		.4byte	.LASF13
+ 393 009c 03       		.byte	0x3
+ 394 009d 18       		.byte	0x18
+ARM GAS  C:\Users\Labeo\AppData\Local\Temp\cchoLg3G.s 			page 12
+
+
+ 395 009e 2C000000 		.4byte	0x2c
+ 396 00a2 03       		.uleb128 0x3
+ 397 00a3 C9010000 		.4byte	.LASF14
+ 398 00a7 03       		.byte	0x3
+ 399 00a8 20       		.byte	0x20
+ 400 00a9 3E000000 		.4byte	0x3e
+ 401 00ad 03       		.uleb128 0x3
+ 402 00ae 5F040000 		.4byte	.LASF15
+ 403 00b2 03       		.byte	0x3
+ 404 00b3 24       		.byte	0x24
+ 405 00b4 50000000 		.4byte	0x50
+ 406 00b8 03       		.uleb128 0x3
+ 407 00b9 FD080000 		.4byte	.LASF16
+ 408 00bd 03       		.byte	0x3
+ 409 00be 30       		.byte	0x30
+ 410 00bf 69000000 		.4byte	0x69
+ 411 00c3 02       		.uleb128 0x2
+ 412 00c4 08       		.byte	0x8
+ 413 00c5 04       		.byte	0x4
+ 414 00c6 C0090000 		.4byte	.LASF17
+ 415 00ca 02       		.uleb128 0x2
+ 416 00cb 04       		.byte	0x4
+ 417 00cc 07       		.byte	0x7
+ 418 00cd 83060000 		.4byte	.LASF18
+ 419 00d1 05       		.uleb128 0x5
+ 420 00d2 B8       		.byte	0xb8
+ 421 00d3 04       		.byte	0x4
+ 422 00d4 34       		.byte	0x34
+ 423 00d5 E2040000 		.4byte	0x4e2
+ 424 00d9 06       		.uleb128 0x6
+ 425 00da F5000000 		.4byte	.LASF19
+ 426 00de 04       		.byte	0x4
+ 427 00df 37       		.byte	0x37
+ 428 00e0 B8000000 		.4byte	0xb8
+ 429 00e4 00       		.byte	0
+ 430 00e5 06       		.uleb128 0x6
+ 431 00e6 B8030000 		.4byte	.LASF20
+ 432 00ea 04       		.byte	0x4
+ 433 00eb 38       		.byte	0x38
+ 434 00ec B8000000 		.4byte	0xb8
+ 435 00f0 04       		.byte	0x4
+ 436 00f1 06       		.uleb128 0x6
+ 437 00f2 EB020000 		.4byte	.LASF21
+ 438 00f6 04       		.byte	0x4
+ 439 00f7 39       		.byte	0x39
+ 440 00f8 B8000000 		.4byte	0xb8
+ 441 00fc 08       		.byte	0x8
+ 442 00fd 06       		.uleb128 0x6
+ 443 00fe 08080000 		.4byte	.LASF22
+ 444 0102 04       		.byte	0x4
+ 445 0103 3A       		.byte	0x3a
+ 446 0104 B8000000 		.4byte	0xb8
+ 447 0108 0C       		.byte	0xc
+ 448 0109 06       		.uleb128 0x6
+ 449 010a 2E020000 		.4byte	.LASF23
+ 450 010e 04       		.byte	0x4
+ 451 010f 3B       		.byte	0x3b
+ARM GAS  C:\Users\Labeo\AppData\Local\Temp\cchoLg3G.s 			page 13
+
+
+ 452 0110 B8000000 		.4byte	0xb8
+ 453 0114 10       		.byte	0x10
+ 454 0115 06       		.uleb128 0x6
+ 455 0116 9C080000 		.4byte	.LASF24
+ 456 011a 04       		.byte	0x4
+ 457 011b 3C       		.byte	0x3c
+ 458 011c B8000000 		.4byte	0xb8
+ 459 0120 14       		.byte	0x14
+ 460 0121 06       		.uleb128 0x6
+ 461 0122 C6040000 		.4byte	.LASF25
+ 462 0126 04       		.byte	0x4
+ 463 0127 3D       		.byte	0x3d
+ 464 0128 B8000000 		.4byte	0xb8
+ 465 012c 18       		.byte	0x18
+ 466 012d 06       		.uleb128 0x6
+ 467 012e 84000000 		.4byte	.LASF26
+ 468 0132 04       		.byte	0x4
+ 469 0133 3E       		.byte	0x3e
+ 470 0134 B8000000 		.4byte	0xb8
+ 471 0138 1C       		.byte	0x1c
+ 472 0139 06       		.uleb128 0x6
+ 473 013a 2F0C0000 		.4byte	.LASF27
+ 474 013e 04       		.byte	0x4
+ 475 013f 3F       		.byte	0x3f
+ 476 0140 B8000000 		.4byte	0xb8
+ 477 0144 20       		.byte	0x20
+ 478 0145 06       		.uleb128 0x6
+ 479 0146 62070000 		.4byte	.LASF28
+ 480 014a 04       		.byte	0x4
+ 481 014b 40       		.byte	0x40
+ 482 014c B8000000 		.4byte	0xb8
+ 483 0150 24       		.byte	0x24
+ 484 0151 06       		.uleb128 0x6
+ 485 0152 3B060000 		.4byte	.LASF29
+ 486 0156 04       		.byte	0x4
+ 487 0157 43       		.byte	0x43
+ 488 0158 97000000 		.4byte	0x97
+ 489 015c 28       		.byte	0x28
+ 490 015d 06       		.uleb128 0x6
+ 491 015e 6A000000 		.4byte	.LASF30
+ 492 0162 04       		.byte	0x4
+ 493 0163 44       		.byte	0x44
+ 494 0164 97000000 		.4byte	0x97
+ 495 0168 29       		.byte	0x29
+ 496 0169 06       		.uleb128 0x6
+ 497 016a 250C0000 		.4byte	.LASF31
+ 498 016e 04       		.byte	0x4
+ 499 016f 45       		.byte	0x45
+ 500 0170 97000000 		.4byte	0x97
+ 501 0174 2A       		.byte	0x2a
+ 502 0175 06       		.uleb128 0x6
+ 503 0176 54070000 		.4byte	.LASF32
+ 504 017a 04       		.byte	0x4
+ 505 017b 46       		.byte	0x46
+ 506 017c 97000000 		.4byte	0x97
+ 507 0180 2B       		.byte	0x2b
+ 508 0181 06       		.uleb128 0x6
+ARM GAS  C:\Users\Labeo\AppData\Local\Temp\cchoLg3G.s 			page 14
+
+
+ 509 0182 A2050000 		.4byte	.LASF33
+ 510 0186 04       		.byte	0x4
+ 511 0187 47       		.byte	0x47
+ 512 0188 97000000 		.4byte	0x97
+ 513 018c 2C       		.byte	0x2c
+ 514 018d 06       		.uleb128 0x6
+ 515 018e 1B0A0000 		.4byte	.LASF34
+ 516 0192 04       		.byte	0x4
+ 517 0193 48       		.byte	0x48
+ 518 0194 97000000 		.4byte	0x97
+ 519 0198 2D       		.byte	0x2d
+ 520 0199 06       		.uleb128 0x6
+ 521 019a 37020000 		.4byte	.LASF35
+ 522 019e 04       		.byte	0x4
+ 523 019f 49       		.byte	0x49
+ 524 01a0 97000000 		.4byte	0x97
+ 525 01a4 2E       		.byte	0x2e
+ 526 01a5 06       		.uleb128 0x6
+ 527 01a6 48060000 		.4byte	.LASF36
+ 528 01aa 04       		.byte	0x4
+ 529 01ab 4A       		.byte	0x4a
+ 530 01ac 97000000 		.4byte	0x97
+ 531 01b0 2F       		.byte	0x2f
+ 532 01b1 06       		.uleb128 0x6
+ 533 01b2 D1090000 		.4byte	.LASF37
+ 534 01b6 04       		.byte	0x4
+ 535 01b7 4B       		.byte	0x4b
+ 536 01b8 97000000 		.4byte	0x97
+ 537 01bc 30       		.byte	0x30
+ 538 01bd 06       		.uleb128 0x6
+ 539 01be BB040000 		.4byte	.LASF38
+ 540 01c2 04       		.byte	0x4
+ 541 01c3 4E       		.byte	0x4e
+ 542 01c4 97000000 		.4byte	0x97
+ 543 01c8 31       		.byte	0x31
+ 544 01c9 06       		.uleb128 0x6
+ 545 01ca 8D000000 		.4byte	.LASF39
+ 546 01ce 04       		.byte	0x4
+ 547 01cf 4F       		.byte	0x4f
+ 548 01d0 97000000 		.4byte	0x97
+ 549 01d4 32       		.byte	0x32
+ 550 01d5 06       		.uleb128 0x6
+ 551 01d6 41040000 		.4byte	.LASF40
+ 552 01da 04       		.byte	0x4
+ 553 01db 50       		.byte	0x50
+ 554 01dc 97000000 		.4byte	0x97
+ 555 01e0 33       		.byte	0x33
+ 556 01e1 06       		.uleb128 0x6
+ 557 01e2 D5060000 		.4byte	.LASF41
+ 558 01e6 04       		.byte	0x4
+ 559 01e7 51       		.byte	0x51
+ 560 01e8 97000000 		.4byte	0x97
+ 561 01ec 34       		.byte	0x34
+ 562 01ed 06       		.uleb128 0x6
+ 563 01ee C60A0000 		.4byte	.LASF42
+ 564 01f2 04       		.byte	0x4
+ 565 01f3 52       		.byte	0x52
+ARM GAS  C:\Users\Labeo\AppData\Local\Temp\cchoLg3G.s 			page 15
+
+
+ 566 01f4 A2000000 		.4byte	0xa2
+ 567 01f8 36       		.byte	0x36
+ 568 01f9 06       		.uleb128 0x6
+ 569 01fa 0B030000 		.4byte	.LASF43
+ 570 01fe 04       		.byte	0x4
+ 571 01ff 53       		.byte	0x53
+ 572 0200 A2000000 		.4byte	0xa2
+ 573 0204 38       		.byte	0x38
+ 574 0205 06       		.uleb128 0x6
+ 575 0206 1B0B0000 		.4byte	.LASF44
+ 576 020a 04       		.byte	0x4
+ 577 020b 54       		.byte	0x54
+ 578 020c A2000000 		.4byte	0xa2
+ 579 0210 3A       		.byte	0x3a
+ 580 0211 06       		.uleb128 0x6
+ 581 0212 0D0C0000 		.4byte	.LASF45
+ 582 0216 04       		.byte	0x4
+ 583 0217 55       		.byte	0x55
+ 584 0218 97000000 		.4byte	0x97
+ 585 021c 3C       		.byte	0x3c
+ 586 021d 06       		.uleb128 0x6
+ 587 021e 3D030000 		.4byte	.LASF46
+ 588 0222 04       		.byte	0x4
+ 589 0223 56       		.byte	0x56
+ 590 0224 97000000 		.4byte	0x97
+ 591 0228 3D       		.byte	0x3d
+ 592 0229 06       		.uleb128 0x6
+ 593 022a DF080000 		.4byte	.LASF47
+ 594 022e 04       		.byte	0x4
+ 595 022f 57       		.byte	0x57
+ 596 0230 97000000 		.4byte	0x97
+ 597 0234 3E       		.byte	0x3e
+ 598 0235 06       		.uleb128 0x6
+ 599 0236 78000000 		.4byte	.LASF48
+ 600 023a 04       		.byte	0x4
+ 601 023b 58       		.byte	0x58
+ 602 023c 97000000 		.4byte	0x97
+ 603 0240 3F       		.byte	0x3f
+ 604 0241 06       		.uleb128 0x6
+ 605 0242 6D070000 		.4byte	.LASF49
+ 606 0246 04       		.byte	0x4
+ 607 0247 59       		.byte	0x59
+ 608 0248 97000000 		.4byte	0x97
+ 609 024c 40       		.byte	0x40
+ 610 024d 06       		.uleb128 0x6
+ 611 024e 9C0A0000 		.4byte	.LASF50
+ 612 0252 04       		.byte	0x4
+ 613 0253 5A       		.byte	0x5a
+ 614 0254 97000000 		.4byte	0x97
+ 615 0258 41       		.byte	0x41
+ 616 0259 06       		.uleb128 0x6
+ 617 025a CE050000 		.4byte	.LASF51
+ 618 025e 04       		.byte	0x4
+ 619 025f 5B       		.byte	0x5b
+ 620 0260 97000000 		.4byte	0x97
+ 621 0264 42       		.byte	0x42
+ 622 0265 06       		.uleb128 0x6
+ARM GAS  C:\Users\Labeo\AppData\Local\Temp\cchoLg3G.s 			page 16
+
+
+ 623 0266 2D070000 		.4byte	.LASF52
+ 624 026a 04       		.byte	0x4
+ 625 026b 5C       		.byte	0x5c
+ 626 026c 97000000 		.4byte	0x97
+ 627 0270 43       		.byte	0x43
+ 628 0271 06       		.uleb128 0x6
+ 629 0272 FA020000 		.4byte	.LASF53
+ 630 0276 04       		.byte	0x4
+ 631 0277 5D       		.byte	0x5d
+ 632 0278 97000000 		.4byte	0x97
+ 633 027c 44       		.byte	0x44
+ 634 027d 06       		.uleb128 0x6
+ 635 027e 00000000 		.4byte	.LASF54
+ 636 0282 04       		.byte	0x4
+ 637 0283 5E       		.byte	0x5e
+ 638 0284 B8000000 		.4byte	0xb8
+ 639 0288 48       		.byte	0x48
+ 640 0289 06       		.uleb128 0x6
+ 641 028a DD020000 		.4byte	.LASF55
+ 642 028e 04       		.byte	0x4
+ 643 028f 5F       		.byte	0x5f
+ 644 0290 B8000000 		.4byte	0xb8
+ 645 0294 4C       		.byte	0x4c
+ 646 0295 06       		.uleb128 0x6
+ 647 0296 600C0000 		.4byte	.LASF56
+ 648 029a 04       		.byte	0x4
+ 649 029b 60       		.byte	0x60
+ 650 029c 97000000 		.4byte	0x97
+ 651 02a0 50       		.byte	0x50
+ 652 02a1 06       		.uleb128 0x6
+ 653 02a2 A3010000 		.4byte	.LASF57
+ 654 02a6 04       		.byte	0x4
+ 655 02a7 61       		.byte	0x61
+ 656 02a8 97000000 		.4byte	0x97
+ 657 02ac 51       		.byte	0x51
+ 658 02ad 06       		.uleb128 0x6
+ 659 02ae 3A0B0000 		.4byte	.LASF58
+ 660 02b2 04       		.byte	0x4
+ 661 02b3 62       		.byte	0x62
+ 662 02b4 97000000 		.4byte	0x97
+ 663 02b8 52       		.byte	0x52
+ 664 02b9 06       		.uleb128 0x6
+ 665 02ba 430A0000 		.4byte	.LASF59
+ 666 02be 04       		.byte	0x4
+ 667 02bf 63       		.byte	0x63
+ 668 02c0 97000000 		.4byte	0x97
+ 669 02c4 53       		.byte	0x53
+ 670 02c5 06       		.uleb128 0x6
+ 671 02c6 ED080000 		.4byte	.LASF60
+ 672 02ca 04       		.byte	0x4
+ 673 02cb 64       		.byte	0x64
+ 674 02cc 97000000 		.4byte	0x97
+ 675 02d0 54       		.byte	0x54
+ 676 02d1 06       		.uleb128 0x6
+ 677 02d2 B5010000 		.4byte	.LASF61
+ 678 02d6 04       		.byte	0x4
+ 679 02d7 65       		.byte	0x65
+ARM GAS  C:\Users\Labeo\AppData\Local\Temp\cchoLg3G.s 			page 17
+
+
+ 680 02d8 97000000 		.4byte	0x97
+ 681 02dc 55       		.byte	0x55
+ 682 02dd 06       		.uleb128 0x6
+ 683 02de 550A0000 		.4byte	.LASF62
+ 684 02e2 04       		.byte	0x4
+ 685 02e3 66       		.byte	0x66
+ 686 02e4 97000000 		.4byte	0x97
+ 687 02e8 56       		.byte	0x56
+ 688 02e9 06       		.uleb128 0x6
+ 689 02ea F9040000 		.4byte	.LASF63
+ 690 02ee 04       		.byte	0x4
+ 691 02ef 67       		.byte	0x67
+ 692 02f0 97000000 		.4byte	0x97
+ 693 02f4 57       		.byte	0x57
+ 694 02f5 06       		.uleb128 0x6
+ 695 02f6 2F000000 		.4byte	.LASF64
+ 696 02fa 04       		.byte	0x4
+ 697 02fb 68       		.byte	0x68
+ 698 02fc 97000000 		.4byte	0x97
+ 699 0300 58       		.byte	0x58
+ 700 0301 06       		.uleb128 0x6
+ 701 0302 7A070000 		.4byte	.LASF65
+ 702 0306 04       		.byte	0x4
+ 703 0307 69       		.byte	0x69
+ 704 0308 97000000 		.4byte	0x97
+ 705 030c 59       		.byte	0x59
+ 706 030d 06       		.uleb128 0x6
+ 707 030e 8C060000 		.4byte	.LASF66
+ 708 0312 04       		.byte	0x4
+ 709 0313 6E       		.byte	0x6e
+ 710 0314 AD000000 		.4byte	0xad
+ 711 0318 5A       		.byte	0x5a
+ 712 0319 06       		.uleb128 0x6
+ 713 031a 850A0000 		.4byte	.LASF67
+ 714 031e 04       		.byte	0x4
+ 715 031f 6F       		.byte	0x6f
+ 716 0320 AD000000 		.4byte	0xad
+ 717 0324 5C       		.byte	0x5c
+ 718 0325 06       		.uleb128 0x6
+ 719 0326 FF000000 		.4byte	.LASF68
+ 720 032a 04       		.byte	0x4
+ 721 032b 70       		.byte	0x70
+ 722 032c 97000000 		.4byte	0x97
+ 723 0330 5E       		.byte	0x5e
+ 724 0331 06       		.uleb128 0x6
+ 725 0332 F2070000 		.4byte	.LASF69
+ 726 0336 04       		.byte	0x4
+ 727 0337 71       		.byte	0x71
+ 728 0338 97000000 		.4byte	0x97
+ 729 033c 5F       		.byte	0x5f
+ 730 033d 06       		.uleb128 0x6
+ 731 033e 1C070000 		.4byte	.LASF70
+ 732 0342 04       		.byte	0x4
+ 733 0343 72       		.byte	0x72
+ 734 0344 97000000 		.4byte	0x97
+ 735 0348 60       		.byte	0x60
+ 736 0349 06       		.uleb128 0x6
+ARM GAS  C:\Users\Labeo\AppData\Local\Temp\cchoLg3G.s 			page 18
+
+
+ 737 034a A6070000 		.4byte	.LASF71
+ 738 034e 04       		.byte	0x4
+ 739 034f 73       		.byte	0x73
+ 740 0350 B8000000 		.4byte	0xb8
+ 741 0354 64       		.byte	0x64
+ 742 0355 06       		.uleb128 0x6
+ 743 0356 3D010000 		.4byte	.LASF72
+ 744 035a 04       		.byte	0x4
+ 745 035b 76       		.byte	0x76
+ 746 035c AD000000 		.4byte	0xad
+ 747 0360 68       		.byte	0x68
+ 748 0361 06       		.uleb128 0x6
+ 749 0362 69060000 		.4byte	.LASF73
+ 750 0366 04       		.byte	0x4
+ 751 0367 77       		.byte	0x77
+ 752 0368 AD000000 		.4byte	0xad
+ 753 036c 6A       		.byte	0x6a
+ 754 036d 06       		.uleb128 0x6
+ 755 036e 23050000 		.4byte	.LASF74
+ 756 0372 04       		.byte	0x4
+ 757 0373 78       		.byte	0x78
+ 758 0374 AD000000 		.4byte	0xad
+ 759 0378 6C       		.byte	0x6c
+ 760 0379 06       		.uleb128 0x6
+ 761 037a 95050000 		.4byte	.LASF75
+ 762 037e 04       		.byte	0x4
+ 763 037f 79       		.byte	0x79
+ 764 0380 AD000000 		.4byte	0xad
+ 765 0384 6E       		.byte	0x6e
+ 766 0385 06       		.uleb128 0x6
+ 767 0386 A6080000 		.4byte	.LASF76
+ 768 038a 04       		.byte	0x4
+ 769 038b 7B       		.byte	0x7b
+ 770 038c 97000000 		.4byte	0x97
+ 771 0390 70       		.byte	0x70
+ 772 0391 06       		.uleb128 0x6
+ 773 0392 01020000 		.4byte	.LASF77
+ 774 0396 04       		.byte	0x4
+ 775 0397 7C       		.byte	0x7c
+ 776 0398 97000000 		.4byte	0x97
+ 777 039c 71       		.byte	0x71
+ 778 039d 06       		.uleb128 0x6
+ 779 039e 370C0000 		.4byte	.LASF78
+ 780 03a2 04       		.byte	0x4
+ 781 03a3 7D       		.byte	0x7d
+ 782 03a4 97000000 		.4byte	0x97
+ 783 03a8 72       		.byte	0x72
+ 784 03a9 06       		.uleb128 0x6
+ 785 03aa E6060000 		.4byte	.LASF79
+ 786 03ae 04       		.byte	0x4
+ 787 03af 7E       		.byte	0x7e
+ 788 03b0 97000000 		.4byte	0x97
+ 789 03b4 73       		.byte	0x73
+ 790 03b5 06       		.uleb128 0x6
+ 791 03b6 61030000 		.4byte	.LASF80
+ 792 03ba 04       		.byte	0x4
+ 793 03bb 80       		.byte	0x80
+ARM GAS  C:\Users\Labeo\AppData\Local\Temp\cchoLg3G.s 			page 19
+
+
+ 794 03bc AD000000 		.4byte	0xad
+ 795 03c0 74       		.byte	0x74
+ 796 03c1 06       		.uleb128 0x6
+ 797 03c2 FD090000 		.4byte	.LASF81
+ 798 03c6 04       		.byte	0x4
+ 799 03c7 81       		.byte	0x81
+ 800 03c8 AD000000 		.4byte	0xad
+ 801 03cc 76       		.byte	0x76
+ 802 03cd 06       		.uleb128 0x6
+ 803 03ce 28030000 		.4byte	.LASF82
+ 804 03d2 04       		.byte	0x4
+ 805 03d3 82       		.byte	0x82
+ 806 03d4 AD000000 		.4byte	0xad
+ 807 03d8 78       		.byte	0x78
+ 808 03d9 06       		.uleb128 0x6
+ 809 03da AF000000 		.4byte	.LASF83
+ 810 03de 04       		.byte	0x4
+ 811 03df 83       		.byte	0x83
+ 812 03e0 AD000000 		.4byte	0xad
+ 813 03e4 7A       		.byte	0x7a
+ 814 03e5 06       		.uleb128 0x6
+ 815 03e6 780B0000 		.4byte	.LASF84
+ 816 03ea 04       		.byte	0x4
+ 817 03eb 86       		.byte	0x86
+ 818 03ec 97000000 		.4byte	0x97
+ 819 03f0 7C       		.byte	0x7c
+ 820 03f1 06       		.uleb128 0x6
+ 821 03f2 E30A0000 		.4byte	.LASF85
+ 822 03f6 04       		.byte	0x4
+ 823 03f7 87       		.byte	0x87
+ 824 03f8 97000000 		.4byte	0x97
+ 825 03fc 7D       		.byte	0x7d
+ 826 03fd 06       		.uleb128 0x6
+ 827 03fe 43000000 		.4byte	.LASF86
+ 828 0402 04       		.byte	0x4
+ 829 0403 88       		.byte	0x88
+ 830 0404 97000000 		.4byte	0x97
+ 831 0408 7E       		.byte	0x7e
+ 832 0409 06       		.uleb128 0x6
+ 833 040a A4030000 		.4byte	.LASF87
+ 834 040e 04       		.byte	0x4
+ 835 040f 89       		.byte	0x89
+ 836 0410 97000000 		.4byte	0x97
+ 837 0414 7F       		.byte	0x7f
+ 838 0415 06       		.uleb128 0x6
+ 839 0416 2D040000 		.4byte	.LASF88
+ 840 041a 04       		.byte	0x4
+ 841 041b 8A       		.byte	0x8a
+ 842 041c 97000000 		.4byte	0x97
+ 843 0420 80       		.byte	0x80
+ 844 0421 06       		.uleb128 0x6
+ 845 0422 05060000 		.4byte	.LASF89
+ 846 0426 04       		.byte	0x4
+ 847 0427 8D       		.byte	0x8d
+ 848 0428 B8000000 		.4byte	0xb8
+ 849 042c 84       		.byte	0x84
+ 850 042d 06       		.uleb128 0x6
+ARM GAS  C:\Users\Labeo\AppData\Local\Temp\cchoLg3G.s 			page 20
+
+
+ 851 042e DE000000 		.4byte	.LASF90
+ 852 0432 04       		.byte	0x4
+ 853 0433 8E       		.byte	0x8e
+ 854 0434 B8000000 		.4byte	0xb8
+ 855 0438 88       		.byte	0x88
+ 856 0439 06       		.uleb128 0x6
+ 857 043a 630B0000 		.4byte	.LASF91
+ 858 043e 04       		.byte	0x4
+ 859 043f 8F       		.byte	0x8f
+ 860 0440 B8000000 		.4byte	0xb8
+ 861 0444 8C       		.byte	0x8c
+ 862 0445 06       		.uleb128 0x6
+ 863 0446 54060000 		.4byte	.LASF92
+ 864 044a 04       		.byte	0x4
+ 865 044b 90       		.byte	0x90
+ 866 044c B8000000 		.4byte	0xb8
+ 867 0450 90       		.byte	0x90
+ 868 0451 06       		.uleb128 0x6
+ 869 0452 18040000 		.4byte	.LASF93
+ 870 0456 04       		.byte	0x4
+ 871 0457 91       		.byte	0x91
+ 872 0458 B8000000 		.4byte	0xb8
+ 873 045c 94       		.byte	0x94
+ 874 045d 06       		.uleb128 0x6
+ 875 045e EF050000 		.4byte	.LASF94
+ 876 0462 04       		.byte	0x4
+ 877 0463 92       		.byte	0x92
+ 878 0464 B8000000 		.4byte	0xb8
+ 879 0468 98       		.byte	0x98
+ 880 0469 06       		.uleb128 0x6
+ 881 046a D10B0000 		.4byte	.LASF95
+ 882 046e 04       		.byte	0x4
+ 883 046f 93       		.byte	0x93
+ 884 0470 B8000000 		.4byte	0xb8
+ 885 0474 9C       		.byte	0x9c
+ 886 0475 06       		.uleb128 0x6
+ 887 0476 52010000 		.4byte	.LASF96
+ 888 047a 04       		.byte	0x4
+ 889 047b 94       		.byte	0x94
+ 890 047c B8000000 		.4byte	0xb8
+ 891 0480 A0       		.byte	0xa0
+ 892 0481 06       		.uleb128 0x6
+ 893 0482 42020000 		.4byte	.LASF97
+ 894 0486 04       		.byte	0x4
+ 895 0487 95       		.byte	0x95
+ 896 0488 AD000000 		.4byte	0xad
+ 897 048c A4       		.byte	0xa4
+ 898 048d 06       		.uleb128 0x6
+ 899 048e DA050000 		.4byte	.LASF98
+ 900 0492 04       		.byte	0x4
+ 901 0493 96       		.byte	0x96
+ 902 0494 AD000000 		.4byte	0xad
+ 903 0498 A6       		.byte	0xa6
+ 904 0499 06       		.uleb128 0x6
+ 905 049a E6070000 		.4byte	.LASF99
+ 906 049e 04       		.byte	0x4
+ 907 049f 97       		.byte	0x97
+ARM GAS  C:\Users\Labeo\AppData\Local\Temp\cchoLg3G.s 			page 21
+
+
+ 908 04a0 AD000000 		.4byte	0xad
+ 909 04a4 A8       		.byte	0xa8
+ 910 04a5 06       		.uleb128 0x6
+ 911 04a6 DD090000 		.4byte	.LASF100
+ 912 04aa 04       		.byte	0x4
+ 913 04ab 98       		.byte	0x98
+ 914 04ac AD000000 		.4byte	0xad
+ 915 04b0 AA       		.byte	0xaa
+ 916 04b1 06       		.uleb128 0x6
+ 917 04b2 5B050000 		.4byte	.LASF101
+ 918 04b6 04       		.byte	0x4
+ 919 04b7 99       		.byte	0x99
+ 920 04b8 AD000000 		.4byte	0xad
+ 921 04bc AC       		.byte	0xac
+ 922 04bd 06       		.uleb128 0x6
+ 923 04be FD060000 		.4byte	.LASF102
+ 924 04c2 04       		.byte	0x4
+ 925 04c3 9A       		.byte	0x9a
+ 926 04c4 AD000000 		.4byte	0xad
+ 927 04c8 AE       		.byte	0xae
+ 928 04c9 06       		.uleb128 0x6
+ 929 04ca AC0A0000 		.4byte	.LASF103
+ 930 04ce 04       		.byte	0x4
+ 931 04cf 9D       		.byte	0x9d
+ 932 04d0 AD000000 		.4byte	0xad
+ 933 04d4 B0       		.byte	0xb0
+ 934 04d5 06       		.uleb128 0x6
+ 935 04d6 56000000 		.4byte	.LASF104
+ 936 04da 04       		.byte	0x4
+ 937 04db 9E       		.byte	0x9e
+ 938 04dc B8000000 		.4byte	0xb8
+ 939 04e0 B4       		.byte	0xb4
+ 940 04e1 00       		.byte	0
+ 941 04e2 03       		.uleb128 0x3
+ 942 04e3 97060000 		.4byte	.LASF105
+ 943 04e7 04       		.byte	0x4
+ 944 04e8 9F       		.byte	0x9f
+ 945 04e9 D1000000 		.4byte	0xd1
+ 946 04ed 02       		.uleb128 0x2
+ 947 04ee 01       		.byte	0x1
+ 948 04ef 08       		.byte	0x8
+ 949 04f0 CC090000 		.4byte	.LASF106
+ 950 04f4 02       		.uleb128 0x2
+ 951 04f5 04       		.byte	0x4
+ 952 04f6 04       		.byte	0x4
+ 953 04f7 97070000 		.4byte	.LASF107
+ 954 04fb 02       		.uleb128 0x2
+ 955 04fc 08       		.byte	0x8
+ 956 04fd 04       		.byte	0x4
+ 957 04fe 21030000 		.4byte	.LASF108
+ 958 0502 07       		.uleb128 0x7
+ 959 0503 F4020000 		.4byte	.LASF109
+ 960 0507 05       		.byte	0x5
+ 961 0508 EA03     		.2byte	0x3ea
+ 962 050a 97000000 		.4byte	0x97
+ 963 050e 07       		.uleb128 0x7
+ 964 050f 12000000 		.4byte	.LASF110
+ARM GAS  C:\Users\Labeo\AppData\Local\Temp\cchoLg3G.s 			page 22
+
+
+ 965 0513 05       		.byte	0x5
+ 966 0514 EB03     		.2byte	0x3eb
+ 967 0516 AD000000 		.4byte	0xad
+ 968 051a 07       		.uleb128 0x7
+ 969 051b 27020000 		.4byte	.LASF111
+ 970 051f 05       		.byte	0x5
+ 971 0520 EC03     		.2byte	0x3ec
+ 972 0522 B8000000 		.4byte	0xb8
+ 973 0526 03       		.uleb128 0x3
+ 974 0527 6B020000 		.4byte	.LASF112
+ 975 052b 06       		.byte	0x6
+ 976 052c D8       		.byte	0xd8
+ 977 052d 0E050000 		.4byte	0x50e
+ 978 0531 03       		.uleb128 0x3
+ 979 0532 F00B0000 		.4byte	.LASF113
+ 980 0536 06       		.byte	0x6
+ 981 0537 DC       		.byte	0xdc
+ 982 0538 02050000 		.4byte	0x502
+ 983 053c 05       		.uleb128 0x5
+ 984 053d 0C       		.byte	0xc
+ 985 053e 07       		.byte	0x7
+ 986 053f 6E       		.byte	0x6e
+ 987 0540 99050000 		.4byte	0x599
+ 988 0544 06       		.uleb128 0x6
+ 989 0545 33080000 		.4byte	.LASF114
+ 990 0549 07       		.byte	0x7
+ 991 054a 73       		.byte	0x73
+ 992 054b 0E050000 		.4byte	0x50e
+ 993 054f 00       		.byte	0
+ 994 0550 06       		.uleb128 0x6
+ 995 0551 3A080000 		.4byte	.LASF115
+ 996 0555 07       		.byte	0x7
+ 997 0556 77       		.byte	0x77
+ 998 0557 0E050000 		.4byte	0x50e
+ 999 055b 02       		.byte	0x2
+ 1000 055c 06       		.uleb128 0x6
+ 1001 055d 41080000 		.4byte	.LASF116
+ 1002 0561 07       		.byte	0x7
+ 1003 0562 7B       		.byte	0x7b
+ 1004 0563 0E050000 		.4byte	0x50e
+ 1005 0567 04       		.byte	0x4
+ 1006 0568 06       		.uleb128 0x6
+ 1007 0569 48080000 		.4byte	.LASF117
+ 1008 056d 07       		.byte	0x7
+ 1009 056e 7F       		.byte	0x7f
+ 1010 056f 0E050000 		.4byte	0x50e
+ 1011 0573 06       		.byte	0x6
+ 1012 0574 06       		.uleb128 0x6
+ 1013 0575 4F080000 		.4byte	.LASF118
+ 1014 0579 07       		.byte	0x7
+ 1015 057a 83       		.byte	0x83
+ 1016 057b 0E050000 		.4byte	0x50e
+ 1017 057f 08       		.byte	0x8
+ 1018 0580 06       		.uleb128 0x6
+ 1019 0581 56080000 		.4byte	.LASF119
+ 1020 0585 07       		.byte	0x7
+ 1021 0586 87       		.byte	0x87
+ARM GAS  C:\Users\Labeo\AppData\Local\Temp\cchoLg3G.s 			page 23
+
+
+ 1022 0587 02050000 		.4byte	0x502
+ 1023 058b 0A       		.byte	0xa
+ 1024 058c 06       		.uleb128 0x6
+ 1025 058d 5D080000 		.4byte	.LASF120
+ 1026 0591 07       		.byte	0x7
+ 1027 0592 8B       		.byte	0x8b
+ 1028 0593 02050000 		.4byte	0x502
+ 1029 0597 0B       		.byte	0xb
+ 1030 0598 00       		.byte	0
+ 1031 0599 03       		.uleb128 0x3
+ 1032 059a B7070000 		.4byte	.LASF121
+ 1033 059e 07       		.byte	0x7
+ 1034 059f 8C       		.byte	0x8c
+ 1035 05a0 3C050000 		.4byte	0x53c
+ 1036 05a4 08       		.uleb128 0x8
+ 1037 05a5 02050000 		.4byte	0x502
+ 1038 05a9 B4050000 		.4byte	0x5b4
+ 1039 05ad 09       		.uleb128 0x9
+ 1040 05ae CA000000 		.4byte	0xca
+ 1041 05b2 00       		.byte	0
+ 1042 05b3 00       		.byte	0
+ 1043 05b4 05       		.uleb128 0x5
+ 1044 05b5 12       		.byte	0x12
+ 1045 05b6 08       		.byte	0x8
+ 1046 05b7 DA       		.byte	0xda
+ 1047 05b8 53060000 		.4byte	0x653
+ 1048 05bc 06       		.uleb128 0x6
+ 1049 05bd 100A0000 		.4byte	.LASF122
+ 1050 05c1 08       		.byte	0x8
+ 1051 05c2 E0       		.byte	0xe0
+ 1052 05c3 0E050000 		.4byte	0x50e
+ 1053 05c7 00       		.byte	0
+ 1054 05c8 06       		.uleb128 0x6
+ 1055 05c9 9D070000 		.4byte	.LASF123
+ 1056 05cd 08       		.byte	0x8
+ 1057 05ce E5       		.byte	0xe5
+ 1058 05cf 26050000 		.4byte	0x526
+ 1059 05d3 02       		.byte	0x2
+ 1060 05d4 06       		.uleb128 0x6
+ 1061 05d5 710C0000 		.4byte	.LASF124
+ 1062 05d9 08       		.byte	0x8
+ 1063 05da EA       		.byte	0xea
+ 1064 05db 02050000 		.4byte	0x502
+ 1065 05df 04       		.byte	0x4
+ 1066 05e0 06       		.uleb128 0x6
+ 1067 05e1 32050000 		.4byte	.LASF125
+ 1068 05e5 08       		.byte	0x8
+ 1069 05e6 EF       		.byte	0xef
+ 1070 05e7 02050000 		.4byte	0x502
+ 1071 05eb 05       		.byte	0x5
+ 1072 05ec 06       		.uleb128 0x6
+ 1073 05ed 28080000 		.4byte	.LASF126
+ 1074 05f1 08       		.byte	0x8
+ 1075 05f2 F4       		.byte	0xf4
+ 1076 05f3 02050000 		.4byte	0x502
+ 1077 05f7 06       		.byte	0x6
+ 1078 05f8 06       		.uleb128 0x6
+ARM GAS  C:\Users\Labeo\AppData\Local\Temp\cchoLg3G.s 			page 24
+
+
+ 1079 05f9 0E010000 		.4byte	.LASF127
+ 1080 05fd 08       		.byte	0x8
+ 1081 05fe F9       		.byte	0xf9
+ 1082 05ff 02050000 		.4byte	0x502
+ 1083 0603 07       		.byte	0x7
+ 1084 0604 0A       		.uleb128 0xa
+ 1085 0605 16030000 		.4byte	.LASF128
+ 1086 0609 08       		.byte	0x8
+ 1087 060a 0001     		.2byte	0x100
+ 1088 060c 31050000 		.4byte	0x531
+ 1089 0610 08       		.byte	0x8
+ 1090 0611 0A       		.uleb128 0xa
+ 1091 0612 27000000 		.4byte	.LASF129
+ 1092 0616 08       		.byte	0x8
+ 1093 0617 0801     		.2byte	0x108
+ 1094 0619 A4050000 		.4byte	0x5a4
+ 1095 061d 09       		.byte	0x9
+ 1096 061e 0A       		.uleb128 0xa
+ 1097 061f F6090000 		.4byte	.LASF130
+ 1098 0623 08       		.byte	0x8
+ 1099 0624 1101     		.2byte	0x111
+ 1100 0626 0E050000 		.4byte	0x50e
+ 1101 062a 0A       		.byte	0xa
+ 1102 062b 0A       		.uleb128 0xa
+ 1103 062c 8D0B0000 		.4byte	.LASF131
+ 1104 0630 08       		.byte	0x8
+ 1105 0631 1601     		.2byte	0x116
+ 1106 0633 02050000 		.4byte	0x502
+ 1107 0637 0C       		.byte	0xc
+ 1108 0638 0A       		.uleb128 0xa
+ 1109 0639 A5000000 		.4byte	.LASF132
+ 1110 063d 08       		.byte	0x8
+ 1111 063e 1D01     		.2byte	0x11d
+ 1112 0640 0E050000 		.4byte	0x50e
+ 1113 0644 0E       		.byte	0xe
+ 1114 0645 0A       		.uleb128 0xa
+ 1115 0646 73030000 		.4byte	.LASF133
+ 1116 064a 08       		.byte	0x8
+ 1117 064b 2201     		.2byte	0x122
+ 1118 064d 0E050000 		.4byte	0x50e
+ 1119 0651 10       		.byte	0x10
+ 1120 0652 00       		.byte	0
+ 1121 0653 07       		.uleb128 0x7
+ 1122 0654 3B050000 		.4byte	.LASF134
+ 1123 0658 08       		.byte	0x8
+ 1124 0659 2301     		.2byte	0x123
+ 1125 065b B4050000 		.4byte	0x5b4
+ 1126 065f 0B       		.uleb128 0xb
+ 1127 0660 12       		.byte	0x12
+ 1128 0661 08       		.byte	0x8
+ 1129 0662 2901     		.2byte	0x129
+ 1130 0664 76060000 		.4byte	0x676
+ 1131 0668 0A       		.uleb128 0xa
+ 1132 0669 0D050000 		.4byte	.LASF135
+ 1133 066d 08       		.byte	0x8
+ 1134 066e 2E01     		.2byte	0x12e
+ 1135 0670 53060000 		.4byte	0x653
+ARM GAS  C:\Users\Labeo\AppData\Local\Temp\cchoLg3G.s 			page 25
+
+
+ 1136 0674 00       		.byte	0
+ 1137 0675 00       		.byte	0
+ 1138 0676 07       		.uleb128 0x7
+ 1139 0677 6E080000 		.4byte	.LASF136
+ 1140 067b 08       		.byte	0x8
+ 1141 067c 2F01     		.2byte	0x12f
+ 1142 067e 5F060000 		.4byte	0x65f
+ 1143 0682 0B       		.uleb128 0xb
+ 1144 0683 0A       		.byte	0xa
+ 1145 0684 08       		.byte	0x8
+ 1146 0685 3501     		.2byte	0x135
+ 1147 0687 DA060000 		.4byte	0x6da
+ 1148 068b 0C       		.uleb128 0xc
+ 1149 068c 72617700 		.ascii	"raw\000"
+ 1150 0690 08       		.byte	0x8
+ 1151 0691 3A01     		.2byte	0x13a
+ 1152 0693 DA060000 		.4byte	0x6da
+ 1153 0697 00       		.byte	0
+ 1154 0698 0A       		.uleb128 0xa
+ 1155 0699 4D040000 		.4byte	.LASF137
+ 1156 069d 08       		.byte	0x8
+ 1157 069e 3F01     		.2byte	0x13f
+ 1158 06a0 DA060000 		.4byte	0x6da
+ 1159 06a4 02       		.byte	0x2
+ 1160 06a5 0A       		.uleb128 0xa
+ 1161 06a6 D7030000 		.4byte	.LASF138
+ 1162 06aa 08       		.byte	0x8
+ 1163 06ab 4501     		.2byte	0x145
+ 1164 06ad A4050000 		.4byte	0x5a4
+ 1165 06b1 04       		.byte	0x4
+ 1166 06b2 0A       		.uleb128 0xa
+ 1167 06b3 4D010000 		.4byte	.LASF139
+ 1168 06b7 08       		.byte	0x8
+ 1169 06b8 4A01     		.2byte	0x14a
+ 1170 06ba 26050000 		.4byte	0x526
+ 1171 06be 06       		.byte	0x6
+ 1172 06bf 0A       		.uleb128 0xa
+ 1173 06c0 8E0A0000 		.4byte	.LASF140
+ 1174 06c4 08       		.byte	0x8
+ 1175 06c5 4F01     		.2byte	0x14f
+ 1176 06c7 EA060000 		.4byte	0x6ea
+ 1177 06cb 08       		.byte	0x8
+ 1178 06cc 0A       		.uleb128 0xa
+ 1179 06cd 690A0000 		.4byte	.LASF141
+ 1180 06d1 08       		.byte	0x8
+ 1181 06d2 5501     		.2byte	0x155
+ 1182 06d4 A4050000 		.4byte	0x5a4
+ 1183 06d8 09       		.byte	0x9
+ 1184 06d9 00       		.byte	0
+ 1185 06da 08       		.uleb128 0x8
+ 1186 06db 0E050000 		.4byte	0x50e
+ 1187 06df EA060000 		.4byte	0x6ea
+ 1188 06e3 09       		.uleb128 0x9
+ 1189 06e4 CA000000 		.4byte	0xca
+ 1190 06e8 00       		.byte	0
+ 1191 06e9 00       		.byte	0
+ 1192 06ea 08       		.uleb128 0x8
+ARM GAS  C:\Users\Labeo\AppData\Local\Temp\cchoLg3G.s 			page 26
+
+
+ 1193 06eb 31050000 		.4byte	0x531
+ 1194 06ef FA060000 		.4byte	0x6fa
+ 1195 06f3 09       		.uleb128 0x9
+ 1196 06f4 CA000000 		.4byte	0xca
+ 1197 06f8 00       		.byte	0
+ 1198 06f9 00       		.byte	0
+ 1199 06fa 07       		.uleb128 0x7
+ 1200 06fb C4000000 		.4byte	.LASF142
+ 1201 06ff 08       		.byte	0x8
+ 1202 0700 5601     		.2byte	0x156
+ 1203 0702 82060000 		.4byte	0x682
+ 1204 0706 0B       		.uleb128 0xb
+ 1205 0707 0A       		.byte	0xa
+ 1206 0708 08       		.byte	0x8
+ 1207 0709 5C01     		.2byte	0x15c
+ 1208 070b 1D070000 		.4byte	0x71d
+ 1209 070f 0A       		.uleb128 0xa
+ 1210 0710 0D050000 		.4byte	.LASF135
+ 1211 0714 08       		.byte	0x8
+ 1212 0715 6101     		.2byte	0x161
+ 1213 0717 1D070000 		.4byte	0x71d
+ 1214 071b 00       		.byte	0
+ 1215 071c 00       		.byte	0
+ 1216 071d 08       		.uleb128 0x8
+ 1217 071e FA060000 		.4byte	0x6fa
+ 1218 0722 2D070000 		.4byte	0x72d
+ 1219 0726 09       		.uleb128 0x9
+ 1220 0727 CA000000 		.4byte	0xca
+ 1221 072b 00       		.byte	0
+ 1222 072c 00       		.byte	0
+ 1223 072d 07       		.uleb128 0x7
+ 1224 072e 1C060000 		.4byte	.LASF143
+ 1225 0732 08       		.byte	0x8
+ 1226 0733 6201     		.2byte	0x162
+ 1227 0735 06070000 		.4byte	0x706
+ 1228 0739 0B       		.uleb128 0xb
+ 1229 073a 40       		.byte	0x40
+ 1230 073b 08       		.byte	0x8
+ 1231 073c 6801     		.2byte	0x168
+ 1232 073e 20080000 		.4byte	0x820
+ 1233 0742 0A       		.uleb128 0xa
+ 1234 0743 8C050000 		.4byte	.LASF144
+ 1235 0747 08       		.byte	0x8
+ 1236 0748 7001     		.2byte	0x170
+ 1237 074a 0E050000 		.4byte	0x50e
+ 1238 074e 00       		.byte	0
+ 1239 074f 0A       		.uleb128 0xa
+ 1240 0750 C5050000 		.4byte	.LASF145
+ 1241 0754 08       		.byte	0x8
+ 1242 0755 7501     		.2byte	0x175
+ 1243 0757 0E050000 		.4byte	0x50e
+ 1244 075b 02       		.byte	0x2
+ 1245 075c 0A       		.uleb128 0xa
+ 1246 075d 0B070000 		.4byte	.LASF146
+ 1247 0761 08       		.byte	0x8
+ 1248 0762 7A01     		.2byte	0x17a
+ 1249 0764 0E050000 		.4byte	0x50e
+ARM GAS  C:\Users\Labeo\AppData\Local\Temp\cchoLg3G.s 			page 27
+
+
+ 1250 0768 04       		.byte	0x4
+ 1251 0769 0A       		.uleb128 0xa
+ 1252 076a 8E070000 		.4byte	.LASF147
+ 1253 076e 08       		.byte	0x8
+ 1254 076f 8001     		.2byte	0x180
+ 1255 0771 0E050000 		.4byte	0x50e
+ 1256 0775 06       		.byte	0x6
+ 1257 0776 0A       		.uleb128 0xa
+ 1258 0777 98030000 		.4byte	.LASF148
+ 1259 077b 08       		.byte	0x8
+ 1260 077c 8501     		.2byte	0x185
+ 1261 077e 0E050000 		.4byte	0x50e
+ 1262 0782 08       		.byte	0x8
+ 1263 0783 0A       		.uleb128 0xa
+ 1264 0784 140B0000 		.4byte	.LASF149
+ 1265 0788 08       		.byte	0x8
+ 1266 0789 8A01     		.2byte	0x18a
+ 1267 078b 20080000 		.4byte	0x820
+ 1268 078f 0C       		.byte	0xc
+ 1269 0790 0A       		.uleb128 0xa
+ 1270 0791 A1040000 		.4byte	.LASF150
+ 1271 0795 08       		.byte	0x8
+ 1272 0796 9001     		.2byte	0x190
+ 1273 0798 25080000 		.4byte	0x825
+ 1274 079c 10       		.byte	0x10
+ 1275 079d 0A       		.uleb128 0xa
+ 1276 079e 0D040000 		.4byte	.LASF151
+ 1277 07a2 08       		.byte	0x8
+ 1278 07a3 9601     		.2byte	0x196
+ 1279 07a5 25080000 		.4byte	0x825
+ 1280 07a9 14       		.byte	0x14
+ 1281 07aa 0A       		.uleb128 0xa
+ 1282 07ab A2020000 		.4byte	.LASF152
+ 1283 07af 08       		.byte	0x8
+ 1284 07b0 A801     		.2byte	0x1a8
+ 1285 07b2 A4050000 		.4byte	0x5a4
+ 1286 07b6 18       		.byte	0x18
+ 1287 07b7 0A       		.uleb128 0xa
+ 1288 07b8 AE050000 		.4byte	.LASF153
+ 1289 07bc 08       		.byte	0x8
+ 1290 07bd AD01     		.2byte	0x1ad
+ 1291 07bf 0E050000 		.4byte	0x50e
+ 1292 07c3 1A       		.byte	0x1a
+ 1293 07c4 0A       		.uleb128 0xa
+ 1294 07c5 C8020000 		.4byte	.LASF154
+ 1295 07c9 08       		.byte	0x8
+ 1296 07ca B201     		.2byte	0x1b2
+ 1297 07cc 02050000 		.4byte	0x502
+ 1298 07d0 1C       		.byte	0x1c
+ 1299 07d1 0A       		.uleb128 0xa
+ 1300 07d2 06090000 		.4byte	.LASF155
+ 1301 07d6 08       		.byte	0x8
+ 1302 07d7 B701     		.2byte	0x1b7
+ 1303 07d9 76060000 		.4byte	0x676
+ 1304 07dd 1E       		.byte	0x1e
+ 1305 07de 0A       		.uleb128 0xa
+ 1306 07df 84050000 		.4byte	.LASF156
+ARM GAS  C:\Users\Labeo\AppData\Local\Temp\cchoLg3G.s 			page 28
+
+
+ 1307 07e3 08       		.byte	0x8
+ 1308 07e4 BC01     		.2byte	0x1bc
+ 1309 07e6 2D070000 		.4byte	0x72d
+ 1310 07ea 30       		.byte	0x30
+ 1311 07eb 0A       		.uleb128 0xa
+ 1312 07ec 68040000 		.4byte	.LASF157
+ 1313 07f0 08       		.byte	0x8
+ 1314 07f1 C101     		.2byte	0x1c1
+ 1315 07f3 02050000 		.4byte	0x502
+ 1316 07f7 3A       		.byte	0x3a
+ 1317 07f8 0A       		.uleb128 0xa
+ 1318 07f9 80010000 		.4byte	.LASF158
+ 1319 07fd 08       		.byte	0x8
+ 1320 07fe C601     		.2byte	0x1c6
+ 1321 0800 02050000 		.4byte	0x502
+ 1322 0804 3B       		.byte	0x3b
+ 1323 0805 0A       		.uleb128 0xa
+ 1324 0806 4D0C0000 		.4byte	.LASF159
+ 1325 080a 08       		.byte	0x8
+ 1326 080b CB01     		.2byte	0x1cb
+ 1327 080d 0E050000 		.4byte	0x50e
+ 1328 0811 3C       		.byte	0x3c
+ 1329 0812 0A       		.uleb128 0xa
+ 1330 0813 48030000 		.4byte	.LASF160
+ 1331 0817 08       		.byte	0x8
+ 1332 0818 D001     		.2byte	0x1d0
+ 1333 081a DA060000 		.4byte	0x6da
+ 1334 081e 3E       		.byte	0x3e
+ 1335 081f 00       		.byte	0
+ 1336 0820 0D       		.uleb128 0xd
+ 1337 0821 1A050000 		.4byte	0x51a
+ 1338 0825 08       		.uleb128 0x8
+ 1339 0826 1A050000 		.4byte	0x51a
+ 1340 082a 35080000 		.4byte	0x835
+ 1341 082e 09       		.uleb128 0x9
+ 1342 082f CA000000 		.4byte	0xca
+ 1343 0833 00       		.byte	0
+ 1344 0834 00       		.byte	0
+ 1345 0835 07       		.uleb128 0x7
+ 1346 0836 D1010000 		.4byte	.LASF161
+ 1347 083a 08       		.byte	0x8
+ 1348 083b D101     		.2byte	0x1d1
+ 1349 083d 39070000 		.4byte	0x739
+ 1350 0841 0B       		.uleb128 0xb
+ 1351 0842 20       		.byte	0x20
+ 1352 0843 08       		.byte	0x8
+ 1353 0844 0F02     		.2byte	0x20f
+ 1354 0846 CD080000 		.4byte	0x8cd
+ 1355 084a 0A       		.uleb128 0xa
+ 1356 084b 30010000 		.4byte	.LASF162
+ 1357 084f 08       		.byte	0x8
+ 1358 0850 1802     		.2byte	0x218
+ 1359 0852 CD080000 		.4byte	0x8cd
+ 1360 0856 00       		.byte	0
+ 1361 0857 0A       		.uleb128 0xa
+ 1362 0858 B9050000 		.4byte	.LASF163
+ 1363 085c 08       		.byte	0x8
+ARM GAS  C:\Users\Labeo\AppData\Local\Temp\cchoLg3G.s 			page 29
+
+
+ 1364 085d 1F02     		.2byte	0x21f
+ 1365 085f D4080000 		.4byte	0x8d4
+ 1366 0863 04       		.byte	0x4
+ 1367 0864 0A       		.uleb128 0xa
+ 1368 0865 D2020000 		.4byte	.LASF164
+ 1369 0869 08       		.byte	0x8
+ 1370 086a 2502     		.2byte	0x225
+ 1371 086c D6080000 		.4byte	0x8d6
+ 1372 0870 08       		.byte	0x8
+ 1373 0871 0A       		.uleb128 0xa
+ 1374 0872 8C080000 		.4byte	.LASF165
+ 1375 0876 08       		.byte	0x8
+ 1376 0877 2A02     		.2byte	0x22a
+ 1377 0879 D4080000 		.4byte	0x8d4
+ 1378 087d 0C       		.byte	0xc
+ 1379 087e 0A       		.uleb128 0xa
+ 1380 087f D30A0000 		.4byte	.LASF166
+ 1381 0883 08       		.byte	0x8
+ 1382 0884 3102     		.2byte	0x231
+ 1383 0886 DC080000 		.4byte	0x8dc
+ 1384 088a 10       		.byte	0x10
+ 1385 088b 0A       		.uleb128 0xa
+ 1386 088c C8060000 		.4byte	.LASF167
+ 1387 0890 08       		.byte	0x8
+ 1388 0891 3602     		.2byte	0x236
+ 1389 0893 1A050000 		.4byte	0x51a
+ 1390 0897 14       		.byte	0x14
+ 1391 0898 0A       		.uleb128 0xa
+ 1392 0899 BA0A0000 		.4byte	.LASF168
+ 1393 089d 08       		.byte	0x8
+ 1394 089e 3D02     		.2byte	0x23d
+ 1395 08a0 0E050000 		.4byte	0x50e
+ 1396 08a4 18       		.byte	0x18
+ 1397 08a5 0A       		.uleb128 0xa
+ 1398 08a6 13070000 		.4byte	.LASF169
+ 1399 08aa 08       		.byte	0x8
+ 1400 08ab 4802     		.2byte	0x248
+ 1401 08ad 02050000 		.4byte	0x502
+ 1402 08b1 1A       		.byte	0x1a
+ 1403 08b2 0A       		.uleb128 0xa
+ 1404 08b3 7B060000 		.4byte	.LASF170
+ 1405 08b7 08       		.byte	0x8
+ 1406 08b8 5002     		.2byte	0x250
+ 1407 08ba 02050000 		.4byte	0x502
+ 1408 08be 1B       		.byte	0x1b
+ 1409 08bf 0A       		.uleb128 0xa
+ 1410 08c0 80040000 		.4byte	.LASF171
+ 1411 08c4 08       		.byte	0x8
+ 1412 08c5 5802     		.2byte	0x258
+ 1413 08c7 E2080000 		.4byte	0x8e2
+ 1414 08cb 1C       		.byte	0x1c
+ 1415 08cc 00       		.byte	0
+ 1416 08cd 0E       		.uleb128 0xe
+ 1417 08ce 04       		.byte	0x4
+ 1418 08cf D3080000 		.4byte	0x8d3
+ 1419 08d3 0F       		.uleb128 0xf
+ 1420 08d4 10       		.uleb128 0x10
+ARM GAS  C:\Users\Labeo\AppData\Local\Temp\cchoLg3G.s 			page 30
+
+
+ 1421 08d5 04       		.byte	0x4
+ 1422 08d6 0E       		.uleb128 0xe
+ 1423 08d7 04       		.byte	0x4
+ 1424 08d8 FA060000 		.4byte	0x6fa
+ 1425 08dc 0E       		.uleb128 0xe
+ 1426 08dd 04       		.byte	0x4
+ 1427 08de 02050000 		.4byte	0x502
+ 1428 08e2 0E       		.uleb128 0xe
+ 1429 08e3 04       		.byte	0x4
+ 1430 08e4 99050000 		.4byte	0x599
+ 1431 08e8 07       		.uleb128 0x7
+ 1432 08e9 69050000 		.4byte	.LASF172
+ 1433 08ed 08       		.byte	0x8
+ 1434 08ee 5902     		.2byte	0x259
+ 1435 08f0 41080000 		.4byte	0x841
+ 1436 08f4 0B       		.uleb128 0xb
+ 1437 08f5 20       		.byte	0x20
+ 1438 08f6 08       		.byte	0x8
+ 1439 08f7 5F02     		.2byte	0x25f
+ 1440 08f9 0B090000 		.4byte	0x90b
+ 1441 08fd 0A       		.uleb128 0xa
+ 1442 08fe 300B0000 		.4byte	.LASF173
+ 1443 0902 08       		.byte	0x8
+ 1444 0903 6402     		.2byte	0x264
+ 1445 0905 0B090000 		.4byte	0x90b
+ 1446 0909 00       		.byte	0
+ 1447 090a 00       		.byte	0
+ 1448 090b 08       		.uleb128 0x8
+ 1449 090c E8080000 		.4byte	0x8e8
+ 1450 0910 1B090000 		.4byte	0x91b
+ 1451 0914 09       		.uleb128 0x9
+ 1452 0915 CA000000 		.4byte	0xca
+ 1453 0919 00       		.byte	0
+ 1454 091a 00       		.byte	0
+ 1455 091b 07       		.uleb128 0x7
+ 1456 091c 10080000 		.4byte	.LASF174
+ 1457 0920 08       		.byte	0x8
+ 1458 0921 6502     		.2byte	0x265
+ 1459 0923 F4080000 		.4byte	0x8f4
+ 1460 0927 11       		.uleb128 0x11
+ 1461 0928 01       		.byte	0x1
+ 1462 0929 37000000 		.4byte	0x37
+ 1463 092d 09       		.byte	0x9
+ 1464 092e 2E       		.byte	0x2e
+ 1465 092f 5E090000 		.4byte	0x95e
+ 1466 0933 12       		.uleb128 0x12
+ 1467 0934 EA030000 		.4byte	.LASF175
+ 1468 0938 00       		.byte	0
+ 1469 0939 12       		.uleb128 0x12
+ 1470 093a AC020000 		.4byte	.LASF176
+ 1471 093e 01       		.byte	0x1
+ 1472 093f 12       		.uleb128 0x12
+ 1473 0940 280A0000 		.4byte	.LASF177
+ 1474 0944 02       		.byte	0x2
+ 1475 0945 12       		.uleb128 0x12
+ 1476 0946 38070000 		.4byte	.LASF178
+ 1477 094a 03       		.byte	0x3
+ARM GAS  C:\Users\Labeo\AppData\Local\Temp\cchoLg3G.s 			page 31
+
+
+ 1478 094b 12       		.uleb128 0x12
+ 1479 094c A7060000 		.4byte	.LASF179
+ 1480 0950 04       		.byte	0x4
+ 1481 0951 12       		.uleb128 0x12
+ 1482 0952 BA080000 		.4byte	.LASF180
+ 1483 0956 05       		.byte	0x5
+ 1484 0957 12       		.uleb128 0x12
+ 1485 0958 85020000 		.4byte	.LASF181
+ 1486 095c 06       		.byte	0x6
+ 1487 095d 00       		.byte	0
+ 1488 095e 03       		.uleb128 0x3
+ 1489 095f FD0A0000 		.4byte	.LASF182
+ 1490 0963 09       		.byte	0x9
+ 1491 0964 36       		.byte	0x36
+ 1492 0965 27090000 		.4byte	0x927
+ 1493 0969 13       		.uleb128 0x13
+ 1494 096a 68010000 		.4byte	.LASF201
+ 1495 096e 01       		.byte	0x1
+ 1496 096f 44       		.byte	0x44
+ 1497 0970 00000000 		.4byte	.LFB79
+ 1498 0974 14000000 		.4byte	.LFE79-.LFB79
+ 1499 0978 01       		.uleb128 0x1
+ 1500 0979 9C       		.byte	0x9c
+ 1501 097a 8A090000 		.4byte	0x98a
+ 1502 097e 14       		.uleb128 0x14
+ 1503 097f E70B0000 		.4byte	.LASF189
+ 1504 0983 01       		.byte	0x1
+ 1505 0984 46       		.byte	0x46
+ 1506 0985 8A090000 		.4byte	0x98a
+ 1507 0989 00       		.byte	0
+ 1508 098a 0E       		.uleb128 0xe
+ 1509 098b 04       		.byte	0x4
+ 1510 098c 90090000 		.4byte	0x990
+ 1511 0990 0D       		.uleb128 0xd
+ 1512 0991 35080000 		.4byte	0x835
+ 1513 0995 15       		.uleb128 0x15
+ 1514 0996 57020000 		.4byte	.LASF202
+ 1515 099a 01       		.byte	0x1
+ 1516 099b 73       		.byte	0x73
+ 1517 099c 1A050000 		.4byte	0x51a
+ 1518 09a0 00000000 		.4byte	.LFB80
+ 1519 09a4 08010000 		.4byte	.LFE80-.LFB80
+ 1520 09a8 01       		.uleb128 0x1
+ 1521 09a9 9C       		.byte	0x9c
+ 1522 09aa 620A0000 		.4byte	0xa62
+ 1523 09ae 16       		.uleb128 0x16
+ 1524 09af AC040000 		.4byte	.LASF183
+ 1525 09b3 01       		.byte	0x1
+ 1526 09b4 75       		.byte	0x75
+ 1527 09b5 1A050000 		.4byte	0x51a
+ 1528 09b9 00000000 		.4byte	.LLST0
+ 1529 09bd 16       		.uleb128 0x16
+ 1530 09be CE030000 		.4byte	.LASF184
+ 1531 09c2 01       		.byte	0x1
+ 1532 09c3 76       		.byte	0x76
+ 1533 09c4 1A050000 		.4byte	0x51a
+ 1534 09c8 29000000 		.4byte	.LLST1
+ARM GAS  C:\Users\Labeo\AppData\Local\Temp\cchoLg3G.s 			page 32
+
+
+ 1535 09cc 16       		.uleb128 0x16
+ 1536 09cd 58030000 		.4byte	.LASF185
+ 1537 09d1 01       		.byte	0x1
+ 1538 09d2 77       		.byte	0x77
+ 1539 09d3 1A050000 		.4byte	0x51a
+ 1540 09d7 3C000000 		.4byte	.LLST2
+ 1541 09db 16       		.uleb128 0x16
+ 1542 09dc DF030000 		.4byte	.LASF186
+ 1543 09e0 01       		.byte	0x1
+ 1544 09e1 78       		.byte	0x78
+ 1545 09e2 1A050000 		.4byte	0x51a
+ 1546 09e6 4F000000 		.4byte	.LLST3
+ 1547 09ea 16       		.uleb128 0x16
+ 1548 09eb 78040000 		.4byte	.LASF187
+ 1549 09ef 01       		.byte	0x1
+ 1550 09f0 79       		.byte	0x79
+ 1551 09f1 5E090000 		.4byte	0x95e
+ 1552 09f5 0F010000 		.4byte	.LLST4
+ 1553 09f9 16       		.uleb128 0x16
+ 1554 09fa D3080000 		.4byte	.LASF188
+ 1555 09fe 01       		.byte	0x1
+ 1556 09ff 7A       		.byte	0x7a
+ 1557 0a00 1A050000 		.4byte	0x51a
+ 1558 0a04 22010000 		.4byte	.LLST5
+ 1559 0a08 14       		.uleb128 0x14
+ 1560 0a09 E70B0000 		.4byte	.LASF189
+ 1561 0a0d 01       		.byte	0x1
+ 1562 0a0e 7C       		.byte	0x7c
+ 1563 0a0f 8A090000 		.4byte	0x98a
+ 1564 0a13 16       		.uleb128 0x16
+ 1565 0a14 19050000 		.4byte	.LASF190
+ 1566 0a18 01       		.byte	0x1
+ 1567 0a19 7D       		.byte	0x7d
+ 1568 0a1a 620A0000 		.4byte	0xa62
+ 1569 0a1e 63010000 		.4byte	.LLST6
+ 1570 0a22 17       		.uleb128 0x17
+ 1571 0a23 12000000 		.4byte	.LVL3
+ 1572 0a27 B10A0000 		.4byte	0xab1
+ 1573 0a2b 17       		.uleb128 0x17
+ 1574 0a2c 1C000000 		.4byte	.LVL4
+ 1575 0a30 BD0A0000 		.4byte	0xabd
+ 1576 0a34 17       		.uleb128 0x17
+ 1577 0a35 46000000 		.4byte	.LVL10
+ 1578 0a39 C90A0000 		.4byte	0xac9
+ 1579 0a3d 17       		.uleb128 0x17
+ 1580 0a3e 76000000 		.4byte	.LVL19
+ 1581 0a42 B10A0000 		.4byte	0xab1
+ 1582 0a46 17       		.uleb128 0x17
+ 1583 0a47 90000000 		.4byte	.LVL20
+ 1584 0a4b BD0A0000 		.4byte	0xabd
+ 1585 0a4f 17       		.uleb128 0x17
+ 1586 0a50 DE000000 		.4byte	.LVL28
+ 1587 0a54 B10A0000 		.4byte	0xab1
+ 1588 0a58 17       		.uleb128 0x17
+ 1589 0a59 F0000000 		.4byte	.LVL29
+ 1590 0a5d BD0A0000 		.4byte	0xabd
+ 1591 0a61 00       		.byte	0
+ARM GAS  C:\Users\Labeo\AppData\Local\Temp\cchoLg3G.s 			page 33
+
+
+ 1592 0a62 0E       		.uleb128 0xe
+ 1593 0a63 04       		.byte	0x4
+ 1594 0a64 680A0000 		.4byte	0xa68
+ 1595 0a68 0D       		.uleb128 0xd
+ 1596 0a69 FA060000 		.4byte	0x6fa
+ 1597 0a6d 18       		.uleb128 0x18
+ 1598 0a6e F40A0000 		.4byte	.LASF191
+ 1599 0a72 01       		.byte	0x1
+ 1600 0a73 35       		.byte	0x35
+ 1601 0a74 1A050000 		.4byte	0x51a
+ 1602 0a78 05       		.uleb128 0x5
+ 1603 0a79 03       		.byte	0x3
+ 1604 0a7a 00000000 		.4byte	tunerFsm
+ 1605 0a7e 19       		.uleb128 0x19
+ 1606 0a7f DC070000 		.4byte	.LASF192
+ 1607 0a83 04       		.byte	0x4
+ 1608 0a84 A7       		.byte	0xa7
+ 1609 0a85 890A0000 		.4byte	0xa89
+ 1610 0a89 0E       		.uleb128 0xe
+ 1611 0a8a 04       		.byte	0x4
+ 1612 0a8b 8F0A0000 		.4byte	0xa8f
+ 1613 0a8f 1A       		.uleb128 0x1a
+ 1614 0a90 E2040000 		.4byte	0x4e2
+ 1615 0a94 1B       		.uleb128 0x1b
+ 1616 0a95 16020000 		.4byte	.LASF193
+ 1617 0a99 08       		.byte	0x8
+ 1618 0a9a F203     		.2byte	0x3f2
+ 1619 0a9c 35080000 		.4byte	0x835
+ 1620 0aa0 1B       		.uleb128 0x1b
+ 1621 0aa1 90010000 		.4byte	.LASF194
+ 1622 0aa5 08       		.byte	0x8
+ 1623 0aa6 F303     		.2byte	0x3f3
+ 1624 0aa8 AC0A0000 		.4byte	0xaac
+ 1625 0aac 1A       		.uleb128 0x1a
+ 1626 0aad 1B090000 		.4byte	0x91b
+ 1627 0ab1 1C       		.uleb128 0x1c
+ 1628 0ab2 0F090000 		.4byte	.LASF195
+ 1629 0ab6 0F090000 		.4byte	.LASF195
+ 1630 0aba 05       		.byte	0x5
+ 1631 0abb B203     		.2byte	0x3b2
+ 1632 0abd 1C       		.uleb128 0x1c
+ 1633 0abe 7A030000 		.4byte	.LASF196
+ 1634 0ac2 7A030000 		.4byte	.LASF196
+ 1635 0ac6 05       		.byte	0x5
+ 1636 0ac7 C103     		.2byte	0x3c1
+ 1637 0ac9 1D       		.uleb128 0x1d
+ 1638 0aca 4A0B0000 		.4byte	.LASF197
+ 1639 0ace 4A0B0000 		.4byte	.LASF197
+ 1640 0ad2 0A       		.byte	0xa
+ 1641 0ad3 3A       		.byte	0x3a
+ 1642 0ad4 00       		.byte	0
+ 1643              		.section	.debug_abbrev,"",%progbits
+ 1644              	.Ldebug_abbrev0:
+ 1645 0000 01       		.uleb128 0x1
+ 1646 0001 11       		.uleb128 0x11
+ 1647 0002 01       		.byte	0x1
+ 1648 0003 25       		.uleb128 0x25
+ARM GAS  C:\Users\Labeo\AppData\Local\Temp\cchoLg3G.s 			page 34
+
+
+ 1649 0004 0E       		.uleb128 0xe
+ 1650 0005 13       		.uleb128 0x13
+ 1651 0006 0B       		.uleb128 0xb
+ 1652 0007 03       		.uleb128 0x3
+ 1653 0008 0E       		.uleb128 0xe
+ 1654 0009 1B       		.uleb128 0x1b
+ 1655 000a 0E       		.uleb128 0xe
+ 1656 000b 55       		.uleb128 0x55
+ 1657 000c 17       		.uleb128 0x17
+ 1658 000d 11       		.uleb128 0x11
+ 1659 000e 01       		.uleb128 0x1
+ 1660 000f 10       		.uleb128 0x10
+ 1661 0010 17       		.uleb128 0x17
+ 1662 0011 00       		.byte	0
+ 1663 0012 00       		.byte	0
+ 1664 0013 02       		.uleb128 0x2
+ 1665 0014 24       		.uleb128 0x24
+ 1666 0015 00       		.byte	0
+ 1667 0016 0B       		.uleb128 0xb
+ 1668 0017 0B       		.uleb128 0xb
+ 1669 0018 3E       		.uleb128 0x3e
+ 1670 0019 0B       		.uleb128 0xb
+ 1671 001a 03       		.uleb128 0x3
+ 1672 001b 0E       		.uleb128 0xe
+ 1673 001c 00       		.byte	0
+ 1674 001d 00       		.byte	0
+ 1675 001e 03       		.uleb128 0x3
+ 1676 001f 16       		.uleb128 0x16
+ 1677 0020 00       		.byte	0
+ 1678 0021 03       		.uleb128 0x3
+ 1679 0022 0E       		.uleb128 0xe
+ 1680 0023 3A       		.uleb128 0x3a
+ 1681 0024 0B       		.uleb128 0xb
+ 1682 0025 3B       		.uleb128 0x3b
+ 1683 0026 0B       		.uleb128 0xb
+ 1684 0027 49       		.uleb128 0x49
+ 1685 0028 13       		.uleb128 0x13
+ 1686 0029 00       		.byte	0
+ 1687 002a 00       		.byte	0
+ 1688 002b 04       		.uleb128 0x4
+ 1689 002c 24       		.uleb128 0x24
+ 1690 002d 00       		.byte	0
+ 1691 002e 0B       		.uleb128 0xb
+ 1692 002f 0B       		.uleb128 0xb
+ 1693 0030 3E       		.uleb128 0x3e
+ 1694 0031 0B       		.uleb128 0xb
+ 1695 0032 03       		.uleb128 0x3
+ 1696 0033 08       		.uleb128 0x8
+ 1697 0034 00       		.byte	0
+ 1698 0035 00       		.byte	0
+ 1699 0036 05       		.uleb128 0x5
+ 1700 0037 13       		.uleb128 0x13
+ 1701 0038 01       		.byte	0x1
+ 1702 0039 0B       		.uleb128 0xb
+ 1703 003a 0B       		.uleb128 0xb
+ 1704 003b 3A       		.uleb128 0x3a
+ 1705 003c 0B       		.uleb128 0xb
+ARM GAS  C:\Users\Labeo\AppData\Local\Temp\cchoLg3G.s 			page 35
+
+
+ 1706 003d 3B       		.uleb128 0x3b
+ 1707 003e 0B       		.uleb128 0xb
+ 1708 003f 01       		.uleb128 0x1
+ 1709 0040 13       		.uleb128 0x13
+ 1710 0041 00       		.byte	0
+ 1711 0042 00       		.byte	0
+ 1712 0043 06       		.uleb128 0x6
+ 1713 0044 0D       		.uleb128 0xd
+ 1714 0045 00       		.byte	0
+ 1715 0046 03       		.uleb128 0x3
+ 1716 0047 0E       		.uleb128 0xe
+ 1717 0048 3A       		.uleb128 0x3a
+ 1718 0049 0B       		.uleb128 0xb
+ 1719 004a 3B       		.uleb128 0x3b
+ 1720 004b 0B       		.uleb128 0xb
+ 1721 004c 49       		.uleb128 0x49
+ 1722 004d 13       		.uleb128 0x13
+ 1723 004e 38       		.uleb128 0x38
+ 1724 004f 0B       		.uleb128 0xb
+ 1725 0050 00       		.byte	0
+ 1726 0051 00       		.byte	0
+ 1727 0052 07       		.uleb128 0x7
+ 1728 0053 16       		.uleb128 0x16
+ 1729 0054 00       		.byte	0
+ 1730 0055 03       		.uleb128 0x3
+ 1731 0056 0E       		.uleb128 0xe
+ 1732 0057 3A       		.uleb128 0x3a
+ 1733 0058 0B       		.uleb128 0xb
+ 1734 0059 3B       		.uleb128 0x3b
+ 1735 005a 05       		.uleb128 0x5
+ 1736 005b 49       		.uleb128 0x49
+ 1737 005c 13       		.uleb128 0x13
+ 1738 005d 00       		.byte	0
+ 1739 005e 00       		.byte	0
+ 1740 005f 08       		.uleb128 0x8
+ 1741 0060 01       		.uleb128 0x1
+ 1742 0061 01       		.byte	0x1
+ 1743 0062 49       		.uleb128 0x49
+ 1744 0063 13       		.uleb128 0x13
+ 1745 0064 01       		.uleb128 0x1
+ 1746 0065 13       		.uleb128 0x13
+ 1747 0066 00       		.byte	0
+ 1748 0067 00       		.byte	0
+ 1749 0068 09       		.uleb128 0x9
+ 1750 0069 21       		.uleb128 0x21
+ 1751 006a 00       		.byte	0
+ 1752 006b 49       		.uleb128 0x49
+ 1753 006c 13       		.uleb128 0x13
+ 1754 006d 2F       		.uleb128 0x2f
+ 1755 006e 0B       		.uleb128 0xb
+ 1756 006f 00       		.byte	0
+ 1757 0070 00       		.byte	0
+ 1758 0071 0A       		.uleb128 0xa
+ 1759 0072 0D       		.uleb128 0xd
+ 1760 0073 00       		.byte	0
+ 1761 0074 03       		.uleb128 0x3
+ 1762 0075 0E       		.uleb128 0xe
+ARM GAS  C:\Users\Labeo\AppData\Local\Temp\cchoLg3G.s 			page 36
+
+
+ 1763 0076 3A       		.uleb128 0x3a
+ 1764 0077 0B       		.uleb128 0xb
+ 1765 0078 3B       		.uleb128 0x3b
+ 1766 0079 05       		.uleb128 0x5
+ 1767 007a 49       		.uleb128 0x49
+ 1768 007b 13       		.uleb128 0x13
+ 1769 007c 38       		.uleb128 0x38
+ 1770 007d 0B       		.uleb128 0xb
+ 1771 007e 00       		.byte	0
+ 1772 007f 00       		.byte	0
+ 1773 0080 0B       		.uleb128 0xb
+ 1774 0081 13       		.uleb128 0x13
+ 1775 0082 01       		.byte	0x1
+ 1776 0083 0B       		.uleb128 0xb
+ 1777 0084 0B       		.uleb128 0xb
+ 1778 0085 3A       		.uleb128 0x3a
+ 1779 0086 0B       		.uleb128 0xb
+ 1780 0087 3B       		.uleb128 0x3b
+ 1781 0088 05       		.uleb128 0x5
+ 1782 0089 01       		.uleb128 0x1
+ 1783 008a 13       		.uleb128 0x13
+ 1784 008b 00       		.byte	0
+ 1785 008c 00       		.byte	0
+ 1786 008d 0C       		.uleb128 0xc
+ 1787 008e 0D       		.uleb128 0xd
+ 1788 008f 00       		.byte	0
+ 1789 0090 03       		.uleb128 0x3
+ 1790 0091 08       		.uleb128 0x8
+ 1791 0092 3A       		.uleb128 0x3a
+ 1792 0093 0B       		.uleb128 0xb
+ 1793 0094 3B       		.uleb128 0x3b
+ 1794 0095 05       		.uleb128 0x5
+ 1795 0096 49       		.uleb128 0x49
+ 1796 0097 13       		.uleb128 0x13
+ 1797 0098 38       		.uleb128 0x38
+ 1798 0099 0B       		.uleb128 0xb
+ 1799 009a 00       		.byte	0
+ 1800 009b 00       		.byte	0
+ 1801 009c 0D       		.uleb128 0xd
+ 1802 009d 35       		.uleb128 0x35
+ 1803 009e 00       		.byte	0
+ 1804 009f 49       		.uleb128 0x49
+ 1805 00a0 13       		.uleb128 0x13
+ 1806 00a1 00       		.byte	0
+ 1807 00a2 00       		.byte	0
+ 1808 00a3 0E       		.uleb128 0xe
+ 1809 00a4 0F       		.uleb128 0xf
+ 1810 00a5 00       		.byte	0
+ 1811 00a6 0B       		.uleb128 0xb
+ 1812 00a7 0B       		.uleb128 0xb
+ 1813 00a8 49       		.uleb128 0x49
+ 1814 00a9 13       		.uleb128 0x13
+ 1815 00aa 00       		.byte	0
+ 1816 00ab 00       		.byte	0
+ 1817 00ac 0F       		.uleb128 0xf
+ 1818 00ad 26       		.uleb128 0x26
+ 1819 00ae 00       		.byte	0
+ARM GAS  C:\Users\Labeo\AppData\Local\Temp\cchoLg3G.s 			page 37
+
+
+ 1820 00af 00       		.byte	0
+ 1821 00b0 00       		.byte	0
+ 1822 00b1 10       		.uleb128 0x10
+ 1823 00b2 0F       		.uleb128 0xf
+ 1824 00b3 00       		.byte	0
+ 1825 00b4 0B       		.uleb128 0xb
+ 1826 00b5 0B       		.uleb128 0xb
+ 1827 00b6 00       		.byte	0
+ 1828 00b7 00       		.byte	0
+ 1829 00b8 11       		.uleb128 0x11
+ 1830 00b9 04       		.uleb128 0x4
+ 1831 00ba 01       		.byte	0x1
+ 1832 00bb 0B       		.uleb128 0xb
+ 1833 00bc 0B       		.uleb128 0xb
+ 1834 00bd 49       		.uleb128 0x49
+ 1835 00be 13       		.uleb128 0x13
+ 1836 00bf 3A       		.uleb128 0x3a
+ 1837 00c0 0B       		.uleb128 0xb
+ 1838 00c1 3B       		.uleb128 0x3b
+ 1839 00c2 0B       		.uleb128 0xb
+ 1840 00c3 01       		.uleb128 0x1
+ 1841 00c4 13       		.uleb128 0x13
+ 1842 00c5 00       		.byte	0
+ 1843 00c6 00       		.byte	0
+ 1844 00c7 12       		.uleb128 0x12
+ 1845 00c8 28       		.uleb128 0x28
+ 1846 00c9 00       		.byte	0
+ 1847 00ca 03       		.uleb128 0x3
+ 1848 00cb 0E       		.uleb128 0xe
+ 1849 00cc 1C       		.uleb128 0x1c
+ 1850 00cd 0B       		.uleb128 0xb
+ 1851 00ce 00       		.byte	0
+ 1852 00cf 00       		.byte	0
+ 1853 00d0 13       		.uleb128 0x13
+ 1854 00d1 2E       		.uleb128 0x2e
+ 1855 00d2 01       		.byte	0x1
+ 1856 00d3 3F       		.uleb128 0x3f
+ 1857 00d4 19       		.uleb128 0x19
+ 1858 00d5 03       		.uleb128 0x3
+ 1859 00d6 0E       		.uleb128 0xe
+ 1860 00d7 3A       		.uleb128 0x3a
+ 1861 00d8 0B       		.uleb128 0xb
+ 1862 00d9 3B       		.uleb128 0x3b
+ 1863 00da 0B       		.uleb128 0xb
+ 1864 00db 27       		.uleb128 0x27
+ 1865 00dc 19       		.uleb128 0x19
+ 1866 00dd 11       		.uleb128 0x11
+ 1867 00de 01       		.uleb128 0x1
+ 1868 00df 12       		.uleb128 0x12
+ 1869 00e0 06       		.uleb128 0x6
+ 1870 00e1 40       		.uleb128 0x40
+ 1871 00e2 18       		.uleb128 0x18
+ 1872 00e3 9742     		.uleb128 0x2117
+ 1873 00e5 19       		.uleb128 0x19
+ 1874 00e6 01       		.uleb128 0x1
+ 1875 00e7 13       		.uleb128 0x13
+ 1876 00e8 00       		.byte	0
+ARM GAS  C:\Users\Labeo\AppData\Local\Temp\cchoLg3G.s 			page 38
+
+
+ 1877 00e9 00       		.byte	0
+ 1878 00ea 14       		.uleb128 0x14
+ 1879 00eb 34       		.uleb128 0x34
+ 1880 00ec 00       		.byte	0
+ 1881 00ed 03       		.uleb128 0x3
+ 1882 00ee 0E       		.uleb128 0xe
+ 1883 00ef 3A       		.uleb128 0x3a
+ 1884 00f0 0B       		.uleb128 0xb
+ 1885 00f1 3B       		.uleb128 0x3b
+ 1886 00f2 0B       		.uleb128 0xb
+ 1887 00f3 49       		.uleb128 0x49
+ 1888 00f4 13       		.uleb128 0x13
+ 1889 00f5 00       		.byte	0
+ 1890 00f6 00       		.byte	0
+ 1891 00f7 15       		.uleb128 0x15
+ 1892 00f8 2E       		.uleb128 0x2e
+ 1893 00f9 01       		.byte	0x1
+ 1894 00fa 3F       		.uleb128 0x3f
+ 1895 00fb 19       		.uleb128 0x19
+ 1896 00fc 03       		.uleb128 0x3
+ 1897 00fd 0E       		.uleb128 0xe
+ 1898 00fe 3A       		.uleb128 0x3a
+ 1899 00ff 0B       		.uleb128 0xb
+ 1900 0100 3B       		.uleb128 0x3b
+ 1901 0101 0B       		.uleb128 0xb
+ 1902 0102 27       		.uleb128 0x27
+ 1903 0103 19       		.uleb128 0x19
+ 1904 0104 49       		.uleb128 0x49
+ 1905 0105 13       		.uleb128 0x13
+ 1906 0106 11       		.uleb128 0x11
+ 1907 0107 01       		.uleb128 0x1
+ 1908 0108 12       		.uleb128 0x12
+ 1909 0109 06       		.uleb128 0x6
+ 1910 010a 40       		.uleb128 0x40
+ 1911 010b 18       		.uleb128 0x18
+ 1912 010c 9742     		.uleb128 0x2117
+ 1913 010e 19       		.uleb128 0x19
+ 1914 010f 01       		.uleb128 0x1
+ 1915 0110 13       		.uleb128 0x13
+ 1916 0111 00       		.byte	0
+ 1917 0112 00       		.byte	0
+ 1918 0113 16       		.uleb128 0x16
+ 1919 0114 34       		.uleb128 0x34
+ 1920 0115 00       		.byte	0
+ 1921 0116 03       		.uleb128 0x3
+ 1922 0117 0E       		.uleb128 0xe
+ 1923 0118 3A       		.uleb128 0x3a
+ 1924 0119 0B       		.uleb128 0xb
+ 1925 011a 3B       		.uleb128 0x3b
+ 1926 011b 0B       		.uleb128 0xb
+ 1927 011c 49       		.uleb128 0x49
+ 1928 011d 13       		.uleb128 0x13
+ 1929 011e 02       		.uleb128 0x2
+ 1930 011f 17       		.uleb128 0x17
+ 1931 0120 00       		.byte	0
+ 1932 0121 00       		.byte	0
+ 1933 0122 17       		.uleb128 0x17
+ARM GAS  C:\Users\Labeo\AppData\Local\Temp\cchoLg3G.s 			page 39
+
+
+ 1934 0123 898201   		.uleb128 0x4109
+ 1935 0126 00       		.byte	0
+ 1936 0127 11       		.uleb128 0x11
+ 1937 0128 01       		.uleb128 0x1
+ 1938 0129 31       		.uleb128 0x31
+ 1939 012a 13       		.uleb128 0x13
+ 1940 012b 00       		.byte	0
+ 1941 012c 00       		.byte	0
+ 1942 012d 18       		.uleb128 0x18
+ 1943 012e 34       		.uleb128 0x34
+ 1944 012f 00       		.byte	0
+ 1945 0130 03       		.uleb128 0x3
+ 1946 0131 0E       		.uleb128 0xe
+ 1947 0132 3A       		.uleb128 0x3a
+ 1948 0133 0B       		.uleb128 0xb
+ 1949 0134 3B       		.uleb128 0x3b
+ 1950 0135 0B       		.uleb128 0xb
+ 1951 0136 49       		.uleb128 0x49
+ 1952 0137 13       		.uleb128 0x13
+ 1953 0138 02       		.uleb128 0x2
+ 1954 0139 18       		.uleb128 0x18
+ 1955 013a 00       		.byte	0
+ 1956 013b 00       		.byte	0
+ 1957 013c 19       		.uleb128 0x19
+ 1958 013d 34       		.uleb128 0x34
+ 1959 013e 00       		.byte	0
+ 1960 013f 03       		.uleb128 0x3
+ 1961 0140 0E       		.uleb128 0xe
+ 1962 0141 3A       		.uleb128 0x3a
+ 1963 0142 0B       		.uleb128 0xb
+ 1964 0143 3B       		.uleb128 0x3b
+ 1965 0144 0B       		.uleb128 0xb
+ 1966 0145 49       		.uleb128 0x49
+ 1967 0146 13       		.uleb128 0x13
+ 1968 0147 3F       		.uleb128 0x3f
+ 1969 0148 19       		.uleb128 0x19
+ 1970 0149 3C       		.uleb128 0x3c
+ 1971 014a 19       		.uleb128 0x19
+ 1972 014b 00       		.byte	0
+ 1973 014c 00       		.byte	0
+ 1974 014d 1A       		.uleb128 0x1a
+ 1975 014e 26       		.uleb128 0x26
+ 1976 014f 00       		.byte	0
+ 1977 0150 49       		.uleb128 0x49
+ 1978 0151 13       		.uleb128 0x13
+ 1979 0152 00       		.byte	0
+ 1980 0153 00       		.byte	0
+ 1981 0154 1B       		.uleb128 0x1b
+ 1982 0155 34       		.uleb128 0x34
+ 1983 0156 00       		.byte	0
+ 1984 0157 03       		.uleb128 0x3
+ 1985 0158 0E       		.uleb128 0xe
+ 1986 0159 3A       		.uleb128 0x3a
+ 1987 015a 0B       		.uleb128 0xb
+ 1988 015b 3B       		.uleb128 0x3b
+ 1989 015c 05       		.uleb128 0x5
+ 1990 015d 49       		.uleb128 0x49
+ARM GAS  C:\Users\Labeo\AppData\Local\Temp\cchoLg3G.s 			page 40
+
+
+ 1991 015e 13       		.uleb128 0x13
+ 1992 015f 3F       		.uleb128 0x3f
+ 1993 0160 19       		.uleb128 0x19
+ 1994 0161 3C       		.uleb128 0x3c
+ 1995 0162 19       		.uleb128 0x19
+ 1996 0163 00       		.byte	0
+ 1997 0164 00       		.byte	0
+ 1998 0165 1C       		.uleb128 0x1c
+ 1999 0166 2E       		.uleb128 0x2e
+ 2000 0167 00       		.byte	0
+ 2001 0168 3F       		.uleb128 0x3f
+ 2002 0169 19       		.uleb128 0x19
+ 2003 016a 3C       		.uleb128 0x3c
+ 2004 016b 19       		.uleb128 0x19
+ 2005 016c 6E       		.uleb128 0x6e
+ 2006 016d 0E       		.uleb128 0xe
+ 2007 016e 03       		.uleb128 0x3
+ 2008 016f 0E       		.uleb128 0xe
+ 2009 0170 3A       		.uleb128 0x3a
+ 2010 0171 0B       		.uleb128 0xb
+ 2011 0172 3B       		.uleb128 0x3b
+ 2012 0173 05       		.uleb128 0x5
+ 2013 0174 00       		.byte	0
+ 2014 0175 00       		.byte	0
+ 2015 0176 1D       		.uleb128 0x1d
+ 2016 0177 2E       		.uleb128 0x2e
+ 2017 0178 00       		.byte	0
+ 2018 0179 3F       		.uleb128 0x3f
+ 2019 017a 19       		.uleb128 0x19
+ 2020 017b 3C       		.uleb128 0x3c
+ 2021 017c 19       		.uleb128 0x19
+ 2022 017d 6E       		.uleb128 0x6e
+ 2023 017e 0E       		.uleb128 0xe
+ 2024 017f 03       		.uleb128 0x3
+ 2025 0180 0E       		.uleb128 0xe
+ 2026 0181 3A       		.uleb128 0x3a
+ 2027 0182 0B       		.uleb128 0xb
+ 2028 0183 3B       		.uleb128 0x3b
+ 2029 0184 0B       		.uleb128 0xb
+ 2030 0185 00       		.byte	0
+ 2031 0186 00       		.byte	0
+ 2032 0187 00       		.byte	0
+ 2033              		.section	.debug_loc,"",%progbits
+ 2034              	.Ldebug_loc0:
+ 2035              	.LLST0:
+ 2036 0000 12000000 		.4byte	.LVL3
+ 2037 0004 1B000000 		.4byte	.LVL4-1
+ 2038 0008 0100     		.2byte	0x1
+ 2039 000a 50       		.byte	0x50
+ 2040 000b 76000000 		.4byte	.LVL19
+ 2041 000f 8F000000 		.4byte	.LVL20-1
+ 2042 0013 0100     		.2byte	0x1
+ 2043 0015 50       		.byte	0x50
+ 2044 0016 DE000000 		.4byte	.LVL28
+ 2045 001a EF000000 		.4byte	.LVL29-1
+ 2046 001e 0100     		.2byte	0x1
+ 2047 0020 50       		.byte	0x50
+ARM GAS  C:\Users\Labeo\AppData\Local\Temp\cchoLg3G.s 			page 41
+
+
+ 2048 0021 00000000 		.4byte	0
+ 2049 0025 00000000 		.4byte	0
+ 2050              	.LLST1:
+ 2051 0029 A6000000 		.4byte	.LVL22
+ 2052 002d CC000000 		.4byte	.LVL24
+ 2053 0031 0100     		.2byte	0x1
+ 2054 0033 53       		.byte	0x53
+ 2055 0034 00000000 		.4byte	0
+ 2056 0038 00000000 		.4byte	0
+ 2057              	.LLST2:
+ 2058 003c AC000000 		.4byte	.LVL23
+ 2059 0040 D6000000 		.4byte	.LVL26
+ 2060 0044 0100     		.2byte	0x1
+ 2061 0046 52       		.byte	0x52
+ 2062 0047 00000000 		.4byte	0
+ 2063 004b 00000000 		.4byte	0
+ 2064              	.LLST3:
+ 2065 004f 02000000 		.4byte	.LVL1
+ 2066 0053 06000000 		.4byte	.LVL2
+ 2067 0057 0200     		.2byte	0x2
+ 2068 0059 30       		.byte	0x30
+ 2069 005a 9F       		.byte	0x9f
+ 2070 005b 06000000 		.4byte	.LVL2
+ 2071 005f 34000000 		.4byte	.LVL6
+ 2072 0063 0100     		.2byte	0x1
+ 2073 0065 56       		.byte	0x56
+ 2074 0066 34000000 		.4byte	.LVL6
+ 2075 006a 38000000 		.4byte	.LVL7
+ 2076 006e 0200     		.2byte	0x2
+ 2077 0070 31       		.byte	0x31
+ 2078 0071 9F       		.byte	0x9f
+ 2079 0072 38000000 		.4byte	.LVL7
+ 2080 0076 3E000000 		.4byte	.LVL8
+ 2081 007a 0100     		.2byte	0x1
+ 2082 007c 56       		.byte	0x56
+ 2083 007d 3E000000 		.4byte	.LVL8
+ 2084 0081 42000000 		.4byte	.LVL9
+ 2085 0085 0200     		.2byte	0x2
+ 2086 0087 31       		.byte	0x31
+ 2087 0088 9F       		.byte	0x9f
+ 2088 0089 42000000 		.4byte	.LVL9
+ 2089 008d 4C000000 		.4byte	.LVL11
+ 2090 0091 0100     		.2byte	0x1
+ 2091 0093 56       		.byte	0x56
+ 2092 0094 4C000000 		.4byte	.LVL11
+ 2093 0098 52000000 		.4byte	.LVL12
+ 2094 009c 0200     		.2byte	0x2
+ 2095 009e 31       		.byte	0x31
+ 2096 009f 9F       		.byte	0x9f
+ 2097 00a0 52000000 		.4byte	.LVL12
+ 2098 00a4 58000000 		.4byte	.LVL13
+ 2099 00a8 0100     		.2byte	0x1
+ 2100 00aa 56       		.byte	0x56
+ 2101 00ab 58000000 		.4byte	.LVL13
+ 2102 00af 5C000000 		.4byte	.LVL14
+ 2103 00b3 0200     		.2byte	0x2
+ 2104 00b5 31       		.byte	0x31
+ARM GAS  C:\Users\Labeo\AppData\Local\Temp\cchoLg3G.s 			page 42
+
+
+ 2105 00b6 9F       		.byte	0x9f
+ 2106 00b7 5C000000 		.4byte	.LVL14
+ 2107 00bb 62000000 		.4byte	.LVL15
+ 2108 00bf 0100     		.2byte	0x1
+ 2109 00c1 56       		.byte	0x56
+ 2110 00c2 62000000 		.4byte	.LVL15
+ 2111 00c6 66000000 		.4byte	.LVL16
+ 2112 00ca 0200     		.2byte	0x2
+ 2113 00cc 31       		.byte	0x31
+ 2114 00cd 9F       		.byte	0x9f
+ 2115 00ce 66000000 		.4byte	.LVL16
+ 2116 00d2 6C000000 		.4byte	.LVL17
+ 2117 00d6 0100     		.2byte	0x1
+ 2118 00d8 56       		.byte	0x56
+ 2119 00d9 6C000000 		.4byte	.LVL17
+ 2120 00dd 6E000000 		.4byte	.LVL18
+ 2121 00e1 0200     		.2byte	0x2
+ 2122 00e3 30       		.byte	0x30
+ 2123 00e4 9F       		.byte	0x9f
+ 2124 00e5 6E000000 		.4byte	.LVL18
+ 2125 00e9 90000000 		.4byte	.LVL20
+ 2126 00ed 0100     		.2byte	0x1
+ 2127 00ef 56       		.byte	0x56
+ 2128 00f0 90000000 		.4byte	.LVL20
+ 2129 00f4 92000000 		.4byte	.LVL21
+ 2130 00f8 0200     		.2byte	0x2
+ 2131 00fa 30       		.byte	0x30
+ 2132 00fb 9F       		.byte	0x9f
+ 2133 00fc 92000000 		.4byte	.LVL21
+ 2134 0100 F2000000 		.4byte	.LVL31
+ 2135 0104 0100     		.2byte	0x1
+ 2136 0106 56       		.byte	0x56
+ 2137 0107 00000000 		.4byte	0
+ 2138 010b 00000000 		.4byte	0
+ 2139              	.LLST4:
+ 2140 010f 22000000 		.4byte	.LVL5
+ 2141 0113 D2000000 		.4byte	.LVL25
+ 2142 0117 0100     		.2byte	0x1
+ 2143 0119 54       		.byte	0x54
+ 2144 011a 00000000 		.4byte	0
+ 2145 011e 00000000 		.4byte	0
+ 2146              	.LLST5:
+ 2147 0122 02000000 		.4byte	.LVL1
+ 2148 0126 06000000 		.4byte	.LVL2
+ 2149 012a 0200     		.2byte	0x2
+ 2150 012c 30       		.byte	0x30
+ 2151 012d 9F       		.byte	0x9f
+ 2152 012e 06000000 		.4byte	.LVL2
+ 2153 0132 46000000 		.4byte	.LVL10
+ 2154 0136 0100     		.2byte	0x1
+ 2155 0138 55       		.byte	0x55
+ 2156 0139 46000000 		.4byte	.LVL10
+ 2157 013d 52000000 		.4byte	.LVL12
+ 2158 0141 0200     		.2byte	0x2
+ 2159 0143 31       		.byte	0x31
+ 2160 0144 9F       		.byte	0x9f
+ 2161 0145 52000000 		.4byte	.LVL12
+ARM GAS  C:\Users\Labeo\AppData\Local\Temp\cchoLg3G.s 			page 43
+
+
+ 2162 0149 F2000000 		.4byte	.LVL30
+ 2163 014d 0100     		.2byte	0x1
+ 2164 014f 55       		.byte	0x55
+ 2165 0150 F2000000 		.4byte	.LVL30
+ 2166 0154 08010000 		.4byte	.LFE80
+ 2167 0158 0100     		.2byte	0x1
+ 2168 015a 50       		.byte	0x50
+ 2169 015b 00000000 		.4byte	0
+ 2170 015f 00000000 		.4byte	0
+ 2171              	.LLST6:
+ 2172 0163 D2000000 		.4byte	.LVL25
+ 2173 0167 F0000000 		.4byte	.LVL29
+ 2174 016b 0100     		.2byte	0x1
+ 2175 016d 54       		.byte	0x54
+ 2176 016e 00000000 		.4byte	0
+ 2177 0172 00000000 		.4byte	0
+ 2178              		.section	.debug_aranges,"",%progbits
+ 2179 0000 24000000 		.4byte	0x24
+ 2180 0004 0200     		.2byte	0x2
+ 2181 0006 00000000 		.4byte	.Ldebug_info0
+ 2182 000a 04       		.byte	0x4
+ 2183 000b 00       		.byte	0
+ 2184 000c 0000     		.2byte	0
+ 2185 000e 0000     		.2byte	0
+ 2186 0010 00000000 		.4byte	.LFB79
+ 2187 0014 14000000 		.4byte	.LFE79-.LFB79
+ 2188 0018 00000000 		.4byte	.LFB80
+ 2189 001c 08010000 		.4byte	.LFE80-.LFB80
+ 2190 0020 00000000 		.4byte	0
+ 2191 0024 00000000 		.4byte	0
+ 2192              		.section	.debug_ranges,"",%progbits
+ 2193              	.Ldebug_ranges0:
+ 2194 0000 00000000 		.4byte	.LFB79
+ 2195 0004 14000000 		.4byte	.LFE79
+ 2196 0008 00000000 		.4byte	.LFB80
+ 2197 000c 08010000 		.4byte	.LFE80
+ 2198 0010 00000000 		.4byte	0
+ 2199 0014 00000000 		.4byte	0
+ 2200              		.section	.debug_line,"",%progbits
+ 2201              	.Ldebug_line0:
+ 2202 0000 AD020000 		.section	.debug_str,"MS",%progbits,1
+ 2202      02004902 
+ 2202      00000201 
+ 2202      FB0E0D00 
+ 2202      01010101 
+ 2203              	.LASF54:
+ 2204 0000 70726F74 		.ascii	"protBusMasterMask\000"
+ 2204      4275734D 
+ 2204      61737465 
+ 2204      724D6173 
+ 2204      6B00
+ 2205              	.LASF110:
+ 2206 0012 75696E74 		.ascii	"uint16\000"
+ 2206      313600
+ 2207              	.LASF1:
+ 2208 0019 756E7369 		.ascii	"unsigned char\000"
+ 2208      676E6564 
+ARM GAS  C:\Users\Labeo\AppData\Local\Temp\cchoLg3G.s 			page 44
+
+
+ 2208      20636861 
+ 2208      7200
+ 2209              	.LASF129:
+ 2210 0027 69646163 		.ascii	"idacMod\000"
+ 2210      4D6F6400 
+ 2211              	.LASF64:
+ 2212 002f 666C6173 		.ascii	"flashCtlMainWs3Freq\000"
+ 2212      6843746C 
+ 2212      4D61696E 
+ 2212      57733346 
+ 2212      72657100 
+ 2213              	.LASF86:
+ 2214 0043 6770696F 		.ascii	"gpioPrtCfgInOffset\000"
+ 2214      50727443 
+ 2214      6667496E 
+ 2214      4F666673 
+ 2214      657400
+ 2215              	.LASF104:
+ 2216 0056 6970634C 		.ascii	"ipcLockStatusOffset\000"
+ 2216      6F636B53 
+ 2216      74617475 
+ 2216      734F6666 
+ 2216      73657400 
+ 2217              	.LASF30:
+ 2218 006a 63727970 		.ascii	"cryptoVersion\000"
+ 2218      746F5665 
+ 2218      7273696F 
+ 2218      6E00
+ 2219              	.LASF48:
+ 2220 0078 70657269 		.ascii	"periClockNr\000"
+ 2220      436C6F63 
+ 2220      6B4E7200 
+ 2221              	.LASF26:
+ 2222 0084 70617373 		.ascii	"passBase\000"
+ 2222      42617365 
+ 2222      00
+ 2223              	.LASF39:
+ 2224 008d 63707573 		.ascii	"cpussIpcIrqNr\000"
+ 2224      73497063 
+ 2224      4972714E 
+ 2224      7200
+ 2225              	.LASF2:
+ 2226 009b 5F5F7569 		.ascii	"__uint8_t\000"
+ 2226      6E74385F 
+ 2226      7400
+ 2227              	.LASF132:
+ 2228 00a5 66696E67 		.ascii	"fingerCap\000"
+ 2228      65724361 
+ 2228      7000
+ 2229              	.LASF83:
+ 2230 00af 70657269 		.ascii	"periDiv24_5CtlOffset\000"
+ 2230      44697632 
+ 2230      345F3543 
+ 2230      746C4F66 
+ 2230      66736574 
+ 2231              	.LASF142:
+ 2232 00c4 43617053 		.ascii	"CapSense_1_RAM_SNS_STRUCT\000"
+ARM GAS  C:\Users\Labeo\AppData\Local\Temp\cchoLg3G.s 			page 45
+
+
+ 2232      656E7365 
+ 2232      5F315F52 
+ 2232      414D5F53 
+ 2232      4E535F53 
+ 2233              	.LASF90:
+ 2234 00de 63707573 		.ascii	"cpussCm4ClockCtlOffset\000"
+ 2234      73436D34 
+ 2234      436C6F63 
+ 2234      6B43746C 
+ 2234      4F666673 
+ 2235              	.LASF19:
+ 2236 00f5 63707573 		.ascii	"cpussBase\000"
+ 2236      73426173 
+ 2236      6500
+ 2237              	.LASF68:
+ 2238 00ff 64774368 		.ascii	"dwChCtlPrioPos\000"
+ 2238      43746C50 
+ 2238      72696F50 
+ 2238      6F7300
+ 2239              	.LASF127:
+ 2240 010e 6F6E4465 		.ascii	"onDebounce\000"
+ 2240      626F756E 
+ 2240      636500
+ 2241              	.LASF11:
+ 2242 0119 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 2242      206C6F6E 
+ 2242      6720756E 
+ 2242      7369676E 
+ 2242      65642069 
+ 2243              	.LASF162:
+ 2244 0130 70747232 		.ascii	"ptr2SnsFlash\000"
+ 2244      536E7346 
+ 2244      6C617368 
+ 2244      00
+ 2245              	.LASF72:
+ 2246 013d 70657269 		.ascii	"periTrCmdOffset\000"
+ 2246      5472436D 
+ 2246      644F6666 
+ 2246      73657400 
+ 2247              	.LASF139:
+ 2248 014d 64696666 		.ascii	"diff\000"
+ 2248      00
+ 2249              	.LASF96:
+ 2250 0152 63707573 		.ascii	"cpussSysTickCtlOffset\000"
+ 2250      73537973 
+ 2250      5469636B 
+ 2250      43746C4F 
+ 2250      66667365 
+ 2251              	.LASF201:
+ 2252 0168 43617053 		.ascii	"CapSense_1_TuInitialize\000"
+ 2252      656E7365 
+ 2252      5F315F54 
+ 2252      75496E69 
+ 2252      7469616C 
+ 2253              	.LASF158:
+ 2254 0180 736E7254 		.ascii	"snrTestSensorId\000"
+ 2254      65737453 
+ARM GAS  C:\Users\Labeo\AppData\Local\Temp\cchoLg3G.s 			page 46
+
+
+ 2254      656E736F 
+ 2254      72496400 
+ 2255              	.LASF194:
+ 2256 0190 43617053 		.ascii	"CapSense_1_dsFlash\000"
+ 2256      656E7365 
+ 2256      5F315F64 
+ 2256      73466C61 
+ 2256      736800
+ 2257              	.LASF57:
+ 2258 01a3 666C6173 		.ascii	"flashPipeRequired\000"
+ 2258      68506970 
+ 2258      65526571 
+ 2258      75697265 
+ 2258      6400
+ 2259              	.LASF61:
+ 2260 01b5 666C6173 		.ascii	"flashCtlMainWs0Freq\000"
+ 2260      6843746C 
+ 2260      4D61696E 
+ 2260      57733046 
+ 2260      72657100 
+ 2261              	.LASF14:
+ 2262 01c9 696E7431 		.ascii	"int16_t\000"
+ 2262      365F7400 
+ 2263              	.LASF161:
+ 2264 01d1 43617053 		.ascii	"CapSense_1_RAM_STRUCT\000"
+ 2264      656E7365 
+ 2264      5F315F52 
+ 2264      414D5F53 
+ 2264      54525543 
+ 2265              	.LASF10:
+ 2266 01e7 6C6F6E67 		.ascii	"long long int\000"
+ 2266      206C6F6E 
+ 2266      6720696E 
+ 2266      7400
+ 2267              	.LASF0:
+ 2268 01f5 7369676E 		.ascii	"signed char\000"
+ 2268      65642063 
+ 2268      68617200 
+ 2269              	.LASF77:
+ 2270 0201 70657269 		.ascii	"periDivCmdTypeSelPos\000"
+ 2270      44697643 
+ 2270      6D645479 
+ 2270      70655365 
+ 2270      6C506F73 
+ 2271              	.LASF193:
+ 2272 0216 43617053 		.ascii	"CapSense_1_dsRam\000"
+ 2272      656E7365 
+ 2272      5F315F64 
+ 2272      7352616D 
+ 2272      00
+ 2273              	.LASF111:
+ 2274 0227 75696E74 		.ascii	"uint32\000"
+ 2274      333200
+ 2275              	.LASF23:
+ 2276 022e 70726F74 		.ascii	"protBase\000"
+ 2276      42617365 
+ 2276      00
+ARM GAS  C:\Users\Labeo\AppData\Local\Temp\cchoLg3G.s 			page 47
+
+
+ 2277              	.LASF35:
+ 2278 0237 69706356 		.ascii	"ipcVersion\000"
+ 2278      65727369 
+ 2278      6F6E00
+ 2279              	.LASF97:
+ 2280 0242 63707573 		.ascii	"cpussCm0NmiCtlOffset\000"
+ 2280      73436D30 
+ 2280      4E6D6943 
+ 2280      746C4F66 
+ 2280      66736574 
+ 2281              	.LASF202:
+ 2282 0257 43617053 		.ascii	"CapSense_1_RunTuner\000"
+ 2282      656E7365 
+ 2282      5F315F52 
+ 2282      756E5475 
+ 2282      6E657200 
+ 2283              	.LASF112:
+ 2284 026b 43617053 		.ascii	"CapSense_1_THRESHOLD_TYPE\000"
+ 2284      656E7365 
+ 2284      5F315F54 
+ 2284      48524553 
+ 2284      484F4C44 
+ 2285              	.LASF181:
+ 2286 0285 43617053 		.ascii	"CapSense_1_TU_CMD_ONE_SCAN_E\000"
+ 2286      656E7365 
+ 2286      5F315F54 
+ 2286      555F434D 
+ 2286      445F4F4E 
+ 2287              	.LASF152:
+ 2288 02a2 736E7353 		.ascii	"snsStatus\000"
+ 2288      74617475 
+ 2288      7300
+ 2289              	.LASF176:
+ 2290 02ac 43617053 		.ascii	"CapSense_1_TU_CMD_SUSPEND_E\000"
+ 2290      656E7365 
+ 2290      5F315F54 
+ 2290      555F434D 
+ 2290      445F5355 
+ 2291              	.LASF154:
+ 2292 02c8 6D6F6443 		.ascii	"modCsdClk\000"
+ 2292      7364436C 
+ 2292      6B00
+ 2293              	.LASF164:
+ 2294 02d2 70747232 		.ascii	"ptr2SnsRam\000"
+ 2294      536E7352 
+ 2294      616D00
+ 2295              	.LASF55:
+ 2296 02dd 63727970 		.ascii	"cryptoMemSize\000"
+ 2296      746F4D65 
+ 2296      6D53697A 
+ 2296      6500
+ 2297              	.LASF21:
+ 2298 02eb 70657269 		.ascii	"periBase\000"
+ 2298      42617365 
+ 2298      00
+ 2299              	.LASF109:
+ 2300 02f4 75696E74 		.ascii	"uint8\000"
+ARM GAS  C:\Users\Labeo\AppData\Local\Temp\cchoLg3G.s 			page 48
+
+
+ 2300      3800
+ 2301              	.LASF53:
+ 2302 02fa 73797350 		.ascii	"sysPmSimoPresent\000"
+ 2302      6D53696D 
+ 2302      6F507265 
+ 2302      73656E74 
+ 2302      00
+ 2303              	.LASF43:
+ 2304 030b 63707573 		.ascii	"cpussFmIrq\000"
+ 2304      73466D49 
+ 2304      727100
+ 2305              	.LASF128:
+ 2306 0316 6C6F7742 		.ascii	"lowBslnRst\000"
+ 2306      736C6E52 
+ 2306      737400
+ 2307              	.LASF108:
+ 2308 0321 646F7562 		.ascii	"double\000"
+ 2308      6C6500
+ 2309              	.LASF82:
+ 2310 0328 70657269 		.ascii	"periDiv16_5CtlOffset\000"
+ 2310      44697631 
+ 2310      365F3543 
+ 2310      746C4F66 
+ 2310      66736574 
+ 2311              	.LASF46:
+ 2312 033d 73727373 		.ascii	"srssNumPll\000"
+ 2312      4E756D50 
+ 2312      6C6C00
+ 2313              	.LASF160:
+ 2314 0348 736E7254 		.ascii	"snrTestRawCount\000"
+ 2314      65737452 
+ 2314      6177436F 
+ 2314      756E7400 
+ 2315              	.LASF185:
+ 2316 0358 73656E73 		.ascii	"sensorId\000"
+ 2316      6F724964 
+ 2316      00
+ 2317              	.LASF80:
+ 2318 0361 70657269 		.ascii	"periDiv8CtlOffset\000"
+ 2318      44697638 
+ 2318      43746C4F 
+ 2318      66667365 
+ 2318      7400
+ 2319              	.LASF133:
+ 2320 0373 73696750 		.ascii	"sigPFC\000"
+ 2320      464300
+ 2321              	.LASF196:
+ 2322 037a 43795F53 		.ascii	"Cy_SysLib_ExitCriticalSection\000"
+ 2322      79734C69 
+ 2322      625F4578 
+ 2322      69744372 
+ 2322      69746963 
+ 2323              	.LASF148:
+ 2324 0398 7363616E 		.ascii	"scanCounter\000"
+ 2324      436F756E 
+ 2324      74657200 
+ 2325              	.LASF87:
+ARM GAS  C:\Users\Labeo\AppData\Local\Temp\cchoLg3G.s 			page 49
+
+
+ 2326 03a4 6770696F 		.ascii	"gpioPrtCfgOutOffset\000"
+ 2326      50727443 
+ 2326      66674F75 
+ 2326      744F6666 
+ 2326      73657400 
+ 2327              	.LASF20:
+ 2328 03b8 666C6173 		.ascii	"flashcBase\000"
+ 2328      68634261 
+ 2328      736500
+ 2329              	.LASF8:
+ 2330 03c3 5F5F7569 		.ascii	"__uint32_t\000"
+ 2330      6E743332 
+ 2330      5F7400
+ 2331              	.LASF184:
+ 2332 03ce 77696467 		.ascii	"widgetId\000"
+ 2332      65744964 
+ 2332      00
+ 2333              	.LASF138:
+ 2334 03d7 62736C6E 		.ascii	"bslnExt\000"
+ 2334      45787400 
+ 2335              	.LASF186:
+ 2336 03df 75706461 		.ascii	"updateFlag\000"
+ 2336      7465466C 
+ 2336      616700
+ 2337              	.LASF175:
+ 2338 03ea 43617053 		.ascii	"CapSense_1_TU_CMD_NONE_E\000"
+ 2338      656E7365 
+ 2338      5F315F54 
+ 2338      555F434D 
+ 2338      445F4E4F 
+ 2339              	.LASF3:
+ 2340 0403 5F5F696E 		.ascii	"__int16_t\000"
+ 2340      7431365F 
+ 2340      7400
+ 2341              	.LASF151:
+ 2342 040d 77646774 		.ascii	"wdgtStatus\000"
+ 2342      53746174 
+ 2342      757300
+ 2343              	.LASF93:
+ 2344 0418 63707573 		.ascii	"cpussCm4PwrCtlOffset\000"
+ 2344      73436D34 
+ 2344      50777243 
+ 2344      746C4F66 
+ 2344      66736574 
+ 2345              	.LASF88:
+ 2346 042d 6770696F 		.ascii	"gpioPrtCfgSioOffset\000"
+ 2346      50727443 
+ 2346      66675369 
+ 2346      6F4F6666 
+ 2346      73657400 
+ 2347              	.LASF40:
+ 2348 0441 63707573 		.ascii	"cpussDwChNr\000"
+ 2348      73447743 
+ 2348      684E7200 
+ 2349              	.LASF137:
+ 2350 044d 62736C6E 		.ascii	"bsln\000"
+ 2350      00
+ARM GAS  C:\Users\Labeo\AppData\Local\Temp\cchoLg3G.s 			page 50
+
+
+ 2351              	.LASF12:
+ 2352 0452 756E7369 		.ascii	"unsigned int\000"
+ 2352      676E6564 
+ 2352      20696E74 
+ 2352      00
+ 2353              	.LASF15:
+ 2354 045f 75696E74 		.ascii	"uint16_t\000"
+ 2354      31365F74 
+ 2354      00
+ 2355              	.LASF157:
+ 2356 0468 736E7254 		.ascii	"snrTestWidgetId\000"
+ 2356      65737457 
+ 2356      69646765 
+ 2356      74496400 
+ 2357              	.LASF187:
+ 2358 0478 636F6D6D 		.ascii	"command\000"
+ 2358      616E6400 
+ 2359              	.LASF171:
+ 2360 0480 70747232 		.ascii	"ptr2NoiseEnvlp\000"
+ 2360      4E6F6973 
+ 2360      65456E76 
+ 2360      6C7000
+ 2361              	.LASF9:
+ 2362 048f 6C6F6E67 		.ascii	"long unsigned int\000"
+ 2362      20756E73 
+ 2362      69676E65 
+ 2362      6420696E 
+ 2362      7400
+ 2363              	.LASF150:
+ 2364 04a1 77646774 		.ascii	"wdgtEnable\000"
+ 2364      456E6162 
+ 2364      6C6500
+ 2365              	.LASF183:
+ 2366 04ac 696E7465 		.ascii	"interruptState\000"
+ 2366      72727570 
+ 2366      74537461 
+ 2366      746500
+ 2367              	.LASF38:
+ 2368 04bb 63707573 		.ascii	"cpussIpcNr\000"
+ 2368      73497063 
+ 2368      4E7200
+ 2369              	.LASF25:
+ 2370 04c6 6770696F 		.ascii	"gpioBase\000"
+ 2370      42617365 
+ 2370      00
+ 2371              	.LASF199:
+ 2372 04cf 47656E65 		.ascii	"Generated_Source\\PSoC6\\CapSense_1_Tuner.c\000"
+ 2372      72617465 
+ 2372      645F536F 
+ 2372      75726365 
+ 2372      5C50536F 
+ 2373              	.LASF63:
+ 2374 04f9 666C6173 		.ascii	"flashCtlMainWs2Freq\000"
+ 2374      6843746C 
+ 2374      4D61696E 
+ 2374      57733246 
+ 2374      72657100 
+ARM GAS  C:\Users\Labeo\AppData\Local\Temp\cchoLg3G.s 			page 51
+
+
+ 2375              	.LASF135:
+ 2376 050d 64756D6D 		.ascii	"dummywidget\000"
+ 2376      79776964 
+ 2376      67657400 
+ 2377              	.LASF190:
+ 2378 0519 70747253 		.ascii	"ptrSnsTmp\000"
+ 2378      6E73546D 
+ 2378      7000
+ 2379              	.LASF74:
+ 2380 0523 70657269 		.ascii	"periTrGrOffset\000"
+ 2380      54724772 
+ 2380      4F666673 
+ 2380      657400
+ 2381              	.LASF125:
+ 2382 0532 6E4E6F69 		.ascii	"nNoiseTh\000"
+ 2382      73655468 
+ 2382      00
+ 2383              	.LASF134:
+ 2384 053b 43617053 		.ascii	"CapSense_1_RAM_WD_BUTTON_STRUCT\000"
+ 2384      656E7365 
+ 2384      5F315F52 
+ 2384      414D5F57 
+ 2384      445F4255 
+ 2385              	.LASF101:
+ 2386 055b 63707573 		.ascii	"cpussRam1Ctl0\000"
+ 2386      7352616D 
+ 2386      3143746C 
+ 2386      3000
+ 2387              	.LASF172:
+ 2388 0569 43617053 		.ascii	"CapSense_1_FLASH_WD_STRUCT\000"
+ 2388      656E7365 
+ 2388      5F315F46 
+ 2388      4C415348 
+ 2388      5F57445F 
+ 2389              	.LASF156:
+ 2390 0584 736E734C 		.ascii	"snsList\000"
+ 2390      69737400 
+ 2391              	.LASF144:
+ 2392 058c 636F6E66 		.ascii	"configId\000"
+ 2392      69674964 
+ 2392      00
+ 2393              	.LASF75:
+ 2394 0595 70657269 		.ascii	"periTrGrSize\000"
+ 2394      54724772 
+ 2394      53697A65 
+ 2394      00
+ 2395              	.LASF33:
+ 2396 05a2 6770696F 		.ascii	"gpioVersion\000"
+ 2396      56657273 
+ 2396      696F6E00 
+ 2397              	.LASF153:
+ 2398 05ae 63736430 		.ascii	"csd0Config\000"
+ 2398      436F6E66 
+ 2398      696700
+ 2399              	.LASF163:
+ 2400 05b9 70747232 		.ascii	"ptr2WdgtRam\000"
+ 2400      57646774 
+ARM GAS  C:\Users\Labeo\AppData\Local\Temp\cchoLg3G.s 			page 52
+
+
+ 2400      52616D00 
+ 2401              	.LASF145:
+ 2402 05c5 64657669 		.ascii	"deviceId\000"
+ 2402      63654964 
+ 2402      00
+ 2403              	.LASF51:
+ 2404 05ce 65704D6F 		.ascii	"epMonitorNr\000"
+ 2404      6E69746F 
+ 2404      724E7200 
+ 2405              	.LASF98:
+ 2406 05da 63707573 		.ascii	"cpussCm4NmiCtlOffset\000"
+ 2406      73436D34 
+ 2406      4E6D6943 
+ 2406      746C4F66 
+ 2406      66736574 
+ 2407              	.LASF94:
+ 2408 05ef 63707573 		.ascii	"cpussTrimRamCtlOffset\000"
+ 2408      73547269 
+ 2408      6D52616D 
+ 2408      43746C4F 
+ 2408      66667365 
+ 2409              	.LASF89:
+ 2410 0605 63707573 		.ascii	"cpussCm0ClockCtlOffset\000"
+ 2410      73436D30 
+ 2410      436C6F63 
+ 2410      6B43746C 
+ 2410      4F666673 
+ 2411              	.LASF143:
+ 2412 061c 43617053 		.ascii	"CapSense_1_RAM_SNS_LIST_STRUCT\000"
+ 2412      656E7365 
+ 2412      5F315F52 
+ 2412      414D5F53 
+ 2412      4E535F4C 
+ 2413              	.LASF29:
+ 2414 063b 63707573 		.ascii	"cpussVersion\000"
+ 2414      73566572 
+ 2414      73696F6E 
+ 2414      00
+ 2415              	.LASF36:
+ 2416 0648 70657269 		.ascii	"periVersion\000"
+ 2416      56657273 
+ 2416      696F6E00 
+ 2417              	.LASF92:
+ 2418 0654 63707573 		.ascii	"cpussCm0StatusOffset\000"
+ 2418      73436D30 
+ 2418      53746174 
+ 2418      75734F66 
+ 2418      66736574 
+ 2419              	.LASF73:
+ 2420 0669 70657269 		.ascii	"periTrCmdGrSelMsk\000"
+ 2420      5472436D 
+ 2420      64477253 
+ 2420      656C4D73 
+ 2420      6B00
+ 2421              	.LASF170:
+ 2422 067b 6E756D43 		.ascii	"numCols\000"
+ 2422      6F6C7300 
+ARM GAS  C:\Users\Labeo\AppData\Local\Temp\cchoLg3G.s 			page 53
+
+
+ 2423              	.LASF18:
+ 2424 0683 73697A65 		.ascii	"sizetype\000"
+ 2424      74797065 
+ 2424      00
+ 2425              	.LASF66:
+ 2426 068c 64774368 		.ascii	"dwChOffset\000"
+ 2426      4F666673 
+ 2426      657400
+ 2427              	.LASF105:
+ 2428 0697 63795F73 		.ascii	"cy_stc_device_t\000"
+ 2428      74635F64 
+ 2428      65766963 
+ 2428      655F7400 
+ 2429              	.LASF179:
+ 2430 06a7 43617053 		.ascii	"CapSense_1_TU_CMD_RUN_SNR_TEST_E\000"
+ 2430      656E7365 
+ 2430      5F315F54 
+ 2430      555F434D 
+ 2430      445F5255 
+ 2431              	.LASF167:
+ 2432 06c8 73746174 		.ascii	"staticConfig\000"
+ 2432      6963436F 
+ 2432      6E666967 
+ 2432      00
+ 2433              	.LASF41:
+ 2434 06d5 63707573 		.ascii	"cpussFlashPaSize\000"
+ 2434      73466C61 
+ 2434      73685061 
+ 2434      53697A65 
+ 2434      00
+ 2435              	.LASF79:
+ 2436 06e6 70657269 		.ascii	"periDivCmdPaTypeSelPos\000"
+ 2436      44697643 
+ 2436      6D645061 
+ 2436      54797065 
+ 2436      53656C50 
+ 2437              	.LASF102:
+ 2438 06fd 63707573 		.ascii	"cpussRam2Ctl0\000"
+ 2438      7352616D 
+ 2438      3243746C 
+ 2438      3000
+ 2439              	.LASF146:
+ 2440 070b 6877436C 		.ascii	"hwClock\000"
+ 2440      6F636B00 
+ 2441              	.LASF169:
+ 2442 0713 77646774 		.ascii	"wdgtType\000"
+ 2442      54797065 
+ 2442      00
+ 2443              	.LASF70:
+ 2444 071c 64775374 		.ascii	"dwStatusChIdxPos\000"
+ 2444      61747573 
+ 2444      43684964 
+ 2444      78506F73 
+ 2444      00
+ 2445              	.LASF52:
+ 2446 072d 75646250 		.ascii	"udbPresent\000"
+ 2446      72657365 
+ARM GAS  C:\Users\Labeo\AppData\Local\Temp\cchoLg3G.s 			page 54
+
+
+ 2446      6E7400
+ 2447              	.LASF178:
+ 2448 0738 43617053 		.ascii	"CapSense_1_TU_CMD_RESTART_E\000"
+ 2448      656E7365 
+ 2448      5F315F54 
+ 2448      555F434D 
+ 2448      445F5245 
+ 2449              	.LASF32:
+ 2450 0754 666C6173 		.ascii	"flashcVersion\000"
+ 2450      68635665 
+ 2450      7273696F 
+ 2450      6E00
+ 2451              	.LASF28:
+ 2452 0762 63727970 		.ascii	"cryptoBase\000"
+ 2452      746F4261 
+ 2452      736500
+ 2453              	.LASF49:
+ 2454 076d 736D6966 		.ascii	"smifDeviceNr\000"
+ 2454      44657669 
+ 2454      63654E72 
+ 2454      00
+ 2455              	.LASF65:
+ 2456 077a 666C6173 		.ascii	"flashCtlMainWs4Freq\000"
+ 2456      6843746C 
+ 2456      4D61696E 
+ 2456      57733446 
+ 2456      72657100 
+ 2457              	.LASF147:
+ 2458 078e 74756E65 		.ascii	"tunerCmd\000"
+ 2458      72436D64 
+ 2458      00
+ 2459              	.LASF107:
+ 2460 0797 666C6F61 		.ascii	"float\000"
+ 2460      7400
+ 2461              	.LASF123:
+ 2462 079d 66696E67 		.ascii	"fingerTh\000"
+ 2462      65725468 
+ 2462      00
+ 2463              	.LASF71:
+ 2464 07a6 64775374 		.ascii	"dwStatusChIdxMsk\000"
+ 2464      61747573 
+ 2464      43684964 
+ 2464      784D736B 
+ 2464      00
+ 2465              	.LASF121:
+ 2466 07b7 534D4152 		.ascii	"SMARTSENSE_CSD_NOISE_ENVELOPE_STRUCT\000"
+ 2466      5453454E 
+ 2466      53455F43 
+ 2466      53445F4E 
+ 2466      4F495345 
+ 2467              	.LASF192:
+ 2468 07dc 63795F64 		.ascii	"cy_device\000"
+ 2468      65766963 
+ 2468      6500
+ 2469              	.LASF99:
+ 2470 07e6 63707573 		.ascii	"cpussRomCtl\000"
+ 2470      73526F6D 
+ARM GAS  C:\Users\Labeo\AppData\Local\Temp\cchoLg3G.s 			page 55
+
+
+ 2470      43746C00 
+ 2471              	.LASF69:
+ 2472 07f2 64774368 		.ascii	"dwChCtlPreemptablePos\000"
+ 2472      43746C50 
+ 2472      7265656D 
+ 2472      70746162 
+ 2472      6C65506F 
+ 2473              	.LASF22:
+ 2474 0808 75646242 		.ascii	"udbBase\000"
+ 2474      61736500 
+ 2475              	.LASF174:
+ 2476 0810 43617053 		.ascii	"CapSense_1_FLASH_STRUCT\000"
+ 2476      656E7365 
+ 2476      5F315F46 
+ 2476      4C415348 
+ 2476      5F535452 
+ 2477              	.LASF126:
+ 2478 0828 68797374 		.ascii	"hysteresis\000"
+ 2478      65726573 
+ 2478      697300
+ 2479              	.LASF114:
+ 2480 0833 70617261 		.ascii	"param0\000"
+ 2480      6D3000
+ 2481              	.LASF115:
+ 2482 083a 70617261 		.ascii	"param1\000"
+ 2482      6D3100
+ 2483              	.LASF116:
+ 2484 0841 70617261 		.ascii	"param2\000"
+ 2484      6D3200
+ 2485              	.LASF117:
+ 2486 0848 70617261 		.ascii	"param3\000"
+ 2486      6D3300
+ 2487              	.LASF118:
+ 2488 084f 70617261 		.ascii	"param4\000"
+ 2488      6D3400
+ 2489              	.LASF119:
+ 2490 0856 70617261 		.ascii	"param5\000"
+ 2490      6D3500
+ 2491              	.LASF120:
+ 2492 085d 70617261 		.ascii	"param6\000"
+ 2492      6D3600
+ 2493              	.LASF4:
+ 2494 0864 73686F72 		.ascii	"short int\000"
+ 2494      7420696E 
+ 2494      7400
+ 2495              	.LASF136:
+ 2496 086e 43617053 		.ascii	"CapSense_1_RAM_WD_LIST_STRUCT\000"
+ 2496      656E7365 
+ 2496      5F315F52 
+ 2496      414D5F57 
+ 2496      445F4C49 
+ 2497              	.LASF165:
+ 2498 088c 70747232 		.ascii	"ptr2FltrHistory\000"
+ 2498      466C7472 
+ 2498      48697374 
+ 2498      6F727900 
+ 2499              	.LASF24:
+ARM GAS  C:\Users\Labeo\AppData\Local\Temp\cchoLg3G.s 			page 56
+
+
+ 2500 089c 6873696F 		.ascii	"hsiomBase\000"
+ 2500      6D426173 
+ 2500      6500
+ 2501              	.LASF76:
+ 2502 08a6 70657269 		.ascii	"periDivCmdDivSelMsk\000"
+ 2502      44697643 
+ 2502      6D644469 
+ 2502      7653656C 
+ 2502      4D736B00 
+ 2503              	.LASF180:
+ 2504 08ba 43617053 		.ascii	"CapSense_1_TU_CMD_PING_E\000"
+ 2504      656E7365 
+ 2504      5F315F54 
+ 2504      555F434D 
+ 2504      445F5049 
+ 2505              	.LASF188:
+ 2506 08d3 74756E65 		.ascii	"tunerStatus\000"
+ 2506      72537461 
+ 2506      74757300 
+ 2507              	.LASF47:
+ 2508 08df 73727373 		.ascii	"srssNumHfroot\000"
+ 2508      4E756D48 
+ 2508      66726F6F 
+ 2508      7400
+ 2509              	.LASF60:
+ 2510 08ed 666C6173 		.ascii	"flashEraseDelay\000"
+ 2510      68457261 
+ 2510      73654465 
+ 2510      6C617900 
+ 2511              	.LASF16:
+ 2512 08fd 75696E74 		.ascii	"uint32_t\000"
+ 2512      33325F74 
+ 2512      00
+ 2513              	.LASF155:
+ 2514 0906 77646774 		.ascii	"wdgtList\000"
+ 2514      4C697374 
+ 2514      00
+ 2515              	.LASF195:
+ 2516 090f 43795F53 		.ascii	"Cy_SysLib_EnterCriticalSection\000"
+ 2516      79734C69 
+ 2516      625F456E 
+ 2516      74657243 
+ 2516      72697469 
+ 2517              	.LASF198:
+ 2518 092e 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 2518      43313120 
+ 2518      352E342E 
+ 2518      31203230 
+ 2518      31363036 
+ 2519 0961 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0plus -mthumb -"
+ 2519      20726576 
+ 2519      6973696F 
+ 2519      6E203233 
+ 2519      37373135 
+ 2520 0994 67202D4F 		.ascii	"g -Og -ffunction-sections -ffat-lto-objects\000"
+ 2520      67202D66 
+ 2520      66756E63 
+ARM GAS  C:\Users\Labeo\AppData\Local\Temp\cchoLg3G.s 			page 57
+
+
+ 2520      74696F6E 
+ 2520      2D736563 
+ 2521              	.LASF17:
+ 2522 09c0 6C6F6E67 		.ascii	"long double\000"
+ 2522      20646F75 
+ 2522      626C6500 
+ 2523              	.LASF106:
+ 2524 09cc 63686172 		.ascii	"char\000"
+ 2524      00
+ 2525              	.LASF37:
+ 2526 09d1 70726F74 		.ascii	"protVersion\000"
+ 2526      56657273 
+ 2526      696F6E00 
+ 2527              	.LASF100:
+ 2528 09dd 63707573 		.ascii	"cpussRam0Ctl0\000"
+ 2528      7352616D 
+ 2528      3043746C 
+ 2528      3000
+ 2529              	.LASF5:
+ 2530 09eb 5F5F7569 		.ascii	"__uint16_t\000"
+ 2530      6E743136 
+ 2530      5F7400
+ 2531              	.LASF130:
+ 2532 09f6 736E7343 		.ascii	"snsClk\000"
+ 2532      6C6B00
+ 2533              	.LASF81:
+ 2534 09fd 70657269 		.ascii	"periDiv16CtlOffset\000"
+ 2534      44697631 
+ 2534      3643746C 
+ 2534      4F666673 
+ 2534      657400
+ 2535              	.LASF122:
+ 2536 0a10 7265736F 		.ascii	"resolution\000"
+ 2536      6C757469 
+ 2536      6F6E00
+ 2537              	.LASF34:
+ 2538 0a1b 6873696F 		.ascii	"hsiomVersion\000"
+ 2538      6D566572 
+ 2538      73696F6E 
+ 2538      00
+ 2539              	.LASF177:
+ 2540 0a28 43617053 		.ascii	"CapSense_1_TU_CMD_RESUME_E\000"
+ 2540      656E7365 
+ 2540      5F315F54 
+ 2540      555F434D 
+ 2540      445F5245 
+ 2541              	.LASF59:
+ 2542 0a43 666C6173 		.ascii	"flashProgramDelay\000"
+ 2542      6850726F 
+ 2542      6772616D 
+ 2542      44656C61 
+ 2542      7900
+ 2543              	.LASF62:
+ 2544 0a55 666C6173 		.ascii	"flashCtlMainWs1Freq\000"
+ 2544      6843746C 
+ 2544      4D61696E 
+ 2544      57733146 
+ARM GAS  C:\Users\Labeo\AppData\Local\Temp\cchoLg3G.s 			page 58
+
+
+ 2544      72657100 
+ 2545              	.LASF141:
+ 2546 0a69 69646163 		.ascii	"idacComp\000"
+ 2546      436F6D70 
+ 2546      00
+ 2547              	.LASF6:
+ 2548 0a72 73686F72 		.ascii	"short unsigned int\000"
+ 2548      7420756E 
+ 2548      7369676E 
+ 2548      65642069 
+ 2548      6E7400
+ 2549              	.LASF67:
+ 2550 0a85 64774368 		.ascii	"dwChSize\000"
+ 2550      53697A65 
+ 2550      00
+ 2551              	.LASF140:
+ 2552 0a8e 6E656742 		.ascii	"negBslnRstCnt\000"
+ 2552      736C6E52 
+ 2552      7374436E 
+ 2552      7400
+ 2553              	.LASF50:
+ 2554 0a9c 70617373 		.ascii	"passSarChannels\000"
+ 2554      53617243 
+ 2554      68616E6E 
+ 2554      656C7300 
+ 2555              	.LASF103:
+ 2556 0aac 69706353 		.ascii	"ipcStructSize\000"
+ 2556      74727563 
+ 2556      7453697A 
+ 2556      6500
+ 2557              	.LASF168:
+ 2558 0aba 746F7461 		.ascii	"totalNumSns\000"
+ 2558      6C4E756D 
+ 2558      536E7300 
+ 2559              	.LASF42:
+ 2560 0ac6 63707573 		.ascii	"cpussIpc0Irq\000"
+ 2560      73497063 
+ 2560      30497271 
+ 2560      00
+ 2561              	.LASF166:
+ 2562 0ad3 70747232 		.ascii	"ptr2DebounceArr\000"
+ 2562      4465626F 
+ 2562      756E6365 
+ 2562      41727200 
+ 2563              	.LASF85:
+ 2564 0ae3 6770696F 		.ascii	"gpioPrtCfgOffset\000"
+ 2564      50727443 
+ 2564      66674F66 
+ 2564      66736574 
+ 2564      00
+ 2565              	.LASF191:
+ 2566 0af4 74756E65 		.ascii	"tunerFsm\000"
+ 2566      7246736D 
+ 2566      00
+ 2567              	.LASF182:
+ 2568 0afd 43617053 		.ascii	"CapSense_1_TU_CMD_ENUM\000"
+ 2568      656E7365 
+ARM GAS  C:\Users\Labeo\AppData\Local\Temp\cchoLg3G.s 			page 59
+
+
+ 2568      5F315F54 
+ 2568      555F434D 
+ 2568      445F454E 
+ 2569              	.LASF149:
+ 2570 0b14 73746174 		.ascii	"status\000"
+ 2570      757300
+ 2571              	.LASF44:
+ 2572 0b1b 63707573 		.ascii	"cpussNotConnectedIrq\000"
+ 2572      734E6F74 
+ 2572      436F6E6E 
+ 2572      65637465 
+ 2572      64497271 
+ 2573              	.LASF173:
+ 2574 0b30 77646774 		.ascii	"wdgtArray\000"
+ 2574      41727261 
+ 2574      7900
+ 2575              	.LASF58:
+ 2576 0b3a 666C6173 		.ascii	"flashWriteDelay\000"
+ 2576      68577269 
+ 2576      74654465 
+ 2576      6C617900 
+ 2577              	.LASF197:
+ 2578 0b4a 43617053 		.ascii	"CapSense_1_Start\000"
+ 2578      656E7365 
+ 2578      5F315F53 
+ 2578      74617274 
+ 2578      00
+ 2579              	.LASF13:
+ 2580 0b5b 75696E74 		.ascii	"uint8_t\000"
+ 2580      385F7400 
+ 2581              	.LASF91:
+ 2582 0b63 63707573 		.ascii	"cpussCm4StatusOffset\000"
+ 2582      73436D34 
+ 2582      53746174 
+ 2582      75734F66 
+ 2582      66736574 
+ 2583              	.LASF84:
+ 2584 0b78 6770696F 		.ascii	"gpioPrtIntrCfgOffset\000"
+ 2584      50727449 
+ 2584      6E747243 
+ 2584      66674F66 
+ 2584      66736574 
+ 2585              	.LASF131:
+ 2586 0b8d 736E7343 		.ascii	"snsClkSource\000"
+ 2586      6C6B536F 
+ 2586      75726365 
+ 2586      00
+ 2587              	.LASF200:
+ 2588 0b9a 433A5C55 		.ascii	"C:\\Users\\Labeo\\Desktop\\JUNK\\GBM2100\\Laboratoi"
+ 2588      73657273 
+ 2588      5C4C6162 
+ 2588      656F5C44 
+ 2588      65736B74 
+ 2589 0bc7 7265332E 		.ascii	"re3.cydsn\000"
+ 2589      63796473 
+ 2589      6E00
+ 2590              	.LASF95:
+ARM GAS  C:\Users\Labeo\AppData\Local\Temp\cchoLg3G.s 			page 60
+
+
+ 2591 0bd1 63707573 		.ascii	"cpussTrimRomCtlOffset\000"
+ 2591      73547269 
+ 2591      6D526F6D 
+ 2591      43746C4F 
+ 2591      66667365 
+ 2592              	.LASF189:
+ 2593 0be7 70747244 		.ascii	"ptrDsRam\000"
+ 2593      7352616D 
+ 2593      00
+ 2594              	.LASF113:
+ 2595 0bf0 43617053 		.ascii	"CapSense_1_LOW_BSLN_RST_TYPE\000"
+ 2595      656E7365 
+ 2595      5F315F4C 
+ 2595      4F575F42 
+ 2595      534C4E5F 
+ 2596              	.LASF45:
+ 2597 0c0d 73727373 		.ascii	"srssNumClkpath\000"
+ 2597      4E756D43 
+ 2597      6C6B7061 
+ 2597      746800
+ 2598              	.LASF7:
+ 2599 0c1c 6C6F6E67 		.ascii	"long int\000"
+ 2599      20696E74 
+ 2599      00
+ 2600              	.LASF31:
+ 2601 0c25 64775665 		.ascii	"dwVersion\000"
+ 2601      7273696F 
+ 2601      6E00
+ 2602              	.LASF27:
+ 2603 0c2f 69706342 		.ascii	"ipcBase\000"
+ 2603      61736500 
+ 2604              	.LASF78:
+ 2605 0c37 70657269 		.ascii	"periDivCmdPaDivSelPos\000"
+ 2605      44697643 
+ 2605      6D645061 
+ 2605      44697653 
+ 2605      656C506F 
+ 2606              	.LASF159:
+ 2607 0c4d 736E7254 		.ascii	"snrTestScanCounter\000"
+ 2607      65737453 
+ 2607      63616E43 
+ 2607      6F756E74 
+ 2607      657200
+ 2608              	.LASF56:
+ 2609 0c60 666C6173 		.ascii	"flashRwwRequired\000"
+ 2609      68527777 
+ 2609      52657175 
+ 2609      69726564 
+ 2609      00
+ 2610              	.LASF124:
+ 2611 0c71 6E6F6973 		.ascii	"noiseTh\000"
+ 2611      65546800 
+ 2612              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
