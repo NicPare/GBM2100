@@ -112,6 +112,7 @@
 #include "Status_SW2.h"
 #include "Clock_2.h"
 #include "I2C_MAX.h"
+#include "I2Cm.h"
 #include "CapSense.h"
 #include "CapSense_Control.h"
 #include "CapSense_Filter.h"
@@ -121,13 +122,16 @@
 #include "CapSense_Tuner.h"
 #include "CapSense_Configuration.h"
 #include "CapSense_SensingCSD_LL.h"
+#include "CapSense_SensingCSX_LL.h"
 #include "CapSense_RegisterMap.h"
+#include "CapSense_Centroid_LL.h"
 #include "CapSense_SmartSense_LL.h"
-#include "I2Cm.h"
+#include "CapSense_Gesture.h"
 #include "CY_EINK_SPIM_SCBCLK.h"
 #include "I2C_MAX_SCBCLK.h"
-#include "CapSense_ModClk.h"
 #include "I2Cm_SCBCLK.h"
+#include "CapSense_ModClk.h"
+#include "CapSense_TMG.h"
 
 /*[]*/
 

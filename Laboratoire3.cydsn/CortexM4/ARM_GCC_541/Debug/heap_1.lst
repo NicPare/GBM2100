@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccL3WNIb.s 			page 1
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxXMB0d.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccL3WNIb.s 			page 1
   27:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** 
   28:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** 
   29:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** /*
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccL3WNIb.s 			page 2
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxXMB0d.s 			page 2
 
 
   30:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c ****  * The simplest possible implementation of pvPortMalloc().  Note that this
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccL3WNIb.s 			page 1
   41              	.LVL1:
   72:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** void *pvReturn = NULL;
   73:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** static uint8_t *pucAlignedHeap = NULL;
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccL3WNIb.s 			page 3
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxXMB0d.s 			page 3
 
 
   74:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** 
@@ -166,10 +166,10 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccL3WNIb.s 			page 1
   95:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** 		if( ( ( xNextFreeByte + xWantedSize ) < configADJUSTED_HEAP_SIZE ) &&
   63              		.loc 1 95 0
   64 0026 0D4B     		ldr	r3, .L8+4
-  65 0028 D3F81436 		ldr	r3, [r3, #1556]
+  65 0028 D3F8643F 		ldr	r3, [r3, #3940]
   66 002c 1C44     		add	r4, r4, r3
   67              	.LVL4:
-  68 002e 42F2F772 		movw	r2, #10231
+  68 002e 47F22752 		movw	r2, #29991
   69 0032 9442     		cmp	r4, r2
   70 0034 08D8     		bhi	.L5
   71              		.loc 1 95 0 is_stmt 0 discriminator 1
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccL3WNIb.s 			page 1
   96:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** 			( ( xNextFreeByte + xWantedSize ) > xNextFreeByte )	)/* Check for overflow. */
   97:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** 		{
   98:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** 			/* Return the next free byte then increment the index past this
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccL3WNIb.s 			page 4
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxXMB0d.s 			page 4
 
 
   99:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** 			block. */
@@ -191,7 +191,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccL3WNIb.s 			page 1
  101:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** 			xNextFreeByte += xWantedSize;
   79              		.loc 1 101 0
   80 0040 064B     		ldr	r3, .L8+4
-  81 0042 C3F81446 		str	r4, [r3, #1556]
+  81 0042 C3F8644F 		str	r4, [r3, #3940]
   82 0046 02E0     		b	.L4
   83              	.LVL6:
   84              	.L5:
@@ -232,13 +232,13 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccL3WNIb.s 			page 1
  100 0056 00BF     		.align	2
  101              	.L8:
  102 0058 00000000 		.word	.LANCHOR0
- 103 005c F0210000 		.word	.LANCHOR1
+ 103 005c D0650000 		.word	.LANCHOR1
  104              		.cfi_endproc
  105              	.LFE136:
  106              		.size	pvPortMalloc, .-pvPortMalloc
  107              		.section	.text.vPortFree,"ax",%progbits
  108              		.align	2
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccL3WNIb.s 			page 5
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxXMB0d.s 			page 5
 
 
  109              		.global	vPortFree
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccL3WNIb.s 			page 1
   27:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** 
   28:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** 
   29:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** #ifndef PORTMACRO_H
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccL3WNIb.s 			page 6
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxXMB0d.s 			page 6
 
 
   30:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** #define PORTMACRO_H
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccL3WNIb.s 			page 1
   84:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** 	/* Barriers are normally not required but do ensure the code is completely	\
   85:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** 	within the specified behaviour for the architecture. */						\
   86:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** 	__asm volatile( "dsb" ::: "memory" );										\
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccL3WNIb.s 			page 7
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxXMB0d.s 			page 7
 
 
   87:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** 	__asm volatile( "isb" );													\
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccL3WNIb.s 			page 1
  141:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** 	}
  142:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** 	else
  143:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** 	{
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccL3WNIb.s 			page 8
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxXMB0d.s 			page 8
 
 
  144:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** 		xReturn = pdTRUE;
@@ -478,15 +478,15 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccL3WNIb.s 			page 1
  160              		.loc 1 137 0
  161 0000 0022     		movs	r2, #0
  162 0002 024B     		ldr	r3, .L14
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccL3WNIb.s 			page 9
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxXMB0d.s 			page 9
 
 
- 163 0004 C3F81426 		str	r2, [r3, #1556]
+ 163 0004 C3F8642F 		str	r2, [r3, #3940]
  164 0008 7047     		bx	lr
  165              	.L15:
  166 000a 00BF     		.align	2
  167              	.L14:
- 168 000c F0210000 		.word	.LANCHOR1
+ 168 000c D0650000 		.word	.LANCHOR1
  169              		.cfi_endproc
  170              	.LFE138:
  171              		.size	vPortInitialiseBlocks, .-vPortInitialiseBlocks
@@ -511,34 +511,34 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccL3WNIb.s 			page 1
  143:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** 	return ( configADJUSTED_HEAP_SIZE - xNextFreeByte );
  185              		.loc 1 143 0
  186 0000 034B     		ldr	r3, .L17
- 187 0002 D3F81406 		ldr	r0, [r3, #1556]
+ 187 0002 D3F8640F 		ldr	r0, [r3, #3940]
  144:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** }
  188              		.loc 1 144 0
- 189 0006 C0F51F50 		rsb	r0, r0, #10176
- 190 000a 3830     		adds	r0, r0, #56
+ 189 0006 C0F5EA40 		rsb	r0, r0, #29952
+ 190 000a 2830     		adds	r0, r0, #40
  191 000c 7047     		bx	lr
  192              	.L18:
  193 000e 00BF     		.align	2
  194              	.L17:
- 195 0010 F0210000 		.word	.LANCHOR1
+ 195 0010 D0650000 		.word	.LANCHOR1
  196              		.cfi_endproc
  197              	.LFE139:
  198              		.size	xPortGetFreeHeapSize, .-xPortGetFreeHeapSize
  199              		.bss
  200              		.align	2
  201              		.set	.LANCHOR0,. + 0
- 202              		.set	.LANCHOR1,. + 8688
+ 202              		.set	.LANCHOR1,. + 26064
  203              		.type	pucAlignedHeap.11761, %object
  204              		.size	pucAlignedHeap.11761, 4
  205              	pucAlignedHeap.11761:
  206 0000 00000000 		.space	4
  207              		.type	ucHeap, %object
- 208              		.size	ucHeap, 10240
+ 208              		.size	ucHeap, 30000
  209              	ucHeap:
- 210 0004 00000000 		.space	10240
+ 210 0004 00000000 		.space	30000
  210      00000000 
  210      00000000 
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccL3WNIb.s 			page 10
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxXMB0d.s 			page 10
 
 
  210      00000000 
@@ -546,7 +546,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccL3WNIb.s 			page 1
  211              		.type	xNextFreeByte, %object
  212              		.size	xNextFreeByte, 4
  213              	xNextFreeByte:
- 214 2804 00000000 		.space	4
+ 214 7534 00000000 		.space	4
  215              		.text
  216              	.Letext0:
  217              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
@@ -561,22 +561,22 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccL3WNIb.s 			page 1
  226 0006 00000000 		.4byte	.Ldebug_abbrev0
  227 000a 04       		.byte	0x4
  228 000b 01       		.uleb128 0x1
- 229 000c 69010000 		.4byte	.LASF28
+ 229 000c 5A010000 		.4byte	.LASF28
  230 0010 0C       		.byte	0xc
- 231 0011 AF000000 		.4byte	.LASF29
- 232 0015 4C020000 		.4byte	.LASF30
+ 231 0011 A0000000 		.4byte	.LASF29
+ 232 0015 38020000 		.4byte	.LASF30
  233 0019 00000000 		.4byte	.Ldebug_ranges0+0
  234 001d 00000000 		.4byte	0
  235 0021 00000000 		.4byte	.Ldebug_line0
  236 0025 02       		.uleb128 0x2
- 237 0026 19000000 		.4byte	.LASF4
+ 237 0026 0A000000 		.4byte	.LASF4
  238 002a 03       		.byte	0x3
  239 002b D8       		.byte	0xd8
  240 002c 30000000 		.4byte	0x30
  241 0030 03       		.uleb128 0x3
  242 0031 04       		.byte	0x4
  243 0032 07       		.byte	0x7
- 244 0033 33010000 		.4byte	.LASF0
+ 244 0033 24010000 		.4byte	.LASF0
  245 0037 04       		.uleb128 0x4
  246 0038 04       		.byte	0x4
  247 0039 05       		.byte	0x5
@@ -584,81 +584,81 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccL3WNIb.s 			page 1
  249 003e 03       		.uleb128 0x3
  250 003f 08       		.byte	0x8
  251 0040 05       		.byte	0x5
- 252 0041 2D020000 		.4byte	.LASF1
+ 252 0041 1E020000 		.4byte	.LASF1
  253 0045 03       		.uleb128 0x3
  254 0046 08       		.byte	0x8
  255 0047 04       		.byte	0x4
- 256 0048 CB020000 		.4byte	.LASF2
+ 256 0048 E5020000 		.4byte	.LASF2
  257 004c 03       		.uleb128 0x3
  258 004d 01       		.byte	0x1
  259 004e 06       		.byte	0x6
- 260 004f D7020000 		.4byte	.LASF3
+ 260 004f F1020000 		.4byte	.LASF3
  261 0053 02       		.uleb128 0x2
- 262 0054 0F000000 		.4byte	.LASF5
+ 262 0054 00000000 		.4byte	.LASF5
  263 0058 04       		.byte	0x4
  264 0059 1D       		.byte	0x1d
  265 005a 5E000000 		.4byte	0x5e
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccL3WNIb.s 			page 11
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxXMB0d.s 			page 11
 
 
  266 005e 03       		.uleb128 0x3
  267 005f 01       		.byte	0x1
  268 0060 08       		.byte	0x8
- 269 0061 5D000000 		.4byte	.LASF6
+ 269 0061 4E000000 		.4byte	.LASF6
  270 0065 03       		.uleb128 0x3
  271 0066 02       		.byte	0x2
  272 0067 05       		.byte	0x5
- 273 0068 96020000 		.4byte	.LASF7
+ 273 0068 B0020000 		.4byte	.LASF7
  274 006c 03       		.uleb128 0x3
  275 006d 02       		.byte	0x2
  276 006e 07       		.byte	0x7
- 277 006f 7D000000 		.4byte	.LASF8
+ 277 006f 6E000000 		.4byte	.LASF8
  278 0073 02       		.uleb128 0x2
- 279 0074 30000000 		.4byte	.LASF9
+ 279 0074 21000000 		.4byte	.LASF9
  280 0078 04       		.byte	0x4
  281 0079 3F       		.byte	0x3f
  282 007a 7E000000 		.4byte	0x7e
  283 007e 03       		.uleb128 0x3
  284 007f 04       		.byte	0x4
  285 0080 05       		.byte	0x5
- 286 0081 C2020000 		.4byte	.LASF10
+ 286 0081 DC020000 		.4byte	.LASF10
  287 0085 02       		.uleb128 0x2
- 288 0086 90000000 		.4byte	.LASF11
+ 288 0086 81000000 		.4byte	.LASF11
  289 008a 04       		.byte	0x4
  290 008b 41       		.byte	0x41
  291 008c 90000000 		.4byte	0x90
  292 0090 03       		.uleb128 0x3
  293 0091 04       		.byte	0x4
  294 0092 07       		.byte	0x7
- 295 0093 6B000000 		.4byte	.LASF12
+ 295 0093 5C000000 		.4byte	.LASF12
  296 0097 03       		.uleb128 0x3
  297 0098 08       		.byte	0x8
  298 0099 07       		.byte	0x7
- 299 009a 40010000 		.4byte	.LASF13
+ 299 009a 31010000 		.4byte	.LASF13
  300 009e 03       		.uleb128 0x3
  301 009f 04       		.byte	0x4
  302 00a0 07       		.byte	0x7
- 303 00a1 24020000 		.4byte	.LASF14
+ 303 00a1 15020000 		.4byte	.LASF14
  304 00a5 05       		.uleb128 0x5
  305 00a6 04       		.byte	0x4
  306 00a7 03       		.uleb128 0x3
  307 00a8 01       		.byte	0x1
  308 00a9 08       		.byte	0x8
- 309 00aa 47020000 		.4byte	.LASF15
+ 309 00aa 8F020000 		.4byte	.LASF15
  310 00ae 02       		.uleb128 0x2
- 311 00af 4F000000 		.4byte	.LASF16
+ 311 00af 40000000 		.4byte	.LASF16
  312 00b3 05       		.byte	0x5
  313 00b4 18       		.byte	0x18
  314 00b5 53000000 		.4byte	0x53
  315 00b9 02       		.uleb128 0x2
- 316 00ba 1C020000 		.4byte	.LASF17
+ 316 00ba 0D020000 		.4byte	.LASF17
  317 00be 05       		.byte	0x5
  318 00bf 2C       		.byte	0x2c
  319 00c0 73000000 		.4byte	0x73
  320 00c4 02       		.uleb128 0x2
- 321 00c5 B9020000 		.4byte	.LASF18
+ 321 00c5 D3020000 		.4byte	.LASF18
  322 00c9 05       		.byte	0x5
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccL3WNIb.s 			page 12
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxXMB0d.s 			page 12
 
 
  323 00ca 30       		.byte	0x30
@@ -666,28 +666,28 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccL3WNIb.s 			page 1
  325 00cf 03       		.uleb128 0x3
  326 00d0 04       		.byte	0x4
  327 00d1 04       		.byte	0x4
- 328 00d2 57000000 		.4byte	.LASF19
+ 328 00d2 48000000 		.4byte	.LASF19
  329 00d6 03       		.uleb128 0x3
  330 00d7 08       		.byte	0x8
  331 00d8 04       		.byte	0x4
- 332 00d9 9B000000 		.4byte	.LASF20
+ 332 00d9 8C000000 		.4byte	.LASF20
  333 00dd 06       		.uleb128 0x6
  334 00de 04       		.byte	0x4
  335 00df AE000000 		.4byte	0xae
  336 00e3 07       		.uleb128 0x7
- 337 00e4 57010000 		.4byte	.LASF31
+ 337 00e4 48010000 		.4byte	.LASF31
  338 00e8 02       		.byte	0x2
  339 00e9 98       		.byte	0x98
  340 00ea 03       		.byte	0x3
  341 00eb FB000000 		.4byte	0xfb
  342 00ef 08       		.uleb128 0x8
- 343 00f0 A2000000 		.4byte	.LASF32
+ 343 00f0 93000000 		.4byte	.LASF32
  344 00f4 02       		.byte	0x2
  345 00f5 9A       		.byte	0x9a
  346 00f6 C4000000 		.4byte	0xc4
  347 00fa 00       		.byte	0
  348 00fb 09       		.uleb128 0x9
- 349 00fc 89020000 		.4byte	.LASF33
+ 349 00fc A3020000 		.4byte	.LASF33
  350 0100 01       		.byte	0x1
  351 0101 46       		.byte	0x46
  352 0102 A5000000 		.4byte	0xa5
@@ -697,19 +697,19 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccL3WNIb.s 			page 1
  356 010f 9C       		.byte	0x9c
  357 0110 56010000 		.4byte	0x156
  358 0114 0A       		.uleb128 0xa
- 359 0115 3B020000 		.4byte	.LASF23
+ 359 0115 2C020000 		.4byte	.LASF23
  360 0119 01       		.byte	0x1
  361 011a 46       		.byte	0x46
  362 011b 25000000 		.4byte	0x25
  363 011f 00000000 		.4byte	.LLST0
  364 0123 0B       		.uleb128 0xb
- 365 0124 00010000 		.4byte	.LASF21
+ 365 0124 F1000000 		.4byte	.LASF21
  366 0128 01       		.byte	0x1
  367 0129 48       		.byte	0x48
  368 012a A5000000 		.4byte	0xa5
  369 012e 1E000000 		.4byte	.LLST1
  370 0132 0C       		.uleb128 0xc
- 371 0133 00000000 		.4byte	.LASF22
+ 371 0133 94020000 		.4byte	.LASF22
  372 0137 01       		.byte	0x1
  373 0138 49       		.byte	0x49
  374 0139 DD000000 		.4byte	0xdd
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccL3WNIb.s 			page 1
  377 013f 00000000 		.4byte	pucAlignedHeap.11761
  378 0143 0D       		.uleb128 0xd
  379 0144 14000000 		.4byte	.LVL3
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccL3WNIb.s 			page 13
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxXMB0d.s 			page 13
 
 
  380 0148 01020000 		.4byte	0x201
@@ -727,7 +727,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccL3WNIb.s 			page 1
  383 0151 0D020000 		.4byte	0x20d
  384 0155 00       		.byte	0
  385 0156 0E       		.uleb128 0xe
- 386 0157 A0020000 		.4byte	.LASF34
+ 386 0157 BA020000 		.4byte	.LASF34
  387 015b 01       		.byte	0x1
  388 015c 7A       		.byte	0x7a
  389 015d 00000000 		.4byte	.LFB137
@@ -757,7 +757,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccL3WNIb.s 			page 1
  413 0195 00       		.byte	0
  414 0196 00       		.byte	0
  415 0197 13       		.uleb128 0x13
- 416 0198 1D010000 		.4byte	.LASF35
+ 416 0198 0E010000 		.4byte	.LASF35
  417 019c 01       		.byte	0x1
  418 019d 86       		.byte	0x86
  419 019e 00000000 		.4byte	.LFB138
@@ -765,7 +765,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccL3WNIb.s 			page 1
  421 01a6 01       		.uleb128 0x1
  422 01a7 9C       		.byte	0x9c
  423 01a8 14       		.uleb128 0x14
- 424 01a9 3A000000 		.4byte	.LASF36
+ 424 01a9 2B000000 		.4byte	.LASF36
  425 01ad 01       		.byte	0x1
  426 01ae 8D       		.byte	0x8d
  427 01af 25000000 		.4byte	0x25
@@ -778,13 +778,13 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccL3WNIb.s 			page 1
  434 01c2 CE010000 		.4byte	0x1ce
  435 01c6 16       		.uleb128 0x16
  436 01c7 9E000000 		.4byte	0x9e
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccL3WNIb.s 			page 14
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxXMB0d.s 			page 14
 
 
- 437 01cb FF27     		.2byte	0x27ff
+ 437 01cb 2F75     		.2byte	0x752f
  438 01cd 00       		.byte	0
  439 01ce 0C       		.uleb128 0xc
- 440 01cf 16010000 		.4byte	.LASF24
+ 440 01cf 07010000 		.4byte	.LASF24
  441 01d3 01       		.byte	0x1
  442 01d4 3E       		.byte	0x3e
  443 01d5 BD010000 		.4byte	0x1bd
@@ -792,28 +792,28 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccL3WNIb.s 			page 1
  445 01da 03       		.byte	0x3
  446 01db 04000000 		.4byte	ucHeap
  447 01df 0C       		.uleb128 0xc
- 448 01e0 E3020000 		.4byte	.LASF25
+ 448 01e0 FD020000 		.4byte	.LASF25
  449 01e4 01       		.byte	0x1
  450 01e5 42       		.byte	0x42
  451 01e6 25000000 		.4byte	0x25
  452 01ea 05       		.uleb128 0x5
  453 01eb 03       		.byte	0x3
- 454 01ec 04280000 		.4byte	xNextFreeByte
+ 454 01ec 34750000 		.4byte	xNextFreeByte
  455 01f0 17       		.uleb128 0x17
- 456 01f1 09010000 		.4byte	.LASF37
+ 456 01f1 FA000000 		.4byte	.LASF37
  457 01f5 07       		.byte	0x7
  458 01f6 0108     		.2byte	0x801
  459 01f8 FC010000 		.4byte	0x1fc
  460 01fc 18       		.uleb128 0x18
  461 01fd B9000000 		.4byte	0xb9
  462 0201 19       		.uleb128 0x19
- 463 0202 20000000 		.4byte	.LASF26
- 464 0206 20000000 		.4byte	.LASF26
+ 463 0202 11000000 		.4byte	.LASF26
+ 464 0206 11000000 		.4byte	.LASF26
  465 020a 06       		.byte	0x6
  466 020b F904     		.2byte	0x4f9
  467 020d 19       		.uleb128 0x19
- 468 020e AA020000 		.4byte	.LASF27
- 469 0212 AA020000 		.4byte	.LASF27
+ 468 020e C4020000 		.4byte	.LASF27
+ 469 0212 C4020000 		.4byte	.LASF27
  470 0216 06       		.byte	0x6
  471 0217 2F05     		.2byte	0x52f
  472 0219 00       		.byte	0
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccL3WNIb.s 			page 1
  491 0010 17       		.uleb128 0x17
  492 0011 00       		.byte	0
  493 0012 00       		.byte	0
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccL3WNIb.s 			page 15
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxXMB0d.s 			page 15
 
 
  494 0013 02       		.uleb128 0x2
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccL3WNIb.s 			page 1
  548 0049 03       		.uleb128 0x3
  549 004a 0E       		.uleb128 0xe
  550 004b 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccL3WNIb.s 			page 16
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxXMB0d.s 			page 16
 
 
  551 004c 0B       		.uleb128 0xb
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccL3WNIb.s 			page 1
  605 0083 03       		.uleb128 0x3
  606 0084 0E       		.uleb128 0xe
  607 0085 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccL3WNIb.s 			page 17
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxXMB0d.s 			page 17
 
 
  608 0086 0B       		.uleb128 0xb
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccL3WNIb.s 			page 1
  662 00be 0E       		.uleb128 0xe
  663 00bf 3A       		.uleb128 0x3a
  664 00c0 0B       		.uleb128 0xb
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccL3WNIb.s 			page 18
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxXMB0d.s 			page 18
 
 
  665 00c1 3B       		.uleb128 0x3b
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccL3WNIb.s 			page 1
  719 00f8 00       		.byte	0
  720 00f9 12       		.uleb128 0x12
  721 00fa 34       		.uleb128 0x34
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccL3WNIb.s 			page 19
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxXMB0d.s 			page 19
 
 
  722 00fb 00       		.byte	0
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccL3WNIb.s 			page 1
  776 0133 01       		.uleb128 0x1
  777 0134 01       		.byte	0x1
  778 0135 49       		.uleb128 0x49
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccL3WNIb.s 			page 20
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxXMB0d.s 			page 20
 
 
  779 0136 13       		.uleb128 0x13
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccL3WNIb.s 			page 1
  833 016c 00       		.byte	0
  834 016d 00       		.byte	0
  835              		.section	.debug_loc,"",%progbits
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccL3WNIb.s 			page 21
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxXMB0d.s 			page 21
 
 
  836              	.Ldebug_loc0:
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccL3WNIb.s 			page 1
  890 0034 00000000 		.4byte	0
  891              		.section	.debug_ranges,"",%progbits
  892              	.Ldebug_ranges0:
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccL3WNIb.s 			page 22
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxXMB0d.s 			page 22
 
 
  893 0000 00000000 		.4byte	.LFB136
@@ -1278,209 +1278,210 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccL3WNIb.s 			page 1
  905      00000201 
  905      FB0E0D00 
  905      01010101 
- 906              	.LASF22:
- 907 0000 70756341 		.ascii	"pucAlignedHeap\000"
- 907      6C69676E 
- 907      65644865 
- 907      617000
- 908              	.LASF5:
- 909 000f 5F5F7569 		.ascii	"__uint8_t\000"
- 909      6E74385F 
- 909      7400
- 910              	.LASF4:
- 911 0019 73697A65 		.ascii	"size_t\000"
- 911      5F7400
- 912              	.LASF26:
- 913 0020 76546173 		.ascii	"vTaskSuspendAll\000"
- 913      6B537573 
- 913      70656E64 
- 913      416C6C00 
- 914              	.LASF9:
- 915 0030 5F5F696E 		.ascii	"__int32_t\000"
- 915      7433325F 
- 915      7400
- 916              	.LASF36:
- 917 003a 78506F72 		.ascii	"xPortGetFreeHeapSize\000"
- 917      74476574 
- 917      46726565 
- 917      48656170 
- 917      53697A65 
- 918              	.LASF16:
- 919 004f 75696E74 		.ascii	"uint8_t\000"
- 919      385F7400 
- 920              	.LASF19:
- 921 0057 666C6F61 		.ascii	"float\000"
- 921      7400
- 922              	.LASF6:
- 923 005d 756E7369 		.ascii	"unsigned char\000"
- 923      676E6564 
- 923      20636861 
- 923      7200
- 924              	.LASF12:
- 925 006b 6C6F6E67 		.ascii	"long unsigned int\000"
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccL3WNIb.s 			page 23
+ 906              	.LASF5:
+ 907 0000 5F5F7569 		.ascii	"__uint8_t\000"
+ 907      6E74385F 
+ 907      7400
+ 908              	.LASF4:
+ 909 000a 73697A65 		.ascii	"size_t\000"
+ 909      5F7400
+ 910              	.LASF26:
+ 911 0011 76546173 		.ascii	"vTaskSuspendAll\000"
+ 911      6B537573 
+ 911      70656E64 
+ 911      416C6C00 
+ 912              	.LASF9:
+ 913 0021 5F5F696E 		.ascii	"__int32_t\000"
+ 913      7433325F 
+ 913      7400
+ 914              	.LASF36:
+ 915 002b 78506F72 		.ascii	"xPortGetFreeHeapSize\000"
+ 915      74476574 
+ 915      46726565 
+ 915      48656170 
+ 915      53697A65 
+ 916              	.LASF16:
+ 917 0040 75696E74 		.ascii	"uint8_t\000"
+ 917      385F7400 
+ 918              	.LASF19:
+ 919 0048 666C6F61 		.ascii	"float\000"
+ 919      7400
+ 920              	.LASF6:
+ 921 004e 756E7369 		.ascii	"unsigned char\000"
+ 921      676E6564 
+ 921      20636861 
+ 921      7200
+ 922              	.LASF12:
+ 923 005c 6C6F6E67 		.ascii	"long unsigned int\000"
+ 923      20756E73 
+ 923      69676E65 
+ 923      6420696E 
+ 923      7400
+ 924              	.LASF8:
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxXMB0d.s 			page 23
 
 
- 925      20756E73 
- 925      69676E65 
- 925      6420696E 
- 925      7400
- 926              	.LASF8:
- 927 007d 73686F72 		.ascii	"short unsigned int\000"
- 927      7420756E 
- 927      7369676E 
- 927      65642069 
- 927      6E7400
- 928              	.LASF11:
- 929 0090 5F5F7569 		.ascii	"__uint32_t\000"
- 929      6E743332 
- 929      5F7400
- 930              	.LASF20:
- 931 009b 646F7562 		.ascii	"double\000"
- 931      6C6500
- 932              	.LASF32:
- 933 00a2 756C4E65 		.ascii	"ulNewBASEPRI\000"
- 933      77424153 
- 933      45505249 
- 933      00
- 934              	.LASF29:
- 935 00af 47656E65 		.ascii	"Generated_Source\\PSoC6\\pdl\\rtos\\FreeRTOS\\10.0."
- 935      72617465 
- 935      645F536F 
- 935      75726365 
- 935      5C50536F 
- 936 00dd 315C536F 		.ascii	"1\\Source\\portable\\MemMang\\heap_1.c\000"
- 936      75726365 
- 936      5C706F72 
- 936      7461626C 
- 936      655C4D65 
- 937              	.LASF21:
- 938 0100 70765265 		.ascii	"pvReturn\000"
- 938      7475726E 
+ 925 006e 73686F72 		.ascii	"short unsigned int\000"
+ 925      7420756E 
+ 925      7369676E 
+ 925      65642069 
+ 925      6E7400
+ 926              	.LASF11:
+ 927 0081 5F5F7569 		.ascii	"__uint32_t\000"
+ 927      6E743332 
+ 927      5F7400
+ 928              	.LASF20:
+ 929 008c 646F7562 		.ascii	"double\000"
+ 929      6C6500
+ 930              	.LASF32:
+ 931 0093 756C4E65 		.ascii	"ulNewBASEPRI\000"
+ 931      77424153 
+ 931      45505249 
+ 931      00
+ 932              	.LASF29:
+ 933 00a0 47656E65 		.ascii	"Generated_Source\\PSoC6\\pdl\\rtos\\FreeRTOS\\10.0."
+ 933      72617465 
+ 933      645F536F 
+ 933      75726365 
+ 933      5C50536F 
+ 934 00ce 315C536F 		.ascii	"1\\Source\\portable\\MemMang\\heap_1.c\000"
+ 934      75726365 
+ 934      5C706F72 
+ 934      7461626C 
+ 934      655C4D65 
+ 935              	.LASF21:
+ 936 00f1 70765265 		.ascii	"pvReturn\000"
+ 936      7475726E 
+ 936      00
+ 937              	.LASF37:
+ 938 00fa 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 938      52784275 
+ 938      66666572 
  938      00
- 939              	.LASF37:
- 940 0109 49544D5F 		.ascii	"ITM_RxBuffer\000"
- 940      52784275 
- 940      66666572 
- 940      00
- 941              	.LASF24:
- 942 0116 75634865 		.ascii	"ucHeap\000"
- 942      617000
- 943              	.LASF35:
- 944 011d 76506F72 		.ascii	"vPortInitialiseBlocks\000"
- 944      74496E69 
- 944      7469616C 
- 944      69736542 
- 944      6C6F636B 
- 945              	.LASF0:
- 946 0133 756E7369 		.ascii	"unsigned int\000"
- 946      676E6564 
- 946      20696E74 
- 946      00
- 947              	.LASF13:
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccL3WNIb.s 			page 24
+ 939              	.LASF24:
+ 940 0107 75634865 		.ascii	"ucHeap\000"
+ 940      617000
+ 941              	.LASF35:
+ 942 010e 76506F72 		.ascii	"vPortInitialiseBlocks\000"
+ 942      74496E69 
+ 942      7469616C 
+ 942      69736542 
+ 942      6C6F636B 
+ 943              	.LASF0:
+ 944 0124 756E7369 		.ascii	"unsigned int\000"
+ 944      676E6564 
+ 944      20696E74 
+ 944      00
+ 945              	.LASF13:
+ 946 0131 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 946      206C6F6E 
+ 946      6720756E 
+ 946      7369676E 
+ 946      65642069 
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxXMB0d.s 			page 24
 
 
- 948 0140 6C6F6E67 		.ascii	"long long unsigned int\000"
- 948      206C6F6E 
- 948      6720756E 
- 948      7369676E 
- 948      65642069 
- 949              	.LASF31:
- 950 0157 76506F72 		.ascii	"vPortRaiseBASEPRI\000"
- 950      74526169 
- 950      73654241 
- 950      53455052 
- 950      4900
- 951              	.LASF28:
- 952 0169 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 952      43313120 
- 952      352E342E 
- 952      31203230 
- 952      31363036 
- 953 019c 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m4 -mfloat-abi=s"
- 953      20726576 
- 953      6973696F 
- 953      6E203233 
- 953      37373135 
- 954 01cf 6F667466 		.ascii	"oftfp -mfpu=fpv4-sp-d16 -mthumb -g -Og -ffunction-s"
- 954      70202D6D 
- 954      6670753D 
- 954      66707634 
- 954      2D73702D 
- 955 0202 65637469 		.ascii	"ections -ffat-lto-objects\000"
- 955      6F6E7320 
- 955      2D666661 
- 955      742D6C74 
- 955      6F2D6F62 
- 956              	.LASF17:
- 957 021c 696E7433 		.ascii	"int32_t\000"
- 957      325F7400 
- 958              	.LASF14:
- 959 0224 73697A65 		.ascii	"sizetype\000"
- 959      74797065 
- 959      00
- 960              	.LASF1:
- 961 022d 6C6F6E67 		.ascii	"long long int\000"
- 961      206C6F6E 
- 961      6720696E 
- 961      7400
- 962              	.LASF23:
- 963 023b 7857616E 		.ascii	"xWantedSize\000"
- 963      74656453 
- 963      697A6500 
- 964              	.LASF15:
- 965 0247 63686172 		.ascii	"char\000"
- 965      00
- 966              	.LASF30:
- 967 024c 433A5C55 		.ascii	"C:\\Users\\nicpa\\OneDrive\\Documents\\GBM2100\\Lab"
- 967      73657273 
- 967      5C6E6963 
- 967      70615C4F 
- 967      6E654472 
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccL3WNIb.s 			page 25
+ 947              	.LASF31:
+ 948 0148 76506F72 		.ascii	"vPortRaiseBASEPRI\000"
+ 948      74526169 
+ 948      73654241 
+ 948      53455052 
+ 948      4900
+ 949              	.LASF28:
+ 950 015a 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 950      43313120 
+ 950      352E342E 
+ 950      31203230 
+ 950      31363036 
+ 951 018d 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m4 -mfloat-abi=s"
+ 951      20726576 
+ 951      6973696F 
+ 951      6E203233 
+ 951      37373135 
+ 952 01c0 6F667466 		.ascii	"oftfp -mfpu=fpv4-sp-d16 -mthumb -g -Og -ffunction-s"
+ 952      70202D6D 
+ 952      6670753D 
+ 952      66707634 
+ 952      2D73702D 
+ 953 01f3 65637469 		.ascii	"ections -ffat-lto-objects\000"
+ 953      6F6E7320 
+ 953      2D666661 
+ 953      742D6C74 
+ 953      6F2D6F62 
+ 954              	.LASF17:
+ 955 020d 696E7433 		.ascii	"int32_t\000"
+ 955      325F7400 
+ 956              	.LASF14:
+ 957 0215 73697A65 		.ascii	"sizetype\000"
+ 957      74797065 
+ 957      00
+ 958              	.LASF1:
+ 959 021e 6C6F6E67 		.ascii	"long long int\000"
+ 959      206C6F6E 
+ 959      6720696E 
+ 959      7400
+ 960              	.LASF23:
+ 961 022c 7857616E 		.ascii	"xWantedSize\000"
+ 961      74656453 
+ 961      697A6500 
+ 962              	.LASF30:
+ 963 0238 433A5C55 		.ascii	"C:\\Users\\nicpa\\OneDrive\\Documents\\PolyDoc\\GBM"
+ 963      73657273 
+ 963      5C6E6963 
+ 963      70615C4F 
+ 963      6E654472 
+ 964 0265 32313030 		.ascii	"2100FINAL\\Laboratoire3\\Laboratoire3.cydsn\000"
+ 964      46494E41 
+ 964      4C5C4C61 
+ 964      626F7261 
+ 964      746F6972 
+ 965              	.LASF15:
+ 966 028f 63686172 		.ascii	"char\000"
+ 966      00
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxXMB0d.s 			page 25
 
 
- 968 0279 6F726174 		.ascii	"oratoire3.cydsn\000"
- 968      6F697265 
- 968      332E6379 
- 968      64736E00 
+ 967              	.LASF22:
+ 968 0294 70756341 		.ascii	"pucAlignedHeap\000"
+ 968      6C69676E 
+ 968      65644865 
+ 968      617000
  969              	.LASF33:
- 970 0289 7076506F 		.ascii	"pvPortMalloc\000"
+ 970 02a3 7076506F 		.ascii	"pvPortMalloc\000"
  970      72744D61 
  970      6C6C6F63 
  970      00
  971              	.LASF7:
- 972 0296 73686F72 		.ascii	"short int\000"
+ 972 02b0 73686F72 		.ascii	"short int\000"
  972      7420696E 
  972      7400
  973              	.LASF34:
- 974 02a0 76506F72 		.ascii	"vPortFree\000"
+ 974 02ba 76506F72 		.ascii	"vPortFree\000"
  974      74467265 
  974      6500
  975              	.LASF27:
- 976 02aa 78546173 		.ascii	"xTaskResumeAll\000"
+ 976 02c4 78546173 		.ascii	"xTaskResumeAll\000"
  976      6B526573 
  976      756D6541 
  976      6C6C00
  977              	.LASF18:
- 978 02b9 75696E74 		.ascii	"uint32_t\000"
+ 978 02d3 75696E74 		.ascii	"uint32_t\000"
  978      33325F74 
  978      00
  979              	.LASF10:
- 980 02c2 6C6F6E67 		.ascii	"long int\000"
+ 980 02dc 6C6F6E67 		.ascii	"long int\000"
  980      20696E74 
  980      00
  981              	.LASF2:
- 982 02cb 6C6F6E67 		.ascii	"long double\000"
+ 982 02e5 6C6F6E67 		.ascii	"long double\000"
  982      20646F75 
  982      626C6500 
  983              	.LASF3:
- 984 02d7 7369676E 		.ascii	"signed char\000"
+ 984 02f1 7369676E 		.ascii	"signed char\000"
  984      65642063 
  984      68617200 
  985              	.LASF25:
- 986 02e3 784E6578 		.ascii	"xNextFreeByte\000"
+ 986 02fd 784E6578 		.ascii	"xNextFreeByte\000"
  986      74467265 
  986      65427974 
  986      6500

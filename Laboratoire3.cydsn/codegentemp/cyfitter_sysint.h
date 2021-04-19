@@ -18,6 +18,22 @@
 #define INCLUDED_CYFITTER_SYSINT_H
 #include "cy_device_headers.h"
 
+/* bouton_isr */
+#define bouton_isr__INTC_CORTEXM4_ASSIGNED 1
+#define bouton_isr__INTC_CORTEXM4_PRIORITY 7u
+#define bouton_isr__INTC_NUMBER 0u
+#define bouton_isr_INTC_CORTEXM4_ASSIGNED 1
+#define bouton_isr_INTC_CORTEXM4_PRIORITY 7u
+#define bouton_isr_INTC_NUMBER 0u
+
+/* PPG_RDY_isr */
+#define PPG_RDY_isr__INTC_CORTEXM4_ASSIGNED 1
+#define PPG_RDY_isr__INTC_CORTEXM4_PRIORITY 7u
+#define PPG_RDY_isr__INTC_NUMBER 13u
+#define PPG_RDY_isr_INTC_CORTEXM4_ASSIGNED 1
+#define PPG_RDY_isr_INTC_CORTEXM4_PRIORITY 7u
+#define PPG_RDY_isr_INTC_NUMBER 13u
+
 /* CapSense_ISR */
 #define CapSense_ISR__INTC_CORTEXM4_ASSIGNED 1
 #define CapSense_ISR__INTC_CORTEXM4_PRIORITY 7u

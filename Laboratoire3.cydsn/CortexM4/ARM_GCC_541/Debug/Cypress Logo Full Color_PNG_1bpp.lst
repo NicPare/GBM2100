@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 1
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccJyoyWV.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 1
   55 0027 FF       		.byte	-1
   56 0028 FF       		.byte	-1
   57 0029 FF       		.byte	-1
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 2
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccJyoyWV.s 			page 2
 
 
   58 002a FF       		.byte	-1
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 1
  112 0060 FF       		.byte	-1
  113 0061 FF       		.byte	-1
  114 0062 FF       		.byte	-1
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 3
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccJyoyWV.s 			page 3
 
 
  115 0063 FF       		.byte	-1
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 1
  169 0099 FF       		.byte	-1
  170 009a FC       		.byte	-4
  171 009b 00       		.byte	0
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 4
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccJyoyWV.s 			page 4
 
 
  172 009c 00       		.byte	0
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 1
  226 00d2 FF       		.byte	-1
  227 00d3 FF       		.byte	-1
  228 00d4 FF       		.byte	-1
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 5
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccJyoyWV.s 			page 5
 
 
  229 00d5 FF       		.byte	-1
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 1
  283 010b FF       		.byte	-1
  284 010c FF       		.byte	-1
  285 010d FF       		.byte	-1
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 6
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccJyoyWV.s 			page 6
 
 
  286 010e FF       		.byte	-1
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 1
  340 0144 00       		.byte	0
  341 0145 3F       		.byte	63
  342 0146 FF       		.byte	-1
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 7
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccJyoyWV.s 			page 7
 
 
  343 0147 FF       		.byte	-1
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 1
  397 017d FF       		.byte	-1
  398 017e F0       		.byte	-16
  399 017f FF       		.byte	-1
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 8
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccJyoyWV.s 			page 8
 
 
  400 0180 F0       		.byte	-16
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 1
  454 01b6 FF       		.byte	-1
  455 01b7 FF       		.byte	-1
  456 01b8 FF       		.byte	-1
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 9
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccJyoyWV.s 			page 9
 
 
  457 01b9 FF       		.byte	-1
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 1
  511 01ef FF       		.byte	-1
  512 01f0 FF       		.byte	-1
  513 01f1 FF       		.byte	-1
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 10
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccJyoyWV.s 			page 10
 
 
  514 01f2 FF       		.byte	-1
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 1
  568 0228 00       		.byte	0
  569 0229 00       		.byte	0
  570 022a 00       		.byte	0
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 11
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccJyoyWV.s 			page 11
 
 
  571 022b 00       		.byte	0
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 1
  625 0261 FF       		.byte	-1
  626 0262 FF       		.byte	-1
  627 0263 FF       		.byte	-1
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 12
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccJyoyWV.s 			page 12
 
 
  628 0264 FF       		.byte	-1
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 1
  682 029a FF       		.byte	-1
  683 029b FF       		.byte	-1
  684 029c FF       		.byte	-1
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 13
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccJyoyWV.s 			page 13
 
 
  685 029d FF       		.byte	-1
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 1
  739 02d3 FF       		.byte	-1
  740 02d4 FC       		.byte	-4
  741 02d5 01       		.byte	1
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 14
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccJyoyWV.s 			page 14
 
 
  742 02d6 FE       		.byte	-2
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 1
  796 030c 1F       		.byte	31
  797 030d FF       		.byte	-1
  798 030e FF       		.byte	-1
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 15
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccJyoyWV.s 			page 15
 
 
  799 030f FF       		.byte	-1
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 1
  853 0345 0F       		.byte	15
  854 0346 C0       		.byte	-64
  855 0347 00       		.byte	0
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 16
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccJyoyWV.s 			page 16
 
 
  856 0348 1F       		.byte	31
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 1
  910 037e 3E       		.byte	62
  911 037f 00       		.byte	0
  912 0380 00       		.byte	0
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 17
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccJyoyWV.s 			page 17
 
 
  913 0381 3F       		.byte	63
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 1
  967 03b7 FF       		.byte	-1
  968 03b8 FF       		.byte	-1
  969 03b9 FF       		.byte	-1
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 18
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccJyoyWV.s 			page 18
 
 
  970 03ba FF       		.byte	-1
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 1
  1024 03f0 07       		.byte	7
  1025 03f1 F0       		.byte	-16
  1026 03f2 FF       		.byte	-1
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 19
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccJyoyWV.s 			page 19
 
 
  1027 03f3 FF       		.byte	-1
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 1
  1081 0429 0F       		.byte	15
  1082 042a 81       		.byte	-127
  1083 042b FF       		.byte	-1
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 20
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccJyoyWV.s 			page 20
 
 
  1084 042c FF       		.byte	-1
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 1
  1138 0462 0F       		.byte	15
  1139 0463 E0       		.byte	-32
  1140 0464 01       		.byte	1
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 21
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccJyoyWV.s 			page 21
 
 
  1141 0465 FE       		.byte	-2
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 1
  1195 049b FF       		.byte	-1
  1196 049c FF       		.byte	-1
  1197 049d FF       		.byte	-1
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 22
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccJyoyWV.s 			page 22
 
 
  1198 049e FF       		.byte	-1
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 1
  1252 04d4 FF       		.byte	-1
  1253 04d5 E0       		.byte	-32
  1254 04d6 0F       		.byte	15
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 23
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccJyoyWV.s 			page 23
 
 
  1255 04d7 FF       		.byte	-1
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 1
  1309 050d 1F       		.byte	31
  1310 050e 00       		.byte	0
  1311 050f 00       		.byte	0
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 24
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccJyoyWV.s 			page 24
 
 
  1312 0510 1F       		.byte	31
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 1
  1366 0546 FF       		.byte	-1
  1367 0547 01       		.byte	1
  1368 0548 FF       		.byte	-1
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 25
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccJyoyWV.s 			page 25
 
 
  1369 0549 FF       		.byte	-1
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 1
  1423 057f 00       		.byte	0
  1424 0580 00       		.byte	0
  1425 0581 00       		.byte	0
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 26
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccJyoyWV.s 			page 26
 
 
  1426 0582 00       		.byte	0
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 1
  1480 05b8 FF       		.byte	-1
  1481 05b9 FF       		.byte	-1
  1482 05ba C0       		.byte	-64
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 27
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccJyoyWV.s 			page 27
 
 
  1483 05bb 1F       		.byte	31
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 1
  1537 05f1 FE       		.byte	-2
  1538 05f2 07       		.byte	7
  1539 05f3 FF       		.byte	-1
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 28
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccJyoyWV.s 			page 28
 
 
  1540 05f4 FF       		.byte	-1
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 1
  1594 062a 00       		.byte	0
  1595 062b 00       		.byte	0
  1596 062c 00       		.byte	0
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 29
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccJyoyWV.s 			page 29
 
 
  1597 062d FF       		.byte	-1
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 1
  1651 0663 07       		.byte	7
  1652 0664 F0       		.byte	-16
  1653 0665 80       		.byte	-128
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 30
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccJyoyWV.s 			page 30
 
 
  1654 0666 00       		.byte	0
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 1
  1708 069c 3F       		.byte	63
  1709 069d 81       		.byte	-127
  1710 069e FF       		.byte	-1
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 31
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccJyoyWV.s 			page 31
 
 
  1711 069f FF       		.byte	-1
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 1
  1765 06d5 0F       		.byte	15
  1766 06d6 FC       		.byte	-4
  1767 06d7 0F       		.byte	15
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 32
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccJyoyWV.s 			page 32
 
 
  1768 06d8 FE       		.byte	-2
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 1
  1822 070e 00       		.byte	0
  1823 070f 3F       		.byte	63
  1824 0710 80       		.byte	-128
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 33
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccJyoyWV.s 			page 33
 
 
  1825 0711 00       		.byte	0
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 1
  1879 0747 3F       		.byte	63
  1880 0748 E0       		.byte	-32
  1881 0749 00       		.byte	0
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 34
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccJyoyWV.s 			page 34
 
 
  1882 074a 1F       		.byte	31
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 1
  1936 0780 FF       		.byte	-1
  1937 0781 03       		.byte	3
  1938 0782 F8       		.byte	-8
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 35
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccJyoyWV.s 			page 35
 
 
  1939 0783 0F       		.byte	15
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 1
  1993 07b9 FF       		.byte	-1
  1994 07ba FF       		.byte	-1
  1995 07bb FF       		.byte	-1
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 36
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccJyoyWV.s 			page 36
 
 
  1996 07bc FF       		.byte	-1
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 1
  2050 07f2 00       		.byte	0
  2051 07f3 00       		.byte	0
  2052 07f4 00       		.byte	0
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 37
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccJyoyWV.s 			page 37
 
 
  2053 07f5 07       		.byte	7
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 1
  2107 082b FF       		.byte	-1
  2108 082c FF       		.byte	-1
  2109 082d FF       		.byte	-1
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 38
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccJyoyWV.s 			page 38
 
 
  2110 082e FF       		.byte	-1
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 1
  2164 0864 FF       		.byte	-1
  2165 0865 FF       		.byte	-1
  2166 0866 FF       		.byte	-1
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 39
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccJyoyWV.s 			page 39
 
 
  2167 0867 FF       		.byte	-1
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 1
  2221 089d FF       		.byte	-1
  2222 089e FF       		.byte	-1
  2223 089f FF       		.byte	-1
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 40
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccJyoyWV.s 			page 40
 
 
  2224 08a0 FF       		.byte	-1
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 1
  2278 08d6 4F       		.byte	79
  2279 08d7 F0       		.byte	-16
  2280 08d8 FF       		.byte	-1
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 41
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccJyoyWV.s 			page 41
 
 
  2281 08d9 F0       		.byte	-16
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 1
  2335 090f FC       		.byte	-4
  2336 0910 F3       		.byte	-13
  2337 0911 B8       		.byte	-72
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 42
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccJyoyWV.s 			page 42
 
 
  2338 0912 06       		.byte	6
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 1
  2392 0948 73       		.byte	115
  2393 0949 33       		.byte	51
  2394 094a FB       		.byte	-5
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 43
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccJyoyWV.s 			page 43
 
 
  2395 094b 9D       		.byte	-99
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 1
  2449 0981 00       		.byte	0
  2450 0982 00       		.byte	0
  2451 0983 00       		.byte	0
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 44
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccJyoyWV.s 			page 44
 
 
  2452 0984 03       		.byte	3
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 1
  2506 09ba FF       		.byte	-1
  2507 09bb FF       		.byte	-1
  2508 09bc FF       		.byte	-1
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 45
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccJyoyWV.s 			page 45
 
 
  2509 09bd FF       		.byte	-1
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 1
  2563 09f3 FF       		.byte	-1
  2564 09f4 FF       		.byte	-1
  2565 09f5 FF       		.byte	-1
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 46
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccJyoyWV.s 			page 46
 
 
  2566 09f6 FF       		.byte	-1
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 1
  2620 0a2c FF       		.byte	-1
  2621 0a2d FF       		.byte	-1
  2622 0a2e FF       		.byte	-1
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 47
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccJyoyWV.s 			page 47
 
 
  2623 0a2f FF       		.byte	-1
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 1
  2677              		.size	_PalCypressLogoFullColor_PNG_1bpp, 12
  2678              	_PalCypressLogoFullColor_PNG_1bpp:
  2679 0a64 02000000 		.word	2
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 48
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccJyoyWV.s 			page 48
 
 
  2680 0a68 00       		.byte	0
@@ -2841,15 +2841,15 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 1
  2697 0006 00000000 		.4byte	.Ldebug_abbrev0
  2698 000a 04       		.byte	0x4
  2699 000b 01       		.uleb128 0x1
- 2700 000c 35020000 		.4byte	.LASF46
+ 2700 000c F8010000 		.4byte	.LASF46
  2701 0010 0C       		.byte	0xc
- 2702 0011 37030000 		.4byte	.LASF47
- 2703 0015 5A000000 		.4byte	.LASF48
+ 2702 0011 FA020000 		.4byte	.LASF47
+ 2703 0015 94030000 		.4byte	.LASF48
  2704 0019 00000000 		.4byte	.Ldebug_line0
  2705 001d 02       		.uleb128 0x2
  2706 001e 04       		.byte	0x4
  2707 001f 07       		.byte	0x7
- 2708 0020 DD010000 		.4byte	.LASF0
+ 2708 0020 A0010000 		.4byte	.LASF0
  2709 0024 03       		.uleb128 0x3
  2710 0025 04       		.byte	0x4
  2711 0026 05       		.byte	0x5
@@ -2857,54 +2857,54 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 1
  2713 002b 02       		.uleb128 0x2
  2714 002c 08       		.byte	0x8
  2715 002d 05       		.byte	0x5
- 2716 002e 08030000 		.4byte	.LASF1
+ 2716 002e CB020000 		.4byte	.LASF1
  2717 0032 02       		.uleb128 0x2
  2718 0033 08       		.byte	0x8
  2719 0034 04       		.byte	0x4
- 2720 0035 B9030000 		.4byte	.LASF2
+ 2720 0035 7C030000 		.4byte	.LASF2
  2721 0039 02       		.uleb128 0x2
  2722 003a 01       		.byte	0x1
  2723 003b 06       		.byte	0x6
- 2724 003c C5030000 		.4byte	.LASF3
+ 2724 003c 88030000 		.4byte	.LASF3
  2725 0040 02       		.uleb128 0x2
  2726 0041 01       		.byte	0x1
  2727 0042 08       		.byte	0x8
- 2728 0043 1F010000 		.4byte	.LASF4
+ 2728 0043 E2000000 		.4byte	.LASF4
  2729 0047 02       		.uleb128 0x2
  2730 0048 02       		.byte	0x2
  2731 0049 05       		.byte	0x5
- 2732 004a 2D030000 		.4byte	.LASF5
+ 2732 004a F0020000 		.4byte	.LASF5
  2733 004e 02       		.uleb128 0x2
  2734 004f 02       		.byte	0x2
  2735 0050 07       		.byte	0x7
- 2736 0051 1D000000 		.4byte	.LASF6
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 49
+ 2736 0051 81000000 		.4byte	.LASF6
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccJyoyWV.s 			page 49
 
 
  2737 0055 02       		.uleb128 0x2
  2738 0056 04       		.byte	0x4
  2739 0057 05       		.byte	0x5
- 2740 0058 9C030000 		.4byte	.LASF7
+ 2740 0058 5F030000 		.4byte	.LASF7
  2741 005c 02       		.uleb128 0x2
  2742 005d 04       		.byte	0x4
  2743 005e 07       		.byte	0x7
- 2744 005f 43010000 		.4byte	.LASF8
+ 2744 005f 06010000 		.4byte	.LASF8
  2745 0063 02       		.uleb128 0x2
  2746 0064 08       		.byte	0x8
  2747 0065 07       		.byte	0x7
- 2748 0066 EA010000 		.4byte	.LASF9
+ 2748 0066 AD010000 		.4byte	.LASF9
  2749 006a 02       		.uleb128 0x2
  2750 006b 04       		.byte	0x4
  2751 006c 07       		.byte	0x7
- 2752 006d F1020000 		.4byte	.LASF10
+ 2752 006d B4020000 		.4byte	.LASF10
  2753 0071 04       		.uleb128 0x4
  2754 0072 04       		.byte	0x4
  2755 0073 02       		.uleb128 0x2
  2756 0074 01       		.byte	0x1
  2757 0075 08       		.byte	0x8
- 2758 0076 16030000 		.4byte	.LASF11
+ 2758 0076 D9020000 		.4byte	.LASF11
  2759 007a 05       		.uleb128 0x5
- 2760 007b C3010000 		.4byte	.LASF15
+ 2760 007b 86010000 		.4byte	.LASF15
  2761 007f 01       		.byte	0x1
  2762 0080 6A       		.byte	0x6a
  2763 0081 5C000000 		.4byte	0x5c
@@ -2914,19 +2914,19 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 1
  2767 0088 73       		.byte	0x73
  2768 0089 B2000000 		.4byte	0xb2
  2769 008d 07       		.uleb128 0x7
- 2770 008e 2D010000 		.4byte	.LASF12
+ 2770 008e F0000000 		.4byte	.LASF12
  2771 0092 01       		.byte	0x1
  2772 0093 74       		.byte	0x74
  2773 0094 24000000 		.4byte	0x24
  2774 0098 00       		.byte	0
  2775 0099 07       		.uleb128 0x7
- 2776 009a 42000000 		.4byte	.LASF13
+ 2776 009a 2F000000 		.4byte	.LASF13
  2777 009e 01       		.byte	0x1
  2778 009f 75       		.byte	0x75
  2779 00a0 73000000 		.4byte	0x73
  2780 00a4 04       		.byte	0x4
  2781 00a5 07       		.uleb128 0x7
- 2782 00a6 21030000 		.4byte	.LASF14
+ 2782 00a6 E4020000 		.4byte	.LASF14
  2783 00aa 01       		.byte	0x1
  2784 00ab 76       		.byte	0x76
  2785 00ac B2000000 		.4byte	0xb2
@@ -2938,15 +2938,15 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 1
  2791 00b8 09       		.uleb128 0x9
  2792 00b9 7A000000 		.4byte	0x7a
  2793 00bd 05       		.uleb128 0x5
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 50
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccJyoyWV.s 			page 50
 
 
- 2794 00be 98010000 		.4byte	.LASF16
+ 2794 00be 5B010000 		.4byte	.LASF16
  2795 00c2 01       		.byte	0x1
  2796 00c3 77       		.byte	0x77
  2797 00c4 85000000 		.4byte	0x85
  2798 00c8 05       		.uleb128 0x5
- 2799 00c9 F3000000 		.4byte	.LASF17
+ 2799 00c9 B6000000 		.4byte	.LASF17
  2800 00cd 01       		.byte	0x1
  2801 00ce 88       		.byte	0x88
  2802 00cf D3000000 		.4byte	0xd3
@@ -2957,7 +2957,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 1
  2807 00dd 5C000000 		.4byte	0x5c
  2808 00e1 00       		.byte	0
  2809 00e2 05       		.uleb128 0x5
- 2810 00e3 A5030000 		.4byte	.LASF18
+ 2810 00e3 68030000 		.4byte	.LASF18
  2811 00e7 01       		.byte	0x1
  2812 00e8 89       		.byte	0x89
  2813 00e9 ED000000 		.4byte	0xed
@@ -2968,7 +2968,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 1
  2818 00f7 7A000000 		.4byte	0x7a
  2819 00fb 00       		.byte	0
  2820 00fc 05       		.uleb128 0x5
- 2821 00fd BC000000 		.4byte	.LASF19
+ 2821 00fd 47000000 		.4byte	.LASF19
  2822 0101 01       		.byte	0x1
  2823 0102 8A       		.byte	0x8a
  2824 0103 07010000 		.4byte	0x107
@@ -2994,11 +2994,11 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 1
  2844 0132 04       		.byte	0x4
  2845 0133 7A000000 		.4byte	0x7a
  2846 0137 05       		.uleb128 0x5
- 2847 0138 07010000 		.4byte	.LASF21
+ 2847 0138 CA000000 		.4byte	.LASF21
  2848 013c 01       		.byte	0x1
  2849 013d 8D       		.byte	0x8d
  2850 013e 42010000 		.4byte	0x142
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 51
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccJyoyWV.s 			page 51
 
 
  2851 0142 0D       		.uleb128 0xd
@@ -3018,37 +3018,37 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 1
  2865 015f 93       		.byte	0x93
  2866 0160 AD010000 		.4byte	0x1ad
  2867 0164 07       		.uleb128 0x7
- 2868 0165 D1030000 		.4byte	.LASF22
+ 2868 0165 EB030000 		.4byte	.LASF22
  2869 0169 01       		.byte	0x1
  2870 016a 94       		.byte	0x94
  2871 016b AD010000 		.4byte	0x1ad
  2872 016f 00       		.byte	0
  2873 0170 07       		.uleb128 0x7
- 2874 0171 6E030000 		.4byte	.LASF23
+ 2874 0171 31030000 		.4byte	.LASF23
  2875 0175 01       		.byte	0x1
  2876 0176 95       		.byte	0x95
  2877 0177 B3010000 		.4byte	0x1b3
  2878 017b 04       		.byte	0x4
  2879 017c 07       		.uleb128 0x7
- 2880 017d 89010000 		.4byte	.LASF24
+ 2880 017d 4C010000 		.4byte	.LASF24
  2881 0181 01       		.byte	0x1
  2882 0182 96       		.byte	0x96
  2883 0183 B9010000 		.4byte	0x1b9
  2884 0187 08       		.byte	0x8
  2885 0188 07       		.uleb128 0x7
- 2886 0189 BB010000 		.4byte	.LASF25
+ 2886 0189 7E010000 		.4byte	.LASF25
  2887 018d 01       		.byte	0x1
  2888 018e 97       		.byte	0x97
  2889 018f 24000000 		.4byte	0x24
  2890 0193 0C       		.byte	0xc
  2891 0194 07       		.uleb128 0x7
- 2892 0195 77010000 		.4byte	.LASF26
+ 2892 0195 3A010000 		.4byte	.LASF26
  2893 0199 01       		.byte	0x1
  2894 019a 98       		.byte	0x98
  2895 019b BF010000 		.4byte	0x1bf
  2896 019f 10       		.byte	0x10
  2897 01a0 07       		.uleb128 0x7
- 2898 01a1 30000000 		.4byte	.LASF27
+ 2898 01a1 1D000000 		.4byte	.LASF27
  2899 01a5 01       		.byte	0x1
  2900 01a6 99       		.byte	0x99
  2901 01a7 C5010000 		.4byte	0x1c5
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 1
  2905 01ae 04       		.byte	0x4
  2906 01af E2000000 		.4byte	0xe2
  2907 01b3 08       		.uleb128 0x8
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 52
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccJyoyWV.s 			page 52
 
 
  2908 01b4 04       		.byte	0x4
@@ -3073,7 +3073,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 1
  2917 01c6 04       		.byte	0x4
  2918 01c7 0C010000 		.4byte	0x10c
  2919 01cb 05       		.uleb128 0x5
- 2920 01cc DA000000 		.4byte	.LASF28
+ 2920 01cc 9D000000 		.4byte	.LASF28
  2921 01d0 01       		.byte	0x1
  2922 01d1 9A       		.byte	0x9a
  2923 01d2 5C010000 		.4byte	0x15c
@@ -3083,12 +3083,12 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 1
  2927 01dc 09       		.uleb128 0x9
  2928 01dd 40000000 		.4byte	0x40
  2929 01e1 05       		.uleb128 0x5
- 2930 01e2 D3010000 		.4byte	.LASF29
+ 2930 01e2 96010000 		.4byte	.LASF29
  2931 01e6 02       		.byte	0x2
  2932 01e7 3D       		.byte	0x3d
  2933 01e8 7A000000 		.4byte	0x7a
  2934 01ec 05       		.uleb128 0x5
- 2935 01ed 4B000000 		.4byte	.LASF30
+ 2935 01ed 38000000 		.4byte	.LASF30
  2936 01f1 02       		.byte	0x2
  2937 01f2 3E       		.byte	0x3e
  2938 01f3 BD000000 		.4byte	0xbd
@@ -3098,27 +3098,27 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 1
  2942 01fa 42       		.byte	0x42
  2943 01fb 30020000 		.4byte	0x230
  2944 01ff 07       		.uleb128 0x7
- 2945 0200 B4010000 		.4byte	.LASF31
+ 2945 0200 77010000 		.4byte	.LASF31
  2946 0204 02       		.byte	0x2
  2947 0205 43       		.byte	0x43
  2948 0206 69020000 		.4byte	0x269
  2949 020a 00       		.byte	0
  2950 020b 07       		.uleb128 0x7
- 2951 020c 6E030000 		.4byte	.LASF23
+ 2951 020c 31030000 		.4byte	.LASF23
  2952 0210 02       		.byte	0x2
  2953 0211 4B       		.byte	0x4b
  2954 0212 7E020000 		.4byte	0x27e
  2955 0216 04       		.byte	0x4
  2956 0217 07       		.uleb128 0x7
- 2957 0218 D1000000 		.4byte	.LASF32
+ 2957 0218 94000000 		.4byte	.LASF32
  2958 021c 02       		.byte	0x2
  2959 021d 4C       		.byte	0x4c
  2960 021e 69020000 		.4byte	0x269
  2961 0222 08       		.byte	0x8
  2962 0223 07       		.uleb128 0x7
- 2963 0224 FA020000 		.4byte	.LASF33
+ 2963 0224 BD020000 		.4byte	.LASF33
  2964 0228 02       		.byte	0x2
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 53
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccJyoyWV.s 			page 53
 
 
  2965 0229 54       		.byte	0x54
@@ -3167,7 +3167,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 1
  3008 028a 09       		.uleb128 0x9
  3009 028b CB010000 		.4byte	0x1cb
  3010 028f 05       		.uleb128 0x5
- 3011 0290 22020000 		.4byte	.LASF34
+ 3011 0290 E5010000 		.4byte	.LASF34
  3012 0294 02       		.byte	0x2
  3013 0295 55       		.byte	0x55
  3014 0296 F7010000 		.4byte	0x1f7
@@ -3177,8 +3177,8 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 1
  3018 029d 57       		.byte	0x57
  3019 029e F7020000 		.4byte	0x2f7
  3020 02a2 07       		.uleb128 0x7
- 3021 02a3 CD010000 		.4byte	.LASF35
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 54
+ 3021 02a3 90010000 		.4byte	.LASF35
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccJyoyWV.s 			page 54
 
 
  3022 02a7 02       		.byte	0x2
@@ -3186,25 +3186,25 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 1
  3024 02a9 4E000000 		.4byte	0x4e
  3025 02ad 00       		.byte	0
  3026 02ae 07       		.uleb128 0x7
- 3027 02af 1B030000 		.4byte	.LASF36
+ 3027 02af DE020000 		.4byte	.LASF36
  3028 02b3 02       		.byte	0x2
  3029 02b4 59       		.byte	0x59
  3030 02b5 4E000000 		.4byte	0x4e
  3031 02b9 02       		.byte	0x2
  3032 02ba 07       		.uleb128 0x7
- 3033 02bb A7010000 		.4byte	.LASF37
+ 3033 02bb 6A010000 		.4byte	.LASF37
  3034 02bf 02       		.byte	0x2
  3035 02c0 5A       		.byte	0x5a
  3036 02c1 4E000000 		.4byte	0x4e
  3037 02c5 04       		.byte	0x4
  3038 02c6 07       		.uleb128 0x7
- 3039 02c7 61030000 		.4byte	.LASF38
+ 3039 02c7 24030000 		.4byte	.LASF38
  3040 02cb 02       		.byte	0x2
  3041 02cc 5B       		.byte	0x5b
  3042 02cd 4E000000 		.4byte	0x4e
  3043 02d1 06       		.byte	0x6
  3044 02d2 07       		.uleb128 0x7
- 3045 02d3 ED000000 		.4byte	.LASF39
+ 3045 02d3 B0000000 		.4byte	.LASF39
  3046 02d7 02       		.byte	0x2
  3047 02d8 5C       		.byte	0x5c
  3048 02d9 D6010000 		.4byte	0x1d6
@@ -3216,7 +3216,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 1
  3054 02e5 F7020000 		.4byte	0x2f7
  3055 02e9 0C       		.byte	0xc
  3056 02ea 07       		.uleb128 0x7
- 3057 02eb E8020000 		.4byte	.LASF41
+ 3057 02eb AB020000 		.4byte	.LASF41
  3058 02ef 02       		.byte	0x2
  3059 02f0 5E       		.byte	0x5e
  3060 02f1 02030000 		.4byte	0x302
@@ -3233,12 +3233,12 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 1
  3071 0308 09       		.uleb128 0x9
  3072 0309 8F020000 		.4byte	0x28f
  3073 030d 05       		.uleb128 0x5
- 3074 030e 38010000 		.4byte	.LASF42
+ 3074 030e FB000000 		.4byte	.LASF42
  3075 0312 02       		.byte	0x2
  3076 0313 5F       		.byte	0x5f
  3077 0314 9A020000 		.4byte	0x29a
  3078 0318 09       		.uleb128 0x9
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 55
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccJyoyWV.s 			page 55
 
 
  3079 0319 0D030000 		.4byte	0x30d
@@ -3252,7 +3252,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 1
  3087 032d 09       		.uleb128 0x9
  3088 032e E1010000 		.4byte	0x1e1
  3089 0332 10       		.uleb128 0x10
- 3090 0333 97000000 		.4byte	.LASF43
+ 3090 0333 5C000000 		.4byte	.LASF43
  3091 0337 03       		.byte	0x3
  3092 0338 2E       		.byte	0x2e
  3093 0339 43030000 		.4byte	0x343
@@ -3262,7 +3262,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 1
  3097 0343 09       		.uleb128 0x9
  3098 0344 1D030000 		.4byte	0x31d
  3099 0348 10       		.uleb128 0x10
- 3100 0349 55010000 		.4byte	.LASF44
+ 3100 0349 18010000 		.4byte	.LASF44
  3101 034d 03       		.byte	0x3
  3102 034e 37       		.byte	0x37
  3103 034f FD020000 		.4byte	0x2fd
@@ -3277,7 +3277,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 1
  3112 0367 4F0A     		.2byte	0xa4f
  3113 0369 00       		.byte	0
  3114 036a 10       		.uleb128 0x10
- 3115 036b 01020000 		.4byte	.LASF45
+ 3115 036b C4010000 		.4byte	.LASF45
  3116 036f 03       		.byte	0x3
  3117 0370 3D       		.byte	0x3d
  3118 0371 7B030000 		.4byte	0x37b
@@ -3287,7 +3287,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 1
  3122 037b 09       		.uleb128 0x9
  3123 037c 59030000 		.4byte	0x359
  3124 0380 12       		.uleb128 0x12
- 3125 0381 7C030000 		.4byte	.LASF49
+ 3125 0381 3F030000 		.4byte	.LASF49
  3126 0385 03       		.byte	0x3
  3127 0386 90       		.byte	0x90
  3128 0387 18030000 		.4byte	0x318
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 1
  3133              		.section	.debug_abbrev,"",%progbits
  3134              	.Ldebug_abbrev0:
  3135 0000 01       		.uleb128 0x1
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 56
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccJyoyWV.s 			page 56
 
 
  3136 0001 11       		.uleb128 0x11
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 1
  3190 0037 00       		.byte	0
  3191 0038 00       		.byte	0
  3192 0039 06       		.uleb128 0x6
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 57
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccJyoyWV.s 			page 57
 
 
  3193 003a 13       		.uleb128 0x13
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 1
  3247 0070 0B       		.uleb128 0xb
  3248 0071 05       		.uleb128 0x5
  3249 0072 00       		.byte	0
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 58
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccJyoyWV.s 			page 58
 
 
  3250 0073 49       		.uleb128 0x49
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 1
  3304 00a9 00       		.byte	0
  3305 00aa 11       		.uleb128 0x11
  3306 00ab 21       		.uleb128 0x21
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 59
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccJyoyWV.s 			page 59
 
 
  3307 00ac 00       		.byte	0
@@ -3532,270 +3532,271 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 1
  3348      496E6465 
  3348      7832436F 
  3348      6C6F7242 
- 3349              	.LASF6:
- 3350 001d 73686F72 		.ascii	"short unsigned int\000"
- 3350      7420756E 
- 3350      7369676E 
- 3350      65642069 
- 3350      6E7400
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 60
+ 3349              	.LASF27:
+ 3350 001d 7066496E 		.ascii	"pfIndex2ColorBulk\000"
+ 3350      64657832 
+ 3350      436F6C6F 
+ 3350      7242756C 
+ 3350      6B00
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccJyoyWV.s 			page 60
 
 
- 3351              	.LASF27:
- 3352 0030 7066496E 		.ascii	"pfIndex2ColorBulk\000"
- 3352      64657832 
- 3352      436F6C6F 
- 3352      7242756C 
- 3352      6B00
- 3353              	.LASF13:
- 3354 0042 48617354 		.ascii	"HasTrans\000"
- 3354      72616E73 
- 3354      00
- 3355              	.LASF30:
- 3356 004b 4755495F 		.ascii	"GUI_LOGPALETTE\000"
- 3356      4C4F4750 
- 3356      414C4554 
- 3356      544500
- 3357              	.LASF48:
- 3358 005a 433A5C55 		.ascii	"C:\\Users\\nicpa\\OneDrive\\Documents\\GBM2100\\Lab"
- 3358      73657273 
- 3358      5C6E6963 
- 3358      70615C4F 
- 3358      6E654472 
- 3359 0087 6F726174 		.ascii	"oratoire3.cydsn\000"
- 3359      6F697265 
- 3359      332E6379 
- 3359      64736E00 
- 3360              	.LASF43:
- 3361 0097 5F436F6C 		.ascii	"_ColorsCypressLogoFullColor_PNG_1bpp\000"
- 3361      6F727343 
- 3361      79707265 
- 3361      73734C6F 
- 3361      676F4675 
- 3362              	.LASF19:
- 3363 00bc 744C4344 		.ascii	"tLCDDEV_GetIndexMask\000"
- 3363      4445565F 
- 3363      47657449 
- 3363      6E646578 
- 3363      4D61736B 
- 3364              	.LASF32:
- 3365 00d1 70664472 		.ascii	"pfDrawHW\000"
- 3365      61774857 
- 3365      00
- 3366              	.LASF28:
- 3367 00da 4C43445F 		.ascii	"LCD_API_COLOR_CONV\000"
- 3367      4150495F 
- 3367      434F4C4F 
- 3367      525F434F 
- 3367      4E5600
- 3368              	.LASF39:
- 3369 00ed 70446174 		.ascii	"pData\000"
- 3369      6100
- 3370              	.LASF17:
- 3371 00f3 744C4344 		.ascii	"tLCDDEV_Index2Color\000"
- 3371      4445565F 
- 3371      496E6465 
- 3371      7832436F 
- 3371      6C6F7200 
- 3372              	.LASF21:
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 61
+ 3351              	.LASF13:
+ 3352 002f 48617354 		.ascii	"HasTrans\000"
+ 3352      72616E73 
+ 3352      00
+ 3353              	.LASF30:
+ 3354 0038 4755495F 		.ascii	"GUI_LOGPALETTE\000"
+ 3354      4C4F4750 
+ 3354      414C4554 
+ 3354      544500
+ 3355              	.LASF19:
+ 3356 0047 744C4344 		.ascii	"tLCDDEV_GetIndexMask\000"
+ 3356      4445565F 
+ 3356      47657449 
+ 3356      6E646578 
+ 3356      4D61736B 
+ 3357              	.LASF43:
+ 3358 005c 5F436F6C 		.ascii	"_ColorsCypressLogoFullColor_PNG_1bpp\000"
+ 3358      6F727343 
+ 3358      79707265 
+ 3358      73734C6F 
+ 3358      676F4675 
+ 3359              	.LASF6:
+ 3360 0081 73686F72 		.ascii	"short unsigned int\000"
+ 3360      7420756E 
+ 3360      7369676E 
+ 3360      65642069 
+ 3360      6E7400
+ 3361              	.LASF32:
+ 3362 0094 70664472 		.ascii	"pfDrawHW\000"
+ 3362      61774857 
+ 3362      00
+ 3363              	.LASF28:
+ 3364 009d 4C43445F 		.ascii	"LCD_API_COLOR_CONV\000"
+ 3364      4150495F 
+ 3364      434F4C4F 
+ 3364      525F434F 
+ 3364      4E5600
+ 3365              	.LASF39:
+ 3366 00b0 70446174 		.ascii	"pData\000"
+ 3366      6100
+ 3367              	.LASF17:
+ 3368 00b6 744C4344 		.ascii	"tLCDDEV_Index2Color\000"
+ 3368      4445565F 
+ 3368      496E6465 
+ 3368      7832436F 
+ 3368      6C6F7200 
+ 3369              	.LASF21:
+ 3370 00ca 744C4344 		.ascii	"tLCDDEV_Color2IndexBulk\000"
+ 3370      4445565F 
+ 3370      436F6C6F 
+ 3370      7232496E 
+ 3370      64657842 
+ 3371              	.LASF4:
+ 3372 00e2 756E7369 		.ascii	"unsigned char\000"
+ 3372      676E6564 
+ 3372      20636861 
+ 3372      7200
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccJyoyWV.s 			page 61
 
 
- 3373 0107 744C4344 		.ascii	"tLCDDEV_Color2IndexBulk\000"
- 3373      4445565F 
- 3373      436F6C6F 
- 3373      7232496E 
- 3373      64657842 
- 3374              	.LASF4:
- 3375 011f 756E7369 		.ascii	"unsigned char\000"
- 3375      676E6564 
- 3375      20636861 
- 3375      7200
- 3376              	.LASF12:
- 3377 012d 4E756D45 		.ascii	"NumEntries\000"
- 3377      6E747269 
- 3377      657300
- 3378              	.LASF42:
- 3379 0138 4755495F 		.ascii	"GUI_BITMAP\000"
- 3379      4249544D 
- 3379      415000
- 3380              	.LASF8:
- 3381 0143 6C6F6E67 		.ascii	"long unsigned int\000"
- 3381      20756E73 
- 3381      69676E65 
- 3381      6420696E 
- 3381      7400
- 3382              	.LASF44:
- 3383 0155 5F50616C 		.ascii	"_PalCypressLogoFullColor_PNG_1bpp\000"
- 3383      43797072 
- 3383      6573734C 
- 3383      6F676F46 
- 3383      756C6C43 
- 3384              	.LASF26:
- 3385 0177 7066436F 		.ascii	"pfColor2IndexBulk\000"
- 3385      6C6F7232 
- 3385      496E6465 
- 3385      7842756C 
- 3385      6B00
- 3386              	.LASF24:
- 3387 0189 70664765 		.ascii	"pfGetIndexMask\000"
- 3387      74496E64 
- 3387      65784D61 
- 3387      736B00
- 3388              	.LASF16:
- 3389 0198 4C43445F 		.ascii	"LCD_LOGPALETTE\000"
- 3389      4C4F4750 
- 3389      414C4554 
- 3389      544500
- 3390              	.LASF37:
- 3391 01a7 42797465 		.ascii	"BytesPerLine\000"
- 3391      73506572 
- 3391      4C696E65 
- 3391      00
- 3392              	.LASF31:
- 3393 01b4 70664472 		.ascii	"pfDraw\000"
- 3393      617700
- 3394              	.LASF25:
- 3395 01bb 4E6F416C 		.ascii	"NoAlpha\000"
- 3395      70686100 
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 62
+ 3373              	.LASF12:
+ 3374 00f0 4E756D45 		.ascii	"NumEntries\000"
+ 3374      6E747269 
+ 3374      657300
+ 3375              	.LASF42:
+ 3376 00fb 4755495F 		.ascii	"GUI_BITMAP\000"
+ 3376      4249544D 
+ 3376      415000
+ 3377              	.LASF8:
+ 3378 0106 6C6F6E67 		.ascii	"long unsigned int\000"
+ 3378      20756E73 
+ 3378      69676E65 
+ 3378      6420696E 
+ 3378      7400
+ 3379              	.LASF44:
+ 3380 0118 5F50616C 		.ascii	"_PalCypressLogoFullColor_PNG_1bpp\000"
+ 3380      43797072 
+ 3380      6573734C 
+ 3380      6F676F46 
+ 3380      756C6C43 
+ 3381              	.LASF26:
+ 3382 013a 7066436F 		.ascii	"pfColor2IndexBulk\000"
+ 3382      6C6F7232 
+ 3382      496E6465 
+ 3382      7842756C 
+ 3382      6B00
+ 3383              	.LASF24:
+ 3384 014c 70664765 		.ascii	"pfGetIndexMask\000"
+ 3384      74496E64 
+ 3384      65784D61 
+ 3384      736B00
+ 3385              	.LASF16:
+ 3386 015b 4C43445F 		.ascii	"LCD_LOGPALETTE\000"
+ 3386      4C4F4750 
+ 3386      414C4554 
+ 3386      544500
+ 3387              	.LASF37:
+ 3388 016a 42797465 		.ascii	"BytesPerLine\000"
+ 3388      73506572 
+ 3388      4C696E65 
+ 3388      00
+ 3389              	.LASF31:
+ 3390 0177 70664472 		.ascii	"pfDraw\000"
+ 3390      617700
+ 3391              	.LASF25:
+ 3392 017e 4E6F416C 		.ascii	"NoAlpha\000"
+ 3392      70686100 
+ 3393              	.LASF15:
+ 3394 0186 4C43445F 		.ascii	"LCD_COLOR\000"
+ 3394      434F4C4F 
+ 3394      5200
+ 3395              	.LASF35:
+ 3396 0190 5853697A 		.ascii	"XSize\000"
+ 3396      6500
+ 3397              	.LASF29:
+ 3398 0196 4755495F 		.ascii	"GUI_COLOR\000"
+ 3398      434F4C4F 
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccJyoyWV.s 			page 62
 
 
- 3396              	.LASF15:
- 3397 01c3 4C43445F 		.ascii	"LCD_COLOR\000"
- 3397      434F4C4F 
- 3397      5200
- 3398              	.LASF35:
- 3399 01cd 5853697A 		.ascii	"XSize\000"
- 3399      6500
- 3400              	.LASF29:
- 3401 01d3 4755495F 		.ascii	"GUI_COLOR\000"
- 3401      434F4C4F 
- 3401      5200
- 3402              	.LASF0:
- 3403 01dd 756E7369 		.ascii	"unsigned int\000"
- 3403      676E6564 
- 3403      20696E74 
- 3403      00
- 3404              	.LASF9:
- 3405 01ea 6C6F6E67 		.ascii	"long long unsigned int\000"
- 3405      206C6F6E 
- 3405      6720756E 
- 3405      7369676E 
- 3405      65642069 
- 3406              	.LASF45:
- 3407 0201 5F616343 		.ascii	"_acCypressLogoFullColor_PNG_1bpp\000"
- 3407      79707265 
- 3407      73734C6F 
- 3407      676F4675 
- 3407      6C6C436F 
- 3408              	.LASF34:
- 3409 0222 4755495F 		.ascii	"GUI_BITMAP_METHODS\000"
- 3409      4249544D 
- 3409      41505F4D 
- 3409      4554484F 
- 3409      445300
- 3410              	.LASF46:
- 3411 0235 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 3411      43313120 
- 3411      352E342E 
- 3411      31203230 
- 3411      31363036 
- 3412 0268 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m4 -mfloat-abi=s"
- 3412      20726576 
- 3412      6973696F 
- 3412      6E203233 
- 3412      37373135 
- 3413 029b 6F667466 		.ascii	"oftfp -mfpu=fpv4-sp-d16 -mthumb -g -Og -ffunction-s"
- 3413      70202D6D 
- 3413      6670753D 
- 3413      66707634 
- 3413      2D73702D 
- 3414 02ce 65637469 		.ascii	"ections -ffat-lto-objects\000"
- 3414      6F6E7320 
- 3414      2D666661 
- 3414      742D6C74 
- 3414      6F2D6F62 
- 3415              	.LASF41:
- 3416 02e8 704D6574 		.ascii	"pMethods\000"
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 63
+ 3398      5200
+ 3399              	.LASF0:
+ 3400 01a0 756E7369 		.ascii	"unsigned int\000"
+ 3400      676E6564 
+ 3400      20696E74 
+ 3400      00
+ 3401              	.LASF9:
+ 3402 01ad 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 3402      206C6F6E 
+ 3402      6720756E 
+ 3402      7369676E 
+ 3402      65642069 
+ 3403              	.LASF45:
+ 3404 01c4 5F616343 		.ascii	"_acCypressLogoFullColor_PNG_1bpp\000"
+ 3404      79707265 
+ 3404      73734C6F 
+ 3404      676F4675 
+ 3404      6C6C436F 
+ 3405              	.LASF34:
+ 3406 01e5 4755495F 		.ascii	"GUI_BITMAP_METHODS\000"
+ 3406      4249544D 
+ 3406      41505F4D 
+ 3406      4554484F 
+ 3406      445300
+ 3407              	.LASF46:
+ 3408 01f8 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 3408      43313120 
+ 3408      352E342E 
+ 3408      31203230 
+ 3408      31363036 
+ 3409 022b 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m4 -mfloat-abi=s"
+ 3409      20726576 
+ 3409      6973696F 
+ 3409      6E203233 
+ 3409      37373135 
+ 3410 025e 6F667466 		.ascii	"oftfp -mfpu=fpv4-sp-d16 -mthumb -g -Og -ffunction-s"
+ 3410      70202D6D 
+ 3410      6670753D 
+ 3410      66707634 
+ 3410      2D73702D 
+ 3411 0291 65637469 		.ascii	"ections -ffat-lto-objects\000"
+ 3411      6F6E7320 
+ 3411      2D666661 
+ 3411      742D6C74 
+ 3411      6F2D6F62 
+ 3412              	.LASF41:
+ 3413 02ab 704D6574 		.ascii	"pMethods\000"
+ 3413      686F6473 
+ 3413      00
+ 3414              	.LASF10:
+ 3415 02b4 73697A65 		.ascii	"sizetype\000"
+ 3415      74797065 
+ 3415      00
+ 3416              	.LASF33:
+ 3417 02bd 70436F6C 		.ascii	"pColorConvAPI\000"
+ 3417      6F72436F 
+ 3417      6E764150 
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccJyoyWV.s 			page 63
 
 
- 3416      686F6473 
- 3416      00
- 3417              	.LASF10:
- 3418 02f1 73697A65 		.ascii	"sizetype\000"
- 3418      74797065 
- 3418      00
- 3419              	.LASF33:
- 3420 02fa 70436F6C 		.ascii	"pColorConvAPI\000"
- 3420      6F72436F 
- 3420      6E764150 
- 3420      4900
- 3421              	.LASF1:
- 3422 0308 6C6F6E67 		.ascii	"long long int\000"
- 3422      206C6F6E 
- 3422      6720696E 
- 3422      7400
- 3423              	.LASF11:
- 3424 0316 63686172 		.ascii	"char\000"
- 3424      00
- 3425              	.LASF36:
- 3426 031b 5953697A 		.ascii	"YSize\000"
- 3426      6500
- 3427              	.LASF14:
- 3428 0321 7050616C 		.ascii	"pPalEntries\000"
- 3428      456E7472 
- 3428      69657300 
- 3429              	.LASF5:
- 3430 032d 73686F72 		.ascii	"short int\000"
- 3430      7420696E 
- 3430      7400
- 3431              	.LASF47:
- 3432 0337 496D6167 		.ascii	"Images\\Cypress Logo Full Color_PNG_1bpp.c\000"
- 3432      65735C43 
- 3432      79707265 
- 3432      7373204C 
- 3432      6F676F20 
- 3433              	.LASF38:
- 3434 0361 42697473 		.ascii	"BitsPerPixel\000"
- 3434      50657250 
- 3434      6978656C 
- 3434      00
- 3435              	.LASF23:
- 3436 036e 7066496E 		.ascii	"pfIndex2Color\000"
- 3436      64657832 
- 3436      436F6C6F 
- 3436      7200
- 3437              	.LASF49:
- 3438 037c 626D4379 		.ascii	"bmCypressLogoFullColor_PNG_1bpp\000"
- 3438      70726573 
- 3438      734C6F67 
- 3438      6F46756C 
- 3438      6C436F6C 
- 3439              	.LASF7:
- 3440 039c 6C6F6E67 		.ascii	"long int\000"
- 3440      20696E74 
- 3440      00
- 3441              	.LASF18:
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccpyPr5V.s 			page 64
+ 3417      4900
+ 3418              	.LASF1:
+ 3419 02cb 6C6F6E67 		.ascii	"long long int\000"
+ 3419      206C6F6E 
+ 3419      6720696E 
+ 3419      7400
+ 3420              	.LASF11:
+ 3421 02d9 63686172 		.ascii	"char\000"
+ 3421      00
+ 3422              	.LASF36:
+ 3423 02de 5953697A 		.ascii	"YSize\000"
+ 3423      6500
+ 3424              	.LASF14:
+ 3425 02e4 7050616C 		.ascii	"pPalEntries\000"
+ 3425      456E7472 
+ 3425      69657300 
+ 3426              	.LASF5:
+ 3427 02f0 73686F72 		.ascii	"short int\000"
+ 3427      7420696E 
+ 3427      7400
+ 3428              	.LASF47:
+ 3429 02fa 496D6167 		.ascii	"Images\\Cypress Logo Full Color_PNG_1bpp.c\000"
+ 3429      65735C43 
+ 3429      79707265 
+ 3429      7373204C 
+ 3429      6F676F20 
+ 3430              	.LASF38:
+ 3431 0324 42697473 		.ascii	"BitsPerPixel\000"
+ 3431      50657250 
+ 3431      6978656C 
+ 3431      00
+ 3432              	.LASF23:
+ 3433 0331 7066496E 		.ascii	"pfIndex2Color\000"
+ 3433      64657832 
+ 3433      436F6C6F 
+ 3433      7200
+ 3434              	.LASF49:
+ 3435 033f 626D4379 		.ascii	"bmCypressLogoFullColor_PNG_1bpp\000"
+ 3435      70726573 
+ 3435      734C6F67 
+ 3435      6F46756C 
+ 3435      6C436F6C 
+ 3436              	.LASF7:
+ 3437 035f 6C6F6E67 		.ascii	"long int\000"
+ 3437      20696E74 
+ 3437      00
+ 3438              	.LASF18:
+ 3439 0368 744C4344 		.ascii	"tLCDDEV_Color2Index\000"
+ 3439      4445565F 
+ 3439      436F6C6F 
+ 3439      7232496E 
+ 3439      64657800 
+ 3440              	.LASF2:
+ 3441 037c 6C6F6E67 		.ascii	"long double\000"
+ 3441      20646F75 
+ 3441      626C6500 
+ 3442              	.LASF3:
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccJyoyWV.s 			page 64
 
 
- 3442 03a5 744C4344 		.ascii	"tLCDDEV_Color2Index\000"
- 3442      4445565F 
- 3442      436F6C6F 
- 3442      7232496E 
- 3442      64657800 
- 3443              	.LASF2:
- 3444 03b9 6C6F6E67 		.ascii	"long double\000"
- 3444      20646F75 
- 3444      626C6500 
- 3445              	.LASF3:
- 3446 03c5 7369676E 		.ascii	"signed char\000"
- 3446      65642063 
- 3446      68617200 
+ 3443 0388 7369676E 		.ascii	"signed char\000"
+ 3443      65642063 
+ 3443      68617200 
+ 3444              	.LASF48:
+ 3445 0394 433A5C55 		.ascii	"C:\\Users\\nicpa\\OneDrive\\Documents\\PolyDoc\\GBM"
+ 3445      73657273 
+ 3445      5C6E6963 
+ 3445      70615C4F 
+ 3445      6E654472 
+ 3446 03c1 32313030 		.ascii	"2100FINAL\\Laboratoire3\\Laboratoire3.cydsn\000"
+ 3446      46494E41 
+ 3446      4C5C4C61 
+ 3446      626F7261 
+ 3446      746F6972 
  3447              	.LASF22:
- 3448 03d1 7066436F 		.ascii	"pfColor2Index\000"
+ 3448 03eb 7066436F 		.ascii	"pfColor2Index\000"
  3448      6C6F7232 
  3448      496E6465 
  3448      7800

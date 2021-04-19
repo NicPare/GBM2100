@@ -20,6 +20,18 @@
 /* ARM CM4 */
 #if (((__CORTEX_M == 4) && (CY_CORE_ID == 0)))
 
+    /* bouton_isr */
+    const cy_stc_sysint_t bouton_isr_cfg = {
+        .intrSrc = (IRQn_Type)bouton_isr__INTC_NUMBER,
+        .intrPriority = bouton_isr__INTC_CORTEXM4_PRIORITY
+    };
+
+    /* PPG_RDY_isr */
+    const cy_stc_sysint_t PPG_RDY_isr_cfg = {
+        .intrSrc = (IRQn_Type)PPG_RDY_isr__INTC_NUMBER,
+        .intrPriority = PPG_RDY_isr__INTC_CORTEXM4_PRIORITY
+    };
+
     /* I2C_MAX_SCB_IRQ */
     const cy_stc_sysint_t I2C_MAX_SCB_IRQ_cfg = {
         .intrSrc = (IRQn_Type)I2C_MAX_SCB_IRQ__INTC_NUMBER,

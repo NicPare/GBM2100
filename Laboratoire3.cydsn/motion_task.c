@@ -67,7 +67,7 @@ typedef enum
 struct bmi160_dev sensor;
 
 /* Motion task handle */
-TaskHandle_t xTaskHandleMotion;
+//TaskHandle_t xTaskHandleMotion;
 
 /** 
  * These static functions are used by the Motion Task. These are not available 
@@ -77,7 +77,6 @@ static void Orientation_Interrupt(void);
 static int8_t MotionSensor_Init(void);
 static int8_t MotionSensor_ConfigOrientIntr(void);
 static int8_t MotionSensor_UpdateOrientation(orientation_t*);
-bool LED_flag = false;
 
 /*******************************************************************************
 * Function Name: void Task_Motion(void *pvParameters)
@@ -93,39 +92,30 @@ bool LED_flag = false;
 *  None
 *
 *******************************************************************************/
-void Motion_Check(void)
+void Task_Motion(void* pvParameters)
 {
+    LED_flag = false;
+    Cy_GPIO_Write(P0_3_PORT, P0_3_NUM, 1);
+    (void)pvParameters;
     /* Variable used to store the return values of Motion Sensor APIs */
-    static int8_t motionSensorApiResult;
-    
-    /* Variable used to store the orientation information */
-    static orientation_t orientation;
-    
+    static int8_t motionSensorApiResult;  
 
-    /* Create binary semaphore and check the operation */
+    /* Create binary semaphore */
     xSemaphoreI2C = xSemaphoreCreateBinary();
-    if(xSemaphoreI2C == NULL)
-    {}
-    
-    /* Initialize BMI160 Motion Sensor and check the operation */
-    motionSensorApiResult = MotionSensor_Init();
-    while(motionSensorApiResult != BMI160_OK) 
-    {
 
-    }
     
-    /* Configure orientation interrupt and check the operation */
-    motionSensorApiResult = MotionSensor_ConfigOrientIntr();
-    while(motionSensorApiResult != BMI160_OK)
-    {
-
-    }
+    /* Initialize BMI160 Motion Sensor */
+    MotionSensor_Init();
+    
+    // Configure orientation interrupt 
+    MotionSensor_ConfigOrientIntr();
         
-    //for(;;)
-    //{
-    //}
-    //Suspend the task 
-    //vTaskSuspend(NULL);
+    for(;;)
+    {
+        vTaskDelay(pdMS_TO_TICKS(5000));
+    }
+    
+    vTaskSuspend(NULL);
 }
 
 /*******************************************************************************
@@ -149,10 +139,11 @@ static void Orientation_Interrupt(void)
     /* Clear any pending interrupts */
     Cy_GPIO_ClearInterrupt(P13_0_PORT, P13_0_NUM );
     NVIC_ClearPendingIRQ(SysInt_OrientINT_cfg.intrSrc);
+    Cy_GPIO_Write(P0_3_PORT, P0_3_NUM, 0);
     LED_flag = true;
     /* Resume Task_Motion */
-    xHigherPriorityTaskWoken = xTaskResumeFromISR(xTaskHandleMotion);
-    portYIELD_FROM_ISR(xHigherPriorityTaskWoken );
+    //xHigherPriorityTaskWoken = xTaskResumeFromISR(xTaskHandleMotion);
+    //portYIELD_FROM_ISR(xHigherPriorityTaskWoken );
 }
 
 /*******************************************************************************
@@ -321,6 +312,7 @@ static int8_t MotionSensor_ConfigOrientIntr(void)
 *  failure in communicating with the motion sensor.
 *
 *******************************************************************************/
+
 static int8_t MotionSensor_Init(void)
 {
     /* Variable used to store the return values of BMI160 APIs */

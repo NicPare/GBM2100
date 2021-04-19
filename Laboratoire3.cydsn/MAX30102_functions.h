@@ -19,6 +19,12 @@
 #include "FreeRTOS.h"
 #include "FreeRTOSConfig.h"
 #include "task.h"
+
+float32 red_data[1000];
+float32 ir_data[1000];
+bool read_flag_MAX;
+int write_idx_MAX;
+
 //Fonctions i2c
 uint8 read_register_MAX(uint8 baseAddress);
 
@@ -28,10 +34,14 @@ void readMultipleBytes_MAX(uint8_t baseAddress, uint8_t *buffer, uint8_t length)
 
 
 //Fonctions MAX
+int received_data();
+
 bool MAX_Init();
 
-bool MAX_Reset();
-
 void read_MAX30102_task(void* pvParameters);
+
+void MAX_data();
+
+void PPG_RDY_handler();
 
 /* [] END OF FILE */

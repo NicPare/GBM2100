@@ -1,78 +1,158 @@
-/* ========================================
- *
- * Copyright YOUR COMPANY, THE YEAR
- * All Rights Reserved
- * UNPUBLISHED, LICENSED SOFTWARE.
- *
- * CONFIDENTIAL AND PROPRIETARY INFORMATION
- * WHICH IS THE PROPERTY OF your company.
- *
- * ========================================
-*/
-#include "headers.h"
+/******************************************************************************
+* File Name: main_cm4.c
+*
+* Version: 1.2
+*
+* Description: This file main application code for the CE223727 EmWin Graphics
+*				library EInk Display 
+
+********************************************************************************
+*************MODIFIED by Christophe Cloutier-Tremblay.**************************
+********************************************************************************
+* 
+*
+* Hardware Dependency: CY8CKIT-028-EPD E-Ink Display Shield
+*					   CY8CKIT-062-BLE PSoC6 BLE Pioneer Kit
+*
+******************************************************************************* 
+* Copyright (2019), Cypress Semiconductor Corporation. All rights reserved. 
+******************************************************************************* 
+* This software, including source code, documentation and related materials 
+* (“Software”), is owned by Cypress Semiconductor Corporation or one of its 
+* subsidiaries (“Cypress”) and is protected by and subject to worldwide patent 
+* protection (United States and foreign), United States copyright laws and 
+* international treaty provisions. Therefore, you may use this Software only 
+* as provided in the license agreement accompanying the software package from 
+* which you obtained this Software (“EULA”). 
+* 
+* If no EULA applies, Cypress hereby grants you a personal, non-exclusive, 
+* non-transferable license to copy, modify, and compile the Software source 
+* code solely for use in connection with Cypress’s integrated circuit products. 
+* Any reproduction, modification, translation, compilation, or representation 
+* of this Software except as specified above is prohibited without the express 
+* written permission of Cypress. 
+* 
+* Disclaimer: THIS SOFTWARE IS PROVIDED AS-IS, WITH NO WARRANTY OF ANY KIND, 
+* EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, NONINFRINGEMENT, IMPLIED 
+* WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. Cypress 
+* reserves the right to make changes to the Software without notice. Cypress 
+* does not assume any liability arising out of the application or use of the 
+* Software or any product or circuit described in the Software. Cypress does 
+* not authorize its products for use in any products where a malfunction or 
+* failure of the Cypress product may reasonably be expected to result in 
+* significant property damage, injury or death (“High Risk Product”). By 
+* including Cypress’s product in a High Risk Product, the manufacturer of such 
+* system or application assumes all risk of such use and in doing so agrees to 
+* indemnify Cypress against all liability.
+********************************************************************************/
+
+#include "project.h"
+
+#include "touch_task.h"
+#include "global_variables.h"
+#include "LED_task.h"
+#include "bmi160.h"
+#include "bmi160_defs.h"
+#include "i2cm_support.h"
+#include "master.h"
+#include "MAX30102_functions.h"
+#include <arm_math.h>
+#include <core_cm4.h>
+#include <string.h>
 #include "motion_task.h"
 
 
-// variables menu
 
-//QueueHandle_t touchData;
+//*******************************************************************************/
+void isr_bouton(void)
+{  
+   
+ /* Clears the triggered pin interrupt */
+    Cy_GPIO_ClearInterrupt(P0_4_PORT, P0_4_NUM);
+    NVIC_ClearPendingIRQ(bouton_isr_cfg.intrSrc);
+    maxormin=!maxormin;
+}
+
 
 int main(void)
 {
     __enable_irq(); /* Enable global interrupts. */
     
-    // Initialize emWin Graphics and start einkdisplay interface
-    //GUI_Init();
-    //Cy_EINK_Start(20);
-    //Cy_EINK_POWER(1);
-    
-    /*GUI_SetPenSize(1);
-    GUI_SetColor(GUI_BLACK);
-    GUI_SetBkColor(GUI_WHITE);
-    GUI_Clear();*/
-
-     
-    //variables
-    //currentpage = PAGE_MENU;
-    
-    //touch
-  
-    
-    //xTaskCreate(touch,"touch",400,NULL,1,0);
-    //vTaskStartScheduler();
-
- 
-    
-    //menu
-    //touchData = xQueueCreate(5, sizeof(int8_t));
-    
-    /*xTaskCreate(capSense_task,"capSense_task",400,NULL,1,0);
-    
-    while(CapSense_IsBusy());*/
-    Cy_GPIO_Write(P0_3_PORT, P0_3_NUM, 0UL);
-    I2C_MAX_Start();
-    MAX_Reset();
-    CyDelay(1000);
-    read_register_MAX(0x00);
-    MAX_Init();
-    
-    //Start everything that needs to be started
-    
-    /*CapSense_Start();
-    CapSense_ScanAllWidgets();*/
-    
-    Motion_Check();
+    // Start I2C communication
     //Create Tasks
     
+    GUI_Init();
+    Cy_EINK_Start(20);
+    Cy_EINK_Power(1);
+    updateMenu(1);
+    
+    
+    //variables
+    currentpage = PAGE_MENU;
+    currenttouch = NO_TOUCH;
+    hrmin = 30;
+    hrmax = 130;
+    LED = 36;
+    maxormin = true;
+    heart_rate = 99;
+    SPO2 = 22;
+    
+    Cy_SysInt_Init(&bouton_isr_cfg, isr_bouton);
+    NVIC_ClearPendingIRQ(bouton_isr_cfg.intrSrc);
+    NVIC_EnableIRQ(bouton_isr_cfg.intrSrc);
+    
+    //xTaskCreate(read_MAX30102_task, "Read MAX30102",2000, NULL, 2, NULL);
+    xTaskCreate(vtouch_task,"touch task",configMINIMAL_STACK_SIZE,NULL,1,0);
+     xTaskCreate(vINTERFACE_task,"INTERFACE task",2000,NULL,1,NULL);
+    
    
-    xTaskCreate(read_MAX30102_task, "Read MAX30102", configMINIMAL_STACK_SIZE, NULL, 1, NULL);
-   
+    
+    //xTaskCreate(traitement_task, "traitement", 3000, NULL, 2, NULL);
+    
+    
+    
+
     vTaskStartScheduler();
     
+    
+    //xTaskCreate(vINTERFACE_task,"INTERFACE task",2000,NULL,2,NULL);
+    //xTaskCreate(vtouch_task,"touch task",300,NULL,2,NULL);
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    //xTaskCreate(Task_Motion, "Motion Task", 300, NULL, 1, NULL);
+    
+    //vTaskStartScheduler();
+    
+    
+
+    
+
+
+    
+    
+    
+
+    
+    //Create Tasks
+    
+    //vTaskStartScheduler();
+    
+    //In case of scheduler problem
+    
     CY_ASSERT(0);
+  
     for(;;)
     {
-        /* Place your application code here. */
+        
     }
 }
 

@@ -81,13 +81,15 @@ CapSense_RAM_STRUCT CapSense_dsRam;
 /*******************************************************************************
 * Declares Widget's De-bounce Counters
 *******************************************************************************/
-static uint8 CapSense_debounceDummyWidget[CapSense_DUMMYWIDGET_NUM_SENSORS];
+static uint8 CapSense_debounceButtonR[CapSense_BUTTONR_NUM_SENSORS];
+static uint8 CapSense_debounceButtonL[CapSense_BUTTONL_NUM_SENSORS];
+static uint8 CapSense_debounceLinearSlider0[1u];
 
 
 /***************************************************************************//**
 * Declares Noise Envelope data structures
 *******************************************************************************/
-static SMARTSENSE_CSD_NOISE_ENVELOPE_STRUCT CapSense_noiseEnvlpDummyWidget[CapSense_DUMMYWIDGET_NUM_SENSORS];
+static SMARTSENSE_CSD_NOISE_ENVELOPE_STRUCT CapSense_noiseEnvlpLinearSlider0[CapSense_LINEARSLIDER0_NUM_SENSORS];
 
 /*******************************************************************************
 * Defines and initializes the Flash Data Structure
@@ -107,17 +109,56 @@ const CapSense_FLASH_STRUCT CapSense_dsFlash =
 {
     /* Flash Widget Initialization Data */
     {
-        { /* DummyWidget */
+        { /* ButtonR */
             &CapSense_ioList[0u],
-            (void *)&CapSense_dsRam.wdgtList.dummywidget,
-            CapSense_dsRam.snsList.dummywidget,
+            (void *)&CapSense_dsRam.wdgtList.buttonr,
+            CapSense_dsRam.snsList.buttonr,
             (void *)0u,
-            CapSense_debounceDummyWidget,
-            CapSense_DUMMYWIDGET_STATIC_CONFIG,
-            CapSense_DUMMYWIDGET_NUM_SENSORS,
+            CapSense_debounceButtonR,
+            CapSense_BUTTONR_STATIC_CONFIG,
+            CapSense_BUTTONR_NUM_SENSORS,
             (uint8)CapSense_WD_BUTTON_E,
-            CapSense_DUMMYWIDGET_NUM_SENSORS,
-            CapSense_noiseEnvlpDummyWidget,
+            (uint8)CapSense_SENSE_METHOD_CSX_E,
+            CapSense_BUTTONR_NUM_SENSORS,
+            1u,
+            0u,
+            0u,
+            (SMARTSENSE_CSD_NOISE_ENVELOPE_STRUCT *)0u,
+            0u,
+        },
+        { /* ButtonL */
+            &CapSense_ioList[2u],
+            (void *)&CapSense_dsRam.wdgtList.buttonl,
+            CapSense_dsRam.snsList.buttonl,
+            (void *)0u,
+            CapSense_debounceButtonL,
+            CapSense_BUTTONL_STATIC_CONFIG,
+            CapSense_BUTTONL_NUM_SENSORS,
+            (uint8)CapSense_WD_BUTTON_E,
+            (uint8)CapSense_SENSE_METHOD_CSX_E,
+            CapSense_BUTTONL_NUM_SENSORS,
+            1u,
+            0u,
+            0u,
+            (SMARTSENSE_CSD_NOISE_ENVELOPE_STRUCT *)0u,
+            0u,
+        },
+        { /* LinearSlider0 */
+            &CapSense_ioList[4u],
+            (void *)&CapSense_dsRam.wdgtList.linearslider0,
+            CapSense_dsRam.snsList.linearslider0,
+            (void *)0u,
+            CapSense_debounceLinearSlider0,
+            CapSense_LINEARSLIDER0_STATIC_CONFIG,
+            CapSense_LINEARSLIDER0_NUM_SENSORS,
+            (uint8)CapSense_WD_LINEAR_SLIDER_E,
+            (uint8)CapSense_SENSE_METHOD_CSD_E,
+            CapSense_LINEARSLIDER0_NUM_SENSORS,
+            0u,
+            CapSense_LINEARSLIDER0_X_RESOLUTION,
+            CapSense_LINEARSLIDER0_X_CENT_MULT,
+            CapSense_noiseEnvlpLinearSlider0,
+            CapSense_LINEARSLIDER0_IIR_FILTER_COEFF,
         },
     },
 };
@@ -127,9 +168,41 @@ const CapSense_FLASH_STRUCT CapSense_dsFlash =
 */
 const CapSense_FLASH_IO_STRUCT CapSense_ioList[CapSense_TOTAL_ELECTRODES] =
 {
-    { /* 0: DummyWidget_Sns0 */
+    { /* 0: ButtonR_Rx0 */
+        CapSense_Rx_0_PORT,
+        (uint8)CapSense_Rx_0_NUM,
+    },
+    { /* 1: ButtonR_Tx */
+        CapSense_Tx_0_PORT,
+        (uint8)CapSense_Tx_0_NUM,
+    },
+    { /* 2: ButtonL_Rx0 */
+        CapSense_Rx_1_PORT,
+        (uint8)CapSense_Rx_1_NUM,
+    },
+    { /* 3: ButtonR_Tx ganged to ButtonL_Tx */
+        CapSense_Tx_0_PORT,
+        (uint8)CapSense_Tx_0_NUM,
+    },
+    { /* 4: LinearSlider0_Sns0 */
         CapSense_Sns_0_PORT,
         (uint8)CapSense_Sns_0_NUM,
+    },
+    { /* 5: LinearSlider0_Sns1 */
+        CapSense_Sns_1_PORT,
+        (uint8)CapSense_Sns_1_NUM,
+    },
+    { /* 6: LinearSlider0_Sns2 */
+        CapSense_Sns_2_PORT,
+        (uint8)CapSense_Sns_2_NUM,
+    },
+    { /* 7: LinearSlider0_Sns3 */
+        CapSense_Sns_3_PORT,
+        (uint8)CapSense_Sns_3_NUM,
+    },
+    { /* 8: LinearSlider0_Sns4 */
+        CapSense_Sns_4_PORT,
+        (uint8)CapSense_Sns_4_NUM,
     },
 };
 
@@ -141,21 +214,59 @@ const CapSense_FLASH_IO_STRUCT CapSense_ioList[CapSense_TOTAL_ELECTRODES] =
 /* Initialization data for RAM widget list */
 const CapSense_RAM_WD_LIST_STRUCT CapSense_ramWidgetInit =
 {
-    { /* DummyWidget */
-        CapSense_DUMMYWIDGET_RESOLUTION,
-        CapSense_DUMMYWIDGET_FINGER_TH,
-        CapSense_DUMMYWIDGET_NOISE_TH,
-        CapSense_DUMMYWIDGET_NNOISE_TH,
-        CapSense_DUMMYWIDGET_HYSTERESIS,
-        CapSense_DUMMYWIDGET_ON_DEBOUNCE,
-        CapSense_DUMMYWIDGET_LOW_BSLN_RST,
+    { /* ButtonR */
+        CapSense_BUTTONR_RESOLUTION,
+        CapSense_BUTTONR_FINGER_TH,
+        CapSense_BUTTONR_NOISE_TH,
+        CapSense_BUTTONR_NNOISE_TH,
+        CapSense_BUTTONR_HYSTERESIS,
+        CapSense_BUTTONR_ON_DEBOUNCE,
+        CapSense_BUTTONR_LOW_BSLN_RST,
         {
-            CapSense_DUMMYWIDGET_IDAC_MOD0,
+            CapSense_BUTTONR_IDAC_MOD0,
         },
-        CapSense_DUMMYWIDGET_SNS_CLK,
-        CapSense_DUMMYWIDGET_SNS_CLK_SOURCE,
-        CapSense_DUMMYWIDGET_FINGER_CAP,
-        CapSense_DUMMYWIDGET_SIGPFC,
+        CapSense_BUTTONR_SNS_CLK,
+        CapSense_BUTTONR_SNS_CLK_SOURCE,
+        CapSense_BUTTONR_FINGER_CAP,
+        CapSense_BUTTONR_SIGPFC,
+        CapSense_NO_GESTURE,
+    },
+    { /* ButtonL */
+        CapSense_BUTTONL_RESOLUTION,
+        CapSense_BUTTONL_FINGER_TH,
+        CapSense_BUTTONL_NOISE_TH,
+        CapSense_BUTTONL_NNOISE_TH,
+        CapSense_BUTTONL_HYSTERESIS,
+        CapSense_BUTTONL_ON_DEBOUNCE,
+        CapSense_BUTTONL_LOW_BSLN_RST,
+        {
+            CapSense_BUTTONL_IDAC_MOD0,
+        },
+        CapSense_BUTTONL_SNS_CLK,
+        CapSense_BUTTONL_SNS_CLK_SOURCE,
+        CapSense_BUTTONL_FINGER_CAP,
+        CapSense_BUTTONL_SIGPFC,
+        CapSense_NO_GESTURE,
+    },
+    { /* LinearSlider0 */
+        CapSense_LINEARSLIDER0_RESOLUTION,
+        CapSense_LINEARSLIDER0_FINGER_TH,
+        CapSense_LINEARSLIDER0_NOISE_TH,
+        CapSense_LINEARSLIDER0_NNOISE_TH,
+        CapSense_LINEARSLIDER0_HYSTERESIS,
+        CapSense_LINEARSLIDER0_ON_DEBOUNCE,
+        CapSense_LINEARSLIDER0_LOW_BSLN_RST,
+        {
+            CapSense_LINEARSLIDER0_IDAC_MOD0,
+        },
+        CapSense_LINEARSLIDER0_SNS_CLK,
+        CapSense_LINEARSLIDER0_SNS_CLK_SOURCE,
+        CapSense_LINEARSLIDER0_FINGER_CAP,
+        CapSense_LINEARSLIDER0_SIGPFC,
+        CapSense_NO_GESTURE,
+        {
+            CapSense_LINEARSLIDER0_POSITION,
+        },
     },
 };
 
@@ -163,11 +274,99 @@ const CapSense_RAM_WD_LIST_STRUCT CapSense_ramWidgetInit =
 /* IDAC Initialization Data */
 const uint8 CapSense_ramIdacInit[CapSense_TOTAL_SENSORS] =
 {
-    /* DummyWidget */
-    CapSense_DUMMYWIDGET_SNS0_IDAC_COMP0,
+    /* ButtonR */
+    CapSense_BUTTONR_RX0_IDAC_COMP0,
+
+    /* ButtonL */
+    CapSense_BUTTONL_RX0_IDAC_COMP0,
+
+    /* LinearSlider0 */
+    CapSense_LINEARSLIDER0_SNS0_IDAC_COMP0,
+    CapSense_LINEARSLIDER0_SNS1_IDAC_COMP0,
+    CapSense_LINEARSLIDER0_SNS2_IDAC_COMP0,
+    CapSense_LINEARSLIDER0_SNS3_IDAC_COMP0,
+    CapSense_LINEARSLIDER0_SNS4_IDAC_COMP0,
 };
 
 
+
+/* Gesture Initialization Data */
+const CapSense_TMG_CONFIG_STRUCT CapSense_ramGesturesInit =
+{
+    sizeof(CapSense_TMG_CONFIG_STRUCT),
+    8u,
+    8u,
+    CapSense_LINEARSLIDER0_DTZM_XPOS_TH,
+    CapSense_LINEARSLIDER0_DTZM_YPOS_TH,
+    CapSense_LINEARSLIDER0_STFK_POS_TH,
+    CapSense_LINEARSLIDER0_STFK_YPOS_TH,
+    CapSense_LINEARSLIDER0_STSL_XPOS_TH1,
+    CapSense_LINEARSLIDER0_STSL_XPOS_TH2,
+    CapSense_LINEARSLIDER0_STSL_XPOS_TH3,
+    CapSense_LINEARSLIDER0_STSL_XPOS_TH4,
+    CapSense_LINEARSLIDER0_STSL_YPOS_TH1,
+    CapSense_LINEARSLIDER0_STSL_YPOS_TH2,
+    CapSense_LINEARSLIDER0_STSL_YPOS_TH3,
+    CapSense_LINEARSLIDER0_STSL_YPOS_TH4,
+    CapSense_LINEARSLIDER0_STSL_SCROLL_STEP1,
+    CapSense_LINEARSLIDER0_STSL_SCROLL_STEP2,
+    CapSense_LINEARSLIDER0_STSL_SCROLL_STEP3,
+    CapSense_LINEARSLIDER0_STSL_SCROLL_STEP4,
+    CapSense_LINEARSLIDER0_STSL_DEBOUNCE,
+    CapSense_LINEARSLIDER0_DTSL_XPOS_TH1,
+    CapSense_LINEARSLIDER0_DTSL_XPOS_TH2,
+    CapSense_LINEARSLIDER0_DTSL_XPOS_TH3,
+    CapSense_LINEARSLIDER0_DTSL_XPOS_TH4,
+    CapSense_LINEARSLIDER0_DTSL_YPOS_TH1,
+    CapSense_LINEARSLIDER0_DTSL_YPOS_TH2,
+    CapSense_LINEARSLIDER0_DTSL_YPOS_TH3,
+    CapSense_LINEARSLIDER0_DTSL_YPOS_TH4,
+    CapSense_LINEARSLIDER0_DTSL_SCROLL_STEP1,
+    CapSense_LINEARSLIDER0_DTSL_SCROLL_STEP2,
+    CapSense_LINEARSLIDER0_DTSL_SCROLL_STEP3,
+    CapSense_LINEARSLIDER0_DTSL_SCROLL_STEP4,
+    CapSense_LINEARSLIDER0_DTSL_DEBOUNCE,
+    CapSense_LINEARSLIDER0_DTZM_SCROLL_ZOOM_DEBOUNCE,
+    CapSense_LINEARSLIDER0_STSL_XPOS_TH,
+    CapSense_LINEARSLIDER0_STSL_YPOS_TH,
+    CapSense_LINEARSLIDER0_STSL_COUNT_LEVEL,
+    CapSense_LINEARSLIDER0_DTSL_XPOS_TH,
+    CapSense_LINEARSLIDER0_DTSL_YPOS_TH,
+    CapSense_LINEARSLIDER0_DTSL_COUNT_LEVEL,
+    CapSense_LINEARSLIDER0_STES_POS_TH,
+    CapSense_LINEARSLIDER0_STES_TOP_ANGLE_TH,
+    CapSense_LINEARSLIDER0_STES_BOTTOM_ANGLE_TH,
+    CapSense_LINEARSLIDER0_STES_DISAM_AREA_WIDTH,
+    3u,
+    CapSense_LINEARSLIDER0_DTZM_DEBOUNCE,
+    CapSense_LINEARSLIDER0_DTZM_DEBOUNCE,
+    3u,
+    CapSense_LINEARSLIDER0_STRT_ROTATE_DEBOUNCE,
+    0u,
+    CapSense_LINEARSLIDER0_STDC_MAX_RADIUS_DISPLACEMENT,
+    CapSense_LINEARSLIDER0_STSC_XMAX_POS_DISPLACEMENT,
+    CapSense_LINEARSLIDER0_STSC_YMAX_POS_DISPLACEMENT,
+    CapSense_LINEARSLIDER0_DT_SETTLING_TIME,
+    CapSense_LINEARSLIDER0_RESOLUTION,
+    0u,
+    CapSense_LINEARSLIDER0_STFK_MAX_SAMPLE_INTERVAL,
+    CapSense_LINEARSLIDER0_STES_TIMEOUT_INTERVAL,
+    CapSense_LINEARSLIDER0_DTSC_MAX_TOUCH_DURATION,
+    CapSense_LINEARSLIDER0_DTSC_MIN_TOUCH_DURATION,
+    CapSense_LINEARSLIDER0_STSC_MAX_TOUCH_DURATION,
+    CapSense_LINEARSLIDER0_STSC_MIN_TOUCH_DURATION,
+    CapSense_LINEARSLIDER0_STDC_MAX_TOUCH_INTERVAL,
+    CapSense_LINEARSLIDER0_STDC_MIN_TOUCH_INTERVAL,
+    240u,
+    40u,
+    41u,
+    48u,
+    63u,
+    72u,
+    73u,
+    144u,
+    159u,
+};
 
 /*******************************************************************************
 * Defines internal data types and statements

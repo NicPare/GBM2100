@@ -1,56 +1,64 @@
 <?xml version="1.0" encoding="us-ascii"?>
 
-<fileSet version="1" anchorPath="C:\Users\nicpa\OneDrive\Documents\GBM2100\Laboratoire3.cydsn\codegentemp" xsi:schemaLocation="http://cypress.com/xsd/cypathdictionary cypathdictionary.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://cypress.com/xsd/cypathdictionary">
-  <file name="C:\Users\nicpa\OneDrive\Documents\GBM2100\Laboratoire3.cydsn\codegentemp\cyfitter_cfg.h" value="HEADER;;;;;" />
-  <file name="C:\Users\nicpa\OneDrive\Documents\GBM2100\Laboratoire3.cydsn\codegentemp\cyfitter_sysint_cfg.h" value="HEADER;;;;;Pins and Interrupts" />
-  <file name="C:\Users\nicpa\OneDrive\Documents\GBM2100\Laboratoire3.cydsn\codegentemp\cyfitter_sysint_cfg.c" value="SOURCE_C;CortexM0p,CortexM4;;;;Pins and Interrupts" />
-  <file name="C:\Users\nicpa\OneDrive\Documents\GBM2100\Laboratoire3.cydsn\codegentemp\cyfitter_cfg.c" value="SOURCE_C;CortexM0p;;;;" />
-  <file name="C:\Users\nicpa\OneDrive\Documents\GBM2100\Laboratoire3.cydsn\codegentemp\cymetadata.c" value="SOURCE_C;CortexM0p,CortexM4;;;;" />
-  <file name="C:\Users\nicpa\OneDrive\Documents\GBM2100\Laboratoire3.cydsn\codegentemp\cydevice_trm.h" value="HEADER;;;;;" />
-  <file name="C:\Users\nicpa\OneDrive\Documents\GBM2100\Laboratoire3.cydsn\codegentemp\cydevicegnu_trm.inc" value="HEADER;;;;;" />
-  <file name="C:\Users\nicpa\OneDrive\Documents\GBM2100\Laboratoire3.cydsn\codegentemp\cydevicerv_trm.inc" value="HEADER;;;;;" />
-  <file name="C:\Users\nicpa\OneDrive\Documents\GBM2100\Laboratoire3.cydsn\codegentemp\cydeviceiar_trm.inc" value="HEADER;;;;;" />
-  <file name="C:\Users\nicpa\OneDrive\Documents\GBM2100\Laboratoire3.cydsn\codegentemp\cyfitter.h" value="HEADER;;;;;" />
-  <file name="C:\Users\nicpa\OneDrive\Documents\GBM2100\Laboratoire3.cydsn\codegentemp\cyfitter_gpio.h" value="HEADER;;;;;Pins and Interrupts" />
-  <file name="C:\Users\nicpa\OneDrive\Documents\GBM2100\Laboratoire3.cydsn\codegentemp\cyfitter_sysint.h" value="HEADER;;;;;Pins and Interrupts" />
-  <file name="C:\Users\nicpa\OneDrive\Documents\GBM2100\Laboratoire3.cydsn\codegentemp\cydisabledsheets.h" value="HEADER;;;;;" />
-  <file name="C:\Users\nicpa\OneDrive\Documents\GBM2100\Laboratoire3.cydsn\codegentemp\CY_EINK_SPIM.c" value="SOURCE_C;CortexM0p,CortexM4;;;;CY_EINK_SPIM" />
-  <file name="C:\Users\nicpa\OneDrive\Documents\GBM2100\Laboratoire3.cydsn\codegentemp\CY_EINK_SPIM.h" value="HEADER;;;;;CY_EINK_SPIM" />
-  <file name="C:\Users\nicpa\OneDrive\Documents\GBM2100\Laboratoire3.cydsn\codegentemp\EINK_Clock.h" value="HEADER;;;;;EINK_Clock" />
-  <file name="C:\Users\nicpa\OneDrive\Documents\GBM2100\Laboratoire3.cydsn\codegentemp\CY_EINK_Timer.c" value="SOURCE_C;CortexM0p,CortexM4;;;;CY_EINK_Timer" />
-  <file name="C:\Users\nicpa\OneDrive\Documents\GBM2100\Laboratoire3.cydsn\codegentemp\CY_EINK_Timer.h" value="HEADER;;;;;CY_EINK_Timer" />
-  <file name="C:\Users\nicpa\OneDrive\Documents\GBM2100\Laboratoire3.cydsn\codegentemp\Status_SW2.c" value="SOURCE_C;CortexM0p,CortexM4;;;;Status_SW2" />
-  <file name="C:\Users\nicpa\OneDrive\Documents\GBM2100\Laboratoire3.cydsn\codegentemp\Status_SW2.h" value="HEADER;;;;;Status_SW2" />
-  <file name="C:\Users\nicpa\OneDrive\Documents\GBM2100\Laboratoire3.cydsn\codegentemp\Clock_2.h" value="HEADER;;;;;Clock_2" />
-  <file name="C:\Users\nicpa\OneDrive\Documents\GBM2100\Laboratoire3.cydsn\codegentemp\I2C_MAX.c" value="SOURCE_C;CortexM0p,CortexM4;;;;I2C_MAX" />
-  <file name="C:\Users\nicpa\OneDrive\Documents\GBM2100\Laboratoire3.cydsn\codegentemp\I2C_MAX.h" value="HEADER;;;;;I2C_MAX" />
-  <file name="C:\Users\nicpa\OneDrive\Documents\GBM2100\Laboratoire3.cydsn\codegentemp\CapSense.h" value="HEADER;;;;;CapSense" />
-  <file name="C:\Users\nicpa\OneDrive\Documents\GBM2100\Laboratoire3.cydsn\codegentemp\CapSense_Control.c" value="SOURCE_C;CortexM0p,CortexM4;;;;CapSense" />
-  <file name="C:\Users\nicpa\OneDrive\Documents\GBM2100\Laboratoire3.cydsn\codegentemp\CapSense_Processing.c" value="SOURCE_C;CortexM0p,CortexM4;;;;CapSense" />
-  <file name="C:\Users\nicpa\OneDrive\Documents\GBM2100\Laboratoire3.cydsn\codegentemp\CapSense_Structure.c" value="SOURCE_C;CortexM0p,CortexM4;;;;CapSense" />
-  <file name="C:\Users\nicpa\OneDrive\Documents\GBM2100\Laboratoire3.cydsn\codegentemp\CapSense_Tuner.c" value="SOURCE_C;CortexM0p,CortexM4;;;;CapSense" />
-  <file name="C:\Users\nicpa\OneDrive\Documents\GBM2100\Laboratoire3.cydsn\codegentemp\CapSense_Filter.c" value="SOURCE_C;CortexM0p,CortexM4;;;;CapSense" />
-  <file name="C:\Users\nicpa\OneDrive\Documents\GBM2100\Laboratoire3.cydsn\codegentemp\CapSense_Sensing.c" value="SOURCE_C;CortexM0p,CortexM4;;;;CapSense" />
-  <file name="C:\Users\nicpa\OneDrive\Documents\GBM2100\Laboratoire3.cydsn\codegentemp\CapSense_Control.h" value="HEADER;;;;;CapSense" />
-  <file name="C:\Users\nicpa\OneDrive\Documents\GBM2100\Laboratoire3.cydsn\codegentemp\CapSense_Filter.h" value="HEADER;;;;;CapSense" />
-  <file name="C:\Users\nicpa\OneDrive\Documents\GBM2100\Laboratoire3.cydsn\codegentemp\CapSense_Processing.h" value="HEADER;;;;;CapSense" />
-  <file name="C:\Users\nicpa\OneDrive\Documents\GBM2100\Laboratoire3.cydsn\codegentemp\CapSense_Sensing.h" value="HEADER;;;;;CapSense" />
-  <file name="C:\Users\nicpa\OneDrive\Documents\GBM2100\Laboratoire3.cydsn\codegentemp\CapSense_Structure.h" value="HEADER;;;;;CapSense" />
-  <file name="C:\Users\nicpa\OneDrive\Documents\GBM2100\Laboratoire3.cydsn\codegentemp\CapSense_Tuner.h" value="HEADER;;;;;CapSense" />
-  <file name="C:\Users\nicpa\OneDrive\Documents\GBM2100\Laboratoire3.cydsn\codegentemp\CapSense_Configuration.h" value="HEADER;;;;;CapSense" />
-  <file name="C:\Users\nicpa\OneDrive\Documents\GBM2100\Laboratoire3.cydsn\codegentemp\CapSense_INT.c" value="SOURCE_C;CortexM0p,CortexM4;;;;CapSense" />
-  <file name="C:\Users\nicpa\OneDrive\Documents\GBM2100\Laboratoire3.cydsn\codegentemp\CapSense_SensingCSD_LL.c" value="SOURCE_C;CortexM0p,CortexM4;;;;CapSense" />
-  <file name="C:\Users\nicpa\OneDrive\Documents\GBM2100\Laboratoire3.cydsn\codegentemp\CapSense_SensingCSD_LL.h" value="HEADER;;;;;CapSense" />
-  <file name="C:\Users\nicpa\OneDrive\Documents\GBM2100\Laboratoire3.cydsn\codegentemp\CapSense_RegisterMap.h" value="HEADER;;;;;CapSense" />
-  <file name="C:\Users\nicpa\OneDrive\Documents\GBM2100\Laboratoire3.cydsn\codegentemp\CapSense_SmartSense_LL.h" value="HEADER;;;;;CapSense" />
-  <file name="C:\Users\nicpa\OneDrive\Documents\GBM2100\Laboratoire3.cydsn\codegentemp\I2Cm.c" value="SOURCE_C;CortexM0p,CortexM4;;;;I2Cm" />
-  <file name="C:\Users\nicpa\OneDrive\Documents\GBM2100\Laboratoire3.cydsn\codegentemp\I2Cm.h" value="HEADER;;;;;I2Cm" />
-  <file name="C:\Users\nicpa\OneDrive\Documents\GBM2100\Laboratoire3.cydsn\codegentemp\CY_EINK_SPIM_SCBCLK.h" value="HEADER;;;;;CY_EINK_SPIM_SCBCLK" />
-  <file name="C:\Users\nicpa\OneDrive\Documents\GBM2100\Laboratoire3.cydsn\codegentemp\I2C_MAX_SCBCLK.h" value="HEADER;;;;;I2C_MAX_SCBCLK" />
-  <file name="C:\Users\nicpa\OneDrive\Documents\GBM2100\Laboratoire3.cydsn\codegentemp\CapSense_ModClk.h" value="HEADER;;;;;CapSense_ModClk" />
-  <file name="C:\Users\nicpa\OneDrive\Documents\GBM2100\Laboratoire3.cydsn\codegentemp\I2Cm_SCBCLK.h" value="HEADER;;;;;I2Cm_SCBCLK" />
-  <file name="C:\Users\nicpa\OneDrive\Documents\GBM2100\Laboratoire3.cydsn\codegentemp\project.h" value="OTHER;;;;;" />
-  <file name="C:\Users\nicpa\OneDrive\Documents\GBM2100\Laboratoire3.cydsn\codegentemp\cycodeshareimport.ld" value="OTHER;;;;;" />
-  <file name="C:\Users\nicpa\OneDrive\Documents\GBM2100\Laboratoire3.cydsn\codegentemp\cycodeshareexport.ld" value="OTHER;;;;;" />
-  <file name="C:\Users\nicpa\OneDrive\Documents\GBM2100\Laboratoire3.cydsn\codegentemp\cycodeshareimport.scat" value="OTHER;;;;;" />
+<fileSet version="1" anchorPath="C:\Users\nicpa\OneDrive\Documents\PolyDoc\GBM2100FINAL\Laboratoire3\Laboratoire3.cydsn\codegentemp" xsi:schemaLocation="http://cypress.com/xsd/cypathdictionary cypathdictionary.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://cypress.com/xsd/cypathdictionary">
+  <file name="C:\Users\nicpa\OneDrive\Documents\PolyDoc\GBM2100FINAL\Laboratoire3\Laboratoire3.cydsn\codegentemp\cyfitter_cfg.h" value="HEADER;;;;;" />
+  <file name="C:\Users\nicpa\OneDrive\Documents\PolyDoc\GBM2100FINAL\Laboratoire3\Laboratoire3.cydsn\codegentemp\cyfitter_sysint_cfg.h" value="HEADER;;;;;Pins and Interrupts" />
+  <file name="C:\Users\nicpa\OneDrive\Documents\PolyDoc\GBM2100FINAL\Laboratoire3\Laboratoire3.cydsn\codegentemp\cyfitter_sysint_cfg.c" value="SOURCE_C;CortexM0p,CortexM4;;;;Pins and Interrupts" />
+  <file name="C:\Users\nicpa\OneDrive\Documents\PolyDoc\GBM2100FINAL\Laboratoire3\Laboratoire3.cydsn\codegentemp\cyfitter_cfg.c" value="SOURCE_C;CortexM0p;;;;" />
+  <file name="C:\Users\nicpa\OneDrive\Documents\PolyDoc\GBM2100FINAL\Laboratoire3\Laboratoire3.cydsn\codegentemp\cymetadata.c" value="SOURCE_C;CortexM0p,CortexM4;;;;" />
+  <file name="C:\Users\nicpa\OneDrive\Documents\PolyDoc\GBM2100FINAL\Laboratoire3\Laboratoire3.cydsn\codegentemp\cydevice_trm.h" value="HEADER;;;;;" />
+  <file name="C:\Users\nicpa\OneDrive\Documents\PolyDoc\GBM2100FINAL\Laboratoire3\Laboratoire3.cydsn\codegentemp\cydevicegnu_trm.inc" value="HEADER;;;;;" />
+  <file name="C:\Users\nicpa\OneDrive\Documents\PolyDoc\GBM2100FINAL\Laboratoire3\Laboratoire3.cydsn\codegentemp\cydevicerv_trm.inc" value="HEADER;;;;;" />
+  <file name="C:\Users\nicpa\OneDrive\Documents\PolyDoc\GBM2100FINAL\Laboratoire3\Laboratoire3.cydsn\codegentemp\cydeviceiar_trm.inc" value="HEADER;;;;;" />
+  <file name="C:\Users\nicpa\OneDrive\Documents\PolyDoc\GBM2100FINAL\Laboratoire3\Laboratoire3.cydsn\codegentemp\cyfitter.h" value="HEADER;;;;;" />
+  <file name="C:\Users\nicpa\OneDrive\Documents\PolyDoc\GBM2100FINAL\Laboratoire3\Laboratoire3.cydsn\codegentemp\cyfitter_gpio.h" value="HEADER;;;;;Pins and Interrupts" />
+  <file name="C:\Users\nicpa\OneDrive\Documents\PolyDoc\GBM2100FINAL\Laboratoire3\Laboratoire3.cydsn\codegentemp\cyfitter_sysint.h" value="HEADER;;;;;Pins and Interrupts" />
+  <file name="C:\Users\nicpa\OneDrive\Documents\PolyDoc\GBM2100FINAL\Laboratoire3\Laboratoire3.cydsn\codegentemp\cydisabledsheets.h" value="HEADER;;;;;" />
+  <file name="C:\Users\nicpa\OneDrive\Documents\PolyDoc\GBM2100FINAL\Laboratoire3\Laboratoire3.cydsn\codegentemp\CY_EINK_SPIM.c" value="SOURCE_C;CortexM0p,CortexM4;;;;CY_EINK_SPIM" />
+  <file name="C:\Users\nicpa\OneDrive\Documents\PolyDoc\GBM2100FINAL\Laboratoire3\Laboratoire3.cydsn\codegentemp\CY_EINK_SPIM.h" value="HEADER;;;;;CY_EINK_SPIM" />
+  <file name="C:\Users\nicpa\OneDrive\Documents\PolyDoc\GBM2100FINAL\Laboratoire3\Laboratoire3.cydsn\codegentemp\EINK_Clock.h" value="HEADER;;;;;EINK_Clock" />
+  <file name="C:\Users\nicpa\OneDrive\Documents\PolyDoc\GBM2100FINAL\Laboratoire3\Laboratoire3.cydsn\codegentemp\CY_EINK_Timer.c" value="SOURCE_C;CortexM0p,CortexM4;;;;CY_EINK_Timer" />
+  <file name="C:\Users\nicpa\OneDrive\Documents\PolyDoc\GBM2100FINAL\Laboratoire3\Laboratoire3.cydsn\codegentemp\CY_EINK_Timer.h" value="HEADER;;;;;CY_EINK_Timer" />
+  <file name="C:\Users\nicpa\OneDrive\Documents\PolyDoc\GBM2100FINAL\Laboratoire3\Laboratoire3.cydsn\codegentemp\Status_SW2.c" value="SOURCE_C;CortexM0p,CortexM4;;;;Status_SW2" />
+  <file name="C:\Users\nicpa\OneDrive\Documents\PolyDoc\GBM2100FINAL\Laboratoire3\Laboratoire3.cydsn\codegentemp\Status_SW2.h" value="HEADER;;;;;Status_SW2" />
+  <file name="C:\Users\nicpa\OneDrive\Documents\PolyDoc\GBM2100FINAL\Laboratoire3\Laboratoire3.cydsn\codegentemp\Clock_2.h" value="HEADER;;;;;Clock_2" />
+  <file name="C:\Users\nicpa\OneDrive\Documents\PolyDoc\GBM2100FINAL\Laboratoire3\Laboratoire3.cydsn\codegentemp\I2C_MAX.c" value="SOURCE_C;CortexM0p,CortexM4;;;;I2C_MAX" />
+  <file name="C:\Users\nicpa\OneDrive\Documents\PolyDoc\GBM2100FINAL\Laboratoire3\Laboratoire3.cydsn\codegentemp\I2C_MAX.h" value="HEADER;;;;;I2C_MAX" />
+  <file name="C:\Users\nicpa\OneDrive\Documents\PolyDoc\GBM2100FINAL\Laboratoire3\Laboratoire3.cydsn\codegentemp\I2Cm.c" value="SOURCE_C;CortexM0p,CortexM4;;;;I2Cm" />
+  <file name="C:\Users\nicpa\OneDrive\Documents\PolyDoc\GBM2100FINAL\Laboratoire3\Laboratoire3.cydsn\codegentemp\I2Cm.h" value="HEADER;;;;;I2Cm" />
+  <file name="C:\Users\nicpa\OneDrive\Documents\PolyDoc\GBM2100FINAL\Laboratoire3\Laboratoire3.cydsn\codegentemp\CapSense.h" value="HEADER;;;;;CapSense" />
+  <file name="C:\Users\nicpa\OneDrive\Documents\PolyDoc\GBM2100FINAL\Laboratoire3\Laboratoire3.cydsn\codegentemp\CapSense_Control.c" value="SOURCE_C;CortexM0p,CortexM4;;;;CapSense" />
+  <file name="C:\Users\nicpa\OneDrive\Documents\PolyDoc\GBM2100FINAL\Laboratoire3\Laboratoire3.cydsn\codegentemp\CapSense_Processing.c" value="SOURCE_C;CortexM0p,CortexM4;;;;CapSense" />
+  <file name="C:\Users\nicpa\OneDrive\Documents\PolyDoc\GBM2100FINAL\Laboratoire3\Laboratoire3.cydsn\codegentemp\CapSense_Structure.c" value="SOURCE_C;CortexM0p,CortexM4;;;;CapSense" />
+  <file name="C:\Users\nicpa\OneDrive\Documents\PolyDoc\GBM2100FINAL\Laboratoire3\Laboratoire3.cydsn\codegentemp\CapSense_Tuner.c" value="SOURCE_C;CortexM0p,CortexM4;;;;CapSense" />
+  <file name="C:\Users\nicpa\OneDrive\Documents\PolyDoc\GBM2100FINAL\Laboratoire3\Laboratoire3.cydsn\codegentemp\CapSense_Filter.c" value="SOURCE_C;CortexM0p,CortexM4;;;;CapSense" />
+  <file name="C:\Users\nicpa\OneDrive\Documents\PolyDoc\GBM2100FINAL\Laboratoire3\Laboratoire3.cydsn\codegentemp\CapSense_Sensing.c" value="SOURCE_C;CortexM0p,CortexM4;;;;CapSense" />
+  <file name="C:\Users\nicpa\OneDrive\Documents\PolyDoc\GBM2100FINAL\Laboratoire3\Laboratoire3.cydsn\codegentemp\CapSense_Control.h" value="HEADER;;;;;CapSense" />
+  <file name="C:\Users\nicpa\OneDrive\Documents\PolyDoc\GBM2100FINAL\Laboratoire3\Laboratoire3.cydsn\codegentemp\CapSense_Filter.h" value="HEADER;;;;;CapSense" />
+  <file name="C:\Users\nicpa\OneDrive\Documents\PolyDoc\GBM2100FINAL\Laboratoire3\Laboratoire3.cydsn\codegentemp\CapSense_Processing.h" value="HEADER;;;;;CapSense" />
+  <file name="C:\Users\nicpa\OneDrive\Documents\PolyDoc\GBM2100FINAL\Laboratoire3\Laboratoire3.cydsn\codegentemp\CapSense_Sensing.h" value="HEADER;;;;;CapSense" />
+  <file name="C:\Users\nicpa\OneDrive\Documents\PolyDoc\GBM2100FINAL\Laboratoire3\Laboratoire3.cydsn\codegentemp\CapSense_Structure.h" value="HEADER;;;;;CapSense" />
+  <file name="C:\Users\nicpa\OneDrive\Documents\PolyDoc\GBM2100FINAL\Laboratoire3\Laboratoire3.cydsn\codegentemp\CapSense_Tuner.h" value="HEADER;;;;;CapSense" />
+  <file name="C:\Users\nicpa\OneDrive\Documents\PolyDoc\GBM2100FINAL\Laboratoire3\Laboratoire3.cydsn\codegentemp\CapSense_Configuration.h" value="HEADER;;;;;CapSense" />
+  <file name="C:\Users\nicpa\OneDrive\Documents\PolyDoc\GBM2100FINAL\Laboratoire3\Laboratoire3.cydsn\codegentemp\CapSense_INT.c" value="SOURCE_C;CortexM0p,CortexM4;;;;CapSense" />
+  <file name="C:\Users\nicpa\OneDrive\Documents\PolyDoc\GBM2100FINAL\Laboratoire3\Laboratoire3.cydsn\codegentemp\CapSense_SensingCSD_LL.c" value="SOURCE_C;CortexM0p,CortexM4;;;;CapSense" />
+  <file name="C:\Users\nicpa\OneDrive\Documents\PolyDoc\GBM2100FINAL\Laboratoire3\Laboratoire3.cydsn\codegentemp\CapSense_SensingCSD_LL.h" value="HEADER;;;;;CapSense" />
+  <file name="C:\Users\nicpa\OneDrive\Documents\PolyDoc\GBM2100FINAL\Laboratoire3\Laboratoire3.cydsn\codegentemp\CapSense_SensingCSX_LL.h" value="HEADER;;;;;CapSense" />
+  <file name="C:\Users\nicpa\OneDrive\Documents\PolyDoc\GBM2100FINAL\Laboratoire3\Laboratoire3.cydsn\codegentemp\CapSense_SensingCSX_LL.c" value="SOURCE_C;CortexM0p,CortexM4;;;;CapSense" />
+  <file name="C:\Users\nicpa\OneDrive\Documents\PolyDoc\GBM2100FINAL\Laboratoire3\Laboratoire3.cydsn\codegentemp\CapSense_RegisterMap.h" value="HEADER;;;;;CapSense" />
+  <file name="C:\Users\nicpa\OneDrive\Documents\PolyDoc\GBM2100FINAL\Laboratoire3\Laboratoire3.cydsn\codegentemp\CapSense_Centroid_LL.c" value="SOURCE_C;CortexM0p,CortexM4;;;;CapSense" />
+  <file name="C:\Users\nicpa\OneDrive\Documents\PolyDoc\GBM2100FINAL\Laboratoire3\Laboratoire3.cydsn\codegentemp\CapSense_Centroid_LL.h" value="HEADER;;;;;CapSense" />
+  <file name="C:\Users\nicpa\OneDrive\Documents\PolyDoc\GBM2100FINAL\Laboratoire3\Laboratoire3.cydsn\codegentemp\CapSense_SmartSense_LL.h" value="HEADER;;;;;CapSense" />
+  <file name="C:\Users\nicpa\OneDrive\Documents\PolyDoc\GBM2100FINAL\Laboratoire3\Laboratoire3.cydsn\codegentemp\CapSense_Gesture.c" value="SOURCE_C;CortexM0p,CortexM4;;;;CapSense" />
+  <file name="C:\Users\nicpa\OneDrive\Documents\PolyDoc\GBM2100FINAL\Laboratoire3\Laboratoire3.cydsn\codegentemp\CapSense_Gesture.h" value="HEADER;;;;;CapSense" />
+  <file name="C:\Users\nicpa\OneDrive\Documents\PolyDoc\GBM2100FINAL\Laboratoire3\Laboratoire3.cydsn\codegentemp\CY_EINK_SPIM_SCBCLK.h" value="HEADER;;;;;CY_EINK_SPIM_SCBCLK" />
+  <file name="C:\Users\nicpa\OneDrive\Documents\PolyDoc\GBM2100FINAL\Laboratoire3\Laboratoire3.cydsn\codegentemp\I2C_MAX_SCBCLK.h" value="HEADER;;;;;I2C_MAX_SCBCLK" />
+  <file name="C:\Users\nicpa\OneDrive\Documents\PolyDoc\GBM2100FINAL\Laboratoire3\Laboratoire3.cydsn\codegentemp\I2Cm_SCBCLK.h" value="HEADER;;;;;I2Cm_SCBCLK" />
+  <file name="C:\Users\nicpa\OneDrive\Documents\PolyDoc\GBM2100FINAL\Laboratoire3\Laboratoire3.cydsn\codegentemp\CapSense_ModClk.h" value="HEADER;;;;;CapSense_ModClk" />
+  <file name="C:\Users\nicpa\OneDrive\Documents\PolyDoc\GBM2100FINAL\Laboratoire3\Laboratoire3.cydsn\codegentemp\CapSense_TMG.c" value="SOURCE_C;CortexM0p,CortexM4;;;;CapSense_TMG" />
+  <file name="C:\Users\nicpa\OneDrive\Documents\PolyDoc\GBM2100FINAL\Laboratoire3\Laboratoire3.cydsn\codegentemp\CapSense_TMG.h" value="HEADER;;;;;CapSense_TMG" />
+  <file name="C:\Users\nicpa\OneDrive\Documents\PolyDoc\GBM2100FINAL\Laboratoire3\Laboratoire3.cydsn\codegentemp\project.h" value="OTHER;;;;;" />
+  <file name="C:\Users\nicpa\OneDrive\Documents\PolyDoc\GBM2100FINAL\Laboratoire3\Laboratoire3.cydsn\codegentemp\cycodeshareimport.ld" value="OTHER;;;;;" />
+  <file name="C:\Users\nicpa\OneDrive\Documents\PolyDoc\GBM2100FINAL\Laboratoire3\Laboratoire3.cydsn\codegentemp\cycodeshareexport.ld" value="OTHER;;;;;" />
+  <file name="C:\Users\nicpa\OneDrive\Documents\PolyDoc\GBM2100FINAL\Laboratoire3\Laboratoire3.cydsn\codegentemp\cycodeshareimport.scat" value="OTHER;;;;;" />
 </fileSet>

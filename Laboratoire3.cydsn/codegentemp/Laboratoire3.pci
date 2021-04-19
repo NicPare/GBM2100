@@ -1,5 +1,5 @@
 # Laboratoire3
-# 2021-04-16 14:25:30Z
+# 2021-04-19 13:15:14Z
 
 dont_use_location p4usbcell -1 -1 0
 dont_use_location USB -1 -1 0
@@ -17,16 +17,26 @@ set_io "CY_EINK_Border(0)" iocell 5 6
 set_io "CY_EINK_DispIoEn(0)" iocell 0 2
 set_io "CY_EINK_DispBusy(0)" iocell 5 3
 set_io "CY_EINK_Ssel(0)" iocell 12 3
-set_io "SW2(0)" iocell 0 4
-set_io "LED(0)" iocell 0 3
-set_io "Pin_Orient_INT(0)" iocell 13 0
 set_io "\I2C_MAX:scl(0)\" iocell 9 0
 set_io "\I2C_MAX:sda(0)\" iocell 9 1
-set_io "\CapSense:Cmod(0)\" iocell 7 7
-set_io "\CapSense:Sns(0)\" iocell 9 7
 set_io "\I2Cm:scl(0)\" iocell 6 0
 set_io "\I2Cm:sda(0)\" iocell 6 1
-set_io "VIN(0)" iocell 13 6
+set_io "Pin_Orient_INT(0)" iocell 13 0
+set_io "LED(0)" iocell 0 3
+set_io "Vin(0)" iocell 13 6
+set_io "\CapSense:Cmod(0)\" iocell 7 7
+set_io "\CapSense:Rx(0)\" iocell 8 1
+set_io "\CapSense:Rx(1)\" iocell 8 2
+set_io "\CapSense:CintB(0)\" iocell 7 2
+set_io "\CapSense:CintA(0)\" iocell 7 1
+set_io "\CapSense:Sns(0)\" iocell 8 3
+set_io "\CapSense:Sns(1)\" iocell 8 4
+set_io "\CapSense:Sns(2)\" iocell 8 5
+set_io "\CapSense:Sns(3)\" iocell 8 6
+set_io "\CapSense:Sns(4)\" iocell 8 7
+set_io "\CapSense:Tx(0)\" iocell 1 0
+set_io "BOUTON(0)" iocell 0 4
+set_io "PPG_pin(0)" iocell 13 7
 set_location "\CapSense:IDACMod\" CSIDAC7 -1 -1 0
 set_location "\CapSense:IDACComp\" CSIDAC7 -1 -1 1
 set_location "\CapSense:CSD\" CSD -1 -1 0

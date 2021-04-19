@@ -21,6 +21,12 @@
 
 /* ARM CM4 */
 #if (((__CORTEX_M == 4) && (CY_CORE_ID == 0)))
+    #define bouton_isr__INTC_ASSIGNED 1u
+    extern const cy_stc_sysint_t bouton_isr_cfg;
+
+    #define PPG_RDY_isr__INTC_ASSIGNED 1u
+    extern const cy_stc_sysint_t PPG_RDY_isr_cfg;
+
     #define I2C_MAX_SCB_IRQ__INTC_ASSIGNED 1u
     extern const cy_stc_sysint_t I2C_MAX_SCB_IRQ_cfg;
 

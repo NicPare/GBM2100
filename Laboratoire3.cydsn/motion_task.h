@@ -67,7 +67,9 @@
 extern TaskHandle_t xTaskHandleMotion;
 
 /* Task_Motion takes care of the Motion Sensor module in this code example */    
-void Motion_Check(void);
+void Task_Motion(void* pvParameters);
+
+bool LED_flag;
 
 #endif
 /* [] END OF FILE */
