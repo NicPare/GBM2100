@@ -27,8 +27,6 @@ extern const uint8_t PAGE_SIGNAL_R;
 extern const uint8_t PAGE_HR;
 extern const uint8_t PAGE_LED;
 
-uint8_t currentpage;
-uint8_t currenttouch;
 
 
 #define NO_TOUCH 0
@@ -38,12 +36,9 @@ uint8_t currenttouch;
 #define BUTTON_MENU 4
 
 
-//SIGNAL
-
-// déclarer ir_data
-// déclarer r_data
-uint32_t heart_rate;
-uint32_t SPO2;
+uint8_t currentpage;
+uint8_t currenttouch;
+bool alerte;
 
 //LED
 uint32_t LED;

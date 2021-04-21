@@ -95,7 +95,7 @@ static int8_t MotionSensor_UpdateOrientation(orientation_t*);
 void Task_Motion(void* pvParameters)
 {
     LED_flag = false;
-    Cy_GPIO_Write(P0_3_PORT, P0_3_NUM, 1);
+    
     (void)pvParameters;
     /* Variable used to store the return values of Motion Sensor APIs */
     static int8_t motionSensorApiResult;  
@@ -135,15 +135,12 @@ void Task_Motion(void* pvParameters)
 static void Orientation_Interrupt(void)
 {
     BaseType_t xHigherPriorityTaskWoken = pdFALSE;
-    
     /* Clear any pending interrupts */
     Cy_GPIO_ClearInterrupt(P13_0_PORT, P13_0_NUM );
     NVIC_ClearPendingIRQ(SysInt_OrientINT_cfg.intrSrc);
     Cy_GPIO_Write(P0_3_PORT, P0_3_NUM, 0);
     LED_flag = true;
-    /* Resume Task_Motion */
-    //xHigherPriorityTaskWoken = xTaskResumeFromISR(xTaskHandleMotion);
-    //portYIELD_FROM_ISR(xHigherPriorityTaskWoken );
+
 }
 
 /*******************************************************************************

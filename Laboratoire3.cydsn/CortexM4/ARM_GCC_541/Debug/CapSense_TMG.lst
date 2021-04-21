@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc7gYuvL.s 			page 1
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cczx4YYi.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc7gYuvL.s 			page 1
   27:Generated_Source\PSoC6/CapSense_TMG.c **** *
   28:Generated_Source\PSoC6/CapSense_TMG.c **** * Parameters:
   29:Generated_Source\PSoC6/CapSense_TMG.c **** *  touchNumber: Number of fingers on the trackpad. Valid range 0-2.
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc7gYuvL.s 			page 2
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cczx4YYi.s 			page 2
 
 
   30:Generated_Source\PSoC6/CapSense_TMG.c **** *  currentTimestamp : Current timestamp value.
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc7gYuvL.s 			page 1
   74:Generated_Source\PSoC6/CapSense_TMG.c **** 
   75:Generated_Source\PSoC6/CapSense_TMG.c ****         #if (CapSense_TMG_EDGE_SWIPE_ENABLED == 1u)
   76:Generated_Source\PSoC6/CapSense_TMG.c ****             uint32_t edgeSwipeGesture = CapSense_TMG_NO_GESTURE;
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc7gYuvL.s 			page 3
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cczx4YYi.s 			page 3
 
 
   77:Generated_Source\PSoC6/CapSense_TMG.c ****         #endif /* (CapSense_TMG_EDGE_SWIPE_ENABLED == 1u) */
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc7gYuvL.s 			page 1
  131:Generated_Source\PSoC6/CapSense_TMG.c ****                     if (clickAndDragActive == 0u)
  132:Generated_Source\PSoC6/CapSense_TMG.c ****                 #elif (CapSense_TMG_EDGE_SWIPE_ENABLED == 1u)
  133:Generated_Source\PSoC6/CapSense_TMG.c ****                     if (edgeSwipeActive == 0u)
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc7gYuvL.s 			page 4
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cczx4YYi.s 			page 4
 
 
  134:Generated_Source\PSoC6/CapSense_TMG.c ****                 #else
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc7gYuvL.s 			page 1
   56              	.LVL5:
   57              	.L3:
   58 0016 0020     		movs	r0, #0
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc7gYuvL.s 			page 5
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cczx4YYi.s 			page 5
 
 
   59              	.LVL6:
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc7gYuvL.s 			page 1
  222:Generated_Source\PSoC6/CapSense_TMG.c ****                                                                    (CapSense_TMG_ROTATE_ENABLED == 
  223:Generated_Source\PSoC6/CapSense_TMG.c **** 
  224:Generated_Source\PSoC6/CapSense_TMG.c ****             #if (CapSense_TMG_EDGE_SWIPE_ENABLED != 0u)
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc7gYuvL.s 			page 6
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cczx4YYi.s 			page 6
 
 
  225:Generated_Source\PSoC6/CapSense_TMG.c ****             deltaTimeoutStamp = currentTimestamp - edgeTimeoutStamp;
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc7gYuvL.s 			page 1
  266:Generated_Source\PSoC6/CapSense_TMG.c **** *******************************************************************************/
  267:Generated_Source\PSoC6/CapSense_TMG.c **** void CapSense_TMG_BallisticsMultiplier(const CapSense_TMG_BALLISTIC_MULT * ballisticMultiplier, uin
  268:Generated_Source\PSoC6/CapSense_TMG.c **** {
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc7gYuvL.s 			page 7
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cczx4YYi.s 			page 7
 
 
   74              		.loc 1 268 0
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc7gYuvL.s 			page 1
  128 0056 2B       		.byte	0x2b
  129 0057 5B000000 		.4byte	0x5b
  130 005b 02       		.uleb128 0x2
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc7gYuvL.s 			page 8
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cczx4YYi.s 			page 8
 
 
  131 005c 02       		.byte	0x2
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc7gYuvL.s 			page 1
  185 00c5 04       		.byte	0x4
  186 00c6 F801     		.2byte	0x1f8
  187 00c8 1B010000 		.4byte	0x11b
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc7gYuvL.s 			page 9
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cczx4YYi.s 			page 9
 
 
  188 00cc 06       		.uleb128 0x6
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc7gYuvL.s 			page 1
  242 013c 7900     		.ascii	"y\000"
  243 013e 04       		.byte	0x4
  244 013f 0E02     		.2byte	0x20e
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc7gYuvL.s 			page 10
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cczx4YYi.s 			page 10
 
 
  245 0141 AD000000 		.4byte	0xad
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc7gYuvL.s 			page 1
  299 01c3 0D       		.uleb128 0xd
  300 01c4 61000000 		.4byte	.LASF29
  301 01c8 01       		.byte	0x1
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc7gYuvL.s 			page 11
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cczx4YYi.s 			page 11
 
 
  302 01c9 30       		.byte	0x30
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc7gYuvL.s 			page 1
  356 0226 B8000000 		.4byte	0xb8
  357 022a 01       		.uleb128 0x1
  358 022b 51       		.byte	0x51
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc7gYuvL.s 			page 12
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cczx4YYi.s 			page 12
 
 
  359 022c 14       		.uleb128 0x14
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc7gYuvL.s 			page 1
  413 001e 03       		.uleb128 0x3
  414 001f 16       		.uleb128 0x16
  415 0020 00       		.byte	0
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc7gYuvL.s 			page 13
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cczx4YYi.s 			page 13
 
 
  416 0021 03       		.uleb128 0x3
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc7gYuvL.s 			page 1
  470 0057 3A       		.uleb128 0x3a
  471 0058 0B       		.uleb128 0xb
  472 0059 3B       		.uleb128 0x3b
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc7gYuvL.s 			page 14
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cczx4YYi.s 			page 14
 
 
  473 005a 05       		.uleb128 0x5
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc7gYuvL.s 			page 1
  527 0091 3B       		.uleb128 0x3b
  528 0092 0B       		.uleb128 0xb
  529 0093 49       		.uleb128 0x49
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc7gYuvL.s 			page 15
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cczx4YYi.s 			page 15
 
 
  530 0094 13       		.uleb128 0x13
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc7gYuvL.s 			page 1
  584 00cc 01       		.uleb128 0x1
  585 00cd 31       		.uleb128 0x31
  586 00ce 13       		.uleb128 0x13
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc7gYuvL.s 			page 16
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cczx4YYi.s 			page 16
 
 
  587 00cf 00       		.byte	0
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc7gYuvL.s 			page 1
  641 0109 00       		.byte	0
  642 010a 03       		.uleb128 0x3
  643 010b 0E       		.uleb128 0xe
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc7gYuvL.s 			page 17
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cczx4YYi.s 			page 17
 
 
  644 010c 3A       		.uleb128 0x3a
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc7gYuvL.s 			page 1
  698 0016 01       		.uleb128 0x1
  699 0017 50       		.byte	0x50
  700 0018 9F       		.byte	0x9f
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc7gYuvL.s 			page 18
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cczx4YYi.s 			page 18
 
 
  701 0019 00000000 		.4byte	0
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc7gYuvL.s 			page 1
  755 00a1 0100     		.2byte	0x1
  756 00a3 50       		.byte	0x50
  757 00a4 00000000 		.4byte	0
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc7gYuvL.s 			page 19
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cczx4YYi.s 			page 19
 
 
  758 00a8 00000000 		.4byte	0
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc7gYuvL.s 			page 1
  793              	.LASF31:
  794 0078 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
  794      43313120 
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc7gYuvL.s 			page 20
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cczx4YYi.s 			page 20
 
 
  794      352E342E 
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc7gYuvL.s 			page 1
  814              	.LASF23:
  815 01af 43617053 		.ascii	"CapSense_TMG_BALLISTIC_MULT\000"
  815      656E7365 
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc7gYuvL.s 			page 21
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cczx4YYi.s 			page 21
 
 
  815      5F544D47 
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc7gYuvL.s 			page 1
  837 0277 73744765 		.ascii	"stGesture\000"
  837      73747572 
  837      6500
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc7gYuvL.s 			page 22
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cczx4YYi.s 			page 22
 
 
  838              	.LASF14:
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc7gYuvL.s 			page 1
  861 0325 73706565 		.ascii	"speedThresholdY\000"
  861      64546872 
  861      6573686F 
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cc7gYuvL.s 			page 23
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\cczx4YYi.s 			page 23
 
 
  861      6C645900 

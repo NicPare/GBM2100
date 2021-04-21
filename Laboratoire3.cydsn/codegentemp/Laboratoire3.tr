@@ -16,7 +16,7 @@
 ##################################################################### 
                     1::Clock Frequency Summary
 ===================================================================== 
-Number of clocks: 14
+Number of clocks: 15
 Clock: CY_EINK_SPIM_SCBCLK  | N/A  | Target: 100.00 MHz  | 
 Clock: CapSense_ModClk      | N/A  | Target: 0.39 MHz    | 
 Clock: CyClk_Fast           | N/A  | Target: 100.00 MHz  | 
@@ -31,6 +31,7 @@ Clock: CyPeriClk_App        | N/A  | Target: 100.00 MHz  |
 Clock: EINK_Clock           | N/A  | Target: 0.00 MHz    | 
 Clock: I2C_MAX_SCBCLK       | N/A  | Target: 1.54 MHz    | 
 Clock: I2Cm_SCBCLK          | N/A  | Target: 1.54 MHz    | 
+Clock: UART_SCBCLK          | N/A  | Target: 1.39 MHz    | 
 
  =====================================================================
                     End of Clock Frequency Summary

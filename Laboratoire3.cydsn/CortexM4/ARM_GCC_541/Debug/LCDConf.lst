@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxwps9k.s 			page 1
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccVDkpUd.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxwps9k.s 			page 1
   27:LCDConf.c     **** ----------------------------------------------------------------------
   28:LCDConf.c     **** Licensing information
   29:LCDConf.c     **** Licensor:                 SEGGER Microcontroller Systems LLC
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxwps9k.s 			page 2
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccVDkpUd.s 			page 2
 
 
   30:LCDConf.c     **** Licensed to:              Cypress Semiconductor Corp, 198 Champion Ct., San Jose, CA 95134, USA
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxwps9k.s 			page 1
   84:LCDConf.c     **** #ifndef   YSIZE_PHYS
   85:LCDConf.c     ****   #error Physical Y size of display is not defined!
   86:LCDConf.c     **** #endif
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxwps9k.s 			page 3
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccVDkpUd.s 			page 3
 
 
   87:LCDConf.c     **** #ifndef   COLOR_CONVERSION
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxwps9k.s 			page 1
   38              		.cfi_def_cfa_offset 16
  132:LCDConf.c     **** 	
  133:LCDConf.c     **** 	GUI_DEVICE * pDevice;
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxwps9k.s 			page 4
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccVDkpUd.s 			page 4
 
 
  134:LCDConf.c     **** 	CONFIG_BITPLAINS Config;
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxwps9k.s 			page 1
   74 0040 4FF48471 		mov	r1, #264
   75 0044 0020     		movs	r0, #0
   76 0046 FFF7FEFF 		bl	LCD_SetSizeEx
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxwps9k.s 			page 5
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccVDkpUd.s 			page 5
 
 
   77              	.LVL5:
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxwps9k.s 			page 1
  172:LCDConf.c     **** * Parameter:
  173:LCDConf.c     **** *   LayerIndex - Index of layer to be configured
  174:LCDConf.c     **** *   Cmd        - Please refer to the details in the switch statement below
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxwps9k.s 			page 6
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccVDkpUd.s 			page 6
 
 
  175:LCDConf.c     **** *   pData      - Pointer to a LCD_X_DATA structure
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxwps9k.s 			page 1
  139              		.thumb_func
  140              		.type	LCD_GetDisplayBuffer, %function
  141              	LCD_GetDisplayBuffer:
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxwps9k.s 			page 7
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccVDkpUd.s 			page 7
 
 
  142              	.LFB134:
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxwps9k.s 			page 1
  172      00000000 
  172      00000000 
  172      00000000 
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxwps9k.s 			page 8
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccVDkpUd.s 			page 8
 
 
  172      00000000 
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxwps9k.s 			page 1
  226 0059 B0030000 		.4byte	.LASF6
  227 005d 04       		.uleb128 0x4
  228 005e 34040000 		.4byte	.LASF8
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxwps9k.s 			page 9
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccVDkpUd.s 			page 9
 
 
  229 0062 02       		.byte	0x2
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxwps9k.s 			page 1
  283 00c8 7A000000 		.4byte	0x7a
  284 00cc 07       		.uleb128 0x7
  285 00cd 08       		.byte	0x8
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxwps9k.s 			page 10
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccVDkpUd.s 			page 10
 
 
  286 00ce 04       		.byte	0x4
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxwps9k.s 			page 1
  340 013f 00       		.byte	0
  341 0140 04       		.uleb128 0x4
  342 0141 5C020000 		.4byte	.LASF22
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxwps9k.s 			page 11
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccVDkpUd.s 			page 11
 
 
  343 0145 04       		.byte	0x4
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxwps9k.s 			page 1
  397 01b7 2E030000 		.4byte	.LASF26
  398 01bb 04       		.byte	0x4
  399 01bc 95       		.byte	0x95
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxwps9k.s 			page 12
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccVDkpUd.s 			page 12
 
 
  400 01bd F9010000 		.4byte	0x1f9
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxwps9k.s 			page 1
  454 022a 2E020000 		.4byte	0x22e
  455 022e 10       		.uleb128 0x10
  456 022f A5030000 		.4byte	.LASF32
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxwps9k.s 			page 13
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccVDkpUd.s 			page 13
 
 
  457 0233 1C       		.byte	0x1c
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxwps9k.s 			page 1
  511 029e 34       		.byte	0x34
  512 029f 05       		.byte	0x5
  513 02a0 6A       		.byte	0x6a
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxwps9k.s 			page 14
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccVDkpUd.s 			page 14
 
 
  514 02a1 42030000 		.4byte	0x342
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxwps9k.s 			page 1
  568 0310 20       		.byte	0x20
  569 0311 0E       		.uleb128 0xe
  570 0312 F1030000 		.4byte	.LASF49
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxwps9k.s 			page 15
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccVDkpUd.s 			page 15
 
 
  571 0316 05       		.byte	0x5
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxwps9k.s 			page 1
  625 038b 0A       		.uleb128 0xa
  626 038c 25000000 		.4byte	0x25
  627 0390 0A       		.uleb128 0xa
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxwps9k.s 			page 16
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccVDkpUd.s 			page 16
 
 
  628 0391 9C030000 		.4byte	0x39c
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxwps9k.s 			page 1
  682 040c 04       		.byte	0x4
  683 040d F2030000 		.4byte	0x3f2
  684 0411 0C       		.uleb128 0xc
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxwps9k.s 			page 17
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccVDkpUd.s 			page 17
 
 
  685 0412 2B040000 		.4byte	0x42b
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxwps9k.s 			page 1
  739 0490 96030000 		.4byte	0x396
  740 0494 0A       		.uleb128 0xa
  741 0495 25000000 		.4byte	0x25
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxwps9k.s 			page 18
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccVDkpUd.s 			page 18
 
 
  742 0499 00       		.byte	0
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxwps9k.s 			page 1
  796 0505 10050000 		.4byte	0x510
  797 0509 15       		.uleb128 0x15
  798 050a 9E000000 		.4byte	0x9e
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxwps9k.s 			page 19
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccVDkpUd.s 			page 19
 
 
  799 050e 07       		.byte	0x7
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxwps9k.s 			page 1
  853 0574 EA060000 		.4byte	0x6ea
  854 0578 83050000 		.4byte	0x583
  855 057c 1A       		.uleb128 0x1a
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxwps9k.s 			page 20
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccVDkpUd.s 			page 20
 
 
  856 057d 01       		.uleb128 0x1
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxwps9k.s 			page 1
  910 05cd 4A000000 		.4byte	.LVL5
  911 05d1 01070000 		.4byte	0x701
  912 05d5 EC050000 		.4byte	0x5ec
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxwps9k.s 			page 21
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccVDkpUd.s 			page 21
 
 
  913 05d9 1A       		.uleb128 0x1a
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxwps9k.s 			page 1
  967 0623 00       		.byte	0
  968 0624 00       		.byte	0
  969 0625 1D       		.uleb128 0x1d
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxwps9k.s 			page 22
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccVDkpUd.s 			page 22
 
 
  970 0626 6A040000 		.4byte	.LASF75
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxwps9k.s 			page 1
  1024 069b 69       		.byte	0x69
  1025 069c 84060000 		.4byte	0x684
  1026 06a0 05       		.uleb128 0x5
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxwps9k.s 			page 23
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccVDkpUd.s 			page 23
 
 
  1027 06a1 03       		.byte	0x3
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxwps9k.s 			page 1
  1081 071e F8010000 		.4byte	.LASF70
  1082 0722 04       		.byte	0x4
  1083 0723 4B02     		.2byte	0x24b
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxwps9k.s 			page 24
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccVDkpUd.s 			page 24
 
 
  1084 0725 00       		.byte	0
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxwps9k.s 			page 1
  1138 0033 13       		.uleb128 0x13
  1139 0034 00       		.byte	0
  1140 0035 00       		.byte	0
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxwps9k.s 			page 25
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccVDkpUd.s 			page 25
 
 
  1141 0036 05       		.uleb128 0x5
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxwps9k.s 			page 1
  1195 006c 00       		.byte	0
  1196 006d 0A       		.uleb128 0xa
  1197 006e 05       		.uleb128 0x5
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxwps9k.s 			page 26
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccVDkpUd.s 			page 26
 
 
  1198 006f 00       		.byte	0
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxwps9k.s 			page 1
  1252 00a5 49       		.uleb128 0x49
  1253 00a6 13       		.uleb128 0x13
  1254 00a7 00       		.byte	0
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxwps9k.s 			page 27
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccVDkpUd.s 			page 27
 
 
  1255 00a8 00       		.byte	0
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxwps9k.s 			page 1
  1309 00de 01       		.uleb128 0x1
  1310 00df 13       		.uleb128 0x13
  1311 00e0 00       		.byte	0
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxwps9k.s 			page 28
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccVDkpUd.s 			page 28
 
 
  1312 00e1 00       		.byte	0
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxwps9k.s 			page 1
  1366 0118 0E       		.uleb128 0xe
  1367 0119 3A       		.uleb128 0x3a
  1368 011a 0B       		.uleb128 0xb
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxwps9k.s 			page 29
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccVDkpUd.s 			page 29
 
 
  1369 011b 3B       		.uleb128 0x3b
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxwps9k.s 			page 1
  1423 015a 0B       		.uleb128 0xb
  1424 015b 3B       		.uleb128 0x3b
  1425 015c 0B       		.uleb128 0xb
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxwps9k.s 			page 30
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccVDkpUd.s 			page 30
 
 
  1426 015d 27       		.uleb128 0x27
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxwps9k.s 			page 1
  1480 0194 0B       		.uleb128 0xb
  1481 0195 49       		.uleb128 0x49
  1482 0196 13       		.uleb128 0x13
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxwps9k.s 			page 31
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccVDkpUd.s 			page 31
 
 
  1483 0197 00       		.byte	0
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxwps9k.s 			page 1
  1537 01ce 35       		.uleb128 0x35
  1538 01cf 00       		.byte	0
  1539 01d0 49       		.uleb128 0x49
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxwps9k.s 			page 32
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccVDkpUd.s 			page 32
 
 
  1540 01d1 13       		.uleb128 0x13
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxwps9k.s 			page 1
  1594 0207 00       		.byte	0
  1595              		.section	.debug_loc,"",%progbits
  1596              	.Ldebug_loc0:
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxwps9k.s 			page 33
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccVDkpUd.s 			page 33
 
 
  1597              	.LLST0:
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxwps9k.s 			page 1
  1651 0010 00000000 		.4byte	.LFB134
  1652 0014 08000000 		.4byte	.LFE134
  1653 0018 00000000 		.4byte	0
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxwps9k.s 			page 34
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccVDkpUd.s 			page 34
 
 
  1654 001c 00000000 		.4byte	0
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxwps9k.s 			page 1
  1677              	.LASF14:
  1678 00b4 73697A65 		.ascii	"sizetype\000"
  1678      74797065 
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxwps9k.s 			page 35
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccVDkpUd.s 			page 35
 
 
  1678      00
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxwps9k.s 			page 1
  1698              	.LASF18:
  1699 01cd 4C43445F 		.ascii	"LCD_COLOR\000"
  1699      434F4C4F 
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxwps9k.s 			page 36
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccVDkpUd.s 			page 36
 
 
  1699      5200
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxwps9k.s 			page 1
  1723      4D61736B 
  1724              	.LASF7:
  1725 0271 6C6F6E67 		.ascii	"long int\000"
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxwps9k.s 			page 37
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccVDkpUd.s 			page 37
 
 
  1725      20696E74 
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxwps9k.s 			page 1
  1749      7369676E 
  1749      65642069 
  1750              	.LASF13:
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxwps9k.s 			page 38
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccVDkpUd.s 			page 38
 
 
  1751 031d 75696E74 		.ascii	"uint32_t\000"
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxwps9k.s 			page 1
  1775 03b0 73686F72 		.ascii	"short unsigned int\000"
  1775      7420756E 
  1775      7369676E 
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxwps9k.s 			page 39
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccVDkpUd.s 			page 39
 
 
  1775      65642069 
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxwps9k.s 			page 1
  1799 0452 744C4344 		.ascii	"tLCDDEV_Color2IndexBulk\000"
  1799      4445565F 
  1799      436F6C6F 
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccxwps9k.s 			page 40
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccVDkpUd.s 			page 40
 
 
  1799      7232496E 

@@ -33,6 +33,9 @@
     #define I2Cm_SCB_IRQ__INTC_ASSIGNED 1u
     extern const cy_stc_sysint_t I2Cm_SCB_IRQ_cfg;
 
+    #define UART_SCB_IRQ__INTC_ASSIGNED 1u
+    extern const cy_stc_sysint_t UART_SCB_IRQ_cfg;
+
     #define CY_EINK_SPIM_SCB_IRQ__INTC_ASSIGNED 1u
     extern const cy_stc_sysint_t CY_EINK_SPIM_SCB_IRQ_cfg;
 

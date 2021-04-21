@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccloIvZd.s 			page 1
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccz6UgYa.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccloIvZd.s 			page 1
   27:Generated_Source\PSoC6/CapSense_Centroid_LL.c **** * REGARD TO THIS MATERIAL, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
   28:Generated_Source\PSoC6/CapSense_Centroid_LL.c **** * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
   29:Generated_Source\PSoC6/CapSense_Centroid_LL.c **** * Cypress reserves the right to make changes without further notice to the
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccloIvZd.s 			page 2
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccz6UgYa.s 			page 2
 
 
   30:Generated_Source\PSoC6/CapSense_Centroid_LL.c **** * materials described herein. Cypress does not assume any liability arising out
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccloIvZd.s 			page 1
   84:Generated_Source\PSoC6/CapSense_Centroid_LL.c ****     static uint8 localMax[CapSense_NUM_CENTROIDS];
   85:Generated_Source\PSoC6/CapSense_Centroid_LL.c ****     static CapSense_THRESHOLD_TYPE localDiffArray[CapSense_NUM_CENTROIDS][3u];
   86:Generated_Source\PSoC6/CapSense_Centroid_LL.c ****     static uint8 localMaxIndex;
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccloIvZd.s 			page 3
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccz6UgYa.s 			page 3
 
 
   87:Generated_Source\PSoC6/CapSense_Centroid_LL.c **** #endif
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccloIvZd.s 			page 1
  141:Generated_Source\PSoC6/CapSense_Centroid_LL.c **** *   localDiffArray[][3u], localMaxIndex.
  142:Generated_Source\PSoC6/CapSense_Centroid_LL.c **** *
  143:Generated_Source\PSoC6/CapSense_Centroid_LL.c **** * \details
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccloIvZd.s 			page 4
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccz6UgYa.s 			page 4
 
 
  144:Generated_Source\PSoC6/CapSense_Centroid_LL.c **** *   The localMax[] is used to store the index of the maximum/maxima.
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccloIvZd.s 			page 1
  198:Generated_Source\PSoC6/CapSense_Centroid_LL.c ****         else
  199:Generated_Source\PSoC6/CapSense_Centroid_LL.c ****         {
  200:Generated_Source\PSoC6/CapSense_Centroid_LL.c ****             slope0 = (int32)localPtrSns[i + 1u].diff - (int32)localPtrSns[i].diff;
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccloIvZd.s 			page 5
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccz6UgYa.s 			page 5
 
 
  201:Generated_Source\PSoC6/CapSense_Centroid_LL.c ****         }
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccloIvZd.s 			page 1
  255:Generated_Source\PSoC6/CapSense_Centroid_LL.c **** *   position calculations.
  256:Generated_Source\PSoC6/CapSense_Centroid_LL.c **** *
  257:Generated_Source\PSoC6/CapSense_Centroid_LL.c **** * \param *ptrSns
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccloIvZd.s 			page 6
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccz6UgYa.s 			page 6
 
 
  258:Generated_Source\PSoC6/CapSense_Centroid_LL.c **** *   A pointer to sensor RAM structure of a found local maximum.
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccloIvZd.s 			page 1
  312:Generated_Source\PSoC6/CapSense_Centroid_LL.c **** *   This API is used in conjunction with CapSense_DpCalcLinearCentroid or
  313:Generated_Source\PSoC6/CapSense_Centroid_LL.c **** *   CapSense__DpCalcRadialCentroid, because they use shared static data: localMax[],
  314:Generated_Source\PSoC6/CapSense_Centroid_LL.c **** *   localDiffArray[][3u], localMaxIndex.
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccloIvZd.s 			page 7
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccz6UgYa.s 			page 7
 
 
  315:Generated_Source\PSoC6/CapSense_Centroid_LL.c **** *
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccloIvZd.s 			page 1
   53              	.LVL3:
   54              	.L4:
  343:Generated_Source\PSoC6/CapSense_Centroid_LL.c ****         {
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccloIvZd.s 			page 8
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccz6UgYa.s 			page 8
 
 
  344:Generated_Source\PSoC6/CapSense_Centroid_LL.c ****             if ((localPtrSns->diff > fingerThreshold) && (localPtrSns->diff > temp))
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccloIvZd.s 			page 1
  366:Generated_Source\PSoC6/CapSense_Centroid_LL.c ****         #if (CapSense_NUM_CENTROIDS == 0x02u)
  367:Generated_Source\PSoC6/CapSense_Centroid_LL.c ****             if (localMaxIndex < CapSense_NUM_CENTROIDS)
  368:Generated_Source\PSoC6/CapSense_Centroid_LL.c ****             {
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccloIvZd.s 			page 9
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccz6UgYa.s 			page 9
 
 
  369:Generated_Source\PSoC6/CapSense_Centroid_LL.c ****         #endif /* (CapSense_NUM_CENTROIDS == 0x02u) */
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccloIvZd.s 			page 1
  400:Generated_Source\PSoC6/CapSense_Centroid_LL.c ****                 localDiffArray[i][CapSense_CENTROID_POS_PREV] = ptrSns[snsCount - 1u].diff;
  107              		.loc 1 400 0
  108 0054 01EB8105 		add	r5, r1, r1, lsl #2
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccloIvZd.s 			page 10
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccz6UgYa.s 			page 10
 
 
  109 0058 6C00     		lsls	r4, r5, #1
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccloIvZd.s 			page 1
  153 00a6 1544     		add	r5, r5, r2
  154 00a8 6C00     		lsls	r4, r5, #1
  155 00aa 0A4D     		ldr	r5, .L13
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccloIvZd.s 			page 11
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccz6UgYa.s 			page 11
 
 
  156 00ac 2C44     		add	r4, r4, r5
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccloIvZd.s 			page 1
  201              	.LFB133:
  418:Generated_Source\PSoC6/CapSense_Centroid_LL.c **** #endif /* (CapSense_ENABLE == CapSense_4PTS_LOCAL_MAX_EN) */
  419:Generated_Source\PSoC6/CapSense_Centroid_LL.c **** #endif /* ((CapSense_ENABLE == CapSense_CENTROID_3X3_CSD_EN) || \
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccloIvZd.s 			page 12
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccz6UgYa.s 			page 12
 
 
  420:Generated_Source\PSoC6/CapSense_Centroid_LL.c ****           (CapSense_ENABLE  == CapSense_SLIDER_WIDGET_EN)) */
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccloIvZd.s 			page 1
  474:Generated_Source\PSoC6/CapSense_Centroid_LL.c ****         {
  475:Generated_Source\PSoC6/CapSense_Centroid_LL.c ****             if (curSize > biggestSize)
  476:Generated_Source\PSoC6/CapSense_Centroid_LL.c ****             {
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccloIvZd.s 			page 13
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccz6UgYa.s 			page 13
 
 
  477:Generated_Source\PSoC6/CapSense_Centroid_LL.c ****                 biggestSize = curSize;
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccloIvZd.s 			page 1
  531:Generated_Source\PSoC6/CapSense_Centroid_LL.c ****     return (uint32)(localMaxIndex);
  532:Generated_Source\PSoC6/CapSense_Centroid_LL.c **** }
  533:Generated_Source\PSoC6/CapSense_Centroid_LL.c **** #endif /* #if CapSense_TOTAL_DIPLEXED_SLIDERS */
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccloIvZd.s 			page 14
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccz6UgYa.s 			page 14
 
 
  534:Generated_Source\PSoC6/CapSense_Centroid_LL.c **** 
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccloIvZd.s 			page 1
  216              		.loc 1 573 0
  217 0004 0025     		movs	r5, #0
  218 0006 33E0     		b	.L16
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccloIvZd.s 			page 15
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccz6UgYa.s 			page 15
 
 
  219              	.LVL18:
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccloIvZd.s 			page 1
  253 003e B6F80C80 		ldrh	r8, [r6, #12]
  594:Generated_Source\PSoC6/CapSense_Centroid_LL.c ****                     (int32) localDiffArray[i][CapSense_CENTROID_POS_PREV];
  254              		.loc 1 594 0 discriminator 2
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccloIvZd.s 			page 16
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccz6UgYa.s 			page 16
 
 
  255 0042 B6F808E0 		ldrh	lr, [r6, #8]
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccloIvZd.s 			page 1
  290 0078 2046     		mov	r0, r4
  291              	.LVL26:
  292 007a BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccloIvZd.s 			page 17
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccz6UgYa.s 			page 17
 
 
  293              	.LVL27:
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccloIvZd.s 			page 1
  346 002e 07       		.byte	0x7
  347 002f 08010000 		.4byte	.LASF0
  348 0033 03       		.uleb128 0x3
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccloIvZd.s 			page 18
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccz6UgYa.s 			page 18
 
 
  349 0034 08       		.byte	0x8
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccloIvZd.s 			page 1
  403 009a 21010000 		.4byte	.LASF13
  404 009e 03       		.uleb128 0x3
  405 009f 04       		.byte	0x4
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccloIvZd.s 			page 19
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccz6UgYa.s 			page 19
 
 
  406 00a0 07       		.byte	0x7
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccloIvZd.s 			page 1
  460 0116 04       		.uleb128 0x4
  461 0117 00000000 		.4byte	.LASF26
  462 011b 05       		.byte	0x5
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccloIvZd.s 			page 20
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccz6UgYa.s 			page 20
 
 
  463 011c F2       		.byte	0xf2
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccloIvZd.s 			page 1
  517 0190 58010000 		.4byte	.LASF31
  518 0194 06       		.byte	0x6
  519 0195 BB01     		.2byte	0x1bb
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccloIvZd.s 			page 21
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccz6UgYa.s 			page 21
 
 
  520 0197 AA010000 		.4byte	0x1aa
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccloIvZd.s 			page 1
  574 0215 6900     		.ascii	"i\000"
  575 0217 01       		.byte	0x1
  576 0218 4B01     		.2byte	0x14b
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccloIvZd.s 			page 22
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccz6UgYa.s 			page 22
 
 
  577 021a FE000000 		.4byte	0xfe
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccloIvZd.s 			page 1
  631 029f 3702     		.2byte	0x237
  632 02a1 FE000000 		.4byte	0xfe
  633 02a5 01       		.uleb128 0x1
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccloIvZd.s 			page 23
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccz6UgYa.s 			page 23
 
 
  634 02a6 53       		.byte	0x53
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccloIvZd.s 			page 1
  688 031f 12       		.uleb128 0x12
  689 0320 96000000 		.4byte	.LASF53
  690 0324 07       		.byte	0x7
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccloIvZd.s 			page 24
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccz6UgYa.s 			page 24
 
 
  691 0325 0108     		.2byte	0x801
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccloIvZd.s 			page 1
  745 002f 0B       		.uleb128 0xb
  746 0030 3B       		.uleb128 0x3b
  747 0031 0B       		.uleb128 0xb
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccloIvZd.s 			page 25
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccz6UgYa.s 			page 25
 
 
  748 0032 49       		.uleb128 0x49
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccloIvZd.s 			page 1
  802 0068 13       		.uleb128 0x13
  803 0069 00       		.byte	0
  804 006a 00       		.byte	0
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccloIvZd.s 			page 26
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccz6UgYa.s 			page 26
 
 
  805 006b 0A       		.uleb128 0xa
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccloIvZd.s 			page 1
  859 00a2 13       		.uleb128 0x13
  860 00a3 00       		.byte	0
  861 00a4 00       		.byte	0
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccloIvZd.s 			page 27
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccz6UgYa.s 			page 27
 
 
  862 00a5 0D       		.uleb128 0xd
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccloIvZd.s 			page 1
  916 00db 49       		.uleb128 0x49
  917 00dc 13       		.uleb128 0x13
  918 00dd 02       		.uleb128 0x2
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccloIvZd.s 			page 28
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccz6UgYa.s 			page 28
 
 
  919 00de 17       		.uleb128 0x17
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccloIvZd.s 			page 1
  973 0016 01       		.uleb128 0x1
  974 0017 50       		.byte	0x50
  975 0018 9F       		.byte	0x9f
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccloIvZd.s 			page 29
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccz6UgYa.s 			page 29
 
 
  976 0019 00000000 		.4byte	0
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccloIvZd.s 			page 1
  1030 00a2 50       		.byte	0x50
  1031 00a3 0E000000 		.4byte	.LVL3
  1032 00a7 34000000 		.4byte	.LVL10
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccloIvZd.s 			page 30
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccz6UgYa.s 			page 30
 
 
  1033 00ab 0100     		.2byte	0x1
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccloIvZd.s 			page 1
  1087 0135 56000000 		.4byte	.LVL20
  1088 0139 64000000 		.4byte	.LVL21
  1089 013d 0100     		.2byte	0x1
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccloIvZd.s 			page 31
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccz6UgYa.s 			page 31
 
 
  1090 013f 5E       		.byte	0x5e
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccloIvZd.s 			page 1
  1144 000c 0000     		.2byte	0
  1145 000e 0000     		.2byte	0
  1146 0010 00000000 		.4byte	.LFB132
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccloIvZd.s 			page 32
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccz6UgYa.s 			page 32
 
 
  1147 0014 D8000000 		.4byte	.LFE132-.LFB132
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccloIvZd.s 			page 1
  1179              	.LASF3:
  1180 005f 7369676E 		.ascii	"signed char\000"
  1180      65642063 
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccloIvZd.s 			page 33
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccz6UgYa.s 			page 33
 
 
  1180      68617200 
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccloIvZd.s 			page 1
  1207              	.LASF24:
  1208 0101 75696E74 		.ascii	"uint32\000"
  1208      333200
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccloIvZd.s 			page 34
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccz6UgYa.s 			page 34
 
 
  1209              	.LASF0:
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccloIvZd.s 			page 1
  1234 01a0 66696E67 		.ascii	"fingerThreshold\000"
  1234      65725468 
  1234      72657368 
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccloIvZd.s 			page 35
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccz6UgYa.s 			page 35
 
 
  1234      6F6C6400 
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccloIvZd.s 			page 1
  1255      00
  1256              	.LASF10:
  1257 02d3 6C6F6E67 		.ascii	"long int\000"
-ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccloIvZd.s 			page 36
+ARM GAS  C:\Users\nicpa\AppData\Local\Temp\ccz6UgYa.s 			page 36
 
 
  1257      20696E74 

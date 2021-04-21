@@ -9,8 +9,11 @@
  *
  * ========================================
 */
-
-/* [] END OF FILE */
 #include "project.h"
 #include "global_variables.h"
+
 void vtouch_task();
+
+
+/* [] END OF FILE */
+

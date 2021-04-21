@@ -16,11 +16,13 @@
 #include "FreeRTOSConfig.h"
 #include "task.h"
 #include "MAX30102_functions.h"
+#include "touch_task.h"
 
+
+    float32_t signal_R[1000];
+    float32_t signal_IF[1000];
     float32_t signal_AC_R[1000];
-    float32_t signal_1_5_R[1000];
     float32_t signal_AC_IF[1000];
-    float32_t signal_1_5_IF[1000];
 
     float32 AC_R;
     float32 AC_IF;
@@ -30,12 +32,10 @@
     float32 R;
     
 
- float32 BPM;
+    float32 BPM;
 
 
-void filtre_1_5(float32 signal[], float32 signal_filtre[]);
-
-void filtre_PB_AC(float32 signal[], float32 signal_filtre[]);
+void filtre_6(float32 signal[], float32 signal_filtre[]);
 
 float32 AC(float32 signal[]);
 

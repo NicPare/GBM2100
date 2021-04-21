@@ -127,11 +127,13 @@
 #include "CapSense_Centroid_LL.h"
 #include "CapSense_SmartSense_LL.h"
 #include "CapSense_Gesture.h"
+#include "UART.h"
 #include "CY_EINK_SPIM_SCBCLK.h"
 #include "I2C_MAX_SCBCLK.h"
 #include "I2Cm_SCBCLK.h"
 #include "CapSense_ModClk.h"
 #include "CapSense_TMG.h"
+#include "UART_SCBCLK.h"
 
 /*[]*/
 

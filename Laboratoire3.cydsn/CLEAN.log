@@ -1,4 +1,4 @@
---------------- Clean Started: 04/18/2021 10:27:36 Project: Laboratoire3, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
+--------------- Clean Started: 04/19/2021 18:35:14 Project: Laboratoire3, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
 Deleting file ".\CortexM0p\ARM_GCC_541\Debug\startup_psoc6_01_cm0plus.o"
 Deleting file ".\CortexM0p\ARM_GCC_541\Debug\main_cm0p.o"
 Deleting file ".\CortexM0p\ARM_GCC_541\Debug\system_psoc6_cm0plus.o"
@@ -140,4 +140,4 @@ Deleting file ".\CortexM4\ARM_GCC_541\Debug\Laboratoire3.hex"
 Deleting file ".\CortexM4\ARM_GCC_541\Debug\Laboratoire3.elf"
 Deleting file ".\CortexM4\ARM_GCC_541\Debug\Laboratoire3.map"
 Deleting file ".\CortexM4\ARM_GCC_541\Debug\.deps\SOURCE_C__ARM_GCC_GENERIC.P"
---------------- Clean Succeeded: 04/18/2021 10:27:36 ---------------
+--------------- Clean Succeeded: 04/19/2021 18:35:14 ---------------

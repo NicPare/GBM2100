@@ -61,90 +61,92 @@
 #include <string.h>
 #include "motion_task.h"
 
-
-
 //*******************************************************************************/
+
+/*******************************************************************************
+* Function Name: void isr_bouton(void* pvParameters)
+********************************************************************************
+*
+* Summary:  
+* C’est une routine d’interruption déclenchée lorsque le bouton SW2 est appuyé. Il modifie la variable 
+* booléenne maxormin si la page actuelle est la page HR, et modifie la variable booléenne alerte si la page 
+* actuelle est la page du menu.
+*
+* Parameters:
+* void* pvParameters
+*
+* Return:
+*  None
+*
+*******************************************************************************/
+
 void isr_bouton(void)
 {  
    
  /* Clears the triggered pin interrupt */
     Cy_GPIO_ClearInterrupt(P0_4_PORT, P0_4_NUM);
     NVIC_ClearPendingIRQ(bouton_isr_cfg.intrSrc);
-    maxormin=!maxormin;
+
+    if(currentpage == PAGE_HR){
+        maxormin=!maxormin;
+    }
+    if(currentpage == PAGE_MENU){
+        alerte = !alerte;  
+        if(!alerte)
+        {
+            Cy_GPIO_Write(P0_3_PORT, P0_3_NUM, 1);
+            NVIC_DisableIRQ(SysInt_OrientINT_cfg.intrSrc);
+            LED_flag = false;
+        }
+        if(alerte)
+        {
+            NVIC_EnableIRQ(SysInt_OrientINT_cfg.intrSrc);
+        }
+    }
 }
 
 
 int main(void)
 {
-    __enable_irq(); /* Enable global interrupts. */
+
+    __enable_irq(); 
     
-    // Start I2C communication
-    //Create Tasks
+    //Clear first motion interrupt
+    Cy_GPIO_ClearInterrupt(P13_0_PORT, P13_0_NUM );
+    NVIC_ClearPendingIRQ(SysInt_OrientINT_cfg.intrSrc);
     
-    GUI_Init();
-    Cy_EINK_Start(20);
-    Cy_EINK_Power(1);
-    updateMenu(1);
+    Cy_GPIO_Write(P0_3_PORT, P0_3_NUM, 1);
     
+    
+
     
     //variables
     currentpage = PAGE_MENU;
     currenttouch = NO_TOUCH;
     hrmin = 30;
     hrmax = 130;
-    LED = 36;
+    LED = 32;
     maxormin = true;
-    heart_rate = 99;
-    SPO2 = 22;
-    
+    //CHANGEMENT
+    alerte = true;
+    //
+
+    //Initiate bouton interrupt
     Cy_SysInt_Init(&bouton_isr_cfg, isr_bouton);
     NVIC_ClearPendingIRQ(bouton_isr_cfg.intrSrc);
     NVIC_EnableIRQ(bouton_isr_cfg.intrSrc);
     
-    //xTaskCreate(read_MAX30102_task, "Read MAX30102",2000, NULL, 2, NULL);
-    xTaskCreate(vtouch_task,"touch task",configMINIMAL_STACK_SIZE,NULL,1,0);
-     xTaskCreate(vINTERFACE_task,"INTERFACE task",2000,NULL,1,NULL);
-    
-   
-    
-    //xTaskCreate(traitement_task, "traitement", 3000, NULL, 2, NULL);
-    
-    
-    
-
-    vTaskStartScheduler();
-    
-    
-    //xTaskCreate(vINTERFACE_task,"INTERFACE task",2000,NULL,2,NULL);
-    //xTaskCreate(vtouch_task,"touch task",300,NULL,2,NULL);
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    //xTaskCreate(Task_Motion, "Motion Task", 300, NULL, 1, NULL);
-    
-    //vTaskStartScheduler();
-    
-    
-
-    
-
-
-    
-    
-    
-
-    
     //Create Tasks
+    xTaskCreate(traitement_task, "traitement", 2000, NULL, 2, NULL);
+    xTaskCreate(read_MAX30102_task, "Read MAX30102",500, NULL, 1, NULL);
     
-    //vTaskStartScheduler();
+    xTaskCreate(Task_Motion, "Motion Task", configMINIMAL_STACK_SIZE, NULL, 1, NULL);
+    xTaskCreate(vtouch_task,"touch task",configMINIMAL_STACK_SIZE,NULL,2,0);
+    xTaskCreate(vINTERFACE_task,"INTERFACE task",2000,NULL,1,NULL);
+    
+    
+    
+    vTaskStartScheduler();
     
     //In case of scheduler problem
     

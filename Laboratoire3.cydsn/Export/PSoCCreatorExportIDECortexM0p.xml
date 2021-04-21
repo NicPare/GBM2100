@@ -120,6 +120,9 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC6\CapSense_ModClk.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC6\CapSense_TMG.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC6\CapSense_TMG.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC6\UART.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC6\UART.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC6\UART_SCBCLK.h</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="C:\Users\nicpa\OneDrive\Documents\PolyDoc\GBM2100FINAL\Laboratoire3\Laboratoire3.cydsn\Generated_Source\PSoC6\pdl\cmsis\include">

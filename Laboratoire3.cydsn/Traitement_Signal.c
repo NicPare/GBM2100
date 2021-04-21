@@ -15,7 +15,7 @@
 
 #define TEST_LENGTH_SAMPLES  1000
 #define BLOCK_SIZE            1
-#define NUM_TAPS              201
+#define NUM_TAPS              51
 
 static float32_t firStateF32[BLOCK_SIZE + NUM_TAPS - 1];
 
@@ -23,9 +23,30 @@ uint32_t blockSize = BLOCK_SIZE;
 uint32_t numBlocks = TEST_LENGTH_SAMPLES/BLOCK_SIZE;
 
 
-void filtre_1_5(float32 signal[], float32 signal_filtre[]){
-    const float32_t firCoeffs32PasseBasBPM[NUM_TAPS] = {-0.000259531559389331f, -0.000262605043039351f, -0.000266644292113138f, -0.000271648680654150f, -0.000277597284634304f, -0.000284448220651325f, -0.000292138103117859f, -0.000300581625013150f, -0.000309671266639938f, -0.000319277136170818f, -0.000329246945082709f, -0.000339406120869097f, -0.000349558058690740f, -0.000359484512880611f, -0.000368946128461655f, -0.000377683112070703f, -0.000385416040912453f, -0.000391846807598119f, -0.000396659697958167f, -0.000399522598161697f, -0.000400088326730656f, -0.000397996086309217f, -0.000392873029341380f, -0.000384335931127099f, -0.000371992963072800f, -0.000355445558329820f, -0.000334290361427509f, -0.000308121252959992f, -0.000276531439880007f, -0.000239115601492852f, -0.000195472080831068f, -0.000145205110728502f, -8.79270636032783e-05f, -2.32607137047552e-05f, 4.91584996183110e-05f, 0.000129680219211179f, 0.000218636939631695f, 0.000316341810578649f, 0.000423086485874996f, 0.000539139029550933f, 0.000664741890411175f, 0.000800109956250042f, 0.000945428698597909f, 0.00110085241854423f, 0.00126650260378719f, 0.00144246640660955f, 0.00162879525197684f, 0.00182550358439937f, 0.00203256776159674f, 0.00224992510235527f, 0.00247747309527756f, 0.00271506877439383f, 0.00296252826683867f, 0.00321962651699962f, 0.00348609719071824f, 0.00376163276227531f, 0.00404588478602252f, 0.00433846435363871f, 0.00463894273709387f, 0.00494685221650190f, 0.00526168709114065f, 0.00558290487101640f, 0.00590992764545760f, 0.00624214362434101f, 0.00657890884668922f, 0.00691954905053475f, 0.00726336169712788f, 0.00760961814177666f, 0.00795756594285294f, 0.00830643129978106f, 0.00865542161015031f, 0.00900372813546166f, 0.00935052876443741f, 0.00969499086229157f, 0.0100362741938830f, 0.0103735339082538f, 0.0107059235716962f, 0.0110325982361916f, 0.0113527175298322f, 0.0116654487556603f, 0.0119699699852609f,0.0122654731333964f, 0.0125511670000057f, 0.0128262802659794f,0.0130900644292846f, 0.0133417966682373f, 0.0135807826190107f, 0.0138063590548222f, 0.0140178964546560f,0.0142148014498525f, 0.0143965191374304f, 0.0145625352495927f, 0.0147123781695085f, 0.0148456207841498f, 0.0149618821656988f, 0.0150608290738141f, 0.0151421772718619f, 0.0152056926510653f, 0.0152511921574016f, 0.0152785445169866f, 0.0152876707566042f, 0.0152785445169866f, 0.0152511921574016f, 0.0152056926510653f, 0.0151421772718619f, 0.0150608290738141f, 0.0149618821656988f, 0.0148456207841498f, 0.0147123781695085f, 0.0145625352495927f, 0.0143965191374304f, 0.0142148014498525f, 0.0140178964546560f, 0.0138063590548222f, 0.0135807826190107f, 0.0133417966682373f, 0.0130900644292846f, 0.0128262802659794f, 0.0125511670000057f, 0.0122654731333964f, 0.0119699699852609f, 0.0116654487556603f, 0.0113527175298322f, 0.0110325982361916f, 0.0107059235716962f, 0.0103735339082538f, 0.0100362741938830f, 0.00969499086229157f,  0.00935052876443741f, 0.00900372813546166f, 0.00865542161015031f, 0.00830643129978106f, 0.00795756594285294f, 0.00760961814177666f, 0.00726336169712788f, 0.00691954905053475f, 0.00657890884668922f, 0.00624214362434101f, 0.00590992764545760f, 0.00558290487101640f, 0.00526168709114065f, 0.00494685221650190f, 0.00463894273709387f, 0.00433846435363871f, 0.00404588478602252f, 0.00376163276227531f, 0.00348609719071824f, 0.00321962651699962f, 0.00296252826683867f, 0.00271506877439383f, 0.00247747309527756f, 0.00224992510235527f, 0.00203256776159674f, 0.00182550358439937f, 0.00162879525197684f, 0.00144246640660955f, 0.00126650260378719f, 0.00110085241854423f, 0.000945428698597909f, 0.000800109956250042f, 0.000664741890411175f,0.000539139029550933f, 0.000423086485874996f, 0.000316341810578649f, 0.000218636939631695f, 0.000129680219211179f, 4.91584996183110e-05f, -2.32607137047552e-05f, -8.79270636032783e-05f,-0.000145205110728502f, -0.000195472080831068f, -0.000239115601492852f, -0.000276531439880007f, -0.000308121252959992f, -0.000334290361427509f, -0.000355445558329820f, -0.000371992963072800f, -0.000384335931127099f, -0.000392873029341380f, -0.000397996086309217f, -0.000400088326730656f, -0.000399522598161697f, -0.000396659697958167f, -0.000391846807598119f, -0.000385416040912453f, -0.000377683112070703f, -0.000368946128461655f, -0.000359484512880611f, -0.000349558058690740f, -0.000339406120869097f,-0.000329246945082709f, -0.000319277136170818f, -0.000309671266639938f, -0.000300581625013150f,-0.000292138103117859f, -0.000284448220651325f,-0.000277597284634304f, -0.000271648680654150f, -0.000266644292113138f, -0.000262605043039351f, -0.000259531559389331f};
-      
+/*******************************************************************************
+* Function Name: void filtre_6(float32 signal[], float32 signal_filtre[])
+
+********************************************************************************
+*
+* Summary: 
+* Cette fonction agit comme filtre passe-bas de 6 Hz pour filtrer un signal d’entrée. 
+* Cette fonction est basée sur l’exemple qu’on retrouve à l’adresse suivante : 
+* https://www.keil.com/pack/doc/CMSIS/DSP/html/group__FIRLPF.html
+
+*Parameters:
+* float32 signal[] : le signal à filtrer
+* float32 signal_filtre[] : vecteur qui contiendra le signal filtré
+
+* Return:
+* None
+*
+* Side Effects:
+* Nécessite plusieurs coefficients
+*******************************************************************************/
+void filtre_6(float32 signal[], float32 signal_filtre[]){
+    
+    const float32_t firCoeffs32PasseBasBPM[NUM_TAPS] = {0.0000000000f, 0.0004075633f, 0.0008932012f, 0.0014675649f, 0.0020672200f, 0.0025361043f, 0.0026372657f, 0.0020986258f, 0.0006875722f, -0.0016995698f, -0.0049535090f, -0.0086959251f, -0.0122709651f, -0.0147960057f, -0.0152718668f, -0.0127397517f, -0.0064606125f, 0.0039149652f, 0.0182199792f, 0.0357159540f, 0.0551271230f, 0.0747660098f, 0.0927358341f, 0.1071803126f, 0.1165414494f, 0.1197829218f, 0.1165414494f, 0.1071803126f, 0.0927358341f, 0.0747660098f, 0.0551271230f, 0.0357159540f, 0.0182199792f, 0.0039149652f, -0.0064606125f, -0.0127397517f, -0.0152718668f, -0.0147960057f, -0.0122709651f, -0.0086959251f, -0.0049535090f, -0.0016995698f, 0.0006875722f, 0.0020986258f, 0.0026372657f, 0.0025361043f, 0.0020672200f, 0.0014675649f, 0.0008932012f, 0.0004075633f, 0.0000000000f};
+
     uint32_t i;
     arm_fir_instance_f32 S;
     float32_t *inputF32;
@@ -53,6 +74,27 @@ void filtre_1_5(float32 signal[], float32 signal_filtre[]){
     uint32_t  indexmin_AC;
     int k;
     float AC_1000[1000] = {};
+    
+    
+/*******************************************************************************
+* Function Name: float32 AC(float32 signal[])
+********************************************************************************
+*
+* Summary: 
+* Cette fonction calcule le maximum ainsi que le minimum d’un signal donné en paramètre. 
+* Cette fonction calcule par la suite la différence du max et du min pour obtenir l’amplitude du 
+* signal et ainsi la composante AC. Elle utilise les valeurs 500 à 1000 du vecteur pour éviter les données 
+* erratiques dûes au filtre.
+    
+* Parameters:
+* float32 signal[] : les données dont on veut trouver l'amplitude
+* 
+* Return:
+* float32 AC_valeur : l'amplitude du signal
+*
+* Side Effects:
+* None   
+*******************************************************************************/
 
 float32 AC(float32 signal[]){
     AC_valeur = 0;
@@ -63,38 +105,74 @@ float32 AC(float32 signal[]){
     k = 0;
   
     
-        for(int i=0; i<1000; i++){
-            AC_1000[i] =signal[k];
-            k++;
-            }
-        arm_max_f32(&AC_1000[0], 1000, &max_AC, &indexmax_AC);
-        arm_min_f32(&AC_1000[0], 1000, &min_AC, &indexmin_AC);
-        AC_valeur = max_AC - min_AC;
-        return AC_valeur;
+    arm_max_f32(&signal[500], 500, &max_AC, &indexmax_AC);
+    arm_min_f32(&signal[500], 500, &min_AC, &indexmin_AC);
+    AC_valeur = max_AC - min_AC;
+    return AC_valeur;
 
 }
+
+
+
 float32 DC;
 float32 moyenne_DC;
+
+/*******************************************************************************
+* Function Name: float32 DC_sum(float32 signal[])
+********************************************************************************
+*
+* Summary: 
+* Cette fonction calcule la moyenne du signal donné en paramètre pour en retirer la composante DC. 
+    
+* Parameters:
+* float32 signal[] : les données dont on veut trouver l'amplitude
+* 
+* Return:
+* float32 AC_valeur : l'amplitude du signal
+*
+* Side Effects:
+* None   
+*******************************************************************************/
 
 float32 DC_sum(float32 signal[]){
      DC=0;
      moyenne_DC = 0;
 
-        for(int i=0; i<1000; i++){
-            DC += signal[i];
-        }
-        moyenne_DC = DC/1000;
-        return moyenne_DC;
+     for(int i=500; i<1000; i++)
+     {
+         DC += signal[i];
+     }
+     moyenne_DC = DC/500;
+     return moyenne_DC;
 }
 
 
 
+/*******************************************************************************
+* Function Name: void traitement_task(void*pvParameters)
+********************************************************************************
+*
+* Summary: 
+* Cette tâche appelle le traitement des données reçues du capteur MAX30102,
+* en filtrant d'abord les signaux, puis en retirant les composantes AC et DC, et finalement en 
+* calculant les valeurs de SpO2 et HR.
+* 
+* Parameters:
+* void* pvParameters
+* 
+* Return:
+* None
+*
+* Side Effects:
+* None  
+* 
+*******************************************************************************/
     
 void traitement_task(void* pvParameters)
 {
-    NVIC_DisableIRQ(PPG_RDY_isr_cfg.intrSrc);
+    
     (void)pvParameters;
-    //constantes SpO2
+
     R = 0 ;
     S = 0;
     DC_R = 0;
@@ -102,62 +180,86 @@ void traitement_task(void* pvParameters)
     AC_R = 0;
     DC_IF = 0;
     
-    //constantes BPM
-
+ 
+   
     
     for (;;)
     {
-        if (read_flag_MAX)
+        
+        if (currentpage == PAGE_SIGNAL_IR || currentpage == PAGE_SIGNAL_R)
         {
-        // Appeler fonction Filtres, AC et DC 
-            filtre_1_5(red_data, signal_1_5_R);
-            filtre_1_5(ir_data, signal_1_5_IF);
-
-            DC_R = DC_sum(signal_1_5_R);
-            DC_IF = DC_sum(signal_1_5_IF);
-    
-            for(int i=0; i<1000; i++)
+            
+            if (read_flag_MAX)
             {
-                signal_AC_R[i] = signal_1_5_R[i] - DC_R;
-                signal_AC_IF[i] = signal_1_5_IF[i] - DC_IF;
-            }
+                //Filtrage passe-bas des signaux 
+                filtre_6(red_data, signal_R);
+                filtre_6(ir_data, signal_IF);
+
+                //Extraction du courant DC moyen
+                DC_R = DC_sum(signal_R);
+                DC_IF = DC_sum(signal_IF);
     
-            AC_R = AC(signal_AC_R);
-            AC_IF = AC(signal_AC_IF);
+                //Obtention des signaux AC
+                for(int i=0; i<1000; i++)
+                {
+                    signal_AC_R[i] = signal_R[i] - DC_R;
+                    signal_AC_IF[i] = signal_IF[i] - DC_IF;
+                }
+            
+                //Extraction du courant AC moyen
+                AC_R = AC(signal_AC_R);
+                AC_IF = AC(signal_AC_IF);
     
-            R = (AC_R/DC_R)/(AC_IF/DC_IF);
-            S = -25.35*R +121.41;
+                //Calcul du SpO2
+                R = (AC_R/DC_R)/(AC_IF/DC_IF);
+                S = -12.5*R + 105;
             
-            float32 max[3]={};
-            float32 indice[3]={};
-            BPM = 0;
-            
-            int j= 0;
-            
-            for (int i=200; i<1000; i++)
-            {
-                if(signal_AC_R[i]> signal_AC_R[i-1] && signal_AC_R[i]> signal_AC_R[i+1] && signal_AC_R[i]> signal_AC_R[i-5] && signal_AC_R[i]> signal_AC_R[i+5] && signal_AC_R[i]> signal_AC_R[i-20] && signal_AC_R[i]> signal_AC_R[i+20])
-                {
-                    max[j] = signal_AC_R[i];
-                    indice[j] = i;
-                    j++;
-                } 
-                if(j==3)
-                {
-                    break;
-                }
-                else
-                {
-                    continue;
-                }
-            }
+
+                //Routine de test du SpO2
+                /*char displayStr[50];
+                sprintf(displayStr,"____%i,____",(int)(1000*R));
+                UART_PutString(displayStr);*/
 
 
-            BPM = (60*200)/(indice[2]-indice[0]);
+                float32 indice[4]={};
+                BPM = 0;
+                int j= 0;
+               
+                //Positionnement des pics d'amplitude
+                for (int i=500; i<1000; i++)
+                {
+                    if(signal_R[i]> signal_R[i-1] && signal_R[i]> signal_R[i+1] && signal_R[i]> signal_R[i-5] && signal_R[i]> signal_R[i+5] && signal_R[i]> signal_R[i-20] && signal_R[i]> signal_R[i+20])
+                    {
+                        indice[j] = i;
+                        j++;
+                    } 
+                    if(j==5)
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        continue;
+                    }
+                }
+
+                //Calcul du HR
+                BPM += (60*100)/(indice[1]-indice[0]);
+                BPM += (60*100)/(indice[2]-indice[1]);
+                BPM += (60*100)/(indice[3]-indice[2]);
+                BPM = BPM/3;
+                vTaskDelay(pdMS_TO_TICKS(2000));
             
+
             
+            }
         }
-        NVIC_EnableIRQ(PPG_RDY_isr_cfg.intrSrc);
+        else
+        {
+            vTaskDelay(pdMS_TO_TICKS(1000));
+        }
+        
+        read_flag_MAX = false;
         vTaskDelay(pdMS_TO_TICKS(2000));
     }
  

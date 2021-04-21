@@ -51,12 +51,15 @@
   <file name="C:\Users\nicpa\OneDrive\Documents\PolyDoc\GBM2100FINAL\Laboratoire3\Laboratoire3.cydsn\codegentemp\CapSense_SmartSense_LL.h" value="HEADER;;;;;CapSense" />
   <file name="C:\Users\nicpa\OneDrive\Documents\PolyDoc\GBM2100FINAL\Laboratoire3\Laboratoire3.cydsn\codegentemp\CapSense_Gesture.c" value="SOURCE_C;CortexM0p,CortexM4;;;;CapSense" />
   <file name="C:\Users\nicpa\OneDrive\Documents\PolyDoc\GBM2100FINAL\Laboratoire3\Laboratoire3.cydsn\codegentemp\CapSense_Gesture.h" value="HEADER;;;;;CapSense" />
+  <file name="C:\Users\nicpa\OneDrive\Documents\PolyDoc\GBM2100FINAL\Laboratoire3\Laboratoire3.cydsn\codegentemp\UART.c" value="SOURCE_C;CortexM0p,CortexM4;;;;UART" />
+  <file name="C:\Users\nicpa\OneDrive\Documents\PolyDoc\GBM2100FINAL\Laboratoire3\Laboratoire3.cydsn\codegentemp\UART.h" value="HEADER;;;;;UART" />
   <file name="C:\Users\nicpa\OneDrive\Documents\PolyDoc\GBM2100FINAL\Laboratoire3\Laboratoire3.cydsn\codegentemp\CY_EINK_SPIM_SCBCLK.h" value="HEADER;;;;;CY_EINK_SPIM_SCBCLK" />
   <file name="C:\Users\nicpa\OneDrive\Documents\PolyDoc\GBM2100FINAL\Laboratoire3\Laboratoire3.cydsn\codegentemp\I2C_MAX_SCBCLK.h" value="HEADER;;;;;I2C_MAX_SCBCLK" />
   <file name="C:\Users\nicpa\OneDrive\Documents\PolyDoc\GBM2100FINAL\Laboratoire3\Laboratoire3.cydsn\codegentemp\I2Cm_SCBCLK.h" value="HEADER;;;;;I2Cm_SCBCLK" />
   <file name="C:\Users\nicpa\OneDrive\Documents\PolyDoc\GBM2100FINAL\Laboratoire3\Laboratoire3.cydsn\codegentemp\CapSense_ModClk.h" value="HEADER;;;;;CapSense_ModClk" />
   <file name="C:\Users\nicpa\OneDrive\Documents\PolyDoc\GBM2100FINAL\Laboratoire3\Laboratoire3.cydsn\codegentemp\CapSense_TMG.c" value="SOURCE_C;CortexM0p,CortexM4;;;;CapSense_TMG" />
   <file name="C:\Users\nicpa\OneDrive\Documents\PolyDoc\GBM2100FINAL\Laboratoire3\Laboratoire3.cydsn\codegentemp\CapSense_TMG.h" value="HEADER;;;;;CapSense_TMG" />
+  <file name="C:\Users\nicpa\OneDrive\Documents\PolyDoc\GBM2100FINAL\Laboratoire3\Laboratoire3.cydsn\codegentemp\UART_SCBCLK.h" value="HEADER;;;;;UART_SCBCLK" />
   <file name="C:\Users\nicpa\OneDrive\Documents\PolyDoc\GBM2100FINAL\Laboratoire3\Laboratoire3.cydsn\codegentemp\project.h" value="OTHER;;;;;" />
   <file name="C:\Users\nicpa\OneDrive\Documents\PolyDoc\GBM2100FINAL\Laboratoire3\Laboratoire3.cydsn\codegentemp\cycodeshareimport.ld" value="OTHER;;;;;" />
   <file name="C:\Users\nicpa\OneDrive\Documents\PolyDoc\GBM2100FINAL\Laboratoire3\Laboratoire3.cydsn\codegentemp\cycodeshareexport.ld" value="OTHER;;;;;" />

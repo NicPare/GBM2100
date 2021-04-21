@@ -11,6 +11,8 @@
       <Data key="eb5fffbd-d43b-40a7-a28c-4ba09dd25f0f" value="EINK_Clock" />
     </Group>
     <Group key="Pin">
+      <Data key="1df5cf43-bc9e-4e09-a3f0-1d6b99cec9d2/65f3af6c-759b-4ccb-8c66-5c95ba1f5f4f" value="UART_tx" />
+      <Data key="1df5cf43-bc9e-4e09-a3f0-1d6b99cec9d2/b7e8018e-1ef7-49c0-b5a5-61641a03e31c" value="UART_rx" />
       <Data key="3bebfee8-790b-4297-b73a-27818bdce71c" value="PWM_OUT" />
       <Data key="3bf7272e-5f05-4e97-9684-d75c0c73d541/4db2e9d3-9f70-4f4e-a919-7eefada41863" value="CapSense_Cmod" />
       <Data key="3bf7272e-5f05-4e97-9684-d75c0c73d541/8ed50244-d239-4c9b-9207-b8e71ce193dc" value="CapSense_Tx" />

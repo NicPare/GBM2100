@@ -18,75 +18,63 @@
 
 uint8_t currenttouch;
 
-/*
-void isr_bouton(void)
-{  
-   
-  Clears the triggered pin interrupt 
-    Cy_GPIO_ClearInterrupt(P0_4_PORT, P0_4_NUM);
-    NVIC_ClearPendingIRQ(bouton_isr_cfg.intrSrc);
-    button_menu=true;
-}
-*/
 
+/*******************************************************************************
+* Function Name: void vtouch_task(void* pvParameters)
+********************************************************************************
+*
+* Summary:  
+* C’est une tâche qui lit le CapSense et modifie la variable représentant l’état du bouton selon la lecture
+*
+* Parameters:
+* void* pvParameters
+*
+* Return:
+*  None
+*
+*******************************************************************************/
 
 void vtouch_task(void* pvParameters){
     (void)pvParameters;
-    NVIC_DisableIRQ(PPG_RDY_isr_cfg.intrSrc);
-   // bool previoustouch = false;
-    /*
-    Cy_SysInt_Init(&bouton_isr_cfg, isr_bouton);
-    NVIC_ClearPendingIRQ(bouton_isr_cfg.intrSrc);
-    NVIC_EnableIRQ(bouton_isr_cfg.intrSrc);*/
-    //
-    
-    cy_status capSenseApiResult;
 
+
+    cy_status capSenseApiResult;
 
     capSenseApiResult = CapSense_Start();
     CapSense_ScanAllWidgets();
     for(;;)
     {
-      if(CapSense_IsBusy() == CapSense_NOT_BUSY)
+
+        if(CapSense_IsBusy() == CapSense_NOT_BUSY)
         {
-        //
-       
-        //
+
             
-        /* Variable that stores CapSense API results */
-        CapSense_ProcessAllWidgets();
+            // Variable that stores CapSense API results
+            CapSense_ProcessAllWidgets();
         
-        if(CapSense_IsWidgetActive(CapSense_BUTTONL_WDGT_ID)){
-   
-                    
-                    currenttouch = BUTTON_R;
-               
-        }
+            if(CapSense_IsWidgetActive(CapSense_BUTTONL_WDGT_ID))
+            {      
+                currenttouch = BUTTON_R;   
+            }
         
-        if(CapSense_IsWidgetActive(CapSense_BUTTONR_WDGT_ID)){
+            if(CapSense_IsWidgetActive(CapSense_BUTTONR_WDGT_ID))
+            {
+                currenttouch = BUTTON_L;
+            }
         
-               // {
-                    currenttouch = BUTTON_L;
-               // }
-        }
-        
-        if(CapSense_IsWidgetActive(CapSense_LINEARSLIDER0_WDGT_ID)){
-            currenttouch = BUTTON_MENU;
-        }
+            if(CapSense_IsWidgetActive(CapSense_LINEARSLIDER0_WDGT_ID))
+            {
+                currenttouch = BUTTON_MENU;
+            }
        
-  // 
-        
-        CapSense_UpdateAllBaselines();
-        CapSense_ScanAllWidgets();
+            CapSense_UpdateAllBaselines();
+            CapSense_ScanAllWidgets();
         
    
-        vTaskDelay(pdMS_TO_TICKS(100));
+            vTaskDelay(pdMS_TO_TICKS(100));
     
         
-    }
-        NVIC_EnableIRQ(PPG_RDY_isr_cfg.intrSrc);
-       
-    
+        }
     }
 
  }

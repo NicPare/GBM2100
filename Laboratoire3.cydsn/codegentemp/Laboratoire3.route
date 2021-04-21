@@ -73,9 +73,9 @@ net Net_507
 	term   ":ioport13:pin0.fb"
 	switch ":ioport13:pin0.fb==>:ioport13:smartio_mux_out0.direct_in"
 	switch ":ioport13:smartio_mux_out0.smartio_mux_out==>:IO[13]_out[0]_input_permute.ioport13_dsiOut0"
-	switch ":IO[13]_out[0]_input_permute.IO[13]_out[0]==>:UDB_Array:DSI_new6:LHO_Sel28.1"
-	switch ":UDB_Array:DSI_new6:LHO_Sel28.lho28==>:UDB_Array:DSI_new7:LHO_Sel28.15"
-	switch ":UDB_Array:DSI_new7:LHO_Sel28.lho28==>:UDB_Array:DSI_new8:RVO_Sel8.10"
+	switch ":IO[13]_out[0]_input_permute.IO[13]_out[0]==>:UDB_Array:DSI_new6:LHO_Sel89.1"
+	switch ":UDB_Array:DSI_new6:LHO_Sel89.lho89==>:UDB_Array:DSI_new7:LHO_Sel89.15"
+	switch ":UDB_Array:DSI_new7:LHO_Sel89.lho89==>:UDB_Array:DSI_new8:RVO_Sel8.15"
 	switch ":UDB_Array:DSI_new8:RVO_Sel8.vo24==>:UDB_Array:UDBroute2:TOP_V_BOT24.1"
 	switch ":UDB_Array:UDBroute2:TOP_V_BOT24.vi24==>:UDB_Array:UDBroute2:RVO_Sel8.31"
 	switch ":UDB_Array:UDBroute2:RVO_Sel8.vo24==>:UDB_Array:DSI_new2:RVO_Sel8.31"
@@ -156,3 +156,29 @@ net \I2Cm:intr_wire\
 	switch ":SCBcontainer:SCB[3].interrupt==>:intc_0:interrupt44.interrupt"
 	term   ":intc_0:interrupt44.interrupt"
 end \I2Cm:intr_wire\
+net \UART:Net_1172\
+	term   ":ioport5:pin0.fb"
+	switch ":ioport5:pin0.fb==>:ioport5:smartio_mux_out0.direct_in"
+	switch ":ioport5:smartio_mux_out0.smartio_mux_out==>:ioport5:hsiomIn0.hsiomIn0"
+	switch ":ioport5:hsiomIn0.fixedOut0_ACT_6==>:SCB[5]uart_rx_input_permute.ioport5_fixedOut0_ACT_6"
+	switch ":SCB[5]uart_rx_input_permute.SCB[5]uart_rx==>:SCBcontainer:SCB[5].uart_rx"
+	term   ":SCBcontainer:SCB[5].uart_rx"
+end \UART:Net_1172\
+net \UART:Net_847_ff3\
+	term   ":Clockcontainer:Clock[0].ff_div_5"
+	switch ":Clockcontainer:Clock[0].ff_div_5==>:Clockcontainer:ff_permute.ff_div_5"
+	switch ":Clockcontainer:ff_permute.Clock[0]ff_div_5==>:SCBcontainer:SCB[5].clock"
+	term   ":SCBcontainer:SCB[5].clock"
+end \UART:Net_847_ff3\
+net \UART:intr_wire\
+	term   ":SCBcontainer:SCB[5].interrupt"
+	switch ":SCBcontainer:SCB[5].interrupt==>:intc_0:interrupt46.interrupt"
+	term   ":intc_0:interrupt46.interrupt"
+end \UART:intr_wire\
+net \UART:tx_wire\
+	term   ":SCBcontainer:SCB[5].uart_tx"
+	switch ":SCBcontainer:SCB[5].uart_tx==>:ioport5:hsiomOut1.fixedIn1_ACT_6"
+	switch ":ioport5:hsiomOut1.hsiomOut1==>:ioport5:smartio_mux_in1.direct_out"
+	switch ":ioport5:smartio_mux_in1.smartio_mux_in==>:ioport5:pin1.pin_input"
+	term   ":ioport5:pin1.pin_input"
+end \UART:tx_wire\
